@@ -38,6 +38,18 @@ Three things we learned along the way matter as much as the headline number.
 Everything here can be rerun from the repository. The code, Dockerfile, model
 assets, raw results and the protocol we wrote before each study are all public.
 
+**What the organisers asked, and where we answer it.**
+
+| Question or request | Section |
+|---|---|
+| Does GraphVOI improve the final meeting outcome against degree-first and uncertainty-first asking, with the same model, matcher and budget? | 5 |
+| How sensitive are decisions to answer-model errors, especially when disclosure behaviour changes? | 7 |
+| Directional calibration, and who waits longer or gets fewer opportunities under each question policy | 8 |
+| If a simpler method works as well, what did the comparison teach us? | 6 and 9 |
+| Supplied baselines, ablations, changing conditions | 5, 6, 7 |
+| Completed meetings and MSMI as the main outcome | 5 |
+| Stated preferences and hard eligibility preserved | 11 |
+
 # 2 What we built
 
 One decision day has two calls, and the policy is a plain pipeline around one
@@ -73,7 +85,7 @@ remaining question against the joint answer worlds of the questions already
 chosen, so two questions that unlock the same pair are not both credited with it.
 Shared questions are charged once. When the joint answer distribution has more
 than eight worlds we compress it to eight; this is an approximation and we know of
-a constructed case where it overstates value (Section 10).
+a constructed case where it overstates value (Section 11).
 
 **Staying inside the rules.** One invalid episode makes a submission ineligible,
 so the match output is re-validated, and the ask phase stops evaluating new
@@ -144,6 +156,8 @@ before they ran (commit `db79b4a` and later).
   GraphVOI with a waiting threshold, and GraphVOI without paired questions.
 - **Code.** Commit `335b0af` for every episode. Results store hashes of every
   policy and runner file and both model assets.
+- **Main outcome.** As the organisers asked, completed meetings (dates) and mutual
+  second-meeting intention are reported side by side for every comparison.
 - **Primary analysis.** Official MSMI per 100 arrived members, averaged within
   and then across scenario families. Two primary comparisons: GraphVOI against
   degree-first and against uncertainty-first. Paired bootstrap over whole seeds
@@ -163,7 +177,7 @@ Differences smaller than that were not going to be resolvable.
 
 [[MAIN_RESULTS]]
 
-# 6 Ablations
+# 6 Ablations: which parts earn their place
 
 [[ABLATIONS]]
 
@@ -175,15 +189,19 @@ Differences smaller than that were not going to be resolvable.
 
 [[CALIBRATION_WAITING]]
 
-# 9 Where it fails
+# 9 What the comparison taught us
+
+[[TAUGHT]]
+
+# 10 Where it fails
 
 [[FAILURES]]
 
-# 10 Validity, runtime and limits
+# 11 Validity, runtime and limits
 
 [[VALIDITY]]
 
-# 11 Reproducing this report
+# 12 Reproducing this report
 
 [[REPRODUCE]]
 

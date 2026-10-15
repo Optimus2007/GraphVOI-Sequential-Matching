@@ -117,6 +117,37 @@ def daily_spend(trace_root, rows):
     return {m: [x / counts[m] for x in v] for m, v in totals.items()}
 
 
+def preference_audit(trace_root, rows):
+    """Re-check every introduction against members' TRUE stated hard preferences.
+
+    Evaluation-side only: worlds are regenerated here to read truth; the policy
+    never sees it. Returns introductions checked and violations, per method.
+    """
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+    from kit import HARD, eligibility, generate
+    worlds, out = {}, {}
+    for r in rows:
+        path = trace_root / f"{r['variant']}_{r['seed']}_{r['method']}.json"
+        if not path.exists():
+            return None
+        key = (r['seed'], r['variant'])
+        if key not in worlds:
+            members = generate(r['seed'], 200, 'evaluation', r['variant'])['members']
+            worlds[key] = {m['member_id']: dict(m, fields=m['truth']) for m in members}
+        truth = worlds[key]
+        o = out.setdefault(r['method'], dict(introductions=0, violations=0, declined_member_introduced=0))
+        for a in json.loads(path.read_text())['actions']:
+            if a['phase'] != 'match':
+                continue
+            for x, y in a['action']:
+                o['introductions'] += 1
+                o['violations'] += eligibility(truth[x], truth[y])['status'] == 'infeasible'
+                o['declined_member_introduced'] += any(truth[i]['field_status'][k] == 'declined'
+                                                       for i in (x, y) for k in HARD)
+    return out
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('raw')
@@ -148,6 +179,16 @@ def main():
         summary['calibration'][m]['both_directions'] = summary['calibration'][m].pop(None)
     summary['opportunity'] = opportunity(raw.parent / (raw.stem + '_traces'), valid)
     summary['daily_ask_units'] = daily_spend(raw.parent / (raw.stem + '_traces'), valid)
+    summary['true_preference_audit'] = preference_audit(raw.parent / (raw.stem + '_traces'), valid)
+    summary['calibration_by_gender'] = {m: {g: {k: [r['calibration']['by_gender'][g][k]
+                                                   for r in valid if r['method'] == m
+                                                   and r.get('calibration', {}).get('by_gender', {}).get(g, {}).get('count')]
+                                               for k in ('count', 'brier')}
+                                           for g in ('woman', 'man', 'non_binary')} for m in methods}
+    for m, gs in summary['calibration_by_gender'].items():
+        for g, v in gs.items():
+            n = sum(v['count'])
+            gs[g] = dict(labels=n, brier=sum(c * b for c, b in zip(v['count'], v['brier'])) / n if n else None)
     (out / 'summary.json').write_text(json.dumps(summary, indent=1, allow_nan=False) + '\n')
     print(out, len(rows), 'episodes', round((out / 'summary.json').stat().st_size / 1e6, 2), 'MB summary')
 

@@ -19,6 +19,7 @@ together is not missed, and it re-scores the remaining questions after each pick
 so overlapping questions are not counted twice.
 
 **Report:** [docs/REPORT.md](docs/REPORT.md) ([PDF](docs/GraphVOI_Round2_report.pdf)).
+Round 1 research note, unchanged since submission: [docs/GraphVOI_Round1_note.pdf](docs/GraphVOI_Round1_note.pdf).
 
 ## Results at a glance
 

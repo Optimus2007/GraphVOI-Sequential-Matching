@@ -5801,5 +5801,104 @@
    0.0,
    0.0
   ]
+ },
+ "true_preference_audit": {
+  "graphvoi": {
+   "introductions": 4604,
+   "violations": 0,
+   "declined_member_introduced": 0
+  },
+  "graphvoi_nofill": {
+   "introductions": 3925,
+   "violations": 0,
+   "declined_member_introduced": 0
+  },
+  "degree_first": {
+   "introductions": 4557,
+   "violations": 0,
+   "declined_member_introduced": 0
+  },
+  "uncertainty_first": {
+   "introductions": 4614,
+   "violations": 0,
+   "declined_member_introduced": 0
+  },
+  "greedy": {
+   "introductions": 4512,
+   "violations": 0,
+   "declined_member_introduced": 0
+  }
+ },
+ "calibration_by_gender": {
+  "degree_first": {
+   "woman": {
+    "labels": 3950,
+    "brier": 0.22249024171102408
+   },
+   "man": {
+    "labels": 4496,
+    "brier": 0.2247493824072472
+   },
+   "non_binary": {
+    "labels": 668,
+    "brier": 0.24918812259416942
+   }
+  },
+  "graphvoi": {
+   "woman": {
+    "labels": 3991,
+    "brier": 0.22253062691248082
+   },
+   "man": {
+    "labels": 4522,
+    "brier": 0.2265147754895118
+   },
+   "non_binary": {
+    "labels": 695,
+    "brier": 0.24447516621353832
+   }
+  },
+  "graphvoi_nofill": {
+   "woman": {
+    "labels": 3332,
+    "brier": 0.22527481264620522
+   },
+   "man": {
+    "labels": 3894,
+    "brier": 0.22819446358873702
+   },
+   "non_binary": {
+    "labels": 624,
+    "brier": 0.22901183392000027
+   }
+  },
+  "greedy": {
+   "woman": {
+    "labels": 3865,
+    "brier": 0.2239643412027645
+   },
+   "man": {
+    "labels": 4418,
+    "brier": 0.23097350324478733
+   },
+   "non_binary": {
+    "labels": 741,
+    "brier": 0.23274780334467862
+   }
+  },
+  "uncertainty_first": {
+   "woman": {
+    "labels": 4015,
+    "brier": 0.2255712970892246
+   },
+   "man": {
+    "labels": 4506,
+    "brier": 0.2261514395221449
+   },
+   "non_binary": {
+    "labels": 707,
+    "brier": 0.2402847658405317
+   }
+  }
  }
 }
