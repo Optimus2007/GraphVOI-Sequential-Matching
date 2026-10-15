@@ -44,7 +44,7 @@ One decision day has two calls, and the policy is a plain pipeline around one
 research component.
 
 | Step | What happens |
-|---|---|
+|--|----------|
 | Feasibility | The official reciprocal eligibility rules decide which pairs are valid, unresolved or blocked. A learned score never overrides a hard failure, and a missing or declined hard field blocks the pair. A declined field is never filled in. |
 | Edge utility | Three small logistic models (both accept, date happens, both give a timely Yes) trained offline on public rollouts, seeds 31001 to 31008. Their product is the edge weight. |
 | Clarification | GraphVOI ranks legal asks, then any units left buy hard-constraint asks (Section 3). |
