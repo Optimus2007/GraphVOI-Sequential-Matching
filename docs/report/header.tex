@@ -5,7 +5,18 @@
 \captionsetup{font=small,labelfont=bf}
 \usepackage{titlesec}
 \titleformat{\section}{\large\bfseries}{}{0pt}{}
-\setlength{\parskip}{4pt}
+\setlength{\parskip}{3pt}
 \setlength{\parindent}{0pt}
 \usepackage{float}
 \floatplacement{figure}{H}
+\usepackage{titling}
+\setlength{\droptitle}{-6em}
+\pretitle{\begin{center}\LARGE}
+\posttitle{\end{center}\vspace{0.2em}}
+\predate{}\postdate{}
+\titlespacing*{\section}{0pt}{9pt plus 2pt}{4pt}
+\setlength{\textfloatsep}{8pt}
+\setlength{\intextsep}{8pt}
+\captionsetup{skip=4pt}
+\setlength{\abovedisplayskip}{4pt}
+\setlength{\belowdisplayskip}{4pt}

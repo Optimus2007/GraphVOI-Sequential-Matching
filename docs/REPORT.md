@@ -1,8 +1,7 @@
 ---
-title: "GraphVOI: allocation-aware clarification for sequential reciprocal matching"
+title: "**GraphVOI: allocation-aware clarification for sequential reciprocal matching**"
 subtitle: "Round 2 technical report, The Sequential Matching Problem (Romeo & Juliet / Vouchsafe)"
-author: "Team Orbit (Aditya Raj)"
-date: "October 2026"
+author: "Team: Orbit  Member: Aditya Raj"
 ---
 
 **Research question.** When clarification has a cost, should we ask the most
@@ -30,24 +29,13 @@ simpler rules when disclosure changes. The model is calibrated in both direction
 but barely discriminates, and the three question policies leave the same people
 waiting; what changes who waits is whether the budget is spent (Section 8).
 
-Three things we learned along the way matter as much as the headline number.
-
-- **Our first build lost to the official greedy baseline, and the reason was
-  mundane.** GraphVOI only spent about half its daily budget, because a work cap
-  ran out and because one-day VOI gives no credit to a hard answer that only pays
-  off on later days. Round 1 listed exactly this as a likely failure ("GraphVOI may
-  be too short-sighted"). Fixing it closed the gap on coverage and volume.
-- **In this simulator, the pair model has almost no signal.** On held-out seeds
-  its acceptance predictions are no better than a constant. So the value of a
-  question comes almost entirely from whether it makes a pair *feasible*, not from
-  how good that pair would be. That limits how far any clarification rule can pull
-  ahead of a simpler one.
-- **Waiting depends on asking.** Leaving budget unspent cost members time:
-  among members who could be served, the share introduced within 14 days of arrival
-  dropped from about 45% to 33% when we turned the budget fill off.
-
-Everything here can be rerun from the repository. The code, Dockerfile, model
-assets, raw results and the protocol we wrote before each study are all public.
+Three things we learned matter as much as the headline. **Our first build lost to
+the official greedy baseline for a mundane reason:** it spent only about half its
+daily budget, the short-sightedness Round 1 warned about; fixing it closed the gap
+(Section 3). **The pair model has almost no signal here**, so a question's value
+comes from making pairs feasible, not from how good they are, which limits how far
+any question rule can pull ahead. **Waiting depends on asking:** without the budget
+fill, the share of servable members introduced within 14 days falls from 45% to 33%.
 
 **What the organisers asked, and where we answer it.**
 
@@ -139,7 +127,7 @@ seeds to separate those numbers, but the secondary metrics could: GraphVOI had
 2.3 fewer mutual acceptances per episode than greedy (95% interval −3.2 to −1.5)
 and five points less coverage.
 
-![Mean ask units spent per decision day. Left: the v2 pilot. Right: the v3 build, with the budget fill turned off and on.](figures/daily_ask_spend.pdf){width=95%}
+![Mean ask units spent per decision day. Left: the v2 pilot. Right: the v3 build, with the budget fill turned off and on.](figures/daily_ask_spend.pdf){width=85%}
 
 Figure 1 shows why. Greedy spends its full 12 units every day until about day
 17, by which time every member worth a constraints ask has been asked. That
@@ -246,7 +234,7 @@ Table: Outcome funnel, confirmatory study (seeds 71001 to 71100, six scenario fa
 
 Table: Service and cost per episode. Unserved: arrived members never introduced. Wait: median / 90th percentile days from arrival to first introduction among members who were introduced (Section 8 gives the censor-aware version). Missing: responses that never arrived. Seconds: total inference time.
 
-![Paired differences, GraphVOI minus each comparator, over 100 seed clusters.](figures/paired_differences.pdf){width=95%}
+![Paired differences, GraphVOI minus each comparator, over 100 seed clusters.](figures/paired_differences.pdf){width=88%}
 
 **H1 is not supported.** Against uncertainty-first, GraphVOI's MSMI difference is
 +0.008 per 100 arrived members (Bonferroni 97.5% interval −0.039 to +0.061).
@@ -268,9 +256,9 @@ budget fill from Section 3 adds 1.27 completed dates (0.89 to 1.66), 1.77 mutual
 acceptances (1.36 to 2.17) and 4.5 coverage points per episode to GraphVOI. Its
 MSMI gain (+0.035) is in the same direction but too rare to resolve.
 
-Official random scores as well as anything here (0.384). That is not a quirk of
-our method: when edge weights carry almost no information, which pairs are
-chosen matters much less than how many feasible pairs exist.
+Official random scores as well as anything (0.384): when edge weights carry
+almost no information, how many feasible pairs exist matters far more than which
+ones are chosen.
 
 **By scenario** (MSMI per 100):
 
@@ -373,7 +361,7 @@ not help. In the refusal world, matched beliefs gave 0.85 fewer mutual
 acceptances (−1.75 to −0.03) and no measurable change in MSMI; in the drift world, MSMI fell by
 0.15 (−0.28 to −0.04). A model that expects refusals values each ask less, so the
 ranked part of the day asks differently, while every answered constraint is still
-worth having. In this setting the robust choice is to keep asking the useful hard
+worth having. In this setting the safer choice is to keep asking the useful hard
 questions rather than tune beliefs to the refusal rate.
 
 These robustness runs use ten seeds per cell, so we treat them as descriptive.
@@ -393,8 +381,6 @@ are 0.230 (women), 0.228 (men) and 0.233 (non-binary members). A larger gap for
 non-binary members in our ten-seed development check (0.244) shrank to this
 size with 100 seeds, so we do not read much into it.
 
-![Directional reliability for GraphVOI episodes. Bins with fewer than 30 labels are not shown.](figures/calibration.pdf){width=55%}
-
 **Who waits.** About 35% of members declined at least one hard field when they
 joined and can never be introduced under any policy. We report waiting for the
 rest, and count members who were never introduced as still waiting at day 59
@@ -408,7 +394,7 @@ rest, and count members who were never introduced as still waiting at day 59
 | GraphVOI, no fill | 44.6% | 32.9% | not reached | 0.657 |
 | Official greedy | 51.4% | 43.7% | 29 | 0.754 |
 
-![Share of servable members introduced within 14 days, by gender and age band.](figures/waiting_by_group.pdf){width=95%}
+![Left: directional reliability in GraphVOI episodes (bins with at least 30 labels). Right: share of servable members first introduced within 14 days of arrival, by gender and age band.](figures/calibration_waiting.pdf){width=100%}
 
 The three selectors are indistinguishable, and so are the groups they leave
 waiting. Two gaps appear under every policy, so they come from the population and
@@ -440,13 +426,10 @@ So the matching-aware part of our idea did not help here, and Round 1 committed
 us to saying so: "If GraphVOI beats uncertainty-first but not degree-first, then
 the matching part of the idea is not what helps." It beat neither.
 
-What did help came from looking closely at the pilot rather than from the
-headline method: spending the whole budget early on hard constraints. That
-change made more difference to completed meetings, coverage and waiting than
-the choice between any of the three ranking rules.
-
-If we were deploying this, we would run degree-first plus the budget fill, and
-keep GraphVOI for settings where pair quality is genuinely predictable. Our
+What did help came from looking closely at the pilot, not from the headline
+method: spending the whole budget early. If we were deploying this, we would run
+degree-first plus the budget fill, and keep GraphVOI for settings where pair
+quality is genuinely predictable. Our
 expectation, which we have not tested, is that GraphVOI's advantage should grow
 with how much the edge values differ, because only then can one answer change
 which pairs are best rather than just how many exist.
@@ -478,33 +461,28 @@ delayed feedback and competition for the same candidate.
   policy: those aged 40 and over get about 17% fewer introductions than those
   aged 30 to 39, which we attribute to narrower mutual age windows rather than to
   any question rule.
-- **Short-sighted value.** One-day VOI ignores the later value of a hard answer.
-  This is the failure we found in the pilot; the fill is a simple patch, not a
-  model of future value.
-- **Approximate batch value.** Compressing large joint answer distributions to
-  eight worlds can overstate value; on a constructed example it gives 17.5
-  where the exact answer is 15.
+- **Approximations of our own.** One-day VOI ignores the later value of a hard
+  answer, and the fill is a patch, not a model of future value (Section 3).
+  Compressing large joint answer distributions to eight worlds can overstate
+  value: 17.5 instead of the exact 15 on a constructed example.
 
 # 11 Validity, runtime and limits
 
 | Check | Result |
-|---|---|
-| Invalid episodes | 0 of 4,200 confirmatory, 2,400 ablation, 720 robustness and 300 development episodes |
-| Stated preferences | Every introduction re-checked against members' true hard preferences, read from regenerated worlds on the evaluation side only: 0 violations in 279,261 introductions across all methods, and no member who declined a hard field was ever introduced |
-| Official container mode (`--network=none --cpus=2 --memory=1g --read-only`) | All six families valid on ARM (Apple M-series) and on x86 Linux (GCP), seed 101 |
-| Determinism | Identical action hashes for the same episode on both machines: 6 of 6 container episodes, 22 of 22 overlapping confirmatory episodes and 320 of 320 overlapping robustness episodes (Python 3.13 on ARM, 3.12 on x86) |
+|--------------|------------------------------------------------------|
+| Invalid episodes | 0 of 7,620 (confirmatory, ablation, robustness, development) |
+| Stated preferences | Every introduction re-checked against members' true preferences (evaluation side only): 0 violations in 279,261, and no member who declined a hard field was introduced |
+| Official container mode | All six families valid on ARM (Apple M-series) and on x86 Linux (GCP), seed 101, with the official flags (no network, 2 CPUs, 1 GiB, read-only) |
+| Determinism | Same episode, same actions on ARM (Python 3.13) and x86 (Python 3.12): 6/6 container, 22/22 confirmatory, 320/320 robustness |
 | Time per call, including container start | Ask: median 1.8 s, max 2.5 s on ARM; median 3.6 s, max 4.6 s on a heavily loaded x86 host. Match: max 1.3 s. Limit 10 s |
-| Ask-phase guard | At 6 s it never fired for GraphVOI or the comparators in 4,200 episodes; it fired only in the waiting-threshold ablation (196 of 600 episodes), whose slowest ask then reached 7.1 s. We lowered it to 4.5 s for the submission; re-running 24 confirmatory episodes gives identical action hashes and no guard hits |
+| Ask-phase guard | At 6 s it never fired for the three selectors; it fired in 196 of 600 waiting-ablation episodes, whose slowest ask reached 7.1 s. Lowered to 4.5 s for submission; 24 re-run confirmatory episodes keep identical actions |
 | Peak memory | 61 MiB of 1 GiB |
 | Model assets | Rebuilt byte for byte from seeds 31001 to 31008 |
 | Tests | 93 passing, including exact small-graph references and brute-force matching |
 
-The x86 timings were taken while 28 study workers shared the same machine, so they
-are pessimistic, but they halve the margin we measured on the Mac. The ablation
-also showed the guard can overshoot by about a second. That is why the submitted
-build stops evaluating new questions after 4.5 s and still returns a legal, full
-ask set; the default policy's slowest ask in the whole study was 3.1 s, so this
-changes no decision we evaluated.
+The x86 timings were taken with 28 study workers sharing the machine, so they are
+pessimistic, but they halve the margin we saw on the Mac. Together with the
+guard's one-second overshoot, that is why the submitted build uses 4.5 s.
 
 **Limits.** All results are from the organisers' synthetic simulator, and MSMI is
 rare enough that differences under about 0.04 per 100 arrivals are not resolvable
@@ -517,27 +495,16 @@ official scenario.
 
 # 12 Reproducing this report
 
-Everything in this report comes from files in the repository:
-`results/<study>/episodes.csv` and `summary.json` for every study, and
-`results/validation/` for the container runs. Raw outputs and per-episode
-traces are attached to the GitHub release; each summary records the SHA-256 of
-its raw file. The README lists every command. In short:
-
-```bash
-python3 -m unittest discover -v && python3 verify_data.py
-docker build -t graphvoi-orbit:round2 .
-python3 evaluate.py --image graphvoi-orbit:round2 --seeds 101 --variants all --output out.json
-python3 scripts/run_study.py --purpose confirmatory --seeds 71001-71100 \
-  --methods graphvoi,degree_first,uncertainty_first,graphvoi_nofill,greedy,no_asks,random \
-  --workers 8 --output results/v3_confirmatory.json
-```
-
-The confirmatory study ran on two machines with identical code and model hashes:
-1,428 episodes on a Mac (Python 3.13.7, 6 workers) and 2,772 on an 80-vCPU x86
-Linux machine (Python 3.12.7). `scripts/merge_studies.py` refuses to combine parts
-whose code or assets differ, requires the full design and checks that overlapping
-episodes have identical actions. The full study takes about 65 CPU-hours on Apple M-series cores. Inference
-uses no random seed; training seeds are 31001 to 31008.
+Every number here comes from `results/<study>/episodes.csv` and `summary.json`,
+and the container runs from `results/validation/`. The README gives the exact
+command for each study, figure and this PDF. Raw outputs and per-episode traces
+are attached to the GitHub release, and each summary records the SHA-256 of the
+raw file it came from. The confirmatory study ran on two machines with identical
+code and model hashes (1,428 episodes on a Mac with Python 3.13, 2,772 on an x86
+Linux machine with Python 3.12); `scripts/merge_studies.py` refuses to combine
+parts whose code or assets differ and checks that overlapping episodes made
+identical decisions. The whole study takes about 65 CPU-hours. Inference uses no
+random seed; training seeds are 31001 to 31008.
 
 # 13 What we claim, stated narrowly
 
@@ -559,6 +526,8 @@ relationship outcomes. That our answer model's probabilities are accurate for
 real people or rare subgroups.
 
 # References
+
+\small
 
 [1] Romeo & Juliet / Vouchsafe. *The One Introduction Problem: Sequential reciprocal matching under uncertainty.* Final participant specification 1.0.0, 2026.
 

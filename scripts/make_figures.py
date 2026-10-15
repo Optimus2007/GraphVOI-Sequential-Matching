@@ -52,7 +52,7 @@ def spend(pilot, confirm):
               if s and s.get('daily_ask_units')]
     if not panels:
         return
-    fig, axes = plt.subplots(1, len(panels), figsize=(3.4 * len(panels), 2.5), sharey=True, squeeze=False)
+    fig, axes = plt.subplots(1, len(panels), figsize=(3.4 * len(panels), 2.2), sharey=True, squeeze=False)
     for ax, (s, title, methods) in zip(axes[0], panels):
         for m in methods:
             y = s['daily_ask_units'].get(m)
@@ -78,7 +78,7 @@ def forest(confirm):
             rows.append((ref, r['msmi_per_100_arrived_members'], r['mutual_acceptances']))
     if not rows:
         return
-    fig, axes = plt.subplots(1, 2, figsize=(7, .45 * len(rows) + 1), sharey=True)
+    fig, axes = plt.subplots(1, 2, figsize=(7, .32 * len(rows) + .9), sharey=True)
     for ax, k, title in ((axes[0], 1, 'MSMI per 100 arrived (primary)'),
                          (axes[1], 2, 'Mutual acceptances per episode (H1b)')):
         for i, row in enumerate(rows):
@@ -126,7 +126,7 @@ def waiting(confirm):
                if m in confirm['opportunity']]
     groups = [('gender', g) for g in ('woman', 'man', 'non_binary')] + \
              [('age_band', a) for a in ('21-29', '30-39', '40+')]
-    fig, ax = plt.subplots(figsize=(7, 2.6))
+    fig, ax = plt.subplots(figsize=(7, 2.2))
     width = .8 / len(methods)
     for j, m in enumerate(methods):
         ys = [confirm['opportunity'][m][d][g]['servable_km_served_within_14_days'] for d, g in groups]
@@ -140,12 +140,51 @@ def waiting(confirm):
     save(fig, 'waiting_by_group')
 
 
+def calibration_waiting(confirm):
+    """Organisers' third question in one figure: calibration (left), waiting (right)."""
+    if not confirm or not confirm.get('calibration') or not confirm.get('opportunity'):
+        return
+    fig, (ax, bx) = plt.subplots(1, 2, figsize=(7.2, 2.5), gridspec_kw={'width_ratios': [1, 2.3]})
+    c = confirm['calibration']['graphvoi']
+    ax.plot([0, 1], [0, 1], color=MUTED, lw=.8, ls=':')
+    for key, label, color, marker in (('a_accepts_b', 'A accepts B', COLOR['graphvoi'], 'o'),
+                                      ('b_accepts_a', 'B accepts A', COLOR['degree_first'], 's')):
+        # Bins with fewer than 30 labels are too noisy to plot.
+        bins = [b for b in c[key]['reliability'] if b['count'] >= 30]
+        ax.plot([b['predicted'] for b in bins], [b['observed'] for b in bins], marker=marker, ms=5,
+                color=color, lw=2, mec='white', mew=1, label=label)
+    ax.set_xlim(.25, .55)
+    ax.set_ylim(.25, .55)
+    ax.set_xlabel('predicted')
+    ax.set_ylabel('observed Yes rate')
+    ax.set_title('Directional calibration', fontsize=9)
+    ax.legend(fontsize=7, loc='upper left')
+    methods = [m for m in ('greedy', 'graphvoi_nofill', 'degree_first', 'uncertainty_first', 'graphvoi')
+               if m in confirm['opportunity']]
+    groups = [('gender', g) for g in ('woman', 'man', 'non_binary')] + \
+             [('age_band', a) for a in ('21-29', '30-39', '40+')]
+    width = .8 / len(methods)
+    for j, m in enumerate(methods):
+        ys = [confirm['opportunity'][m][d][g]['servable_km_served_within_14_days'] for d, g in groups]
+        bx.bar([i + (j - (len(methods) - 1) / 2) * width for i in range(len(groups))], ys,
+               width=width - .02, color=COLOR[m], label=LABEL[m], edgecolor='white', linewidth=1)
+    bx.set_xticks(range(len(groups)), [g.replace('_', '-') for _, g in groups])
+    bx.set_ylabel('introduced within 14 days')
+    bx.set_title('Who waits: servable members, Kaplan-Meier', fontsize=9)
+    bx.set_ylim(0, .68)
+    bx.legend(fontsize=6.5, ncol=3, loc='upper center', frameon=False)
+    bx.grid(axis='x', visible=False)
+    fig.tight_layout()
+    save(fig, 'calibration_waiting')
+
+
 def main():
     pilot, confirm = load('pilot_v2'), load('confirmatory')
     spend(pilot, confirm)
     forest(confirm)
     calibration(confirm)
     waiting(confirm)
+    calibration_waiting(confirm)
 
 
 if __name__ == '__main__':
