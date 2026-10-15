@@ -1,181 +1,202 @@
-# GraphVOI: corrected allocation-aware clarification
+---
+title: "GraphVOI: allocation-aware clarification for sequential reciprocal matching"
+subtitle: "Round 2 technical report, The Sequential Matching Problem (Romeo & Juliet / Vouchsafe)"
+author: "Team Orbit (Aditya Raj)"
+date: "October 2026"
+---
 
-Team Orbit, The Sequential Matching Problem, Round2. This report concerns the
-frozen conditional-acquisition v2 implementation and a prespecified10-seed pilot.
-The original smoke report is preserved in `audit_history/REPORT_smoke_original.md`;
-its results concern superseded cache/batch/statistics code, not this corrected build.
-No full100-seed study has run. This is not certified submission-ready: Docker and
-an immutable public release remain unverified.
+**Research question.** When clarification has a cost, should we ask the most
+uncertain question, or the question whose answer is most likely to improve the
+best feasible allocation?
 
-## Method and correctness
+# 1 Summary
 
-Research question: does allocation-aware asking improve official MSMI/100 relative
-to degree-first and uncertainty-first? For action q, GraphVOI evaluates
-E[V(G after q)]−V(G)−lambda cost(q), where V is exact maximum-weight general-graph
-matching on observable, reciprocally eligible pairs. Lambda0 in the frozen pilot.
-Joint constraint bundles cost3/member, soft asks1; daily cap12.
+In Round 1 we proposed GraphVOI: score a clarification by imagining its possible
+answers, re-solving the pool's maximum-weight matching for each one, and asking
+the question whose answers improve that matching the most. We promised to test it
+against uncertainty-first and degree-first clarification with the same model,
+matcher, budget and seeds, and to report the result even if it went against us.
 
-After selecting asks, remaining candidates are evaluated against their joint
-counterfactual world distribution, with allocation recomputed under each updated
-state. Duplicate asks are removed from residual actions and charged once. Paired
-questions capture zero-singleton-gain complements, including soft/nonpartner
-questions that change an alternating allocation. No additive independent-VOI
-subtraction is used. Actual match responses always use refreshed observed answers,
-never hypothetical values.
+This report does that. [[SUMMARY_RESULT]]
 
-Approximations: myopic pool value, nearest-four donor support,16-single/8-pair
-restricted frontier (up to4 reserved hard pairs), greedy conditional acquisition,
-8-world deterministic probability quadrature,256 coalesced candidate-outcome
-work cap. Larger joint distributions can have biased compressed expectations;
-this is not global optimal batch VOI. Common >600-edge fallback remains. Tests
-compare exact uncapped small supports and brute-force matching, not merely renamed
-heuristics. The three selectors share pair model/assets/solver/waiting/candidates,
-budget and world seeds; only entropy/degree/allocation selection criteria differ.
+Three things we learned along the way matter as much as the headline number.
 
-Answer-cache identity now includes all current calculation dependencies. An
-uncached reference,400 randomized exact comparisons, mutation isolation and
-per-invocation clearing establish cached calculation equivalence. They do not
-prove answer-model fidelity. Refused hard fields remain unavailable, known hard
-violations dominate missingness, explicit preferences are never overridden.
-Policy inference has no generator, simulator, seed or privileged-state access.
-Official eligibility/evaluator/simulator/baselines and model weights are unchanged.
+- **Our first build lost to the official greedy baseline, and the reason was
+  mundane.** GraphVOI only spent about half its daily budget, because a work cap
+  ran out and because one-day VOI gives no credit to a hard answer that only pays
+  off on later days. Round 1 listed exactly this as a likely failure ("GraphVOI may
+  be too short-sighted"). Fixing it closed the gap on coverage and volume.
+- **In this simulator, the pair model has almost no signal.** On held-out seeds
+  its acceptance predictions are no better than a constant. So the value of a
+  question comes almost entirely from whether it makes a pair *feasible*, not from
+  how good that pair would be. That limits how far any clarification rule can pull
+  ahead of a simpler one.
+- **Waiting depends on asking.** Leaving budget unspent cost real people time:
+  among members who could be served, the share introduced within 14 days of arrival
+  dropped from about 45% to 33% when we turned the budget fill off.
 
-## Training and model limitations
+Everything here can be rerun from the repository. The code, Dockerfile, model
+assets, raw results and the protocol we wrote before each study are all public.
 
-Fixed assets use48 lawful observed training rollouts: seeds31001..31008 across
-six public variants,60 decision plus40 follow-up days. Pre-introduction public
-features and matured recorded events only; evaluation/pilot seeds are disjoint.
-Static public train/validation/development-test pools remain separate.
-Regularized logistic models estimate directional recorded Yes with reversed
-features, joint mutual acceptance directly, timely completed date conditional on
-mutual acceptance, then timely mutual second intention conditional on a date.
-7392 directed labels,382 completed-date examples,33 positive timely-second
-outcomes. Answer support uses6285 disclosed donors and soft frequencies.
+# 2 What we built
 
-Pending events are censored; absence of recorded Yes is not a dislike label.
-Undated pairs have no invented second-meeting label. Greedy-logged selective
-training and reused scenario populations limit interpretation. Prior one-seed
-Brier/log-loss/reliability records remain historical; no new fitted calibration or
-held-out answer-model validation is claimed. H5 remains UNVERIFIED. A larger
-held-out disclosure/support/refusal study remains necessary before asserting that
-beliefs are accurate or robust to actual disclosure changes.
+One decision day has two calls, and the policy is a plain pipeline around one
+research component.
 
-## Frozen pilot design and inference
+| Step | What happens |
+|---|---|
+| Feasibility | The official reciprocal eligibility rules decide which pairs are valid, unresolved or blocked. A learned score never overrides a hard failure, and a missing or declined hard field blocks the pair. A declined field is never filled in. |
+| Edge utility | Three small logistic models (both accept, date happens, both give a timely Yes) trained offline on public rollouts, seeds 31001 to 31008. Their product is the edge weight. |
+| Clarification | GraphVOI ranks legal asks, then any units left buy hard-constraint asks (Section 3). |
+| Allocation | Exact maximum-weight general-graph matching (NetworkX blossom) over feasible pairs, then every pair is checked again before it is returned. |
+| Waiting | None in the main build. A fixed day-dependent threshold is tested as an ablation. |
 
-`CORRECTED_PILOT_PROTOCOL.md` was declared before execution. Seeds62001..62010,
-six official families, six methods,360 expected complete200-member episodes,
-60/method. Three independent host workers; inference receives ordinary JSON.
-All rows/validity flags and120 daily action records per valid episode are saved.
-No fitting, frontier tuning or threshold tuning uses pilot outcomes.
+For a possible question $q$ with answer $y$,
 
-Official scoring: any invalid episode makes a method ineligible. Missing/duplicate
-expected scenario/seed/method records also suppress scores and paired inference.
-Zero outcomes are retained. Each family mean has equal weight in the aggregate.
-Paired bootstrap resamples whole world-seed clusters across families,2,000 draws,
-seed771; scenario-membership strata preserve denominators if seed lists differ.
-The balanced pilot has10 clusters, not60 independent worlds. Its intervals are
-explicitly flagged as limited support. An implemented runner is not completed
-experimental evidence; the measured complete result matrix is authoritative.
+$$\mathrm{GraphVOI}(q) = \mathbb{E}_y\left[V(G_t \mid q = y)\right] - V(G_t) - \lambda\, c(q),$$
 
-## Completed corrected pilot results
+where $V(G)$ is the value of the best matching under the edge weights. We use
+$\lambda = 0$, because unused budget is lost at the end of the day and ask cost is
+only the third tie-breaker in the official ranking.
 
-`results/corrected_pilot.json`:360 completed valid episodes,60 per method,10 paired seeds per family. Invalid episodes:0. Independent aggregate/trace/bootstrap/source checks passed in `results/corrected_pilot_verification.json`. No full100-seed study was run.
+**Answers.** For a constraints bundle, possible answers come from the four most
+similar fully disclosed members in the training pools (by age, gender and zone,
+the fields that are always visible), with the member's own known fields kept
+fixed. For a soft field we use the training frequencies. Nothing hidden in the
+simulator is read at inference.
 
-Counts are recorded events across60 simulated episodes per method; families share seed populations. Cost and unserved are episode means. Waiting quantiles pool served members only.
+**Asking several questions at once.** Round 1 already noted that two blocked
+members who are each other's only option need to be asked together. We score
+such pairs as one 6-unit action, and more generally we try two-question
+combinations from the candidate frontier. After each pick we re-score every
+remaining question against the joint answer worlds of the questions already
+chosen, so two questions that unlock the same pair are not both credited with it.
+Shared questions are charged once. When the joint answer distribution has more
+than eight worlds we compress it to eight; this is an approximation and we know of
+a constructed case where it overstates value (Section 10).
 
-| Method | MSMI/100 | Mutual accepts (total) | Dates (total) | Coverage | Cost/episode | Unserved/episode | Served median/p90 days | Invalid |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| graphvoi | 0.308 | 530 | 421 | 28.0% | 136.4 | 144.0 | 3.5/24.0 | 0 |
-| degree_first | 0.317 | 576 | 444 | 28.4% | 135.5 | 143.2 | 4.0/24.0 | 0 |
-| uncertainty_first | 0.333 | 630 | 470 | 30.5% | 245.6 | 139.0 | 5.0/25.0 | 0 |
-| greedy | 0.350 | 670 | 500 | 33.0% | 197.6 | 134.0 | 4.0/16.0 | 0 |
-| no_asks | 0.117 | 148 | 127 | 12.8% | 0.0 | 174.5 | 0.0/14.9 | 0 |
-| random | 0.233 | 674 | 515 | 32.9% | 197.6 | 134.2 | 4.0/16.0 | 0 |
+**Staying inside the rules.** One invalid episode makes a submission ineligible,
+so the match output is re-validated, and the ask phase stops evaluating new
+candidates six seconds into a call and still returns a legal, full ask set. That
+guard never fired in any run reported here.
 
-Equal-family MSMI/100 means:
+**Comparators.** Uncertainty-first ranks questions by the entropy of their
+answers. Degree-first ranks them by how many feasible edges they are expected to
+add. Both use exactly the same pair model, answer model, frontier, budget, budget
+fill, matcher and seeds as GraphVOI. Only the ranking criterion differs.
 
-| Scenario | GraphVOI | Degree | Uncertainty | Greedy | No asks | Random |
-|---|---:|---:|---:|---:|---:|---:|
-| development | 0.400 | 0.450 | 0.500 | 0.500 | 0.150 | 0.350 |
-| sparse | 0.050 | 0.050 | 0.100 | 0.050 | 0.050 | 0.050 |
-| cold_start | 0.200 | 0.200 | 0.250 | 0.400 | 0.150 | 0.250 |
-| delayed | 0.400 | 0.500 | 0.500 | 0.500 | 0.100 | 0.450 |
-| shift | 0.400 | 0.200 | 0.200 | 0.200 | 0.100 | 0.050 |
-| drift | 0.400 | 0.500 | 0.450 | 0.450 | 0.150 | 0.250 |
+# 3 What the first build taught us
 
-Paired differences are GraphVOI minus comparator, official MSMI/100. Bootstrap2,000 whole-seed draws; each draw retains all six scenarios with equal family weights. All comparisons have10 pairs/family and10 independent seed clusters; all intervals are flagged limited support.
+We ran a ten-seed pilot of the first complete build (v2) before any larger study,
+with its design written down first. GraphVOI scored 0.308 MSMI per 100 arrived
+members against 0.350 for the official greedy baseline. MSMI is too rare for ten
+seeds to separate those numbers, but the secondary metrics could: GraphVOI had
+2.3 fewer mutual acceptances per episode than greedy (95% interval −3.2 to −1.5)
+and five points less coverage.
 
-| Comparator | Difference | Paired95% interval |
-|---|---:|---:|
-| degree_first | -0.008 | [-0.108, +0.092] |
-| uncertainty_first | -0.025 | [-0.142, +0.117] |
-| greedy | -0.042 | [-0.200, +0.100] |
-| no_asks | +0.192 | [+0.042, +0.342] |
-| random | +0.075 | [-0.092, +0.233] |
+![Mean ask units spent per decision day. Left: the v2 pilot. Right: the v3 build, with the budget fill turned off and on.](figures/daily_ask_spend.pdf)
 
-These are pilot estimates, not proof of superiority. No parameters were tuned from this run. CIs for acceptance, dates, coverage, cost, unserved counts and inference time are also retained in the JSON. Waiting quantiles remain descriptive and conditional, not population censor-aware estimates.
+Figure 1 shows why. Greedy spends its full 12 units every day until about day
+17, by which time every member worth a constraints ask has been asked. That
+matches what we saw in Round 1: the constraint budget is only tight at the start.
+GraphVOI spent about 5 units a day over the same period. Members it did not ask
+stayed infeasible for longer.
 
-Runtime under three parallel host workers (in-process; excludes startup):
+We traced two causes. First, a cap of 256 answer-world evaluations per call ran
+out during the second and third picks, and candidates were evaluated in member-ID
+order, so the cap cut an arbitrary subset rather than the least promising one. On
+real states from the first four days, raising the cap to 1024 made GraphVOI spend
+11 to 12 units instead of 9.
+Second, one-day VOI only counts today's matching. A hard answer stays known for
+every later day, so a question with no value today can still be worth asking.
 
-| Method | Mean inference seconds/episode | Max ask seconds | Max match seconds |
-|---|---:|---:|---:|
-| graphvoi | 43.01 | 1.289 | 0.199 |
-| degree_first | 41.97 | 1.305 | 0.123 |
-| uncertainty_first | 31.50 | 1.012 | 0.116 |
-| greedy | 2.98 | 0.019 | 0.124 |
-| no_asks | 3.79 | 0.000 | 0.133 |
-| random | 2.84 | 0.001 | 0.087 |
+Rather than raise the cap and spend our runtime margin, we made two changes for
+the v3 build: candidates are evaluated in priority order, and after the ranked
+questions, any units left buy legal constraints asks, ordered by how much matching
+value each member touches. The fill is shared by all three selectors, so the
+comparison still isolates the ranking criterion. We kept the old behaviour as the
+`graphvoi_nofill` ablation. A ten-seed development check on unused seeds
+confirmed that coverage recovered to greedy's level (32.7% against 32.8%) and that
+nothing became invalid or slow. We did not try other variants.
 
-Pilot wall time: 58.0 minutes. Measured worker peakRSS: 75.0MiB (cumulative trusted-process high-water mark, including simulator/traces). Isolated policy fresh-process profile:61.14MiB; maxask1.4344s/maxmatch0.7580s. Neither measurement certifies Docker's enforced resources.
+We also checked whether a better pair model was available before the main study.
+Refitting on seeds 31001 to 31006 and scoring on 31007 and 31008, the directional
+acceptance model reached a log loss of 0.6501 against 0.6496 for predicting the
+base rate. Weaker regularization made it worse. Adding each member's own past
+responses (0.6487) and training on rollouts that also asked soft fields (0.6502)
+did not help either. In this simulator acceptance is driven mostly by a hidden
+per-member tendency and per-pair noise, and members get too few introductions for
+their history to reveal it. We kept the shipped model.
 
-All360 metric rows and43,200 phase actions were checked against trace digests, per-member waiting/coverage records, equal-family summaries, frozen source/assets and an independently recomputed paired MSMI bootstrap. Six fresh official subprocess families plus a complete repeated episode provide7 separate validity episodes; the balanced pilot count excludes those and intermediate repair-build runs.
+# 4 Experimental setup
 
-## Waiting, opportunities and disclosure scope
+All studies were written into `docs/CONFIRMATORY_PROTOCOL.md` and committed
+before they ran (commit `db79b4a` and later).
 
-First-introduction median/p90 condition on served members. Unserved counts and
-coverage retain all arrivals; never impute unserved waits as0. Traces distinguish
-feasible-but-unserved, hard-refusal blocked, unresolved constraints and no observed
-opportunity; the latter is not proof of true hidden ineligibility. Population
-censor-aware waiting and independently supported subgroup differences remain unrun.
-No preference relaxation or fairness claim is made.
+- **Worlds.** Seeds 71001 to 71100, never used before, in all six official
+  scenario families: 600 worlds of 200 members, 60 decision days and 40 follow-up
+  days. Every method sees the same worlds, and the simulator draws the outcome of
+  a given pair on a given day from the same random stream for every method, so
+  differences come from decisions.
+- **Methods.** GraphVOI, degree-first, uncertainty-first, GraphVOI without the
+  fill, the three official baselines, and the remaining Round 1 rows: learned
+  edge model with greedy allocation, learned model with max-weight allocation,
+  GraphVOI with a waiting threshold, and GraphVOI without paired questions.
+- **Code.** Commit `335b0af` for every episode. Results store hashes of every
+  policy and runner file and both model assets.
+- **Primary analysis.** Official MSMI per 100 arrived members, averaged within
+  and then across scenario families. Two primary comparisons: GraphVOI against
+  degree-first and against uncertainty-first. Paired bootstrap over whole seeds
+  (100 clusters, 2,000 draws), because one seed produces the same population in
+  most families. We call a difference real only if its Bonferroni-adjusted 97.5%
+  interval excludes zero.
+- **Secondary (H1b, fixed in Round 1).** Mutual acceptances, which have about ten
+  times more events. Then dates, coverage, waiting, ask cost, missing feedback and
+  runtime.
+- **Failures.** Any invalid, missing or duplicated episode blocks the score and
+  intervals for that method, as in the official scorer. Nothing is dropped.
 
-Historical10-episode single-seed disclosure smoke and126 snapshot comparisons
-were not rerun in this pilot. Belief perturbations and independent actual-disclosure
-wrapper remain separate mechanisms; neither exposes disclosure parameters to the
-policy. The corrected pilot is official-environment validity/comparison evidence,
-not a new disclosure degradation or robustness experiment.
+Before running, we expected the 95% half-width for MSMI to be about 0.03 to 0.04.
+Differences smaller than that were not going to be resolvable.
 
-## Verification, runtime and release limitations
+# 5 Main result
 
-85 unit/integration tests actually executed/pass,71 checksums verified. Six
-fresh official subprocess scenarios at seed63004 are valid, and a second full
-development episode has identical action hash. Manual A–F,30 random small graphs,
-probabilistic redundancy, paired hard/soft complements and failure-aware
-statistics tests pass. Profiles:20 fresh-process calls with two hash seeds,
-maxask1.4344s/maxmatch0.7580s, peakRSS61.14MiB.750,000-byte memory roundtrip
-succeeds; unsupported schema rejects without stdout JSON. Model assets load.
-These are measured local cases, not worst-case guarantees or Docker certification.
-Pilot phase timing excludes startup and includes parallel host scheduling.
+[[MAIN_RESULTS]]
 
-NetworkX3.5 is vendored/pinned, offline inference assets included, starter/data/
-dependency notices retained. Source/script/asset/test hashes are frozen in
-`CORRECTED_BUILD_MANIFEST.json`; results carry runner and model hashes. Docker
-resource compliance, public immutable release/pin, owner-selected contribution
-licence, fresh corrected archive and some packaging hygiene remain outstanding.
-The existing candidate archive contains superseded code and must not be submitted.
-No implementation of new architectures or full100-seed study was performed.
+# 6 Ablations
 
-Research limitations remain rare outcomes, answer-model bias, restricted
-acquisition/support/quadrature, selective labels, missing population waiting
-analysis, insufficient subgroup/disclosure evidence, and synthetic-only outcomes.
-No GraphVOI superiority or real-product effectiveness is claimed from smoke or
-pilot alone. See the audit follow-up and release checklist for unresolved gates.
+[[ABLATIONS]]
 
-Explicit quadrature counterexample: two independent four-outcome hard questions
-produce16 worlds; each unlocks a disjoint weight10 pair with probability.75, so
-exact expectation15. Eight systematic midpoint worlds miss every second-member
-failure, yielding17.5. Regression asserts both results and measured bias2.5.
-This is a runtime-bounded approximation, with no small universal error bound or
-global-batch exactness guarantee. Cap sensitivity remains a research limitation.
-The static additive-credit bug is fixed; arbitrary joint expectation is not exact
-after compression. No policy change was made after the pilot freeze.
+# 7 Answer-model errors and changing disclosure
+
+[[DISCLOSURE]]
+
+# 8 Calibration, waiting and who gets opportunities
+
+[[CALIBRATION_WAITING]]
+
+# 9 Where it fails
+
+[[FAILURES]]
+
+# 10 Validity, runtime and limits
+
+[[VALIDITY]]
+
+# 11 Reproducing this report
+
+[[REPRODUCE]]
+
+# References
+
+[1] Romeo & Juliet / Vouchsafe. *The One Introduction Problem: Sequential reciprocal matching under uncertainty.* Final participant specification 1.0.0, 2026.
+
+[2] A. Blum, J. P. Dickerson, N. Haghtalab, A. D. Procaccia, T. Sandholm, A. Sharma. Ignorance is almost bliss: near-optimal stochastic matching with few queries. *Operations Research*, 2020.
+
+[3] S. Singla. The price of information in combinatorial optimization. *SODA*, 2018.
+
+[4] J. Drummond, C. Boutilier. Elicitation and approximately stable matching with partial preferences. *IJCAI*, 2013.
+
+[5] Y. Shi, C. Wang, H. Wang, X. Xiao. NBQ: Next-best-question for dynamic profiling. *KDD*, 2026.
+
+[6] C. Vernade et al. Linear bandits with stochastic delayed feedback. *ICML*, 2020.

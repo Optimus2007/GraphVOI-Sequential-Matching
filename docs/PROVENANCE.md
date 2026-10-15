@@ -1,40 +1,47 @@
-# Provenance and permissions
+# Provenance, licences and tools
 
-Official source: RomeoJulietLove/The-Sequential-Matching-Problem, commit
-`a8e26b35118cfa8e886a02f93984923e43ab64f6`, retrieved through the connected
-GitHub API. Original source contents were Git-blob SHA-1 verified. The original
-baseline adapter is preserved as `official_policy.py`; the original Dockerfile
-and dependency file are preserved with `.starter` naming. Simulator, evaluator,
-verification code, public data and original tests are unmodified.
-The original CI workflow is retained as verify.yml.starter; Orbit's workflow tests
-Python 3.11 and 3.12 because NetworkX 3.5 requires Python 3.11 or later.
+## Starter kit and data
 
-Public static data was regenerated outside the project with the official builder,
-then copied only after all 71 supplied SHA-256 checksums matched. All records are
-synthetic. See retained LICENSE and DATA_LICENSE.md for starter permissions.
-No private organizer worlds, production records or external personal data used.
-Local research-context Markdown/PDF/feedback files are ignored, preserved on disk,
-and excluded from Docker. The official problem PDF was not needed for semantics:
-the complete Markdown specification was read instead.
+Built on the official starter, RomeoJulietLove/The-Sequential-Matching-Problem,
+commit `a8e26b35118cfa8e886a02f93984923e43ab64f6`. The simulator (`kit.py`),
+evaluator (`evaluate.py`), data verifier, public data and the starter tests are
+unmodified; `git diff a8e26b3` shows every file we changed. `official_policy.py`
+keeps the original baseline adapter so the greedy, no-clarification and random
+baselines run exactly as supplied. All data is the organisers' synthetic data;
+no private worlds, real records or external personal data were used.
 
-GraphVOI models: pure-Python logistic regression fitted to observed public
-simulator rollouts; assets/training_summary.json declares seeds, counts, settings,
-and asset hashes. No pretrained language models or learned hidden-state oracle.
-The answer asset contains only disclosed constraint donors (no IDs), public age,
-gender and zone, and aggregate observed soft counts. Answer distribution is
-empirical and conditional, not an estimate of a specific unknown consent value.
+## Models
 
-NetworkX 3.5 is vendored from the installed Anaconda distribution, retaining its
-BSD-3-Clause notice at vendor/NETWORKX_LICENSE.txt. Python sources are unchanged;
-tests and bytecode are omitted. vendor/PROVENANCE.json inventories content hashes.
-It supplies exact general-graph maximum-weight blossom matching. Requirements
-pins its version; inference requires no pip install or network.
+Pure-Python regularized logistic regression, trained by `scripts/train_models.py`
+on public simulator rollouts of the official greedy policy, seeds 31001 to 31008
+in all six scenario families, CPU only, a few minutes. Labels are recorded events
+only; responses still inside their window are censored, not counted as No. The
+answer model stores disclosed constraint answers of training members (no IDs)
+with their public age, gender and zone, plus soft-field frequencies.
+`assets/training_summary.json` declares seeds, counts and settings; retraining
+reproduces the assets byte for byte. No pretrained or external models are used.
 
-Coding and documentation assistance: OpenAI Codex. PDF text extraction: Apple's
-PDFKit. Runtime: Python standard library and vendored NetworkX. Training CPU only.
-Python 3.12.7 is the declared Docker base; local interpreter versions are recorded
-with results. Docker execution remains unverified until an actual successful run.
+Evaluation seeds never overlap training seeds: pilot 62001 to 62010, development
+check 64001 to 64010, validation 65001 and 101, confirmatory 71001 to 71100.
 
-Starter permissions do not automatically license Team Orbit's contributions.
-Team Orbit must select a licence for its own code before publication; this task
-does not silently grant a commercial licence to original contributions.
+## Dependencies
+
+| Component | Version | Licence | Use |
+|---|---|---|---|
+| Python | 3.12.7 (Docker), 3.13.7 (local) | PSF | runtime |
+| NetworkX | 3.5, vendored in `vendor/` | BSD-3-Clause (`vendor/NETWORKX_LICENSE.txt`) | exact max-weight matching |
+| matplotlib | 3.10.7, analysis only (`requirements-analysis.txt`) | PSF-based | report figures |
+
+Inference needs no installation and no network.
+
+## Tools
+
+Coding, testing and documentation assistance: OpenAI Codex and Anthropic Claude
+Code. The design, hypotheses and the Round 1 research note are the team's own.
+Container runtime for local validation: Colima with the Docker CLI.
+
+## Licence
+
+Team Orbit's contributions are released under the MIT licence in `LICENSE`,
+alongside the starter's own MIT notice. The synthetic data keeps the conditions in
+`DATA_LICENSE.md`.

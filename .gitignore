@@ -1,8 +1,11 @@
 __pycache__/
 *.pyc
 .venv/
-# Summary JSONs are tracked; bulky per-episode traces are archived separately.
+# Raw study outputs and traces are large; they are published as a release asset
+# with SHA-256. Compact per-study exports in results/<study>/ are tracked.
 results/*_traces/
+results/*.json
+.venv-analysis/
 .env
 .env.*
 

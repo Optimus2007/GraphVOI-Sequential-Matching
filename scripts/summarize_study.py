@@ -47,11 +47,11 @@ def main():
                 if not r:
                     continue
                 if r['status'] != 'complete':
-                    out.append(f"| {m} − {ref} | {metric} | {r['status']} | — | — |")
+                    out.append(f"| {m} − {ref} | {metric} | {r['status']} | n/a | n/a |")
                     continue
                 ci, cb = r['ci95'], r.get('ci97_5_bonferroni2')
                 out.append(f"| {m} − {ref} | {metric} | {fmt(r['delta'])} | [{fmt(ci[0])}, {fmt(ci[1])}] | "
-                           + (f"[{fmt(cb[0])}, {fmt(cb[1])}]" if cb else '—') + ' |')
+                           + (f"[{fmt(cb[0])}, {fmt(cb[1])}]" if cb else 'n/a') + ' |')
     rt = {}
     for r in episodes:
         if r.get('valid') and 'phase_runtime' in r:

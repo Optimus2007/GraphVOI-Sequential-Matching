@@ -93,3 +93,19 @@ confirmatory rows for the same seeds, from the same commit.
   own unshifted confirmatory rows.
 - Ten seed clusters only: descriptive, 95% paired seed-cluster intervals, no
   superiority claims. No parameter is changed in response.
+
+## Round 1 ablation rows (declared before running, 15 October 2026)
+
+The Round 1 note (Section 7) promised every row of its experiment table. The
+confirmatory run covers the official baselines and the three selectors; the
+remaining rows run on the same seeds 71001–71100 and the same commit, so every
+row is paired with the confirmatory rows:
+
+- `learned_greedy`: learned edge model, greedy allocation, official-style constraint asks.
+- `learned_maxweight`: learned edge model, max-weight allocation, same asks.
+  Together these separate prediction gains from allocation gains.
+- `graphvoi_wait`: GraphVOI plus the fixed day-dependent waiting threshold (0.025, not tuned).
+- `graphvoi_no_pairs`: GraphVOI without complementary two-member asks.
+
+Reported with 95% paired seed-cluster intervals against `graphvoi` and
+`learned_maxweight`; descriptive, no superiority claim beyond the primary rule.

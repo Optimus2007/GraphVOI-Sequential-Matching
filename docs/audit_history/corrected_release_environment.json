@@ -1,6 +1,0 @@
-{
-  "docker_executable": null,
-  "gh_executable": null,
-  "git_status_exit": 128,
-  "git_status_error": "fatal: not a git repository (or any of the parent directories): .git"
-}

@@ -1,0 +1,5805 @@
+{
+ "complete": true,
+ "expected_design": {
+  "methods": [
+   "graphvoi",
+   "graphvoi_nofill",
+   "degree_first",
+   "uncertainty_first",
+   "greedy"
+  ],
+  "seeds": [
+   64001,
+   64002,
+   64003,
+   64004,
+   64005,
+   64006,
+   64007,
+   64008,
+   64009,
+   64010
+  ],
+  "variants": [
+   "development",
+   "sparse",
+   "cold_start",
+   "delayed",
+   "shift",
+   "drift"
+  ]
+ },
+ "purpose": "development",
+ "summaries": {
+  "graphvoi": {
+   "eligible": true,
+   "primary_score": 0.45,
+   "scenario_means": {
+    "cold_start": {
+     "msmi_per_100_arrived_members": 0.55,
+     "coverage": 0.311,
+     "mutual_acceptances_per_100": 4.75,
+     "ask_cost": 267.7,
+     "inference_seconds": 63.50458330377005
+    },
+    "delayed": {
+     "msmi_per_100_arrived_members": 0.35,
+     "coverage": 0.3715,
+     "mutual_acceptances_per_100": 5.45,
+     "ask_cost": 237.8,
+     "inference_seconds": 57.581093096901895
+    },
+    "development": {
+     "msmi_per_100_arrived_members": 0.55,
+     "coverage": 0.3745,
+     "mutual_acceptances_per_100": 6.0,
+     "ask_cost": 237.4,
+     "inference_seconds": 58.7714226158394
+    },
+    "drift": {
+     "msmi_per_100_arrived_members": 0.55,
+     "coverage": 0.3745,
+     "mutual_acceptances_per_100": 5.75,
+     "ask_cost": 237.9,
+     "inference_seconds": 59.45224666883005
+    },
+    "shift": {
+     "msmi_per_100_arrived_members": 0.5,
+     "coverage": 0.3755,
+     "mutual_acceptances_per_100": 5.4,
+     "ask_cost": 238.5,
+     "inference_seconds": 59.2526620702527
+    },
+    "sparse": {
+     "msmi_per_100_arrived_members": 0.2,
+     "coverage": 0.153,
+     "mutual_acceptances_per_100": 1.55,
+     "ask_cost": 196.6,
+     "inference_seconds": 48.61079743878217
+    }
+   },
+   "overall": {
+    "msmi_per_100_arrived_members": 0.45,
+    "coverage": 0.32666666666666666,
+    "mutual_acceptances_per_100": 4.816666666666666,
+    "ask_cost": 235.98333333333335,
+    "inference_seconds": 57.86213419906271
+   },
+   "ranking_key_descending": [
+    0.45,
+    0.32666666666666666,
+    4.816666666666666,
+    -235.98333333333335,
+    -57.86213419906271
+   ],
+   "invalid_count": 0,
+   "recorded_count": 60
+  },
+  "graphvoi_nofill": {
+   "eligible": true,
+   "primary_score": 0.35833333333333334,
+   "scenario_means": {
+    "cold_start": {
+     "msmi_per_100_arrived_members": 0.3,
+     "coverage": 0.239,
+     "mutual_acceptances_per_100": 4.9,
+     "ask_cost": 147.9,
+     "inference_seconds": 77.15974529110244
+    },
+    "delayed": {
+     "msmi_per_100_arrived_members": 0.45,
+     "coverage": 0.3385,
+     "mutual_acceptances_per_100": 5.5,
+     "ask_cost": 155,
+     "inference_seconds": 72.09408921747236
+    },
+    "development": {
+     "msmi_per_100_arrived_members": 0.45,
+     "coverage": 0.3425,
+     "mutual_acceptances_per_100": 5.4,
+     "ask_cost": 155.7,
+     "inference_seconds": 72.50130138947861
+    },
+    "drift": {
+     "msmi_per_100_arrived_members": 0.4,
+     "coverage": 0.3425,
+     "mutual_acceptances_per_100": 4.9,
+     "ask_cost": 155.7,
+     "inference_seconds": 72.64161547509138
+    },
+    "shift": {
+     "msmi_per_100_arrived_members": 0.4,
+     "coverage": 0.34600000000000003,
+     "mutual_acceptances_per_100": 5.2,
+     "ask_cost": 156,
+     "inference_seconds": 73.12599448970286
+    },
+    "sparse": {
+     "msmi_per_100_arrived_members": 0.15,
+     "coverage": 0.08449999999999999,
+     "mutual_acceptances_per_100": 0.85,
+     "ask_cost": 49.7,
+     "inference_seconds": 77.65054654689156
+    }
+   },
+   "overall": {
+    "msmi_per_100_arrived_members": 0.35833333333333334,
+    "coverage": 0.2821666666666667,
+    "mutual_acceptances_per_100": 4.458333333333334,
+    "ask_cost": 136.66666666666666,
+    "inference_seconds": 74.19554873495653
+   },
+   "ranking_key_descending": [
+    0.35833333333333334,
+    0.2821666666666667,
+    4.458333333333334,
+    -136.66666666666666,
+    -74.19554873495653
+   ],
+   "invalid_count": 0,
+   "recorded_count": 60
+  },
+  "degree_first": {
+   "eligible": true,
+   "primary_score": 0.4083333333333333,
+   "scenario_means": {
+    "cold_start": {
+     "msmi_per_100_arrived_members": 0.35,
+     "coverage": 0.3125,
+     "mutual_acceptances_per_100": 4.95,
+     "ask_cost": 227.4,
+     "inference_seconds": 55.29029836534755
+    },
+    "delayed": {
+     "msmi_per_100_arrived_members": 0.35,
+     "coverage": 0.371,
+     "mutual_acceptances_per_100": 5.55,
+     "ask_cost": 192.3,
+     "inference_seconds": 49.53155918439734
+    },
+    "development": {
+     "msmi_per_100_arrived_members": 0.55,
+     "coverage": 0.375,
+     "mutual_acceptances_per_100": 5.65,
+     "ask_cost": 192.3,
+     "inference_seconds": 50.445611742627804
+    },
+    "drift": {
+     "msmi_per_100_arrived_members": 0.45,
+     "coverage": 0.375,
+     "mutual_acceptances_per_100": 5.55,
+     "ask_cost": 192.3,
+     "inference_seconds": 50.85587261309847
+    },
+    "shift": {
+     "msmi_per_100_arrived_members": 0.5,
+     "coverage": 0.3765,
+     "mutual_acceptances_per_100": 5.2,
+     "ask_cost": 192.3,
+     "inference_seconds": 50.54186014751322
+    },
+    "sparse": {
+     "msmi_per_100_arrived_members": 0.25,
+     "coverage": 0.153,
+     "mutual_acceptances_per_100": 1.8,
+     "ask_cost": 186.3,
+     "inference_seconds": 47.41772004684899
+    }
+   },
+   "overall": {
+    "msmi_per_100_arrived_members": 0.4083333333333333,
+    "coverage": 0.32716666666666666,
+    "mutual_acceptances_per_100": 4.783333333333333,
+    "ask_cost": 197.15,
+    "inference_seconds": 50.68048701663889
+   },
+   "ranking_key_descending": [
+    0.4083333333333333,
+    0.32716666666666666,
+    4.783333333333333,
+    -197.15,
+    -50.68048701663889
+   ],
+   "invalid_count": 0,
+   "recorded_count": 60
+  },
+  "uncertainty_first": {
+   "eligible": true,
+   "primary_score": 0.375,
+   "scenario_means": {
+    "cold_start": {
+     "msmi_per_100_arrived_members": 0.3,
+     "coverage": 0.3135,
+     "mutual_acceptances_per_100": 4.5,
+     "ask_cost": 268.1,
+     "inference_seconds": 42.92688964275876
+    },
+    "delayed": {
+     "msmi_per_100_arrived_members": 0.45,
+     "coverage": 0.371,
+     "mutual_acceptances_per_100": 5.55,
+     "ask_cost": 241.4,
+     "inference_seconds": 38.24481153956149
+    },
+    "development": {
+     "msmi_per_100_arrived_members": 0.45,
+     "coverage": 0.374,
+     "mutual_acceptances_per_100": 5.95,
+     "ask_cost": 243.5,
+     "inference_seconds": 38.823811158916214
+    },
+    "drift": {
+     "msmi_per_100_arrived_members": 0.35,
+     "coverage": 0.374,
+     "mutual_acceptances_per_100": 5.5,
+     "ask_cost": 243.9,
+     "inference_seconds": 38.70003783770953
+    },
+    "shift": {
+     "msmi_per_100_arrived_members": 0.45,
+     "coverage": 0.3755,
+     "mutual_acceptances_per_100": 5.35,
+     "ask_cost": 243.3,
+     "inference_seconds": 39.273156269552416
+    },
+    "sparse": {
+     "msmi_per_100_arrived_members": 0.25,
+     "coverage": 0.153,
+     "mutual_acceptances_per_100": 1.8,
+     "ask_cost": 199,
+     "inference_seconds": 41.16770241287304
+    }
+   },
+   "overall": {
+    "msmi_per_100_arrived_members": 0.375,
+    "coverage": 0.3268333333333333,
+    "mutual_acceptances_per_100": 4.775,
+    "ask_cost": 239.86666666666667,
+    "inference_seconds": 39.856068143561906
+   },
+   "ranking_key_descending": [
+    0.375,
+    0.3268333333333333,
+    4.775,
+    -239.86666666666667,
+    -39.856068143561906
+   ],
+   "invalid_count": 0,
+   "recorded_count": 60
+  },
+  "greedy": {
+   "eligible": true,
+   "primary_score": 0.31666666666666665,
+   "scenario_means": {
+    "cold_start": {
+     "msmi_per_100_arrived_members": 0.35,
+     "coverage": 0.314,
+     "mutual_acceptances_per_100": 5.35,
+     "ask_cost": 227.4,
+     "inference_seconds": 5.387231308163609
+    },
+    "delayed": {
+     "msmi_per_100_arrived_members": 0.6,
+     "coverage": 0.3705,
+     "mutual_acceptances_per_100": 5.9,
+     "ask_cost": 192.3,
+     "inference_seconds": 4.8777429274981845
+    },
+    "development": {
+     "msmi_per_100_arrived_members": 0.35,
+     "coverage": 0.376,
+     "mutual_acceptances_per_100": 6.25,
+     "ask_cost": 192.3,
+     "inference_seconds": 4.99392809967394
+    },
+    "drift": {
+     "msmi_per_100_arrived_members": 0.35,
+     "coverage": 0.376,
+     "mutual_acceptances_per_100": 6.1,
+     "ask_cost": 192.3,
+     "inference_seconds": 5.0399176634324245
+    },
+    "shift": {
+     "msmi_per_100_arrived_members": 0.15,
+     "coverage": 0.376,
+     "mutual_acceptances_per_100": 6.3,
+     "ask_cost": 192.3,
+     "inference_seconds": 5.013936669909162
+    },
+    "sparse": {
+     "msmi_per_100_arrived_members": 0.1,
+     "coverage": 0.153,
+     "mutual_acceptances_per_100": 1.5,
+     "ask_cost": 186.3,
+     "inference_seconds": 6.1994763548020275
+    }
+   },
+   "overall": {
+    "msmi_per_100_arrived_members": 0.31666666666666665,
+    "coverage": 0.32758333333333334,
+    "mutual_acceptances_per_100": 5.233333333333333,
+    "ask_cost": 197.15,
+    "inference_seconds": 5.252038837246558
+   },
+   "ranking_key_descending": [
+    0.31666666666666665,
+    0.32758333333333334,
+    5.233333333333333,
+    -197.15,
+    -5.252038837246558
+   ],
+   "invalid_count": 0,
+   "recorded_count": 60
+  }
+ },
+ "secondary": {
+  "graphvoi": {
+   "mean_mutual_acceptances": 9.633333333333333,
+   "mean_completed_dates": 7.766666666666667,
+   "mean_unserved": 134.66666666666666,
+   "served_wait_median": 3.0,
+   "served_wait_p90": 15.0,
+   "max_ask_seconds": 2.6179941670270637,
+   "max_match_seconds": 0.25982483400730416,
+   "note": "Waiting quantiles condition on served members; unserved remain in scoring/coverage denominator."
+  },
+  "graphvoi_nofill": {
+   "mean_mutual_acceptances": 8.916666666666666,
+   "mean_completed_dates": 6.95,
+   "mean_unserved": 143.56666666666666,
+   "served_wait_median": 4.0,
+   "served_wait_p90": 25.0,
+   "max_ask_seconds": 2.908671041019261,
+   "max_match_seconds": 0.2703199160168879,
+   "note": "Waiting quantiles condition on served members; unserved remain in scoring/coverage denominator."
+  },
+  "degree_first": {
+   "mean_mutual_acceptances": 9.566666666666666,
+   "mean_completed_dates": 7.516666666666667,
+   "mean_unserved": 134.56666666666666,
+   "served_wait_median": 3.0,
+   "served_wait_p90": 15.0,
+   "max_ask_seconds": 2.593544374976773,
+   "max_match_seconds": 0.28583437495399266,
+   "note": "Waiting quantiles condition on served members; unserved remain in scoring/coverage denominator."
+  },
+  "uncertainty_first": {
+   "mean_mutual_acceptances": 9.55,
+   "mean_completed_dates": 7.166666666666667,
+   "mean_unserved": 134.63333333333333,
+   "served_wait_median": 3.0,
+   "served_wait_p90": 16.0,
+   "max_ask_seconds": 1.6410216660005972,
+   "max_match_seconds": 0.34485362499253824,
+   "note": "Waiting quantiles condition on served members; unserved remain in scoring/coverage denominator."
+  },
+  "greedy": {
+   "mean_mutual_acceptances": 10.466666666666667,
+   "mean_completed_dates": 7.9,
+   "mean_unserved": 134.48333333333332,
+   "served_wait_median": 4.0,
+   "served_wait_p90": 16.0,
+   "max_ask_seconds": 0.005094791005831212,
+   "max_match_seconds": 0.19799429195700213,
+   "note": "Waiting quantiles condition on served members; unserved remain in scoring/coverage denominator."
+  }
+ },
+ "paired_intervals": {
+  "uncertainty_first": {
+   "degree_first": {
+    "validation": {
+     "status": "complete",
+     "invalid_counts": {
+      "degree_first": 0,
+      "uncertainty_first": 0
+     },
+     "missing_pairs": {
+      "degree_first": [],
+      "uncertainty_first": []
+     },
+     "duplicate_keys": [],
+     "unexpected_pairs": [],
+     "expected_pairs": 60,
+     "recorded_counts": {
+      "degree_first": 60,
+      "uncertainty_first": 60
+     }
+    },
+    "msmi_per_100_arrived_members": {
+     "status": "complete",
+     "delta": 0.03333333333333333,
+     "scenario_deltas": {
+      "cold_start": 0.05,
+      "delayed": -0.1,
+      "development": 0.1,
+      "drift": 0.1,
+      "shift": 0.05,
+      "sparse": 0.0
+     },
+     "ci95": [
+      -0.058333333333333334,
+      0.125
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "degree_first": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "mutual_acceptances_per_100": {
+     "status": "complete",
+     "delta": 0.008333333333333338,
+     "scenario_deltas": {
+      "cold_start": 0.45,
+      "delayed": 0.0,
+      "development": -0.3,
+      "drift": 0.05,
+      "shift": -0.15,
+      "sparse": 0.0
+     },
+     "ci95": [
+      -0.5083333333333333,
+      0.5333333333333333
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "degree_first": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "coverage": {
+     "status": "complete",
+     "delta": 0.0003333333333333327,
+     "scenario_deltas": {
+      "cold_start": -0.0010000000000000009,
+      "delayed": -5.551115123125783e-18,
+      "development": 0.0010000000000000009,
+      "drift": 0.0010000000000000009,
+      "shift": 0.0010000000000000009,
+      "sparse": 0.0
+     },
+     "ci95": [
+      -0.002083333333333334,
+      0.0030000000000000014
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "degree_first": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "ask_cost": {
+     "status": "complete",
+     "delta": -42.71666666666667,
+     "scenario_deltas": {
+      "cold_start": -40.7,
+      "delayed": -49.1,
+      "development": -51.2,
+      "drift": -51.6,
+      "shift": -51,
+      "sparse": -12.7
+     },
+     "ci95": [
+      -47.70041666666667,
+      -37.51625
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "degree_first": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "dates": {
+     "status": "complete",
+     "delta": 0.35,
+     "scenario_deltas": {
+      "cold_start": 1,
+      "delayed": 1.5,
+      "development": -0.4,
+      "drift": 0.1,
+      "shift": -0.1,
+      "sparse": 0
+     },
+     "ci95": [
+      -0.6333333333333333,
+      1.3833333333333333
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "degree_first": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "mutual_acceptances": {
+     "status": "complete",
+     "delta": 0.016666666666666677,
+     "scenario_deltas": {
+      "cold_start": 0.9,
+      "delayed": 0,
+      "development": -0.6,
+      "drift": 0.1,
+      "shift": -0.3,
+      "sparse": 0
+     },
+     "ci95": [
+      -1.0166666666666666,
+      1.0666666666666667
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "degree_first": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "unserved_members": {
+     "status": "complete",
+     "delta": -0.06666666666666667,
+     "scenario_deltas": {
+      "cold_start": 0.2,
+      "delayed": 0,
+      "development": -0.2,
+      "drift": -0.2,
+      "shift": -0.2,
+      "sparse": 0
+     },
+     "ci95": [
+      -0.6,
+      0.41666666666666663
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "degree_first": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "inference_seconds": {
+     "status": "complete",
+     "delta": 10.824418873076986,
+     "scenario_deltas": {
+      "cold_start": 12.363408722588792,
+      "delayed": 11.28674764483585,
+      "development": 11.621800583711593,
+      "drift": 12.15583477538894,
+      "shift": 11.268703877960798,
+      "sparse": 6.250017633975949
+     },
+     "ci95": [
+      9.987169165120818,
+      11.681156385516369
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "degree_first": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    }
+   },
+   "graphvoi": {
+    "validation": {
+     "status": "complete",
+     "invalid_counts": {
+      "graphvoi": 0,
+      "uncertainty_first": 0
+     },
+     "missing_pairs": {
+      "graphvoi": [],
+      "uncertainty_first": []
+     },
+     "duplicate_keys": [],
+     "unexpected_pairs": [],
+     "expected_pairs": 60,
+     "recorded_counts": {
+      "graphvoi": 60,
+      "uncertainty_first": 60
+     }
+    },
+    "msmi_per_100_arrived_members": {
+     "status": "complete",
+     "delta": 0.075,
+     "scenario_deltas": {
+      "cold_start": 0.25,
+      "delayed": -0.1,
+      "development": 0.1,
+      "drift": 0.2,
+      "shift": 0.05,
+      "sparse": -0.05
+     },
+     "ci95": [
+      -0.05,
+      0.225
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "mutual_acceptances_per_100": {
+     "status": "complete",
+     "delta": 0.041666666666666664,
+     "scenario_deltas": {
+      "cold_start": 0.25,
+      "delayed": -0.1,
+      "development": 0.05,
+      "drift": 0.25,
+      "shift": 0.05,
+      "sparse": -0.25
+     },
+     "ci95": [
+      -0.6083333333333333,
+      0.7585416666666654
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "coverage": {
+     "status": "complete",
+     "delta": -0.00016666666666666775,
+     "scenario_deltas": {
+      "cold_start": -0.0025000000000000022,
+      "delayed": 0.0004999999999999949,
+      "development": 0.0005000000000000004,
+      "drift": 0.0005000000000000004,
+      "shift": 0.0,
+      "sparse": 0.0
+     },
+     "ci95": [
+      -0.0023333333333333366,
+      0.0024166666666666677
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "ask_cost": {
+     "status": "complete",
+     "delta": -3.8833333333333333,
+     "scenario_deltas": {
+      "cold_start": -0.4,
+      "delayed": -3.6,
+      "development": -6.1,
+      "drift": -6,
+      "shift": -4.8,
+      "sparse": -2.4
+     },
+     "ci95": [
+      -5.984166666666667,
+      -1.7666666666666666
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "dates": {
+     "status": "complete",
+     "delta": 0.6,
+     "scenario_deltas": {
+      "cold_start": 0.9,
+      "delayed": 0.4,
+      "development": 0.9,
+      "drift": 1.1,
+      "shift": 0.6,
+      "sparse": -0.3
+     },
+     "ci95": [
+      -0.5170833333333333,
+      1.767083333333331
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "mutual_acceptances": {
+     "status": "complete",
+     "delta": 0.08333333333333333,
+     "scenario_deltas": {
+      "cold_start": 0.5,
+      "delayed": -0.2,
+      "development": 0.1,
+      "drift": 0.5,
+      "shift": 0.1,
+      "sparse": -0.5
+     },
+     "ci95": [
+      -1.2166666666666666,
+      1.517083333333331
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "unserved_members": {
+     "status": "complete",
+     "delta": 0.03333333333333333,
+     "scenario_deltas": {
+      "cold_start": 0.5,
+      "delayed": -0.1,
+      "development": -0.1,
+      "drift": -0.1,
+      "shift": 0,
+      "sparse": 0
+     },
+     "ci95": [
+      -0.48333333333333334,
+      0.4666666666666667
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "inference_seconds": {
+     "status": "complete",
+     "delta": 18.006066055500803,
+     "scenario_deltas": {
+      "cold_start": 20.57769366101129,
+      "delayed": 19.336281557340406,
+      "development": 19.947611456923187,
+      "drift": 20.752208831120516,
+      "shift": 19.97950580070028,
+      "sparse": 7.443095025909133
+     },
+     "ci95": [
+      16.301677107817135,
+      19.791108903573935
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    }
+   },
+   "graphvoi_nofill": {
+    "validation": {
+     "status": "complete",
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "uncertainty_first": 0
+     },
+     "missing_pairs": {
+      "graphvoi_nofill": [],
+      "uncertainty_first": []
+     },
+     "duplicate_keys": [],
+     "unexpected_pairs": [],
+     "expected_pairs": 60,
+     "recorded_counts": {
+      "graphvoi_nofill": 60,
+      "uncertainty_first": 60
+     }
+    },
+    "msmi_per_100_arrived_members": {
+     "status": "complete",
+     "delta": -0.016666666666666666,
+     "scenario_deltas": {
+      "cold_start": 0.0,
+      "delayed": 0.0,
+      "development": 0.0,
+      "drift": 0.05,
+      "shift": -0.05,
+      "sparse": -0.1
+     },
+     "ci95": [
+      -0.20854166666666665,
+      0.15
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "mutual_acceptances_per_100": {
+     "status": "complete",
+     "delta": -0.31666666666666665,
+     "scenario_deltas": {
+      "cold_start": 0.4,
+      "delayed": -0.05,
+      "development": -0.55,
+      "drift": -0.6,
+      "shift": -0.15,
+      "sparse": -0.95
+     },
+     "ci95": [
+      -0.9833333333333333,
+      0.375
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "coverage": {
+     "status": "complete",
+     "delta": -0.04466666666666667,
+     "scenario_deltas": {
+      "cold_start": -0.07450000000000001,
+      "delayed": -0.032499999999999994,
+      "development": -0.03149999999999999,
+      "drift": -0.03149999999999999,
+      "shift": -0.0295,
+      "sparse": -0.0685
+     },
+     "ci95": [
+      -0.05674999999999999,
+      -0.03191250000000002
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "ask_cost": {
+     "status": "complete",
+     "delta": -103.2,
+     "scenario_deltas": {
+      "cold_start": -120.2,
+      "delayed": -86.4,
+      "development": -87.8,
+      "drift": -88.2,
+      "shift": -87.3,
+      "sparse": -149.3
+     },
+     "ci95": [
+      -113.46791666666667,
+      -93.14916666666666
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "dates": {
+     "status": "complete",
+     "delta": -0.21666666666666665,
+     "scenario_deltas": {
+      "cold_start": 0.7,
+      "delayed": 1.1,
+      "development": -0.7,
+      "drift": -0.7,
+      "shift": -0.4,
+      "sparse": -1.3
+     },
+     "ci95": [
+      -1.4,
+      1.0833333333333333
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "mutual_acceptances": {
+     "status": "complete",
+     "delta": -0.6333333333333333,
+     "scenario_deltas": {
+      "cold_start": 0.8,
+      "delayed": -0.1,
+      "development": -1.1,
+      "drift": -1.2,
+      "shift": -0.3,
+      "sparse": -1.9
+     },
+     "ci95": [
+      -1.9666666666666666,
+      0.75
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "unserved_members": {
+     "status": "complete",
+     "delta": 8.933333333333334,
+     "scenario_deltas": {
+      "cold_start": 14.9,
+      "delayed": 6.5,
+      "development": 6.3,
+      "drift": 6.3,
+      "shift": 5.9,
+      "sparse": 13.7
+     },
+     "ci95": [
+      6.382499999999999,
+      11.35
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "inference_seconds": {
+     "status": "complete",
+     "delta": 34.33948059139463,
+     "scenario_deltas": {
+      "cold_start": 34.23285564834369,
+      "delayed": 33.84927767791087,
+      "development": 33.6774902305624,
+      "drift": 33.941577637381855,
+      "shift": 33.852838220150446,
+      "sparse": 36.48284413401852
+     },
+     "ci95": [
+      32.07444072604383,
+      36.4424352339046
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    }
+   },
+   "greedy": {
+    "validation": {
+     "status": "complete",
+     "invalid_counts": {
+      "greedy": 0,
+      "uncertainty_first": 0
+     },
+     "missing_pairs": {
+      "greedy": [],
+      "uncertainty_first": []
+     },
+     "duplicate_keys": [],
+     "unexpected_pairs": [],
+     "expected_pairs": 60,
+     "recorded_counts": {
+      "greedy": 60,
+      "uncertainty_first": 60
+     }
+    },
+    "msmi_per_100_arrived_members": {
+     "status": "complete",
+     "delta": -0.058333333333333334,
+     "scenario_deltas": {
+      "cold_start": 0.05,
+      "delayed": 0.15,
+      "development": -0.1,
+      "drift": 0.0,
+      "shift": -0.3,
+      "sparse": -0.15
+     },
+     "ci95": [
+      -0.225,
+      0.10833333333333334
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "greedy": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "mutual_acceptances_per_100": {
+     "status": "complete",
+     "delta": 0.4583333333333333,
+     "scenario_deltas": {
+      "cold_start": 0.85,
+      "delayed": 0.35,
+      "development": 0.3,
+      "drift": 0.6,
+      "shift": 0.95,
+      "sparse": -0.3
+     },
+     "ci95": [
+      -0.31666666666666665,
+      1.225
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "greedy": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "coverage": {
+     "status": "complete",
+     "delta": 0.0007500000000000002,
+     "scenario_deltas": {
+      "cold_start": 0.0005000000000000004,
+      "delayed": -0.000500000000000006,
+      "development": 0.0020000000000000018,
+      "drift": 0.0020000000000000018,
+      "shift": 0.0005000000000000004,
+      "sparse": 2.7755575615628915e-18
+     },
+     "ci95": [
+      -0.003750000000000002,
+      0.00441666666666667
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "greedy": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "ask_cost": {
+     "status": "complete",
+     "delta": -42.71666666666667,
+     "scenario_deltas": {
+      "cold_start": -40.7,
+      "delayed": -49.1,
+      "development": -51.2,
+      "drift": -51.6,
+      "shift": -51,
+      "sparse": -12.7
+     },
+     "ci95": [
+      -47.70041666666667,
+      -37.51625
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "greedy": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "dates": {
+     "status": "complete",
+     "delta": 0.7333333333333334,
+     "scenario_deltas": {
+      "cold_start": 1.8,
+      "delayed": 1.1,
+      "development": 0,
+      "drift": 0.6,
+      "shift": 1.5,
+      "sparse": -0.6
+     },
+     "ci95": [
+      -0.5,
+      1.9837499999999977
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "greedy": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "mutual_acceptances": {
+     "status": "complete",
+     "delta": 0.9166666666666666,
+     "scenario_deltas": {
+      "cold_start": 1.7,
+      "delayed": 0.7,
+      "development": 0.6,
+      "drift": 1.2,
+      "shift": 1.9,
+      "sparse": -0.6
+     },
+     "ci95": [
+      -0.6333333333333333,
+      2.45
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "greedy": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "unserved_members": {
+     "status": "complete",
+     "delta": -0.15000000000000002,
+     "scenario_deltas": {
+      "cold_start": -0.1,
+      "delayed": 0.1,
+      "development": -0.4,
+      "drift": -0.4,
+      "shift": -0.1,
+      "sparse": 0
+     },
+     "ci95": [
+      -0.8833333333333333,
+      0.75
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "greedy": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "inference_seconds": {
+     "status": "complete",
+     "delta": -34.604029306315354,
+     "scenario_deltas": {
+      "cold_start": -37.53965833459515,
+      "delayed": -33.367068612063306,
+      "development": -33.82988305924228,
+      "drift": -33.66012017427711,
+      "shift": -34.25921959964326,
+      "sparse": -34.96822605807101
+     },
+     "ci95": [
+      -35.75463875540476,
+      -33.31471629840576
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "greedy": 0,
+      "uncertainty_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    }
+   }
+  },
+  "degree_first": {
+   "graphvoi": {
+    "validation": {
+     "status": "complete",
+     "invalid_counts": {
+      "graphvoi": 0,
+      "degree_first": 0
+     },
+     "missing_pairs": {
+      "graphvoi": [],
+      "degree_first": []
+     },
+     "duplicate_keys": [],
+     "unexpected_pairs": [],
+     "expected_pairs": 60,
+     "recorded_counts": {
+      "graphvoi": 60,
+      "degree_first": 60
+     }
+    },
+    "msmi_per_100_arrived_members": {
+     "status": "complete",
+     "delta": 0.04166666666666667,
+     "scenario_deltas": {
+      "cold_start": 0.2,
+      "delayed": 0.0,
+      "development": 0.0,
+      "drift": 0.1,
+      "shift": 0.0,
+      "sparse": -0.05
+     },
+     "ci95": [
+      -0.08333333333333334,
+      0.18333333333333335
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "mutual_acceptances_per_100": {
+     "status": "complete",
+     "delta": 0.03333333333333333,
+     "scenario_deltas": {
+      "cold_start": -0.2,
+      "delayed": -0.1,
+      "development": 0.35,
+      "drift": 0.2,
+      "shift": 0.2,
+      "sparse": -0.25
+     },
+     "ci95": [
+      -0.25833333333333336,
+      0.3835416666666655
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "coverage": {
+     "status": "complete",
+     "delta": -0.0005000000000000004,
+     "scenario_deltas": {
+      "cold_start": -0.0015000000000000013,
+      "delayed": 0.0005000000000000004,
+      "development": -0.0005000000000000004,
+      "drift": -0.0005000000000000004,
+      "shift": -0.0010000000000000009,
+      "sparse": 0.0
+     },
+     "ci95": [
+      -0.0012500000000000011,
+      0.0002500000000000002
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "ask_cost": {
+     "status": "complete",
+     "delta": 38.833333333333336,
+     "scenario_deltas": {
+      "cold_start": 40.3,
+      "delayed": 45.5,
+      "development": 45.1,
+      "drift": 45.6,
+      "shift": 46.2,
+      "sparse": 10.3
+     },
+     "ci95": [
+      34.41625,
+      43.05
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "dates": {
+     "status": "complete",
+     "delta": 0.25,
+     "scenario_deltas": {
+      "cold_start": -0.1,
+      "delayed": -1.1,
+      "development": 1.3,
+      "drift": 1,
+      "shift": 0.7,
+      "sparse": -0.3
+     },
+     "ci95": [
+      -0.38333333333333336,
+      0.9333333333333333
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "mutual_acceptances": {
+     "status": "complete",
+     "delta": 0.06666666666666667,
+     "scenario_deltas": {
+      "cold_start": -0.4,
+      "delayed": -0.2,
+      "development": 0.7,
+      "drift": 0.4,
+      "shift": 0.4,
+      "sparse": -0.5
+     },
+     "ci95": [
+      -0.5166666666666667,
+      0.767083333333331
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "unserved_members": {
+     "status": "complete",
+     "delta": 0.1,
+     "scenario_deltas": {
+      "cold_start": 0.3,
+      "delayed": -0.1,
+      "development": 0.1,
+      "drift": 0.1,
+      "shift": 0.2,
+      "sparse": 0
+     },
+     "ci95": [
+      -0.049999999999999996,
+      0.25
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "inference_seconds": {
+     "status": "complete",
+     "delta": 7.1816471824238155,
+     "scenario_deltas": {
+      "cold_start": 8.214284938422498,
+      "delayed": 8.049533912504558,
+      "development": 8.325810873211594,
+      "drift": 8.596374055731577,
+      "shift": 8.710801922739483,
+      "sparse": 1.193077391933184
+     },
+     "ci95": [
+      6.067032626553507,
+      8.402193814574202
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    }
+   },
+   "graphvoi_nofill": {
+    "validation": {
+     "status": "complete",
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "degree_first": 0
+     },
+     "missing_pairs": {
+      "graphvoi_nofill": [],
+      "degree_first": []
+     },
+     "duplicate_keys": [],
+     "unexpected_pairs": [],
+     "expected_pairs": 60,
+     "recorded_counts": {
+      "graphvoi_nofill": 60,
+      "degree_first": 60
+     }
+    },
+    "msmi_per_100_arrived_members": {
+     "status": "complete",
+     "delta": -0.05,
+     "scenario_deltas": {
+      "cold_start": -0.05,
+      "delayed": 0.1,
+      "development": -0.1,
+      "drift": -0.05,
+      "shift": -0.1,
+      "sparse": -0.1
+     },
+     "ci95": [
+      -0.23333333333333334,
+      0.13333333333333333
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "mutual_acceptances_per_100": {
+     "status": "complete",
+     "delta": -0.325,
+     "scenario_deltas": {
+      "cold_start": -0.05,
+      "delayed": -0.05,
+      "development": -0.25,
+      "drift": -0.65,
+      "shift": 0.0,
+      "sparse": -0.95
+     },
+     "ci95": [
+      -0.8916666666666666,
+      0.2833333333333333
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "coverage": {
+     "status": "complete",
+     "delta": -0.045,
+     "scenario_deltas": {
+      "cold_start": -0.07350000000000001,
+      "delayed": -0.03249999999999999,
+      "development": -0.032499999999999994,
+      "drift": -0.032499999999999994,
+      "shift": -0.0305,
+      "sparse": -0.0685
+     },
+     "ci95": [
+      -0.05666874999999999,
+      -0.03191666666666667
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "ask_cost": {
+     "status": "complete",
+     "delta": -60.483333333333334,
+     "scenario_deltas": {
+      "cold_start": -79.5,
+      "delayed": -37.3,
+      "development": -36.6,
+      "drift": -36.6,
+      "shift": -36.3,
+      "sparse": -136.6
+     },
+     "ci95": [
+      -73.235,
+      -48.36625
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "dates": {
+     "status": "complete",
+     "delta": -0.5666666666666667,
+     "scenario_deltas": {
+      "cold_start": -0.3,
+      "delayed": -0.4,
+      "development": -0.3,
+      "drift": -0.8,
+      "shift": -0.3,
+      "sparse": -1.3
+     },
+     "ci95": [
+      -1.3666666666666667,
+      0.2833333333333333
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "mutual_acceptances": {
+     "status": "complete",
+     "delta": -0.65,
+     "scenario_deltas": {
+      "cold_start": -0.1,
+      "delayed": -0.1,
+      "development": -0.5,
+      "drift": -1.3,
+      "shift": 0,
+      "sparse": -1.9
+     },
+     "ci95": [
+      -1.7833333333333332,
+      0.5666666666666667
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "unserved_members": {
+     "status": "complete",
+     "delta": 9.0,
+     "scenario_deltas": {
+      "cold_start": 14.7,
+      "delayed": 6.5,
+      "development": 6.5,
+      "drift": 6.5,
+      "shift": 6.1,
+      "sparse": 13.7
+     },
+     "ci95": [
+      6.383333333333334,
+      11.333749999999998
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "inference_seconds": {
+     "status": "complete",
+     "delta": 23.51506171831764,
+     "scenario_deltas": {
+      "cold_start": 21.869446925754893,
+      "delayed": 22.562530033075017,
+      "development": 22.055689646850805,
+      "drift": 21.78574286199291,
+      "shift": 22.584134342189646,
+      "sparse": 30.232826500042574
+     },
+     "ci95": [
+      21.71833015940043,
+      25.125740308809664
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    }
+   },
+   "greedy": {
+    "validation": {
+     "status": "complete",
+     "invalid_counts": {
+      "greedy": 0,
+      "degree_first": 0
+     },
+     "missing_pairs": {
+      "greedy": [],
+      "degree_first": []
+     },
+     "duplicate_keys": [],
+     "unexpected_pairs": [],
+     "expected_pairs": 60,
+     "recorded_counts": {
+      "greedy": 60,
+      "degree_first": 60
+     }
+    },
+    "msmi_per_100_arrived_members": {
+     "status": "complete",
+     "delta": -0.09166666666666666,
+     "scenario_deltas": {
+      "cold_start": 0.0,
+      "delayed": 0.25,
+      "development": -0.2,
+      "drift": -0.1,
+      "shift": -0.35,
+      "sparse": -0.15
+     },
+     "ci95": [
+      -0.2,
+      0.025000000000000005
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "greedy": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "mutual_acceptances_per_100": {
+     "status": "complete",
+     "delta": 0.45,
+     "scenario_deltas": {
+      "cold_start": 0.4,
+      "delayed": 0.35,
+      "development": 0.6,
+      "drift": 0.55,
+      "shift": 1.1,
+      "sparse": -0.3
+     },
+     "ci95": [
+      -0.16666666666666669,
+      0.9916666666666667
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "greedy": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "coverage": {
+     "status": "complete",
+     "delta": 0.0004166666666666675,
+     "scenario_deltas": {
+      "cold_start": 0.0015000000000000013,
+      "delayed": -0.0005000000000000004,
+      "development": 0.0010000000000000009,
+      "drift": 0.0010000000000000009,
+      "shift": -0.0005000000000000004,
+      "sparse": 2.7755575615628915e-18
+     },
+     "ci95": [
+      -0.0035000000000000027,
+      0.0037500000000000033
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "greedy": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "ask_cost": {
+     "status": "complete",
+     "delta": 0,
+     "scenario_deltas": {
+      "cold_start": 0,
+      "delayed": 0,
+      "development": 0,
+      "drift": 0,
+      "shift": 0,
+      "sparse": 0
+     },
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "greedy": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "dates": {
+     "status": "complete",
+     "delta": 0.38333333333333336,
+     "scenario_deltas": {
+      "cold_start": 0.8,
+      "delayed": -0.4,
+      "development": 0.4,
+      "drift": 0.5,
+      "shift": 1.6,
+      "sparse": -0.6
+     },
+     "ci95": [
+      -0.5833333333333334,
+      1.3
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "greedy": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "mutual_acceptances": {
+     "status": "complete",
+     "delta": 0.9,
+     "scenario_deltas": {
+      "cold_start": 0.8,
+      "delayed": 0.7,
+      "development": 1.2,
+      "drift": 1.1,
+      "shift": 2.2,
+      "sparse": -0.6
+     },
+     "ci95": [
+      -0.33333333333333337,
+      1.9833333333333334
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "greedy": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "unserved_members": {
+     "status": "complete",
+     "delta": -0.08333333333333333,
+     "scenario_deltas": {
+      "cold_start": -0.3,
+      "delayed": 0.1,
+      "development": -0.2,
+      "drift": -0.2,
+      "shift": 0.1,
+      "sparse": 0
+     },
+     "ci95": [
+      -0.75,
+      0.7
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "greedy": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "inference_seconds": {
+     "status": "complete",
+     "delta": -45.42844817939234,
+     "scenario_deltas": {
+      "cold_start": -49.90306705718395,
+      "delayed": -44.653816256899155,
+      "development": -45.45168364295387,
+      "drift": -45.81595494966605,
+      "shift": -45.527923477604055,
+      "sparse": -41.21824369204696
+     },
+     "ci95": [
+      -47.02653596380771,
+      -43.81094616418775
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "greedy": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    }
+   },
+   "uncertainty_first": {
+    "validation": {
+     "status": "complete",
+     "invalid_counts": {
+      "uncertainty_first": 0,
+      "degree_first": 0
+     },
+     "missing_pairs": {
+      "uncertainty_first": [],
+      "degree_first": []
+     },
+     "duplicate_keys": [],
+     "unexpected_pairs": [],
+     "expected_pairs": 60,
+     "recorded_counts": {
+      "uncertainty_first": 60,
+      "degree_first": 60
+     }
+    },
+    "msmi_per_100_arrived_members": {
+     "status": "complete",
+     "delta": -0.03333333333333333,
+     "scenario_deltas": {
+      "cold_start": -0.05,
+      "delayed": 0.1,
+      "development": -0.1,
+      "drift": -0.1,
+      "shift": -0.05,
+      "sparse": 0.0
+     },
+     "ci95": [
+      -0.125,
+      0.058333333333333334
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "uncertainty_first": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "mutual_acceptances_per_100": {
+     "status": "complete",
+     "delta": -0.008333333333333338,
+     "scenario_deltas": {
+      "cold_start": -0.45,
+      "delayed": 0.0,
+      "development": 0.3,
+      "drift": -0.05,
+      "shift": 0.15,
+      "sparse": 0.0
+     },
+     "ci95": [
+      -0.5333333333333333,
+      0.5083333333333333
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "uncertainty_first": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "coverage": {
+     "status": "complete",
+     "delta": -0.0003333333333333327,
+     "scenario_deltas": {
+      "cold_start": 0.0010000000000000009,
+      "delayed": 5.551115123125783e-18,
+      "development": -0.0010000000000000009,
+      "drift": -0.0010000000000000009,
+      "shift": -0.0010000000000000009,
+      "sparse": 0.0
+     },
+     "ci95": [
+      -0.0030000000000000014,
+      0.002083333333333334
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "uncertainty_first": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "ask_cost": {
+     "status": "complete",
+     "delta": 42.71666666666667,
+     "scenario_deltas": {
+      "cold_start": 40.7,
+      "delayed": 49.1,
+      "development": 51.2,
+      "drift": 51.6,
+      "shift": 51,
+      "sparse": 12.7
+     },
+     "ci95": [
+      37.51625,
+      47.70041666666667
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "uncertainty_first": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "dates": {
+     "status": "complete",
+     "delta": -0.35,
+     "scenario_deltas": {
+      "cold_start": -1,
+      "delayed": -1.5,
+      "development": 0.4,
+      "drift": -0.1,
+      "shift": 0.1,
+      "sparse": 0
+     },
+     "ci95": [
+      -1.3833333333333333,
+      0.6333333333333333
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "uncertainty_first": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "mutual_acceptances": {
+     "status": "complete",
+     "delta": -0.016666666666666677,
+     "scenario_deltas": {
+      "cold_start": -0.9,
+      "delayed": 0,
+      "development": 0.6,
+      "drift": -0.1,
+      "shift": 0.3,
+      "sparse": 0
+     },
+     "ci95": [
+      -1.0666666666666667,
+      1.0166666666666666
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "uncertainty_first": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "unserved_members": {
+     "status": "complete",
+     "delta": 0.06666666666666667,
+     "scenario_deltas": {
+      "cold_start": -0.2,
+      "delayed": 0,
+      "development": 0.2,
+      "drift": 0.2,
+      "shift": 0.2,
+      "sparse": 0
+     },
+     "ci95": [
+      -0.41666666666666663,
+      0.6
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "uncertainty_first": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "inference_seconds": {
+     "status": "complete",
+     "delta": -10.824418873076986,
+     "scenario_deltas": {
+      "cold_start": -12.363408722588792,
+      "delayed": -11.28674764483585,
+      "development": -11.621800583711593,
+      "drift": -12.15583477538894,
+      "shift": -11.268703877960798,
+      "sparse": -6.250017633975949
+     },
+     "ci95": [
+      -11.681156385516369,
+      -9.987169165120818
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "uncertainty_first": 0,
+      "degree_first": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    }
+   }
+  },
+  "greedy": {
+   "degree_first": {
+    "validation": {
+     "status": "complete",
+     "invalid_counts": {
+      "degree_first": 0,
+      "greedy": 0
+     },
+     "missing_pairs": {
+      "degree_first": [],
+      "greedy": []
+     },
+     "duplicate_keys": [],
+     "unexpected_pairs": [],
+     "expected_pairs": 60,
+     "recorded_counts": {
+      "degree_first": 60,
+      "greedy": 60
+     }
+    },
+    "msmi_per_100_arrived_members": {
+     "status": "complete",
+     "delta": 0.09166666666666666,
+     "scenario_deltas": {
+      "cold_start": 0.0,
+      "delayed": -0.25,
+      "development": 0.2,
+      "drift": 0.1,
+      "shift": 0.35,
+      "sparse": 0.15
+     },
+     "ci95": [
+      -0.025000000000000005,
+      0.2
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "degree_first": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "mutual_acceptances_per_100": {
+     "status": "complete",
+     "delta": -0.45,
+     "scenario_deltas": {
+      "cold_start": -0.4,
+      "delayed": -0.35,
+      "development": -0.6,
+      "drift": -0.55,
+      "shift": -1.1,
+      "sparse": 0.3
+     },
+     "ci95": [
+      -0.9916666666666667,
+      0.16666666666666669
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "degree_first": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "coverage": {
+     "status": "complete",
+     "delta": -0.0004166666666666675,
+     "scenario_deltas": {
+      "cold_start": -0.0015000000000000013,
+      "delayed": 0.0005000000000000004,
+      "development": -0.0010000000000000009,
+      "drift": -0.0010000000000000009,
+      "shift": 0.0005000000000000004,
+      "sparse": -2.7755575615628915e-18
+     },
+     "ci95": [
+      -0.0037500000000000033,
+      0.0035000000000000027
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "degree_first": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "ask_cost": {
+     "status": "complete",
+     "delta": 0,
+     "scenario_deltas": {
+      "cold_start": 0,
+      "delayed": 0,
+      "development": 0,
+      "drift": 0,
+      "shift": 0,
+      "sparse": 0
+     },
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "degree_first": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "dates": {
+     "status": "complete",
+     "delta": -0.38333333333333336,
+     "scenario_deltas": {
+      "cold_start": -0.8,
+      "delayed": 0.4,
+      "development": -0.4,
+      "drift": -0.5,
+      "shift": -1.6,
+      "sparse": 0.6
+     },
+     "ci95": [
+      -1.3,
+      0.5833333333333334
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "degree_first": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "mutual_acceptances": {
+     "status": "complete",
+     "delta": -0.9,
+     "scenario_deltas": {
+      "cold_start": -0.8,
+      "delayed": -0.7,
+      "development": -1.2,
+      "drift": -1.1,
+      "shift": -2.2,
+      "sparse": 0.6
+     },
+     "ci95": [
+      -1.9833333333333334,
+      0.33333333333333337
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "degree_first": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "unserved_members": {
+     "status": "complete",
+     "delta": 0.08333333333333333,
+     "scenario_deltas": {
+      "cold_start": 0.3,
+      "delayed": -0.1,
+      "development": 0.2,
+      "drift": 0.2,
+      "shift": -0.1,
+      "sparse": 0
+     },
+     "ci95": [
+      -0.7,
+      0.75
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "degree_first": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "inference_seconds": {
+     "status": "complete",
+     "delta": 45.42844817939234,
+     "scenario_deltas": {
+      "cold_start": 49.90306705718395,
+      "delayed": 44.653816256899155,
+      "development": 45.45168364295387,
+      "drift": 45.81595494966605,
+      "shift": 45.527923477604055,
+      "sparse": 41.21824369204696
+     },
+     "ci95": [
+      43.81094616418775,
+      47.02653596380771
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "degree_first": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    }
+   },
+   "graphvoi": {
+    "validation": {
+     "status": "complete",
+     "invalid_counts": {
+      "graphvoi": 0,
+      "greedy": 0
+     },
+     "missing_pairs": {
+      "graphvoi": [],
+      "greedy": []
+     },
+     "duplicate_keys": [],
+     "unexpected_pairs": [],
+     "expected_pairs": 60,
+     "recorded_counts": {
+      "graphvoi": 60,
+      "greedy": 60
+     }
+    },
+    "msmi_per_100_arrived_members": {
+     "status": "complete",
+     "delta": 0.13333333333333333,
+     "scenario_deltas": {
+      "cold_start": 0.2,
+      "delayed": -0.25,
+      "development": 0.2,
+      "drift": 0.2,
+      "shift": 0.35,
+      "sparse": 0.1
+     },
+     "ci95": [
+      -0.016666666666666666,
+      0.3
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "mutual_acceptances_per_100": {
+     "status": "complete",
+     "delta": -0.4166666666666667,
+     "scenario_deltas": {
+      "cold_start": -0.6,
+      "delayed": -0.45,
+      "development": -0.25,
+      "drift": -0.35,
+      "shift": -0.9,
+      "sparse": 0.05
+     },
+     "ci95": [
+      -1.1333333333333333,
+      0.325
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "coverage": {
+     "status": "complete",
+     "delta": -0.000916666666666668,
+     "scenario_deltas": {
+      "cold_start": -0.0030000000000000027,
+      "delayed": 0.0010000000000000009,
+      "development": -0.0015000000000000013,
+      "drift": -0.0015000000000000013,
+      "shift": -0.0005000000000000004,
+      "sparse": -2.7755575615628915e-18
+     },
+     "ci95": [
+      -0.0040000000000000036,
+      0.0028333333333333353
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "ask_cost": {
+     "status": "complete",
+     "delta": 38.833333333333336,
+     "scenario_deltas": {
+      "cold_start": 40.3,
+      "delayed": 45.5,
+      "development": 45.1,
+      "drift": 45.6,
+      "shift": 46.2,
+      "sparse": 10.3
+     },
+     "ci95": [
+      34.41625,
+      43.05
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "dates": {
+     "status": "complete",
+     "delta": -0.13333333333333333,
+     "scenario_deltas": {
+      "cold_start": -0.9,
+      "delayed": -0.7,
+      "development": 0.9,
+      "drift": 0.5,
+      "shift": -0.9,
+      "sparse": 0.3
+     },
+     "ci95": [
+      -1.4166666666666667,
+      1.117083333333331
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "mutual_acceptances": {
+     "status": "complete",
+     "delta": -0.8333333333333334,
+     "scenario_deltas": {
+      "cold_start": -1.2,
+      "delayed": -0.9,
+      "development": -0.5,
+      "drift": -0.7,
+      "shift": -1.8,
+      "sparse": 0.1
+     },
+     "ci95": [
+      -2.2666666666666666,
+      0.65
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "unserved_members": {
+     "status": "complete",
+     "delta": 0.18333333333333332,
+     "scenario_deltas": {
+      "cold_start": 0.6,
+      "delayed": -0.2,
+      "development": 0.3,
+      "drift": 0.3,
+      "shift": 0.1,
+      "sparse": 0
+     },
+     "ci95": [
+      -0.5666666666666667,
+      0.8
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "inference_seconds": {
+     "status": "complete",
+     "delta": 52.61009536181616,
+     "scenario_deltas": {
+      "cold_start": 58.11735199560644,
+      "delayed": 52.70335016940371,
+      "development": 53.77749451616546,
+      "drift": 54.41232900539762,
+      "shift": 54.23872540034354,
+      "sparse": 42.41132108398015
+     },
+     "ci95": [
+      50.28673609563979,
+      54.84909560480155
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    }
+   },
+   "graphvoi_nofill": {
+    "validation": {
+     "status": "complete",
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "greedy": 0
+     },
+     "missing_pairs": {
+      "graphvoi_nofill": [],
+      "greedy": []
+     },
+     "duplicate_keys": [],
+     "unexpected_pairs": [],
+     "expected_pairs": 60,
+     "recorded_counts": {
+      "graphvoi_nofill": 60,
+      "greedy": 60
+     }
+    },
+    "msmi_per_100_arrived_members": {
+     "status": "complete",
+     "delta": 0.04166666666666667,
+     "scenario_deltas": {
+      "cold_start": -0.05,
+      "delayed": -0.15,
+      "development": 0.1,
+      "drift": 0.05,
+      "shift": 0.25,
+      "sparse": 0.05
+     },
+     "ci95": [
+      -0.125,
+      0.20833333333333334
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "mutual_acceptances_per_100": {
+     "status": "complete",
+     "delta": -0.775,
+     "scenario_deltas": {
+      "cold_start": -0.45,
+      "delayed": -0.4,
+      "development": -0.85,
+      "drift": -1.2,
+      "shift": -1.1,
+      "sparse": -0.65
+     },
+     "ci95": [
+      -1.5833333333333333,
+      0.050208333333332196
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "coverage": {
+     "status": "complete",
+     "delta": -0.04541666666666667,
+     "scenario_deltas": {
+      "cold_start": -0.07500000000000001,
+      "delayed": -0.03199999999999999,
+      "development": -0.033499999999999995,
+      "drift": -0.033499999999999995,
+      "shift": -0.03,
+      "sparse": -0.0685
+     },
+     "ci95": [
+      -0.056916666666666664,
+      -0.03291458333333335
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "ask_cost": {
+     "status": "complete",
+     "delta": -60.483333333333334,
+     "scenario_deltas": {
+      "cold_start": -79.5,
+      "delayed": -37.3,
+      "development": -36.6,
+      "drift": -36.6,
+      "shift": -36.3,
+      "sparse": -136.6
+     },
+     "ci95": [
+      -73.235,
+      -48.36625
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "dates": {
+     "status": "complete",
+     "delta": -0.95,
+     "scenario_deltas": {
+      "cold_start": -1.1,
+      "delayed": 0,
+      "development": -0.7,
+      "drift": -1.3,
+      "shift": -1.9,
+      "sparse": -0.7
+     },
+     "ci95": [
+      -2.1170833333333334,
+      0.4504166666666644
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "mutual_acceptances": {
+     "status": "complete",
+     "delta": -1.55,
+     "scenario_deltas": {
+      "cold_start": -0.9,
+      "delayed": -0.8,
+      "development": -1.7,
+      "drift": -2.4,
+      "shift": -2.2,
+      "sparse": -1.3
+     },
+     "ci95": [
+      -3.1666666666666665,
+      0.10041666666666439
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "unserved_members": {
+     "status": "complete",
+     "delta": 9.083333333333334,
+     "scenario_deltas": {
+      "cold_start": 15,
+      "delayed": 6.4,
+      "development": 6.7,
+      "drift": 6.7,
+      "shift": 6,
+      "sparse": 13.7
+     },
+     "ci95": [
+      6.582916666666667,
+      11.383333333333333
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "inference_seconds": {
+     "status": "complete",
+     "delta": 68.94350989770999,
+     "scenario_deltas": {
+      "cold_start": 71.77251398293883,
+      "delayed": 67.21634628997417,
+      "development": 67.50737328980468,
+      "drift": 67.60169781165897,
+      "shift": 68.1120578197937,
+      "sparse": 71.45107019208953
+     },
+     "ci95": [
+      65.79049145794889,
+      71.68994103869001
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "graphvoi_nofill": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    }
+   },
+   "uncertainty_first": {
+    "validation": {
+     "status": "complete",
+     "invalid_counts": {
+      "uncertainty_first": 0,
+      "greedy": 0
+     },
+     "missing_pairs": {
+      "uncertainty_first": [],
+      "greedy": []
+     },
+     "duplicate_keys": [],
+     "unexpected_pairs": [],
+     "expected_pairs": 60,
+     "recorded_counts": {
+      "uncertainty_first": 60,
+      "greedy": 60
+     }
+    },
+    "msmi_per_100_arrived_members": {
+     "status": "complete",
+     "delta": 0.058333333333333334,
+     "scenario_deltas": {
+      "cold_start": -0.05,
+      "delayed": -0.15,
+      "development": 0.1,
+      "drift": 0.0,
+      "shift": 0.3,
+      "sparse": 0.15
+     },
+     "ci95": [
+      -0.10833333333333334,
+      0.225
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "uncertainty_first": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "mutual_acceptances_per_100": {
+     "status": "complete",
+     "delta": -0.4583333333333333,
+     "scenario_deltas": {
+      "cold_start": -0.85,
+      "delayed": -0.35,
+      "development": -0.3,
+      "drift": -0.6,
+      "shift": -0.95,
+      "sparse": 0.3
+     },
+     "ci95": [
+      -1.225,
+      0.31666666666666665
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "uncertainty_first": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "coverage": {
+     "status": "complete",
+     "delta": -0.0007500000000000002,
+     "scenario_deltas": {
+      "cold_start": -0.0005000000000000004,
+      "delayed": 0.000500000000000006,
+      "development": -0.0020000000000000018,
+      "drift": -0.0020000000000000018,
+      "shift": -0.0005000000000000004,
+      "sparse": -2.7755575615628915e-18
+     },
+     "ci95": [
+      -0.00441666666666667,
+      0.003750000000000002
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "uncertainty_first": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "ask_cost": {
+     "status": "complete",
+     "delta": 42.71666666666667,
+     "scenario_deltas": {
+      "cold_start": 40.7,
+      "delayed": 49.1,
+      "development": 51.2,
+      "drift": 51.6,
+      "shift": 51,
+      "sparse": 12.7
+     },
+     "ci95": [
+      37.51625,
+      47.70041666666667
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "uncertainty_first": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "dates": {
+     "status": "complete",
+     "delta": -0.7333333333333334,
+     "scenario_deltas": {
+      "cold_start": -1.8,
+      "delayed": -1.1,
+      "development": 0,
+      "drift": -0.6,
+      "shift": -1.5,
+      "sparse": 0.6
+     },
+     "ci95": [
+      -1.9837500000000001,
+      0.5
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "uncertainty_first": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "mutual_acceptances": {
+     "status": "complete",
+     "delta": -0.9166666666666666,
+     "scenario_deltas": {
+      "cold_start": -1.7,
+      "delayed": -0.7,
+      "development": -0.6,
+      "drift": -1.2,
+      "shift": -1.9,
+      "sparse": 0.6
+     },
+     "ci95": [
+      -2.45,
+      0.6333333333333333
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "uncertainty_first": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "unserved_members": {
+     "status": "complete",
+     "delta": 0.15000000000000002,
+     "scenario_deltas": {
+      "cold_start": 0.1,
+      "delayed": -0.1,
+      "development": 0.4,
+      "drift": 0.4,
+      "shift": 0.1,
+      "sparse": 0
+     },
+     "ci95": [
+      -0.75,
+      0.8833333333333333
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "uncertainty_first": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    },
+    "inference_seconds": {
+     "status": "complete",
+     "delta": 34.604029306315354,
+     "scenario_deltas": {
+      "cold_start": 37.53965833459515,
+      "delayed": 33.367068612063306,
+      "development": 33.82988305924228,
+      "drift": 33.66012017427711,
+      "shift": 34.25921959964326,
+      "sparse": 34.96822605807101
+     },
+     "ci95": [
+      33.31471629840576,
+      35.75463875540476
+     ],
+     "paired_counts": {
+      "cold_start": 10,
+      "delayed": 10,
+      "development": 10,
+      "drift": 10,
+      "shift": 10,
+      "sparse": 10
+     },
+     "invalid_counts": {
+      "uncertainty_first": 0,
+      "greedy": 0
+     },
+     "reliable_sample_size": false,
+     "bootstrap": "paired seed clusters stratified by scenario membership, equal scenario weights",
+     "cluster_counts": {
+      "cold_start,delayed,development,drift,shift,sparse": 10
+     },
+     "note": "Retain all records; failures block inference. Small pilot bootstrap intervals have limited support."
+    }
+   }
+  }
+ },
+ "code_sha256": {
+  "graphvoi/__init__.py": "ecf105855fd2829829f61700d9b11c30f0136f93013c11311b7ffd15dc823827",
+  "graphvoi/analysis.py": "42dcff1bebeb120279beca63caa1516dbf5834bd2004145de805eb932a795d48",
+  "graphvoi/answers.py": "3308a751aa53f04caa25576f0f03437e27df595daabef4fcc740d86be95d51bd",
+  "graphvoi/clarification.py": "2a2a117019a4ee58938c6975c9d05e20e336f831198f80272a2b3d34a8e82875",
+  "graphvoi/core.py": "8eccb125c5e69a6f49ee0a6b6be50b539b3225cbf7220c12b349075c3d2e29e8",
+  "graphvoi/models.py": "274f39b84159e5f05855b9940edf0dc22169d176d6c1daeeb1a2a0b121d119d1",
+  "graphvoi/policy.py": "a72e73dd6e31b9fdbf283cf22226e3e0193054670ba65c62aebcee2d5d95a992",
+  "scripts/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scripts/audit_runtime.py": "3f3ed6001de28ca8e876bb6f4efefea6c3bb2a3dd5da85b3814fd1773d144abc",
+  "scripts/evaluate_method.py": "69ac4b268f0d3bb0665024458780d209c377d03b3dd1353326edd6979d08fe02",
+  "scripts/independent_audit.py": "202eaf253a29ce6de68fecdc236dc0f5ef91ddbdb25ecbfca3c60232e0715406",
+  "scripts/package_source.py": "cb0469157dd1474f00b1b8c2018ab126e46c9e47effeb7ca85888ba1970abf43",
+  "scripts/plot_calibration.py": "b4f57bdc4b0b5e981755947f04d8b15ba3fe5e0d9482ef717d2398e9bcdc5516",
+  "scripts/profile_policy.py": "1b4383858ad027c2f0346b4da9204d1bebc080e6a44fcdb84aa68b4d03d13170",
+  "scripts/run_experiments.py": "a218c8a9d60f0b3b85612477c13b1b6a9b1ebb0b93c40423d782e58880b14d15",
+  "scripts/run_pilot.py": "b3633b7a67ed31d314ada1a87a9ab97127c8cf6767f0f5aed22627c076426368",
+  "scripts/run_robustness.py": "227d6f7b44206eee5a821c26d4fd1fbd5e47fba69fe6a0133adfc984b2f6524d",
+  "scripts/run_study.py": "be68eba42675ec27ca16b8adfa1a1c453671f162efa3cb58d9fb86b70f47e427",
+  "scripts/summarize_results.py": "1135d6700cd013e70539bfad2c01c2295ddb0dd8fa5318da1d0a3aa1a2f53179",
+  "scripts/train_models.py": "14604b6b61245ff2045313b0fc64486048e0d02c99a03827525eda4357209d8e",
+  "scripts/write_report.py": "af4d9845def4d3037670314008f3b2b2a9af21bb84090459ca82c08395b15fe6"
+ },
+ "asset_sha256": {
+  "pair_model.json": "5a1db00312713ffd9447840b8a0473759f60e4ec6855fa6d364a202a29c0dca4",
+  "answer_model.json": "732cdcf12e07061bc88e868a0229e9eb2eefc656ac9c9d3bc44dd913a2568695"
+ },
+ "acquisition": {
+  "frontier": 16,
+  "paired_actions": 8,
+  "world_limit": 8,
+  "evaluation_limit": 256,
+  "lambda_cost": 0,
+  "shared_hard_budget_fill": true
+ },
+ "python_version": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.3.19.1)]",
+ "workers": 7,
+ "elapsed_seconds": 2551.9057007919764,
+ "raw_sha256": "46a34fe1684a3a9e9d213ba1655be6f669dc21434f343c5dee128c0f224bad58",
+ "raw_file": "v3_dev_check.json",
+ "calibration": {
+  "degree_first": {
+   "a_accepts_b": {
+    "labels": 4557,
+    "brier": 0.22563010342982673,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 4391,
+      "predicted": 0.35573765251347156,
+      "observed": 0.3404691414256434
+     },
+     {
+      "bin": 4,
+      "count": 166,
+      "predicted": 0.41197207575970474,
+      "observed": 0.4819277108433735
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   },
+   "b_accepts_a": {
+    "labels": 4557,
+    "brier": 0.2254928599132573,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 4395,
+      "predicted": 0.35600513587182214,
+      "observed": 0.3378839590443686
+     },
+     {
+      "bin": 4,
+      "count": 162,
+      "predicted": 0.4135751991347086,
+      "observed": 0.5185185185185185
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   },
+   "both_directions": {
+    "labels": 9114,
+    "brier": 0.225561481671542,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 8786,
+      "predicted": 0.35587145508118734,
+      "observed": 0.3391759617573412
+     },
+     {
+      "bin": 4,
+      "count": 328,
+      "predicted": 0.412763862304676,
+      "observed": 0.5
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   }
+  },
+  "graphvoi": {
+   "a_accepts_b": {
+    "labels": 4604,
+    "brier": 0.2247471366677658,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 4419,
+      "predicted": 0.35587933407057365,
+      "observed": 0.337632948630912
+     },
+     {
+      "bin": 4,
+      "count": 185,
+      "predicted": 0.4112596873059459,
+      "observed": 0.4918918918918919
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   },
+   "b_accepts_a": {
+    "labels": 4604,
+    "brier": 0.22753995874702412,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 4430,
+      "predicted": 0.35587276578457977,
+      "observed": 0.34514672686230247
+     },
+     {
+      "bin": 4,
+      "count": 174,
+      "predicted": 0.41336156921344425,
+      "observed": 0.5229885057471264
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   },
+   "both_directions": {
+    "labels": 9208,
+    "brier": 0.22614354770739492,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 8849,
+      "predicted": 0.3558760458451298,
+      "observed": 0.3413945078539948
+     },
+     {
+      "bin": 4,
+      "count": 359,
+      "predicted": 0.41227842672629317,
+      "observed": 0.5069637883008357
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   }
+  },
+  "graphvoi_nofill": {
+   "a_accepts_b": {
+    "labels": 3925,
+    "brier": 0.22253532016551664,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 3756,
+      "predicted": 0.3554170838693814,
+      "observed": 0.3306709265175719
+     },
+     {
+      "bin": 4,
+      "count": 169,
+      "predicted": 0.41157017650283034,
+      "observed": 0.40828402366863903
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   },
+   "b_accepts_a": {
+    "labels": 3925,
+    "brier": 0.231505011380414,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 3763,
+      "predicted": 0.3560253709059019,
+      "observed": 0.3582248206218443
+     },
+     {
+      "bin": 4,
+      "count": 162,
+      "predicted": 0.41396387907401166,
+      "observed": 0.5802469135802469
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   },
+   "both_directions": {
+    "labels": 7850,
+    "brier": 0.2270201657729653,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 7519,
+      "predicted": 0.35572151053761203,
+      "observed": 0.34446069956111186
+     },
+     {
+      "bin": 4,
+      "count": 331,
+      "predicted": 0.4127417167340427,
+      "observed": 0.49244712990936557
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   }
+  },
+  "greedy": {
+   "a_accepts_b": {
+    "labels": 4512,
+    "brier": 0.22676483497488142,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 4342,
+      "predicted": 0.3559780434389439,
+      "observed": 0.3438507600184247
+     },
+     {
+      "bin": 4,
+      "count": 170,
+      "predicted": 0.4119432180320039,
+      "observed": 0.43529411764705883
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   },
+   "b_accepts_a": {
+    "labels": 4512,
+    "brier": 0.22946948203809783,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 4337,
+      "predicted": 0.35613582365801466,
+      "observed": 0.3543924371685497
+     },
+     {
+      "bin": 4,
+      "count": 175,
+      "predicted": 0.4128065991593411,
+      "observed": 0.5028571428571429
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   },
+   "both_directions": {
+    "labels": 9024,
+    "brier": 0.2281171585064896,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 8679,
+      "predicted": 0.35605688809963176,
+      "observed": 0.3491185620463187
+     },
+     {
+      "bin": 4,
+      "count": 345,
+      "predicted": 0.4123811649806532,
+      "observed": 0.46956521739130436
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   }
+  },
+  "uncertainty_first": {
+   "a_accepts_b": {
+    "labels": 4614,
+    "brier": 0.22458730516130468,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 4399,
+      "predicted": 0.3575025949685717,
+      "observed": 0.3366674244146397
+     },
+     {
+      "bin": 4,
+      "count": 215,
+      "predicted": 0.41089505923401554,
+      "observed": 0.48372093023255813
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   },
+   "b_accepts_a": {
+    "labels": 4614,
+    "brier": 0.2293763865918981,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 4389,
+      "predicted": 0.3581811979324816,
+      "observed": 0.35657325131009343
+     },
+     {
+      "bin": 4,
+      "count": 225,
+      "predicted": 0.41351268092341337,
+      "observed": 0.44
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   },
+   "both_directions": {
+    "labels": 9228,
+    "brier": 0.22698184587660142,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 8788,
+      "predicted": 0.3578415103541658,
+      "observed": 0.34660901228948565
+     },
+     {
+      "bin": 4,
+      "count": 440,
+      "predicted": 0.4122336157797303,
+      "observed": 0.46136363636363636
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   }
+  }
+ },
+ "opportunity": {
+  "graphvoi": {
+   "all": {
+    "all": {
+     "members": 12000,
+     "served_share": 0.32666666666666666,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.2915833333333333,
+     "introductions_per_member": 0.7673333333333333,
+     "eligible_partners_per_member": 0.8858333333333334,
+     "ask_units_per_member": 1.1799166666666667,
+     "declined_hard_field_share": 0.3505,
+     "servable_members": 7794,
+     "servable_served_share": 0.5029509879394406,
+     "servable_km_median_wait_days": 39,
+     "servable_km_served_within_14_days": 0.4489350782653321
+    }
+   },
+   "gender": {
+    "woman": {
+     "members": 5519,
+     "served_share": 0.30585250951259285,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.2665337923536871,
+     "introductions_per_member": 0.7231382496829136,
+     "eligible_partners_per_member": 0.8336655191157818,
+     "ask_units_per_member": 1.177024823337561,
+     "declined_hard_field_share": 0.35531799238992573,
+     "servable_members": 3558,
+     "servable_served_share": 0.4744238336143901,
+     "servable_km_median_wait_days": null,
+     "servable_km_served_within_14_days": 0.413434513771782
+    },
+    "man": {
+     "members": 5551,
+     "served_share": 0.3460637722932805,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.31399747793190425,
+     "introductions_per_member": 0.8146279949558638,
+     "eligible_partners_per_member": 0.936768149882904,
+     "ask_units_per_member": 1.1925779138893893,
+     "declined_hard_field_share": 0.3439019996397046,
+     "servable_members": 3642,
+     "servable_served_share": 0.5274574409665019,
+     "servable_km_median_wait_days": 18,
+     "servable_km_served_within_14_days": 0.4785831960461284
+    },
+    "non_binary": {
+     "members": 930,
+     "served_share": 0.33440860215053764,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.30645161290322565,
+     "introductions_per_member": 0.7473118279569892,
+     "eligible_partners_per_member": 0.8913978494623656,
+     "ask_units_per_member": 1.121505376344086,
+     "declined_hard_field_share": 0.36129032258064514,
+     "servable_members": 594,
+     "servable_served_share": 0.5235690235690236,
+     "servable_km_median_wait_days": 17,
+     "servable_km_served_within_14_days": 0.4797979797979798
+    }
+   },
+   "age_band": {
+    "21-29": {
+     "members": 4217,
+     "served_share": 0.31752430637894236,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.27697415224092947,
+     "introductions_per_member": 0.7346454825705477,
+     "eligible_partners_per_member": 0.8166943324638368,
+     "ask_units_per_member": 1.1335072326298317,
+     "declined_hard_field_share": 0.3658999288593787,
+     "servable_members": 2674,
+     "servable_served_share": 0.5007479431563201,
+     "servable_km_median_wait_days": 55,
+     "servable_km_served_within_14_days": 0.43679880329094967
+    },
+    "30-39": {
+     "members": 4621,
+     "served_share": 0.34776022505951093,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.31529971867561135,
+     "introductions_per_member": 0.8677775373295823,
+     "eligible_partners_per_member": 1.0465267258169229,
+     "ask_units_per_member": 1.20796364423285,
+     "declined_hard_field_share": 0.34819303181129624,
+     "servable_members": 3012,
+     "servable_served_share": 0.5335325365205843,
+     "servable_km_median_wait_days": 16,
+     "servable_km_served_within_14_days": 0.48373173970783523
+    },
+    "40+": {
+     "members": 3162,
+     "served_share": 0.3080328905755851,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.2764073371283997,
+     "introductions_per_member": 0.6641366223908919,
+     "eligible_partners_per_member": 0.7432005060088551,
+     "ask_units_per_member": 1.200822264389627,
+     "declined_hard_field_share": 0.3333333333333333,
+     "servable_members": 2108,
+     "servable_served_share": 0.4620493358633776,
+     "servable_km_median_wait_days": null,
+     "servable_km_served_within_14_days": 0.41461100569259945
+    }
+   }
+  },
+  "graphvoi_nofill": {
+   "all": {
+    "all": {
+     "members": 12000,
+     "served_share": 0.2821666666666667,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.21583333333333354,
+     "introductions_per_member": 0.6541666666666667,
+     "eligible_partners_per_member": 0.7781666666666667,
+     "ask_units_per_member": 0.6833333333333333,
+     "declined_hard_field_share": 0.3505,
+     "servable_members": 7794,
+     "servable_served_share": 0.4344367462150372,
+     "servable_km_median_wait_days": null,
+     "servable_km_served_within_14_days": 0.33230690274570196
+    }
+   },
+   "gender": {
+    "woman": {
+     "members": 5519,
+     "served_share": 0.2621851784743613,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.1938757021199492,
+     "introductions_per_member": 0.6037325602464214,
+     "eligible_partners_per_member": 0.7196955970284472,
+     "ask_units_per_member": 0.6774778039499909,
+     "declined_hard_field_share": 0.35531799238992573,
+     "servable_members": 3558,
+     "servable_served_share": 0.40668915120854415,
+     "servable_km_median_wait_days": null,
+     "servable_km_served_within_14_days": 0.3007307476110175
+    },
+    "man": {
+     "members": 5551,
+     "served_share": 0.3031886146640245,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.23743469645108972,
+     "introductions_per_member": 0.7014952260853901,
+     "eligible_partners_per_member": 0.8297604035308953,
+     "ask_units_per_member": 0.6982525671050261,
+     "declined_hard_field_share": 0.3439019996397046,
+     "servable_members": 3642,
+     "servable_served_share": 0.46210873146622733,
+     "servable_km_median_wait_days": null,
+     "servable_km_served_within_14_days": 0.3618890719384954
+    },
+    "non_binary": {
+     "members": 930,
+     "served_share": 0.2752688172043011,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.2172043010752689,
+     "introductions_per_member": 0.6709677419354839,
+     "eligible_partners_per_member": 0.8172043010752689,
+     "ask_units_per_member": 0.6290322580645161,
+     "declined_hard_field_share": 0.36129032258064514,
+     "servable_members": 594,
+     "servable_served_share": 0.43097643097643096,
+     "servable_km_median_wait_days": null,
+     "servable_km_served_within_14_days": 0.34006734006733985
+    }
+   },
+   "age_band": {
+    "21-29": {
+     "members": 4217,
+     "served_share": 0.2703343609200854,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.18899691723974377,
+     "introductions_per_member": 0.6009011145364003,
+     "eligible_partners_per_member": 0.6943324638368509,
+     "ask_units_per_member": 0.6016125207493479,
+     "declined_hard_field_share": 0.3658999288593787,
+     "servable_members": 2674,
+     "servable_served_share": 0.4263275991024682,
+     "servable_km_median_wait_days": null,
+     "servable_km_served_within_14_days": 0.29805534779356757
+    },
+    "30-39": {
+     "members": 4621,
+     "served_share": 0.3018827093702662,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.24215537762389094,
+     "introductions_per_member": 0.7578446223761091,
+     "eligible_partners_per_member": 0.9333477602250595,
+     "ask_units_per_member": 0.7195412248431076,
+     "declined_hard_field_share": 0.34819303181129624,
+     "servable_members": 3012,
+     "servable_served_share": 0.4631474103585657,
+     "servable_km_median_wait_days": null,
+     "servable_km_served_within_14_days": 0.37151394422310746
+    },
+    "40+": {
+     "members": 3162,
+     "served_share": 0.2691334598355471,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.21315623023402874,
+     "introductions_per_member": 0.5736875395319418,
+     "eligible_partners_per_member": 0.6631878557874763,
+     "ask_units_per_member": 0.7394054395951929,
+     "declined_hard_field_share": 0.3333333333333333,
+     "servable_members": 2108,
+     "servable_served_share": 0.40370018975332067,
+     "servable_km_median_wait_days": null,
+     "servable_km_served_within_14_days": 0.3197343453510435
+    }
+   }
+  },
+  "degree_first": {
+   "all": {
+    "all": {
+     "members": 12000,
+     "served_share": 0.32716666666666666,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.2916666666666665,
+     "introductions_per_member": 0.7595,
+     "eligible_partners_per_member": 0.8908333333333334,
+     "ask_units_per_member": 0.98575,
+     "declined_hard_field_share": 0.3505,
+     "servable_members": 7794,
+     "servable_served_share": 0.5037208108801642,
+     "servable_km_median_wait_days": 35,
+     "servable_km_served_within_14_days": 0.44906338208878616
+    }
+   },
+   "gender": {
+    "woman": {
+     "members": 5519,
+     "served_share": 0.30675847073745244,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.2683457148034062,
+     "introductions_per_member": 0.715709367639065,
+     "eligible_partners_per_member": 0.8401884399347708,
+     "ask_units_per_member": 0.9974633085703932,
+     "declined_hard_field_share": 0.35531799238992573,
+     "servable_members": 3558,
+     "servable_served_share": 0.4758291174817313,
+     "servable_km_median_wait_days": null,
+     "servable_km_served_within_14_days": 0.41624508150646433
+    },
+    "man": {
+     "members": 5551,
+     "served_share": 0.34624392001441184,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.3123761484417221,
+     "introductions_per_member": 0.8099441542064493,
+     "eligible_partners_per_member": 0.9419924337957125,
+     "ask_units_per_member": 0.9846874437038371,
+     "declined_hard_field_share": 0.3439019996397046,
+     "servable_members": 3642,
+     "servable_served_share": 0.527732015376167,
+     "servable_km_median_wait_days": 18,
+     "servable_km_served_within_14_days": 0.4761120263591433
+    },
+    "non_binary": {
+     "members": 930,
+     "served_share": 0.33440860215053764,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.30645161290322576,
+     "introductions_per_member": 0.7182795698924731,
+     "eligible_partners_per_member": 0.886021505376344,
+     "ask_units_per_member": 0.9225806451612903,
+     "declined_hard_field_share": 0.36129032258064514,
+     "servable_members": 594,
+     "servable_served_share": 0.5235690235690236,
+     "servable_km_median_wait_days": 17,
+     "servable_km_served_within_14_days": 0.4797979797979799
+    }
+   },
+   "age_band": {
+    "21-29": {
+     "members": 4217,
+     "served_share": 0.3177614417832582,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.277922693858193,
+     "introductions_per_member": 0.7282428266540194,
+     "eligible_partners_per_member": 0.8318709983400522,
+     "ask_units_per_member": 0.9433246383685084,
+     "declined_hard_field_share": 0.3658999288593787,
+     "servable_members": 2674,
+     "servable_served_share": 0.5011219147344802,
+     "servable_km_median_wait_days": 53,
+     "servable_km_served_within_14_days": 0.43829468960358997
+    },
+    "30-39": {
+     "members": 4621,
+     "served_share": 0.3473274183077256,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.31443410517204096,
+     "introductions_per_member": 0.864098679939407,
+     "eligible_partners_per_member": 1.0471759359446007,
+     "ask_units_per_member": 0.9874486041982254,
+     "declined_hard_field_share": 0.34819303181129624,
+     "servable_members": 3012,
+     "servable_served_share": 0.5328685258964143,
+     "servable_km_median_wait_days": 17,
+     "servable_km_served_within_14_days": 0.48240371845949526
+    },
+    "40+": {
+     "members": 3162,
+     "served_share": 0.31024667931688804,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.2767235926628715,
+     "introductions_per_member": 0.6483238456672992,
+     "eligible_partners_per_member": 0.7409867172675522,
+     "ask_units_per_member": 1.0398481973434535,
+     "declined_hard_field_share": 0.3333333333333333,
+     "servable_members": 2108,
+     "servable_served_share": 0.4653700189753321,
+     "servable_km_median_wait_days": null,
+     "servable_km_served_within_14_days": 0.4150853889943077
+    }
+   }
+  },
+  "uncertainty_first": {
+   "all": {
+    "all": {
+     "members": 12000,
+     "served_share": 0.3268333333333333,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.2895,
+     "introductions_per_member": 0.769,
+     "eligible_partners_per_member": 0.888,
+     "ask_units_per_member": 1.1993333333333334,
+     "declined_hard_field_share": 0.3505,
+     "servable_members": 7794,
+     "servable_served_share": 0.5032075955863484,
+     "servable_km_median_wait_days": 36,
+     "servable_km_served_within_14_days": 0.4457274826789839
+    }
+   },
+   "gender": {
+    "woman": {
+     "members": 5519,
+     "served_share": 0.3065772784924805,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.26472186990396795,
+     "introductions_per_member": 0.7274868635622396,
+     "eligible_partners_per_member": 0.8407320166696866,
+     "ask_units_per_member": 1.2083710817177025,
+     "declined_hard_field_share": 0.35531799238992573,
+     "servable_members": 3558,
+     "servable_served_share": 0.47554806070826305,
+     "servable_km_median_wait_days": null,
+     "servable_km_served_within_14_days": 0.4106239460370994
+    },
+    "man": {
+     "members": 5551,
+     "served_share": 0.3449828859664925,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.3114754098360656,
+     "introductions_per_member": 0.8117456314177626,
+     "eligible_partners_per_member": 0.936768149882904,
+     "ask_units_per_member": 1.200144118176905,
+     "declined_hard_field_share": 0.3439019996397046,
+     "servable_members": 3642,
+     "servable_served_share": 0.5258099945085118,
+     "servable_km_median_wait_days": 19,
+     "servable_km_served_within_14_days": 0.47473915431081826
+    },
+    "non_binary": {
+     "members": 930,
+     "served_share": 0.3387096774193548,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.3053763440860213,
+     "introductions_per_member": 0.7602150537634409,
+     "eligible_partners_per_member": 0.8774193548387097,
+     "ask_units_per_member": 1.1408602150537634,
+     "declined_hard_field_share": 0.36129032258064514,
+     "servable_members": 594,
+     "servable_served_share": 0.5303030303030303,
+     "servable_km_median_wait_days": 17,
+     "servable_km_served_within_14_days": 0.47811447811447827
+    }
+   },
+   "age_band": {
+    "21-29": {
+     "members": 4217,
+     "served_share": 0.31847284799620584,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.27626274602798206,
+     "introductions_per_member": 0.7253972018022291,
+     "eligible_partners_per_member": 0.8271282902537349,
+     "ask_units_per_member": 1.1752430637894238,
+     "declined_hard_field_share": 0.3658999288593787,
+     "servable_members": 2674,
+     "servable_served_share": 0.5022438294689604,
+     "servable_km_median_wait_days": 51,
+     "servable_km_served_within_14_days": 0.4356768885564698
+    },
+    "30-39": {
+     "members": 4621,
+     "served_share": 0.3449469811729063,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.3109716511577578,
+     "introductions_per_member": 0.8688595542090457,
+     "eligible_partners_per_member": 1.0337589266392555,
+     "ask_units_per_member": 1.225275914304263,
+     "declined_hard_field_share": 0.34819303181129624,
+     "servable_members": 3012,
+     "servable_served_share": 0.5292164674634794,
+     "servable_km_median_wait_days": 17,
+     "servable_km_served_within_14_days": 0.47709163346613526
+    },
+    "40+": {
+     "members": 3162,
+     "served_share": 0.31151170145477547,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.27577482605945614,
+     "introductions_per_member": 0.681214421252372,
+     "eligible_partners_per_member": 0.7561669829222012,
+     "ask_units_per_member": 1.1935483870967742,
+     "declined_hard_field_share": 0.3333333333333333,
+     "servable_members": 2108,
+     "servable_served_share": 0.4672675521821632,
+     "servable_km_median_wait_days": null,
+     "servable_km_served_within_14_days": 0.4136622390891842
+    }
+   }
+  },
+  "greedy": {
+   "all": {
+    "all": {
+     "members": 12000,
+     "served_share": 0.32758333333333334,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.2829166666666669,
+     "introductions_per_member": 0.752,
+     "eligible_partners_per_member": 0.882,
+     "ask_units_per_member": 0.98575,
+     "declined_hard_field_share": 0.3505,
+     "servable_members": 7794,
+     "servable_served_share": 0.5043623299974339,
+     "servable_km_median_wait_days": 38,
+     "servable_km_served_within_14_days": 0.4355914806261225
+    }
+   },
+   "gender": {
+    "woman": {
+     "members": 5519,
+     "served_share": 0.309838738901975,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.26001087153469826,
+     "introductions_per_member": 0.7003080268164522,
+     "eligible_partners_per_member": 0.8244247146222141,
+     "ask_units_per_member": 0.9974633085703932,
+     "declined_hard_field_share": 0.35531799238992573,
+     "servable_members": 3558,
+     "servable_served_share": 0.4806070826306914,
+     "servable_km_median_wait_days": null,
+     "servable_km_served_within_14_days": 0.40331646992692527
+    },
+    "man": {
+     "members": 5551,
+     "served_share": 0.3428211133129166,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.3030084669428931,
+     "introductions_per_member": 0.7958926319582057,
+     "eligible_partners_per_member": 0.9331651954602774,
+     "ask_units_per_member": 0.9846874437038371,
+     "declined_hard_field_share": 0.3439019996397046,
+     "servable_members": 3642,
+     "servable_served_share": 0.5225151015925316,
+     "servable_km_median_wait_days": 22,
+     "servable_km_served_within_14_days": 0.46183415705656217
+    },
+    "non_binary": {
+     "members": 930,
+     "served_share": 0.3419354838709677,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.2989247311827957,
+     "introductions_per_member": 0.7967741935483871,
+     "eligible_partners_per_member": 0.9182795698924732,
+     "ask_units_per_member": 0.9225806451612903,
+     "declined_hard_field_share": 0.36129032258064514,
+     "servable_members": 594,
+     "servable_served_share": 0.5353535353535354,
+     "servable_km_median_wait_days": 18,
+     "servable_km_served_within_14_days": 0.4680134680134681
+    }
+   },
+   "age_band": {
+    "21-29": {
+     "members": 4217,
+     "served_share": 0.3161014939530472,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.2696229547071378,
+     "introductions_per_member": 0.7092719943087503,
+     "eligible_partners_per_member": 0.809580270334361,
+     "ask_units_per_member": 0.9433246383685084,
+     "declined_hard_field_share": 0.3658999288593787,
+     "servable_members": 2674,
+     "servable_served_share": 0.49850411368735975,
+     "servable_km_median_wait_days": null,
+     "servable_km_served_within_14_days": 0.4252056843679881
+    },
+    "30-39": {
+     "members": 4621,
+     "served_share": 0.34884224193897423,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.30685998701579764,
+     "introductions_per_member": 0.8506816706340619,
+     "eligible_partners_per_member": 1.0365721705258601,
+     "ask_units_per_member": 0.9874486041982254,
+     "declined_hard_field_share": 0.34819303181129624,
+     "servable_members": 3012,
+     "servable_served_share": 0.5351925630810093,
+     "servable_km_median_wait_days": 18,
+     "servable_km_served_within_14_days": 0.4707835325365204
+    },
+    "40+": {
+     "members": 3162,
+     "served_share": 0.3118279569892473,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.2656546489563568,
+     "introductions_per_member": 0.6647691334598356,
+     "eligible_partners_per_member": 0.7526881720430108,
+     "ask_units_per_member": 1.0398481973434535,
+     "declined_hard_field_share": 0.3333333333333333,
+     "servable_members": 2108,
+     "servable_served_share": 0.46774193548387094,
+     "servable_km_median_wait_days": null,
+     "servable_km_served_within_14_days": 0.3984819734345352
+    }
+   }
+  }
+ },
+ "daily_ask_units": {
+  "graphvoi": [
+   12.0,
+   11.966666666666667,
+   11.95,
+   12.0,
+   11.966666666666667,
+   11.766666666666667,
+   11.833333333333334,
+   11.8,
+   11.7,
+   11.966666666666667,
+   11.65,
+   11.433333333333334,
+   10.733333333333333,
+   9.533333333333333,
+   8.333333333333334,
+   7.7,
+   7.333333333333333,
+   5.05,
+   4.75,
+   5.466666666666667,
+   5.05,
+   1.4666666666666666,
+   1.4666666666666666,
+   1.1666666666666667,
+   1.7,
+   1.55,
+   1.1666666666666667,
+   1.3333333333333333,
+   1.05,
+   0.6833333333333333,
+   0.7333333333333333,
+   0.5666666666666667,
+   1.4166666666666667,
+   1.15,
+   0.9,
+   1.0833333333333333,
+   0.9833333333333333,
+   0.38333333333333336,
+   0.26666666666666666,
+   0.4,
+   1.4166666666666667,
+   0.65,
+   0.7333333333333333,
+   0.7,
+   0.75,
+   0.38333333333333336,
+   0.36666666666666664,
+   0.2833333333333333,
+   1.1333333333333333,
+   0.48333333333333334,
+   0.38333333333333336,
+   0.4,
+   0.18333333333333332,
+   0.36666666666666664,
+   0.2,
+   0.35,
+   0.6666666666666666,
+   0.2833333333333333,
+   0.48333333333333334,
+   0.31666666666666665
+  ],
+  "graphvoi_nofill": [
+   6.05,
+   6.05,
+   5.516666666666667,
+   5.95,
+   4.9,
+   4.75,
+   4.85,
+   3.8,
+   5.283333333333333,
+   5.283333333333333,
+   3.683333333333333,
+   4.8,
+   4.3,
+   3.566666666666667,
+   4.583333333333333,
+   4.066666666666666,
+   4.766666666666667,
+   4.016666666666667,
+   3.5833333333333335,
+   3.7666666666666666,
+   4.283333333333333,
+   3.9,
+   3.1166666666666667,
+   2.783333333333333,
+   2.9833333333333334,
+   4.016666666666667,
+   2.716666666666667,
+   1.9833333333333334,
+   0.8166666666666667,
+   1.3833333333333333,
+   1.7,
+   0.7,
+   0.9333333333333333,
+   1.05,
+   0.75,
+   0.9,
+   1.0666666666666667,
+   0.55,
+   1.45,
+   0.65,
+   0.7333333333333333,
+   0.6166666666666667,
+   0.2,
+   0.3,
+   0.5,
+   0.15,
+   0.6,
+   0.2,
+   0.1,
+   0.3333333333333333,
+   0.1,
+   0.13333333333333333,
+   0.15,
+   0.45,
+   0.2833333333333333,
+   0.2,
+   0.05,
+   0.0,
+   0.1,
+   0.16666666666666666
+  ],
+  "degree_first": [
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   11.6,
+   10.55,
+   8.2,
+   7.15,
+   6.7,
+   5.65,
+   3.1,
+   3.6,
+   4.55,
+   3.95,
+   0.1,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "uncertainty_first": [
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   11.866666666666667,
+   11.633333333333333,
+   10.883333333333333,
+   9.183333333333334,
+   7.783333333333333,
+   7.816666666666666,
+   6.65,
+   5.066666666666666,
+   4.416666666666667,
+   5.266666666666667,
+   4.85,
+   1.6166666666666667,
+   1.3333333333333333,
+   1.2333333333333334,
+   1.8333333333333333,
+   1.6,
+   1.0833333333333333,
+   1.45,
+   1.0,
+   0.85,
+   0.75,
+   1.1166666666666667,
+   1.55,
+   1.3166666666666667,
+   1.1,
+   1.1666666666666667,
+   1.2333333333333334,
+   0.5333333333333333,
+   0.38333333333333336,
+   0.7833333333333333,
+   1.0333333333333334,
+   0.9666666666666667,
+   0.7833333333333333,
+   0.6,
+   0.6,
+   0.8333333333333334,
+   0.4166666666666667,
+   0.43333333333333335,
+   0.9,
+   0.8333333333333334,
+   0.5833333333333334,
+   0.6,
+   0.31666666666666665,
+   0.5166666666666667,
+   0.13333333333333333,
+   0.5833333333333334,
+   0.6666666666666666,
+   0.8,
+   0.5,
+   0.4166666666666667
+  ],
+  "greedy": [
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   11.6,
+   10.55,
+   8.2,
+   7.15,
+   6.7,
+   5.65,
+   3.1,
+   3.6,
+   4.55,
+   3.95,
+   0.1,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ }
+}

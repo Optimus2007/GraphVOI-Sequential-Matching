@@ -1,0 +1,2 @@
+# Analysis and figures only; inference needs nothing installed.
+matplotlib==3.10.7
