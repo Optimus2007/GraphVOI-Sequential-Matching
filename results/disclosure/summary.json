@@ -1,0 +1,734 @@
+{
+ "complete": true,
+ "code_sha256": {
+  "graphvoi/__init__.py": "ecf105855fd2829829f61700d9b11c30f0136f93013c11311b7ffd15dc823827",
+  "graphvoi/analysis.py": "08e016fa048a8d20f9238bee10222e6d969785baccfe1e90e29c0f3815333ac2",
+  "graphvoi/answers.py": "3308a751aa53f04caa25576f0f03437e27df595daabef4fcc740d86be95d51bd",
+  "graphvoi/clarification.py": "3fc7a731ae49b183ae13a20f219bc020c469a219f325d63603cf07cd86e8d981",
+  "graphvoi/core.py": "8eccb125c5e69a6f49ee0a6b6be50b539b3225cbf7220c12b349075c3d2e29e8",
+  "graphvoi/models.py": "274f39b84159e5f05855b9940edf0dc22169d176d6c1daeeb1a2a0b121d119d1",
+  "graphvoi/policy.py": "50b77220cedeed4d98aa827c7165d0b9fbafaad60515db9acfcbd41d70697d32",
+  "scripts/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scripts/compare_studies.py": "2408926466c2f9a3b52ff85396237c796a699085dba45a49db76a70a3be4804f",
+  "scripts/decision_sensitivity.py": "7ff47819ce13d506426655613989c951836829ab754005b1d62ecc03ae0b6571",
+  "scripts/evaluate_method.py": "69ac4b268f0d3bb0665024458780d209c377d03b3dd1353326edd6979d08fe02",
+  "scripts/export_results.py": "dc7b89126f854faf6222a9b81abe65b354a721e634e5618c3b19fc0a44f97eca",
+  "scripts/make_figures.py": "6a8daf4e300a21441b4695d13185b43fb7eee9b46aa39358a02f9554a8670364",
+  "scripts/profile_container.py": "473afb8fdde6662cf39029f57a583133a0c908cbbb71fd27d488240288e536f7",
+  "scripts/run_disclosure.py": "aff2d23facc277f591ddecbd9be98408a80a617b0020e9b7e9c8d2df523552b9",
+  "scripts/run_experiments.py": "56311dfd7b5f62b247cd0d702c95ec80269fd5226095359ad67a4cc78975b476",
+  "scripts/run_pilot.py": "b3633b7a67ed31d314ada1a87a9ab97127c8cf6767f0f5aed22627c076426368",
+  "scripts/run_study.py": "c9d1702b088f8500dcb2b49ea1b328013a215d039a2438a6c7d649787acdba9a",
+  "scripts/summarize_results.py": "1135d6700cd013e70539bfad2c01c2295ddb0dd8fa5318da1d0a3aa1a2f53179",
+  "scripts/summarize_study.py": "b83c64bc01848a90ddef481f45596dc22ffb631caa5df571f3cda4b19bd11177",
+  "scripts/train_models.py": "14604b6b61245ff2045313b0fc64486048e0d02c99a03827525eda4357209d8e"
+ },
+ "elapsed_seconds": 3174.2104516689997,
+ "conditions": [
+  [
+   "graphvoi",
+   "biased",
+   "none"
+  ],
+  [
+   "graphvoi",
+   "overconfident",
+   "none"
+  ],
+  [
+   "graphvoi",
+   "underconfident",
+   "none"
+  ],
+  [
+   "graphvoi",
+   "refusal",
+   "none"
+  ],
+  [
+   "graphvoi",
+   "none",
+   "refusal"
+  ],
+  [
+   "degree_first",
+   "none",
+   "refusal"
+  ],
+  [
+   "greedy",
+   "none",
+   "refusal"
+  ],
+  [
+   "graphvoi",
+   "none",
+   "drift"
+  ],
+  [
+   "degree_first",
+   "none",
+   "drift"
+  ],
+  [
+   "greedy",
+   "none",
+   "drift"
+  ]
+ ],
+ "seeds": [
+  71001,
+  71010
+ ],
+ "raw_sha256": "7941d84d6d4c83599d9fa1153a0e420fa849f76d0b02c7150653bd807efe2a81",
+ "raw_file": "v3_disclosure.json",
+ "calibration": {
+  "degree_first": {
+   "a_accepts_b": {
+    "labels": 7991,
+    "brier": 0.2278067929115578,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 7585,
+      "predicted": 0.35552586725037627,
+      "observed": 0.34489123269611077
+     },
+     {
+      "bin": 4,
+      "count": 406,
+      "predicted": 0.4124848524699464,
+      "observed": 0.5295566502463054
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   },
+   "b_accepts_a": {
+    "labels": 7991,
+    "brier": 0.22452865990643933,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 7629,
+      "predicted": 0.3562178598719179,
+      "observed": 0.33215362432822126
+     },
+     {
+      "bin": 4,
+      "count": 362,
+      "predicted": 0.4105465748647085,
+      "observed": 0.5469613259668509
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   },
+   "both_directions": {
+    "labels": 15982,
+    "brier": 0.22616772640899852,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 15214,
+      "predicted": 0.3558728642077668,
+      "observed": 0.3385040094649665
+     },
+     {
+      "bin": 4,
+      "count": 768,
+      "predicted": 0.41157123724456063,
+      "observed": 0.5377604166666666
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   }
+  },
+  "graphvoi": {
+   "a_accepts_b": {
+    "labels": 26775,
+    "brier": 0.2279266628990392,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 3,
+      "predicted": 0.2988133361340414,
+      "observed": 0.0
+     },
+     {
+      "bin": 3,
+      "count": 25509,
+      "predicted": 0.35539271518199406,
+      "observed": 0.34787721980477476
+     },
+     {
+      "bin": 4,
+      "count": 1263,
+      "predicted": 0.41211958806112614,
+      "observed": 0.5281076801266825
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   },
+   "b_accepts_a": {
+    "labels": 26775,
+    "brier": 0.22516936930565098,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 25655,
+      "predicted": 0.3558047479445491,
+      "observed": 0.3359968816994738
+     },
+     {
+      "bin": 4,
+      "count": 1120,
+      "predicted": 0.4108652641756954,
+      "observed": 0.5464285714285714
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   },
+   "both_directions": {
+    "labels": 53550,
+    "brier": 0.22654801610234504,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 3,
+      "predicted": 0.2988133361340414,
+      "observed": 0.0
+     },
+     {
+      "bin": 3,
+      "count": 51164,
+      "predicted": 0.3555993194452133,
+      "observed": 0.341920100070362
+     },
+     {
+      "bin": 4,
+      "count": 2383,
+      "predicted": 0.41153006109860746,
+      "observed": 0.536718422156945
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   }
+  },
+  "greedy": {
+   "a_accepts_b": {
+    "labels": 7729,
+    "brier": 0.22620506001705112,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 7295,
+      "predicted": 0.35565162305608167,
+      "observed": 0.34461960246744344
+     },
+     {
+      "bin": 4,
+      "count": 434,
+      "predicted": 0.4117764304531531,
+      "observed": 0.4815668202764977
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   },
+   "b_accepts_a": {
+    "labels": 7729,
+    "brier": 0.2230024306339602,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 7339,
+      "predicted": 0.3565415009521557,
+      "observed": 0.32497615478948083
+     },
+     {
+      "bin": 4,
+      "count": 390,
+      "predicted": 0.41035582802502063,
+      "observed": 0.558974358974359
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   },
+   "both_directions": {
+    "labels": 15458,
+    "brier": 0.2246037453255057,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 14634,
+      "predicted": 0.35609789980060025,
+      "observed": 0.33476834768347685
+     },
+     {
+      "bin": 4,
+      "count": 824,
+      "predicted": 0.41110405794469246,
+      "observed": 0.5182038834951457
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   }
+  }
+ },
+ "opportunity": null,
+ "daily_ask_units": null,
+ "true_preference_audit": null,
+ "calibration_by_gender": {
+  "degree_first": {
+   "woman": {
+    "labels": 7872,
+    "brier": 0.2265608308651796
+   },
+   "man": {
+    "labels": 6670,
+    "brier": 0.22443368683097545
+   },
+   "non_binary": {
+    "labels": 1440,
+    "brier": 0.23205073037174612
+   }
+  },
+  "graphvoi": {
+   "woman": {
+    "labels": 26015,
+    "brier": 0.22888178310205756
+   },
+   "man": {
+    "labels": 22849,
+    "brier": 0.22320511346042654
+   },
+   "non_binary": {
+    "labels": 4686,
+    "brier": 0.2298918133639076
+   }
+  },
+  "greedy": {
+   "woman": {
+    "labels": 7492,
+    "brier": 0.22573190280418473
+   },
+   "man": {
+    "labels": 6560,
+    "brier": 0.2230405867443863
+   },
+   "non_binary": {
+    "labels": 1406,
+    "brier": 0.22588551236809457
+   }
+  }
+ }
+}

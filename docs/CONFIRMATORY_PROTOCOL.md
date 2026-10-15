@@ -126,3 +126,23 @@ especially when disclosure behaviour changes. Two additions, no policy change:
   `refusal` environment, and `temporal_drift` beliefs in the `drift` environment,
   seeds 71001 to 71010. Compared with GraphVOI using correct-world (`none`)
   beliefs in the same shifted environments. 120 episodes.
+
+## Execution notes (added after the runs, 15 October 2026)
+
+Nothing above was changed after any run started. How the studies actually ran:
+
+- The confirmatory study started on a Mac (6 workers). To finish in time it was
+  stopped cleanly after seeds 71001 to 71034 were complete; seeds 71035 to 71100
+  ran on an x86 Linux machine (GCP n2d-highcpu-80, Python 3.12.7). Ablations and
+  robustness runs ran on that machine and a GCP n2-standard-32. Every part used
+  identical policy, runner and model hashes. `scripts/merge_studies.py` refused
+  to combine parts with any difference, required the full declared matrix, and
+  confirmed identical action hashes for all 22 confirmatory and 320 robustness
+  episodes that were run on both machines.
+- Decision rule outcome: neither primary comparison met the Bonferroni rule, so no
+  superiority or inferiority claim is made.
+- After the study, the ask-phase guard was lowered from 6 s to 4.5 s for the
+  submission, because the waiting ablation showed it can overshoot by about one
+  second. The default policy's slowest ask in the study was 3.1 s, and 24 re-run
+  confirmatory episodes plus six container episodes have identical action hashes,
+  so no evaluated decision changes.

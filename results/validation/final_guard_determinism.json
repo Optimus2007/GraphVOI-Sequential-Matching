@@ -1,0 +1,201 @@
+{
+ "ask_deadline_seconds": 4.5,
+ "reference": "v3_confirmatory.json",
+ "episodes": 24,
+ "identical_to_reference": 24,
+ "deadline_hits": 0,
+ "cells": [
+  {
+   "seed": 71001,
+   "variant": "development",
+   "method": "graphvoi",
+   "action_sha256": "15a3c7f4ae7e0ae53516a478ca11d54fe7aa2a3aae33111654bfc195600eab10",
+   "deadline_count": 0,
+   "matches": true
+  },
+  {
+   "seed": 71001,
+   "variant": "sparse",
+   "method": "graphvoi",
+   "action_sha256": "837fcd38b742d84396a00e3f1eddda55b1fde36d85de443ed28fb2477af7f762",
+   "deadline_count": 0,
+   "matches": true
+  },
+  {
+   "seed": 71001,
+   "variant": "cold_start",
+   "method": "graphvoi",
+   "action_sha256": "f3a0872f14b7109b978e78abea41d66753da9f80890207bbed9d8ded2570e17e",
+   "deadline_count": 0,
+   "matches": true
+  },
+  {
+   "seed": 71001,
+   "variant": "delayed",
+   "method": "graphvoi",
+   "action_sha256": "19c4ee327e8921dfb3a00d97f62ce5b81ea372e2ba879a5942056041ee4fab4e",
+   "deadline_count": 0,
+   "matches": true
+  },
+  {
+   "seed": 71001,
+   "variant": "shift",
+   "method": "graphvoi",
+   "action_sha256": "2bb4d02003d3d23628541d1b82ce88b5091dff99bf1ad36b8e244bd40b90fc34",
+   "deadline_count": 0,
+   "matches": true
+  },
+  {
+   "seed": 71001,
+   "variant": "drift",
+   "method": "graphvoi",
+   "action_sha256": "97837b229f892bb9af84f09003fc98d1e32f2bc9f1b3e78c0550c691171a5e6d",
+   "deadline_count": 0,
+   "matches": true
+  },
+  {
+   "seed": 71002,
+   "variant": "development",
+   "method": "graphvoi",
+   "action_sha256": "7e34721ce4f0ec7012a01040bdc5d85cf8a53822429943d4dde5e58a83ec9a3e",
+   "deadline_count": 0,
+   "matches": true
+  },
+  {
+   "seed": 71002,
+   "variant": "sparse",
+   "method": "graphvoi",
+   "action_sha256": "0e13f2926b1a55ef95c35977e6b4939065b0c948e8f400019fba05ad2ffffce9",
+   "deadline_count": 0,
+   "matches": true
+  },
+  {
+   "seed": 71002,
+   "variant": "cold_start",
+   "method": "graphvoi",
+   "action_sha256": "e255d44ee6e47b38b7007f8f1c8c57c1326a47dc15f2e35164aedd552ec79f90",
+   "deadline_count": 0,
+   "matches": true
+  },
+  {
+   "seed": 71002,
+   "variant": "delayed",
+   "method": "graphvoi",
+   "action_sha256": "993ba1cece37573022d54d8caeb632fe3cee3cdb189c85a485648af0a397cd8f",
+   "deadline_count": 0,
+   "matches": true
+  },
+  {
+   "seed": 71002,
+   "variant": "shift",
+   "method": "graphvoi",
+   "action_sha256": "2faf09a6724f4c7ed0c91dbccb17223f80379ead53d83c22b48d1e8e294898cf",
+   "deadline_count": 0,
+   "matches": true
+  },
+  {
+   "seed": 71002,
+   "variant": "drift",
+   "method": "graphvoi",
+   "action_sha256": "d83ac84f500b1c849418c69b7826ec7c0e0dbd5e4ee2b29390f8a67d39e43e9c",
+   "deadline_count": 0,
+   "matches": true
+  },
+  {
+   "seed": 71003,
+   "variant": "development",
+   "method": "graphvoi",
+   "action_sha256": "946139051851ec70e87dd6253d3c1ba5b2b000a56ce10b3172ac31ab0c6875a4",
+   "deadline_count": 0,
+   "matches": true
+  },
+  {
+   "seed": 71003,
+   "variant": "sparse",
+   "method": "graphvoi",
+   "action_sha256": "2d60060f8801ed1106a3a0245f2622a9416b38b558c3df705650a1ea60d442b9",
+   "deadline_count": 0,
+   "matches": true
+  },
+  {
+   "seed": 71003,
+   "variant": "cold_start",
+   "method": "graphvoi",
+   "action_sha256": "b720ae2bf14dd311446564ff2a1c76e355b4192cd085297ed58694591a25b952",
+   "deadline_count": 0,
+   "matches": true
+  },
+  {
+   "seed": 71003,
+   "variant": "delayed",
+   "method": "graphvoi",
+   "action_sha256": "450324318813664053a6fe4d65f807f20605169897827b07dd423b31cf343444",
+   "deadline_count": 0,
+   "matches": true
+  },
+  {
+   "seed": 71003,
+   "variant": "shift",
+   "method": "graphvoi",
+   "action_sha256": "a5d22809350f1fa127148f526a1b586972eb5c943187d4e6d4931ba902cf1a21",
+   "deadline_count": 0,
+   "matches": true
+  },
+  {
+   "seed": 71003,
+   "variant": "drift",
+   "method": "graphvoi",
+   "action_sha256": "68a70162a1159060ddd2a7ef53b76404e56f8d438fb0bea81d93b8a620cf67e1",
+   "deadline_count": 0,
+   "matches": true
+  },
+  {
+   "seed": 71004,
+   "variant": "development",
+   "method": "graphvoi",
+   "action_sha256": "bdf18018d29ed4f1f6c0efb1f03110d863392893efda853d99e4c2efa4e6b658",
+   "deadline_count": 0,
+   "matches": true
+  },
+  {
+   "seed": 71004,
+   "variant": "sparse",
+   "method": "graphvoi",
+   "action_sha256": "dec8893f3c2a6b34fb2c00a05f5457bc55ac8d0b73cac58fdcf5e29138b09975",
+   "deadline_count": 0,
+   "matches": true
+  },
+  {
+   "seed": 71004,
+   "variant": "cold_start",
+   "method": "graphvoi",
+   "action_sha256": "eddc92badedf0b188df1fc56bf6ef2e9c29bce45f9c851045dff99478ad2d530",
+   "deadline_count": 0,
+   "matches": true
+  },
+  {
+   "seed": 71004,
+   "variant": "delayed",
+   "method": "graphvoi",
+   "action_sha256": "a9e33a50c2ddc554462f06a9e99a54e9209c052071f411fc911b1c5bb5c1a9d4",
+   "deadline_count": 0,
+   "matches": true
+  },
+  {
+   "seed": 71004,
+   "variant": "shift",
+   "method": "graphvoi",
+   "action_sha256": "a61bf8dc03f7bca2c2909e702fd516e159692685fad0f2394d1e42fe647cf988",
+   "deadline_count": 0,
+   "matches": true
+  },
+  {
+   "seed": 71004,
+   "variant": "drift",
+   "method": "graphvoi",
+   "action_sha256": "6a20414c80b90ade77ecb8502a0b38dfeda581e780a08a81fd5eb997f8e91893",
+   "deadline_count": 0,
+   "matches": true
+  }
+ ]
+}

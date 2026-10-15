@@ -21,7 +21,8 @@ LABEL = {'graphvoi': 'GraphVOI', 'degree_first': 'Degree-first', 'uncertainty_fi
          'graphvoi_no_pairs': 'GraphVOI, no pairs'}
 INK, MUTED, GRID = '#0b0b0b', '#52514e', '#e4e3df'
 
-plt.rcParams.update({'font.family': 'serif', 'font.size': 9, 'axes.edgecolor': MUTED,
+plt.rcParams.update({'font.family': 'serif', 'font.serif': ['Times New Roman', 'Times', 'DejaVu Serif'],
+                     'font.size': 9, 'mathtext.fontset': 'stix', 'axes.edgecolor': MUTED,
                      'axes.labelcolor': INK, 'xtick.color': MUTED, 'ytick.color': MUTED,
                      'axes.spines.top': False, 'axes.spines.right': False,
                      'axes.grid': True, 'grid.color': GRID, 'grid.linewidth': .6,

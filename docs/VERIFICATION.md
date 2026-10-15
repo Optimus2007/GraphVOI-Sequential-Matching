@@ -12,6 +12,7 @@ or unverified, we say so.
 
 ```bash
 python3 -m unittest discover -v        # 93 tests, starter tests included
+python3 scripts/check_determinism.py   # same episodes, identical action hashes
 python3 verify_data.py                 # 71 official data checksums
 python3 scripts/train_models.py --output /tmp/retrain   # assets rebuild byte for byte
 shasum -a 256 /tmp/retrain/*.json assets/pair_model.json assets/answer_model.json
@@ -75,10 +76,15 @@ one-day VOI gives no credit to a hard answer that pays off on later days. v3
 spends unused units on legal hard asks (the same rule for all three selectors)
 and evaluates candidates in priority order.
 
-**V2. No protection against a timeout (fixed in v3).** One call over 10 seconds
-disqualifies the entry. The ask phase now stops evaluating new candidates 6
-seconds after the call starts and still returns a legal, filled ask set. It never
-triggered in any run we made; each episode row records `deadline_count`.
+**V2. No protection against a timeout (fixed in v3, tightened for submission).**
+One call over 10 seconds disqualifies the entry. The ask phase stops evaluating
+new candidates after a deadline and still returns a legal, filled ask set. At
+6 seconds it never fired for GraphVOI or its comparators in 4,200 episodes, but in
+the waiting-threshold ablation it fired in 196 of 600 episodes and calls still
+reached 7.1 s, so it can overshoot by about a second. The submitted build uses
+4.5 seconds. The default policy's slowest ask in the study was 3.1 s, and
+`scripts/check_determinism.py` re-runs 24 confirmatory episodes with identical
+action hashes and no guard hits (`results/validation/final_guard_determinism.json`).
 
 **V3. The pair model has almost no held-out signal (negative result, no change).**
 Refitting on training seeds 31001 to 31006 and scoring on 31007 and 31008 gave a
@@ -91,9 +97,12 @@ ask soft fields did not materially help. We kept the shipped model.
 | Check | Result |
 |---|---|
 | Image | 227 MB, Python 3.12.7, NetworkX 3.5 vendored, bytecode compiled at build |
-| Official container evaluation, six families, seed 101 | all valid, eligible (`results/validation/container_six_families.json`) |
-| Per-call container time on heavy real states, 216 calls | ask max 2.55 s, match max 0.80 s, including startup |
-| Same request repeated | identical actions every time |
+| Official container evaluation, six families, seed 101 | all valid and eligible on ARM (Apple M-series) and on x86 Linux (GCP); action hashes identical on both (`results/validation/`) |
+| Final build (4.5 s guard), container, six families | all valid; see `container_six_families_final.json` |
+| Per-call container time on heavy real states, 216 calls per machine | ARM: ask max 2.55 s, match max 0.80 s. x86 under heavy load: ask max 4.62 s, match max 1.30 s. Startup included |
+| Cross-machine determinism | identical action hashes for 22 of 22 overlapping confirmatory episodes and 320 of 320 robustness episodes (ARM Python 3.13, x86 Python 3.12) |
+| Final code against the study | 24 of 24 confirmatory episodes re-run with identical action hashes |
+| Stated preferences, checked against true preferences | 0 violations in 279,261 introductions |
 | Official subprocess evaluation, six families, seed 65001 | all valid |
 | Peak memory, fresh process on heavy states | 61.0 MiB of the 1 GiB limit |
 | Carried memory | 2 bytes in normal runs (counters only if a guard fires) |

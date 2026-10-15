@@ -1,0 +1,2468 @@
+{
+ "graphvoi": {
+  "degree_first": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": 0.04083333333333333,
+    "ci95": [
+     0.0016458333333333338,
+     0.07916666666666666
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.015,
+     "delayed": 0.045,
+     "development": 0.08,
+     "drift": 0.08,
+     "shift": 0.005,
+     "sparse": 0.02
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": 0.0004833333333333331,
+    "ci95": [
+     -8.354166666666726e-05,
+     0.0010750000000000004
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.00044999999999999874,
+     "delayed": 0.0010499999999999997,
+     "development": 0.00040000000000000034,
+     "drift": 0.0005000000000000004,
+     "shift": 0.0004499999999999993,
+     "sparse": 5.000000000000032e-05
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": -39.875,
+    "ci95": [
+     -41.09675,
+     -38.664875
+    ],
+    "scenario_deltas": {
+     "cold_start": -41.43,
+     "delayed": -45.3,
+     "development": -47.09,
+     "drift": -47.31,
+     "shift": -46.57,
+     "sparse": -11.55
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": 0.1,
+    "ci95": [
+     -0.15504166666666666,
+     0.3450416666666664
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.01,
+     "delayed": -0.12,
+     "development": 0.41,
+     "drift": 0.39,
+     "shift": -0.18,
+     "sparse": 0.11
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": 0.1366666666666667,
+    "ci95": [
+     -0.14666666666666667,
+     0.41833333333333333
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.11,
+     "delayed": 0.14,
+     "development": 0.37,
+     "drift": 0.34,
+     "shift": -0.09,
+     "sparse": 0.17
+    }
+   }
+  },
+  "graphvoi_no_pairs": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": 0.0125,
+    "ci95": [
+     -0.029166666666666667,
+     0.0475
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.01,
+     "delayed": 0.02,
+     "development": 0.025,
+     "drift": 0.025,
+     "shift": 0.0,
+     "sparse": -0.005
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": 0.00035833333333333317,
+    "ci95": [
+     -0.00013333333333333437,
+     0.0009416666666666665
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.0004999999999999999,
+     "delayed": 0.0004999999999999994,
+     "development": 0.0002499999999999997,
+     "drift": 0.0005499999999999999,
+     "shift": 0.0005000000000000004,
+     "sparse": -0.00015000000000000042
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": 13.443333333333333,
+    "ci95": [
+     12.516625000000001,
+     14.338333333333333
+    ],
+    "scenario_deltas": {
+     "cold_start": 15.31,
+     "delayed": 15.43,
+     "development": 15.1,
+     "drift": 15.27,
+     "shift": 14.25,
+     "sparse": 5.3
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": -0.12000000000000001,
+    "ci95": [
+     -0.39166666666666666,
+     0.15333333333333332
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.06,
+     "delayed": -0.2,
+     "development": -0.29,
+     "drift": -0.28,
+     "shift": -0.01,
+     "sparse": 0
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": -0.18666666666666668,
+    "ci95": [
+     -0.48504166666666665,
+     0.12004166666666644
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.06,
+     "delayed": -0.31,
+     "development": -0.37,
+     "drift": -0.34,
+     "shift": -0.05,
+     "sparse": 0.01
+    }
+   }
+  },
+  "graphvoi_nofill": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": -0.035,
+    "ci95": [
+     -0.08916666666666667,
+     0.016666666666666666
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.105,
+     "delayed": 0.02,
+     "development": 0.005,
+     "drift": 0.005,
+     "shift": -0.085,
+     "sparse": -0.05
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": -0.04513333333333333,
+    "ci95": [
+     -0.048675833333333335,
+     -0.04157479166666666
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.0553,
+     "delayed": -0.036199999999999996,
+     "development": -0.0355,
+     "drift": -0.0352,
+     "shift": -0.033249999999999995,
+     "sparse": -0.07535
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": -100.19833333333334,
+    "ci95": [
+     -103.75904166666666,
+     -96.49983333333333
+    ],
+    "scenario_deltas": {
+     "cold_start": -103.52,
+     "delayed": -86,
+     "development": -86.33,
+     "drift": -86.28,
+     "shift": -83.78,
+     "sparse": -155.28
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": -1.2650000000000001,
+    "ci95": [
+     -1.6567083333333334,
+     -0.885
+    ],
+    "scenario_deltas": {
+     "cold_start": -2.08,
+     "delayed": -1.49,
+     "development": -0.84,
+     "drift": -0.92,
+     "shift": -1.02,
+     "sparse": -1.24
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": -1.7650000000000001,
+    "ci95": [
+     -2.1667083333333337,
+     -1.3616666666666668
+    ],
+    "scenario_deltas": {
+     "cold_start": -2.74,
+     "delayed": -1.59,
+     "development": -1.56,
+     "drift": -1.63,
+     "shift": -1.43,
+     "sparse": -1.64
+    }
+   }
+  },
+  "graphvoi_wait": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": -0.04833333333333333,
+    "ci95": [
+     -0.105,
+     0.0066666666666666645
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.065,
+     "delayed": -0.12,
+     "development": -0.005,
+     "drift": -0.03,
+     "shift": -0.085,
+     "sparse": 0.015
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": -0.031575,
+    "ci95": [
+     -0.03398333333333333,
+     -0.029308333333333325
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.03485,
+     "delayed": -0.0388,
+     "development": -0.0353,
+     "drift": -0.03455,
+     "shift": -0.0344,
+     "sparse": -0.01155
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": 31.636666666666667,
+    "ci95": [
+     30.634791666666665,
+     32.648375
+    ],
+    "scenario_deltas": {
+     "cold_start": 30.93,
+     "delayed": 29.5,
+     "development": 30.08,
+     "drift": 30.31,
+     "shift": 30.92,
+     "sparse": 38.08
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": -2.2816666666666667,
+    "ci95": [
+     -2.718375,
+     -1.858291666666667
+    ],
+    "scenario_deltas": {
+     "cold_start": -2.31,
+     "delayed": -2.48,
+     "development": -2.41,
+     "drift": -3.53,
+     "shift": -2.54,
+     "sparse": -0.42
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": -2.9683333333333333,
+    "ci95": [
+     -3.4300833333333336,
+     -2.51
+    ],
+    "scenario_deltas": {
+     "cold_start": -3.01,
+     "delayed": -2.95,
+     "development": -3.29,
+     "drift": -4.76,
+     "shift": -3.33,
+     "sparse": -0.47
+    }
+   }
+  },
+  "greedy": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": 0.010833333333333334,
+    "ci95": [
+     -0.04166666666666667,
+     0.06335416666666656
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.06,
+     "delayed": -0.06,
+     "development": 0.04,
+     "drift": 0.03,
+     "shift": -0.015,
+     "sparse": 0.01
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": -0.00027499999999999964,
+    "ci95": [
+     -0.001266875000000002,
+     0.000741875
+    ],
+    "scenario_deltas": {
+     "cold_start": 1.1102230246251566e-18,
+     "delayed": 0.0006000000000000005,
+     "development": -0.0009499999999999998,
+     "drift": -0.0008499999999999996,
+     "shift": -0.00065,
+     "sparse": 0.00020000000000000004
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": -39.875,
+    "ci95": [
+     -41.09675,
+     -38.664875
+    ],
+    "scenario_deltas": {
+     "cold_start": -41.43,
+     "delayed": -45.3,
+     "development": -47.09,
+     "drift": -47.31,
+     "shift": -46.57,
+     "sparse": -11.55
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": -0.2866666666666667,
+    "ci95": [
+     -0.6816666666666666,
+     0.09837499999999977
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.68,
+     "delayed": -0.82,
+     "development": -0.1,
+     "drift": -0.12,
+     "shift": -0.2,
+     "sparse": 0.2
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": -0.39,
+    "ci95": [
+     -0.8350416666666667,
+     0.04504166666666646
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.71,
+     "delayed": -0.66,
+     "development": -0.47,
+     "drift": -0.4,
+     "shift": -0.32,
+     "sparse": 0.22
+    }
+   }
+  },
+  "learned_greedy": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": 0.0025000000000000022,
+    "ci95": [
+     -0.045,
+     0.055
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.0,
+     "delayed": -0.12,
+     "development": 0.05,
+     "drift": 0.05,
+     "shift": -0.015,
+     "sparse": 0.05
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": 0.00023333333333333417,
+    "ci95": [
+     -0.00048333333333333214,
+     0.0009752083333333345
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.0004000000000000015,
+     "delayed": 0.0010000000000000015,
+     "development": 0.0002500000000000013,
+     "drift": 0.00015000000000000123,
+     "shift": 0.0002500000000000019,
+     "sparse": 0.00015000000000000056
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": -39.875,
+    "ci95": [
+     -41.09675,
+     -38.664875
+    ],
+    "scenario_deltas": {
+     "cold_start": -41.43,
+     "delayed": -45.3,
+     "development": -47.09,
+     "drift": -47.31,
+     "shift": -46.57,
+     "sparse": -11.55
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": -0.445,
+    "ci95": [
+     -0.768375,
+     -0.1348750000000007
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.21,
+     "delayed": -0.98,
+     "development": -0.43,
+     "drift": -0.44,
+     "shift": -0.58,
+     "sparse": -0.03
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": -0.6133333333333333,
+    "ci95": [
+     -1.0050833333333336,
+     -0.24166666666666667
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.5,
+     "delayed": -0.66,
+     "development": -0.88,
+     "drift": -0.93,
+     "shift": -0.58,
+     "sparse": -0.13
+    }
+   }
+  },
+  "learned_maxweight": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": 0.007500000000000001,
+    "ci95": [
+     -0.042520833333333334,
+     0.060000000000000005
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.02,
+     "delayed": -0.135,
+     "development": 0.05,
+     "drift": 0.07,
+     "shift": -0.01,
+     "sparse": 0.05
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": 0.0008250000000000011,
+    "ci95": [
+     0.0001831250000000004,
+     0.0014835416666666675
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.00020000000000000185,
+     "delayed": 0.002500000000000001,
+     "development": 0.0009000000000000019,
+     "drift": 0.0009000000000000019,
+     "shift": 0.0007000000000000028,
+     "sparse": 0.00015000000000000056
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": -39.875,
+    "ci95": [
+     -41.09675,
+     -38.664875
+    ],
+    "scenario_deltas": {
+     "cold_start": -41.43,
+     "delayed": -45.3,
+     "development": -47.09,
+     "drift": -47.31,
+     "shift": -46.57,
+     "sparse": -11.55
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": -0.455,
+    "ci95": [
+     -0.7983333333333333,
+     -0.13166666666666665
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.17,
+     "delayed": -1.08,
+     "development": -0.4,
+     "drift": -0.39,
+     "shift": -0.69,
+     "sparse": 0
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": -0.5266666666666666,
+    "ci95": [
+     -0.9050833333333334,
+     -0.13495833333333357
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.38,
+     "delayed": -0.58,
+     "development": -0.82,
+     "drift": -0.83,
+     "shift": -0.46,
+     "sparse": -0.09
+    }
+   }
+  },
+  "no_asks": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": -0.2625,
+    "ci95": [
+     -0.30502083333333335,
+     -0.2233125000000001
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.295,
+     "delayed": -0.38,
+     "development": -0.27,
+     "drift": -0.255,
+     "shift": -0.305,
+     "sparse": -0.07
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": -0.218425,
+    "ci95": [
+     -0.224516875,
+     -0.21274916666666666
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.267,
+     "delayed": -0.23005,
+     "development": -0.2315,
+     "drift": -0.23145,
+     "shift": -0.2317,
+     "sparse": -0.11885
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": -238.755,
+    "ci95": [
+     -241.96179166666667,
+     -235.35745833333334
+    ],
+    "scenario_deltas": {
+     "cold_start": -278.22,
+     "delayed": -236.4,
+     "development": -238.19,
+     "drift": -238.41,
+     "shift": -237.67,
+     "sparse": -203.64
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": -6.37,
+    "ci95": [
+     -6.775,
+     -5.968333333333334
+    ],
+    "scenario_deltas": {
+     "cold_start": -7.71,
+     "delayed": -7.53,
+     "development": -7.38,
+     "drift": -6.88,
+     "shift": -6.84,
+     "sparse": -1.88
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": -8.265,
+    "ci95": [
+     -8.741708333333333,
+     -7.804958333333333
+    ],
+    "scenario_deltas": {
+     "cold_start": -9.82,
+     "delayed": -9.38,
+     "development": -9.86,
+     "drift": -9.19,
+     "shift": -8.88,
+     "sparse": -2.46
+    }
+   }
+  },
+  "random": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": 0.045000000000000005,
+    "ci95": [
+     -0.0166875,
+     0.10583333333333333
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.1,
+     "delayed": -0.005,
+     "development": 0.065,
+     "drift": 0.07,
+     "shift": 0.015,
+     "sparse": 0.025
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": 7.500000000000039e-05,
+    "ci95": [
+     -0.000933541666666667,
+     0.0010833333333333328
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.0006999999999999996,
+     "delayed": 0.0009499999999999998,
+     "development": -0.0005999999999999994,
+     "drift": -0.0004499999999999993,
+     "shift": -4.9999999999998376e-05,
+     "sparse": -9.999999999999995e-05
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": -39.875,
+    "ci95": [
+     -41.09675,
+     -38.664875
+    ],
+    "scenario_deltas": {
+     "cold_start": -41.43,
+     "delayed": -45.3,
+     "development": -47.09,
+     "drift": -47.31,
+     "shift": -46.57,
+     "sparse": -11.55
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": -0.14833333333333334,
+    "ci95": [
+     -0.5450416666666668,
+     0.255
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.26,
+     "delayed": -0.76,
+     "development": -0.05,
+     "drift": 0.03,
+     "shift": 0,
+     "sparse": 0.15
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": -0.325,
+    "ci95": [
+     -0.74175,
+     0.10508333333333288
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.74,
+     "delayed": -0.46,
+     "development": -0.4,
+     "drift": -0.29,
+     "shift": -0.27,
+     "sparse": 0.21
+    }
+   }
+  },
+  "uncertainty_first": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": -0.008333333333333333,
+    "ci95": [
+     -0.05502083333333333,
+     0.03333333333333333
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.0,
+     "delayed": -0.045,
+     "development": 0.01,
+     "drift": 0.005,
+     "shift": -0.04,
+     "sparse": 0.02
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": 0.00034999999999999945,
+    "ci95": [
+     -0.0002416666666666661,
+     0.001041666666666665
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.00010000000000000175,
+     "delayed": 0.0009499999999999986,
+     "development": 0.0002999999999999997,
+     "drift": 0.0006,
+     "shift": 0.00040000000000000034,
+     "sparse": -5.0000000000000185e-05
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": 2.901666666666667,
+    "ci95": [
+     2.009958333333333,
+     3.8216666666666668
+    ],
+    "scenario_deltas": {
+     "cold_start": 1.68,
+     "delayed": 3.88,
+     "development": 3.7,
+     "drift": 4.16,
+     "shift": 4.2,
+     "sparse": -0.21
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": -0.048333333333333325,
+    "ci95": [
+     -0.35,
+     0.24004166666666643
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.09,
+     "delayed": -0.47,
+     "development": 0,
+     "drift": 0.07,
+     "shift": -0.12,
+     "sparse": 0.14
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": -0.12333333333333334,
+    "ci95": [
+     -0.46341666666666664,
+     0.21516666666666576
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.09,
+     "delayed": -0.24,
+     "development": -0.32,
+     "drift": -0.17,
+     "shift": -0.24,
+     "sparse": 0.14
+    }
+   }
+  }
+ },
+ "learned_maxweight": {
+  "degree_first": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": 0.03333333333333333,
+    "ci95": [
+     -0.023333333333333334,
+     0.08666666666666667
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.005,
+     "delayed": 0.18,
+     "development": 0.03,
+     "drift": 0.01,
+     "shift": 0.015,
+     "sparse": -0.03
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": -0.0003416666666666679,
+    "ci95": [
+     -0.0009583333333333346,
+     0.00027499999999999844
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.0006500000000000006,
+     "delayed": -0.0014500000000000012,
+     "development": -0.0005000000000000015,
+     "drift": -0.0004000000000000015,
+     "shift": -0.00025000000000000353,
+     "sparse": -0.00010000000000000022
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": 0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "scenario_deltas": {
+     "cold_start": 0,
+     "delayed": 0,
+     "development": 0,
+     "drift": 0,
+     "shift": 0,
+     "sparse": 0
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": 0.555,
+    "ci95": [
+     0.21329166666666666,
+     0.9266666666666666
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.16,
+     "delayed": 0.96,
+     "development": 0.81,
+     "drift": 0.78,
+     "shift": 0.51,
+     "sparse": 0.11
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": 0.6633333333333333,
+    "ci95": [
+     0.26158333333333333,
+     1.0783333333333334
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.27,
+     "delayed": 0.72,
+     "development": 1.19,
+     "drift": 1.17,
+     "shift": 0.37,
+     "sparse": 0.26
+    }
+   }
+  },
+  "graphvoi": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": -0.007500000000000001,
+    "ci95": [
+     -0.060000000000000005,
+     0.04252083333333322
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.02,
+     "delayed": 0.135,
+     "development": -0.05,
+     "drift": -0.07,
+     "shift": 0.01,
+     "sparse": -0.05
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": -0.0008250000000000011,
+    "ci95": [
+     -0.0014835416666666688,
+     -0.0001831250000000015
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.00020000000000000185,
+     "delayed": -0.002500000000000001,
+     "development": -0.0009000000000000019,
+     "drift": -0.0009000000000000019,
+     "shift": -0.0007000000000000028,
+     "sparse": -0.00015000000000000056
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": 39.875,
+    "ci95": [
+     38.664875,
+     41.09675
+    ],
+    "scenario_deltas": {
+     "cold_start": 41.43,
+     "delayed": 45.3,
+     "development": 47.09,
+     "drift": 47.31,
+     "shift": 46.57,
+     "sparse": 11.55
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": 0.455,
+    "ci95": [
+     0.13166666666666665,
+     0.7983333333333333
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.17,
+     "delayed": 1.08,
+     "development": 0.4,
+     "drift": 0.39,
+     "shift": 0.69,
+     "sparse": 0
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": 0.5266666666666666,
+    "ci95": [
+     0.13495833333333335,
+     0.9050833333333329
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.38,
+     "delayed": 0.58,
+     "development": 0.82,
+     "drift": 0.83,
+     "shift": 0.46,
+     "sparse": 0.09
+    }
+   }
+  },
+  "graphvoi_no_pairs": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": 0.005,
+    "ci95": [
+     -0.0475,
+     0.055
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.01,
+     "delayed": 0.155,
+     "development": -0.025,
+     "drift": -0.045,
+     "shift": 0.01,
+     "sparse": -0.055
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": -0.00046666666666666796,
+    "ci95": [
+     -0.0011000000000000012,
+     0.0001499999999999986
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.0007000000000000017,
+     "delayed": -0.0020000000000000018,
+     "development": -0.0006500000000000022,
+     "drift": -0.000350000000000002,
+     "shift": -0.0002000000000000024,
+     "sparse": -0.00030000000000000095
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": 53.318333333333335,
+    "ci95": [
+     51.66779166666667,
+     54.915166666666664
+    ],
+    "scenario_deltas": {
+     "cold_start": 56.74,
+     "delayed": 60.73,
+     "development": 62.19,
+     "drift": 62.58,
+     "shift": 60.82,
+     "sparse": 16.85
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": 0.335,
+    "ci95": [
+     -0.03679166666666667,
+     0.725
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.23,
+     "delayed": 0.88,
+     "development": 0.11,
+     "drift": 0.11,
+     "shift": 0.68,
+     "sparse": 0
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": 0.34,
+    "ci95": [
+     -0.06833333333333333,
+     0.7683749999999998
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.32,
+     "delayed": 0.27,
+     "development": 0.45,
+     "drift": 0.49,
+     "shift": 0.41,
+     "sparse": 0.1
+    }
+   }
+  },
+  "graphvoi_nofill": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": -0.0425,
+    "ci95": [
+     -0.09,
+     0.0033333333333333314
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.125,
+     "delayed": 0.155,
+     "development": -0.045,
+     "drift": -0.065,
+     "shift": -0.075,
+     "sparse": -0.1
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": -0.04595833333333334,
+    "ci95": [
+     -0.049466874999999993,
+     -0.04238291666666667
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.0551,
+     "delayed": -0.0387,
+     "development": -0.0364,
+     "drift": -0.0361,
+     "shift": -0.03395,
+     "sparse": -0.0755
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": -60.32333333333333,
+    "ci95": [
+     -63.8145,
+     -56.766333333333336
+    ],
+    "scenario_deltas": {
+     "cold_start": -62.09,
+     "delayed": -40.7,
+     "development": -39.24,
+     "drift": -38.97,
+     "shift": -37.21,
+     "sparse": -143.73
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": -0.8099999999999999,
+    "ci95": [
+     -1.2300416666666667,
+     -0.3949583333333335
+    ],
+    "scenario_deltas": {
+     "cold_start": -1.91,
+     "delayed": -0.41,
+     "development": -0.44,
+     "drift": -0.53,
+     "shift": -0.33,
+     "sparse": -1.24
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": -1.2383333333333333,
+    "ci95": [
+     -1.6967500000000002,
+     -0.7666250000000002
+    ],
+    "scenario_deltas": {
+     "cold_start": -2.36,
+     "delayed": -1.01,
+     "development": -0.74,
+     "drift": -0.8,
+     "shift": -0.97,
+     "sparse": -1.55
+    }
+   }
+  },
+  "graphvoi_wait": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": -0.05583333333333333,
+    "ci95": [
+     -0.1125,
+     -0.0033333333333333327
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.085,
+     "delayed": 0.015,
+     "development": -0.055,
+     "drift": -0.1,
+     "shift": -0.075,
+     "sparse": -0.035
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": -0.0324,
+    "ci95": [
+     -0.03493354166666668,
+     -0.03004145833333333
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.03465,
+     "delayed": -0.041299999999999996,
+     "development": -0.0362,
+     "drift": -0.035449999999999995,
+     "shift": -0.035100000000000006,
+     "sparse": -0.0117
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": 71.51166666666667,
+    "ci95": [
+     70.61658333333334,
+     72.37179166666667
+    ],
+    "scenario_deltas": {
+     "cold_start": 72.36,
+     "delayed": 74.8,
+     "development": 77.17,
+     "drift": 77.62,
+     "shift": 77.49,
+     "sparse": 49.63
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": -1.8266666666666667,
+    "ci95": [
+     -2.231708333333333,
+     -1.3966666666666667
+    ],
+    "scenario_deltas": {
+     "cold_start": -2.14,
+     "delayed": -1.4,
+     "development": -2.01,
+     "drift": -3.14,
+     "shift": -1.85,
+     "sparse": -0.42
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": -2.441666666666667,
+    "ci95": [
+     -2.898375,
+     -1.9416666666666667
+    ],
+    "scenario_deltas": {
+     "cold_start": -2.63,
+     "delayed": -2.37,
+     "development": -2.47,
+     "drift": -3.93,
+     "shift": -2.87,
+     "sparse": -0.38
+    }
+   }
+  },
+  "greedy": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": 0.0033333333333333327,
+    "ci95": [
+     -0.056666666666666664,
+     0.06333333333333334
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.04,
+     "delayed": 0.075,
+     "development": -0.01,
+     "drift": -0.04,
+     "shift": -0.005,
+     "sparse": -0.04
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": -0.0011000000000000007,
+    "ci95": [
+     -0.0019752083333333327,
+     -0.00026666666666666776
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.00020000000000000296,
+     "delayed": -0.0019000000000000006,
+     "development": -0.0018500000000000016,
+     "drift": -0.0017500000000000016,
+     "shift": -0.0013500000000000029,
+     "sparse": 4.999999999999949e-05
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": 0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "scenario_deltas": {
+     "cold_start": 0,
+     "delayed": 0,
+     "development": 0,
+     "drift": 0,
+     "shift": 0,
+     "sparse": 0
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": 0.16833333333333333,
+    "ci95": [
+     -0.17187499999999997,
+     0.5367499999999995
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.51,
+     "delayed": 0.26,
+     "development": 0.3,
+     "drift": 0.27,
+     "shift": 0.49,
+     "sparse": 0.2
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": 0.13666666666666666,
+    "ci95": [
+     -0.2634583333333333,
+     0.5484999999999991
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.33,
+     "delayed": -0.08,
+     "development": 0.35,
+     "drift": 0.43,
+     "shift": 0.14,
+     "sparse": 0.31
+    }
+   }
+  },
+  "learned_greedy": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": -0.005,
+    "ci95": [
+     -0.035,
+     0.024166666666666666
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.02,
+     "delayed": 0.015,
+     "development": 0.0,
+     "drift": -0.02,
+     "shift": -0.005,
+     "sparse": 0.0
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": -0.0005916666666666669,
+    "ci95": [
+     -0.001024999999999999,
+     -0.00014166666666666706
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.00019999999999999963,
+     "delayed": -0.0014999999999999996,
+     "development": -0.0006500000000000006,
+     "drift": -0.0007500000000000007,
+     "shift": -0.00045000000000000096,
+     "sparse": 0.0
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": 0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "scenario_deltas": {
+     "cold_start": 0,
+     "delayed": 0,
+     "development": 0,
+     "drift": 0,
+     "shift": 0,
+     "sparse": 0
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": 0.01,
+    "ci95": [
+     -0.18170833333333333,
+     0.20337499999999978
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.04,
+     "delayed": 0.1,
+     "development": -0.03,
+     "drift": -0.05,
+     "shift": 0.11,
+     "sparse": -0.03
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": -0.08666666666666667,
+    "ci95": [
+     -0.29833333333333334,
+     0.12504166666666644
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.12,
+     "delayed": -0.08,
+     "development": -0.06,
+     "drift": -0.1,
+     "shift": -0.12,
+     "sparse": -0.04
+    }
+   }
+  },
+  "no_asks": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": -0.27,
+    "ci95": [
+     -0.315,
+     -0.22916666666666669
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.315,
+     "delayed": -0.245,
+     "development": -0.32,
+     "drift": -0.325,
+     "shift": -0.295,
+     "sparse": -0.12
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": -0.21925,
+    "ci95": [
+     -0.22537499999999996,
+     -0.21354874999999998
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.2668,
+     "delayed": -0.23255,
+     "development": -0.2324,
+     "drift": -0.23235,
+     "shift": -0.2324,
+     "sparse": -0.119
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": -198.88,
+    "ci95": [
+     -201.76100000000002,
+     -195.864875
+    ],
+    "scenario_deltas": {
+     "cold_start": -236.79,
+     "delayed": -191.1,
+     "development": -191.1,
+     "drift": -191.1,
+     "shift": -191.1,
+     "sparse": -192.09
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": -5.915,
+    "ci95": [
+     -6.281666666666666,
+     -5.548291666666667
+    ],
+    "scenario_deltas": {
+     "cold_start": -7.54,
+     "delayed": -6.45,
+     "development": -6.98,
+     "drift": -6.49,
+     "shift": -6.15,
+     "sparse": -1.88
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": -7.738333333333333,
+    "ci95": [
+     -8.19,
+     -7.273291666666667
+    ],
+    "scenario_deltas": {
+     "cold_start": -9.44,
+     "delayed": -8.8,
+     "development": -9.04,
+     "drift": -8.36,
+     "shift": -8.42,
+     "sparse": -2.37
+    }
+   }
+  },
+  "random": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": 0.0375,
+    "ci95": [
+     -0.02083333333333333,
+     0.09416666666666666
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.08,
+     "delayed": 0.13,
+     "development": 0.015,
+     "drift": 0.0,
+     "shift": 0.025,
+     "sparse": -0.025
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": -0.0007500000000000007,
+    "ci95": [
+     -0.0016250000000000008,
+     9.187499999999842e-05
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.0009000000000000014,
+     "delayed": -0.0015500000000000015,
+     "development": -0.0015000000000000013,
+     "drift": -0.0013500000000000012,
+     "shift": -0.0007500000000000012,
+     "sparse": -0.0002500000000000005
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": 0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "scenario_deltas": {
+     "cold_start": 0,
+     "delayed": 0,
+     "development": 0,
+     "drift": 0,
+     "shift": 0,
+     "sparse": 0
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": 0.30666666666666664,
+    "ci95": [
+     -0.09499999999999999,
+     0.7133749999999998
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.09,
+     "delayed": 0.32,
+     "development": 0.35,
+     "drift": 0.42,
+     "shift": 0.69,
+     "sparse": 0.15
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": 0.20166666666666666,
+    "ci95": [
+     -0.24841666666666665,
+     0.6733749999999998
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.36,
+     "delayed": 0.12,
+     "development": 0.42,
+     "drift": 0.54,
+     "shift": 0.19,
+     "sparse": 0.3
+    }
+   }
+  },
+  "uncertainty_first": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": -0.015833333333333335,
+    "ci95": [
+     -0.07416666666666667,
+     0.03833333333333334
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.02,
+     "delayed": 0.09,
+     "development": -0.04,
+     "drift": -0.065,
+     "shift": -0.03,
+     "sparse": -0.03
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": -0.0004750000000000016,
+    "ci95": [
+     -0.0011250000000000008,
+     0.00019166666666666507
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.00010000000000000009,
+     "delayed": -0.0015500000000000025,
+     "development": -0.0006000000000000022,
+     "drift": -0.0003000000000000019,
+     "shift": -0.00030000000000000247,
+     "sparse": -0.00020000000000000074
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": 42.776666666666664,
+    "ci95": [
+     41.44133333333333,
+     43.988375
+    ],
+    "scenario_deltas": {
+     "cold_start": 43.11,
+     "delayed": 49.18,
+     "development": 50.79,
+     "drift": 51.47,
+     "shift": 50.77,
+     "sparse": 11.34
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": 0.4066666666666667,
+    "ci95": [
+     0.04000000000000001,
+     0.7817499999999996
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.26,
+     "delayed": 0.61,
+     "development": 0.4,
+     "drift": 0.46,
+     "shift": 0.57,
+     "sparse": 0.14
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": 0.4033333333333333,
+    "ci95": [
+     0.0016666666666666705,
+     0.8333333333333334
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.47,
+     "delayed": 0.34,
+     "development": 0.5,
+     "drift": 0.66,
+     "shift": 0.22,
+     "sparse": 0.23
+    }
+   }
+  }
+ },
+ "learned_greedy": {
+  "degree_first": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": 0.03833333333333334,
+    "ci95": [
+     -0.014166666666666664,
+     0.08918749999999989
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.015,
+     "delayed": 0.165,
+     "development": 0.03,
+     "drift": 0.03,
+     "shift": 0.02,
+     "sparse": -0.03
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": 0.000249999999999999,
+    "ci95": [
+     -0.00047500000000000087,
+     0.000950208333333331
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.0008500000000000002,
+     "delayed": 4.9999999999998376e-05,
+     "development": 0.000149999999999999,
+     "drift": 0.0003499999999999992,
+     "shift": 0.0001999999999999974,
+     "sparse": -0.00010000000000000022
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": 0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "scenario_deltas": {
+     "cold_start": 0,
+     "delayed": 0,
+     "development": 0,
+     "drift": 0,
+     "shift": 0,
+     "sparse": 0
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": 0.545,
+    "ci95": [
+     0.196625,
+     0.895
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.2,
+     "delayed": 0.86,
+     "development": 0.84,
+     "drift": 0.83,
+     "shift": 0.4,
+     "sparse": 0.14
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": 0.75,
+    "ci95": [
+     0.35,
+     1.1517499999999996
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.39,
+     "delayed": 0.8,
+     "development": 1.25,
+     "drift": 1.27,
+     "shift": 0.49,
+     "sparse": 0.3
+    }
+   }
+  },
+  "graphvoi": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": -0.0025000000000000022,
+    "ci95": [
+     -0.055,
+     0.045
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.0,
+     "delayed": 0.12,
+     "development": -0.05,
+     "drift": -0.05,
+     "shift": 0.015,
+     "sparse": -0.05
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": -0.00023333333333333417,
+    "ci95": [
+     -0.0009752083333333357,
+     0.00048333333333333214
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.0004000000000000015,
+     "delayed": -0.0010000000000000015,
+     "development": -0.0002500000000000013,
+     "drift": -0.00015000000000000123,
+     "shift": -0.0002500000000000019,
+     "sparse": -0.00015000000000000056
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": 39.875,
+    "ci95": [
+     38.664875,
+     41.09675
+    ],
+    "scenario_deltas": {
+     "cold_start": 41.43,
+     "delayed": 45.3,
+     "development": 47.09,
+     "drift": 47.31,
+     "shift": 46.57,
+     "sparse": 11.55
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": 0.445,
+    "ci95": [
+     0.13487500000000002,
+     0.7683749999999998
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.21,
+     "delayed": 0.98,
+     "development": 0.43,
+     "drift": 0.44,
+     "shift": 0.58,
+     "sparse": 0.03
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": 0.6133333333333333,
+    "ci95": [
+     0.24166666666666667,
+     1.0050833333333329
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.5,
+     "delayed": 0.66,
+     "development": 0.88,
+     "drift": 0.93,
+     "shift": 0.58,
+     "sparse": 0.13
+    }
+   }
+  },
+  "graphvoi_no_pairs": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": 0.010000000000000002,
+    "ci95": [
+     -0.042499999999999996,
+     0.059166666666666666
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.01,
+     "delayed": 0.14,
+     "development": -0.025,
+     "drift": -0.025,
+     "shift": 0.015,
+     "sparse": -0.055
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": 0.00012499999999999897,
+    "ci95": [
+     -0.0005252083333333355,
+     0.0007418749999999985
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.0009000000000000014,
+     "delayed": -0.0005000000000000021,
+     "development": -1.6653345369377347e-18,
+     "drift": 0.00039999999999999866,
+     "shift": 0.00024999999999999854,
+     "sparse": -0.00030000000000000095
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": 53.318333333333335,
+    "ci95": [
+     51.66779166666667,
+     54.915166666666664
+    ],
+    "scenario_deltas": {
+     "cold_start": 56.74,
+     "delayed": 60.73,
+     "development": 62.19,
+     "drift": 62.58,
+     "shift": 60.82,
+     "sparse": 16.85
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": 0.325,
+    "ci95": [
+     -0.03849999999999998,
+     0.7016666666666667
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.27,
+     "delayed": 0.78,
+     "development": 0.14,
+     "drift": 0.16,
+     "shift": 0.57,
+     "sparse": 0.03
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": 0.42666666666666664,
+    "ci95": [
+     0.026625,
+     0.8467499999999994
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.44,
+     "delayed": 0.35,
+     "development": 0.51,
+     "drift": 0.59,
+     "shift": 0.53,
+     "sparse": 0.14
+    }
+   }
+  },
+  "graphvoi_nofill": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": -0.0375,
+    "ci95": [
+     -0.08502083333333334,
+     0.009999999999999998
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.105,
+     "delayed": 0.14,
+     "development": -0.045,
+     "drift": -0.045,
+     "shift": -0.07,
+     "sparse": -0.1
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": -0.045366666666666666,
+    "ci95": [
+     -0.04894229166666666,
+     -0.04184145833333335
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.0549,
+     "delayed": -0.0372,
+     "development": -0.035750000000000004,
+     "drift": -0.03535,
+     "shift": -0.0335,
+     "sparse": -0.0755
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": -60.32333333333333,
+    "ci95": [
+     -63.8145,
+     -56.766333333333336
+    ],
+    "scenario_deltas": {
+     "cold_start": -62.09,
+     "delayed": -40.7,
+     "development": -39.24,
+     "drift": -38.97,
+     "shift": -37.21,
+     "sparse": -143.73
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": -0.8200000000000001,
+    "ci95": [
+     -1.218375,
+     -0.42333333333333334
+    ],
+    "scenario_deltas": {
+     "cold_start": -1.87,
+     "delayed": -0.51,
+     "development": -0.41,
+     "drift": -0.48,
+     "shift": -0.44,
+     "sparse": -1.21
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": -1.1516666666666666,
+    "ci95": [
+     -1.6050833333333334,
+     -0.7050000000000001
+    ],
+    "scenario_deltas": {
+     "cold_start": -2.24,
+     "delayed": -0.93,
+     "development": -0.68,
+     "drift": -0.7,
+     "shift": -0.85,
+     "sparse": -1.51
+    }
+   }
+  },
+  "graphvoi_wait": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": -0.050833333333333335,
+    "ci95": [
+     -0.10416666666666666,
+     0.00252083333333322
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.065,
+     "delayed": 0.0,
+     "development": -0.055,
+     "drift": -0.08,
+     "shift": -0.07,
+     "sparse": -0.035
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": -0.031808333333333334,
+    "ci95": [
+     -0.03435854166666667,
+     -0.02952479166666666
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.03445,
+     "delayed": -0.0398,
+     "development": -0.03555,
+     "drift": -0.034699999999999995,
+     "shift": -0.03465,
+     "sparse": -0.0117
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": 71.51166666666667,
+    "ci95": [
+     70.61658333333334,
+     72.37179166666667
+    ],
+    "scenario_deltas": {
+     "cold_start": 72.36,
+     "delayed": 74.8,
+     "development": 77.17,
+     "drift": 77.62,
+     "shift": 77.49,
+     "sparse": 49.63
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": -1.8366666666666667,
+    "ci95": [
+     -2.2467083333333333,
+     -1.395
+    ],
+    "scenario_deltas": {
+     "cold_start": -2.1,
+     "delayed": -1.5,
+     "development": -1.98,
+     "drift": -3.09,
+     "shift": -1.96,
+     "sparse": -0.39
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": -2.355,
+    "ci95": [
+     -2.8083333333333336,
+     -1.8732500000000005
+    ],
+    "scenario_deltas": {
+     "cold_start": -2.51,
+     "delayed": -2.29,
+     "development": -2.41,
+     "drift": -3.83,
+     "shift": -2.75,
+     "sparse": -0.34
+    }
+   }
+  },
+  "greedy": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": 0.008333333333333331,
+    "ci95": [
+     -0.05170833333333333,
+     0.06666666666666667
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.06,
+     "delayed": 0.06,
+     "development": -0.01,
+     "drift": -0.02,
+     "shift": 0.0,
+     "sparse": -0.04
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": -0.0005083333333333337,
+    "ci95": [
+     -0.0014418750000000013,
+     0.0003999999999999996
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.00040000000000000257,
+     "delayed": -0.0004000000000000009,
+     "development": -0.001200000000000001,
+     "drift": -0.0010000000000000009,
+     "shift": -0.0009000000000000019,
+     "sparse": 4.999999999999949e-05
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": 0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "scenario_deltas": {
+     "cold_start": 0,
+     "delayed": 0,
+     "development": 0,
+     "drift": 0,
+     "shift": 0,
+     "sparse": 0
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": 0.15833333333333335,
+    "ci95": [
+     -0.18016666666666664,
+     0.52
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.47,
+     "delayed": 0.16,
+     "development": 0.33,
+     "drift": 0.32,
+     "shift": 0.38,
+     "sparse": 0.23
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": 0.22333333333333333,
+    "ci95": [
+     -0.195,
+     0.62
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.21,
+     "delayed": 0,
+     "development": 0.41,
+     "drift": 0.53,
+     "shift": 0.26,
+     "sparse": 0.35
+    }
+   }
+  },
+  "learned_maxweight": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": 0.005,
+    "ci95": [
+     -0.024166666666666666,
+     0.035
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.02,
+     "delayed": -0.015,
+     "development": 0.0,
+     "drift": 0.02,
+     "shift": 0.005,
+     "sparse": 0.0
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": 0.0005916666666666669,
+    "ci95": [
+     0.00014166666666666706,
+     0.001024999999999999
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.00019999999999999963,
+     "delayed": 0.0014999999999999996,
+     "development": 0.0006500000000000006,
+     "drift": 0.0007500000000000007,
+     "shift": 0.00045000000000000096,
+     "sparse": 0.0
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": 0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "scenario_deltas": {
+     "cold_start": 0,
+     "delayed": 0,
+     "development": 0,
+     "drift": 0,
+     "shift": 0,
+     "sparse": 0
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": -0.01,
+    "ci95": [
+     -0.203375,
+     0.1817083333333331
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.04,
+     "delayed": -0.1,
+     "development": 0.03,
+     "drift": 0.05,
+     "shift": -0.11,
+     "sparse": 0.03
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": 0.08666666666666667,
+    "ci95": [
+     -0.12504166666666666,
+     0.29833333333333334
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.12,
+     "delayed": 0.08,
+     "development": 0.06,
+     "drift": 0.1,
+     "shift": 0.12,
+     "sparse": 0.04
+    }
+   }
+  },
+  "no_asks": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": -0.265,
+    "ci95": [
+     -0.31333333333333335,
+     -0.2225
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.295,
+     "delayed": -0.26,
+     "development": -0.32,
+     "drift": -0.305,
+     "shift": -0.29,
+     "sparse": -0.12
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": -0.21865833333333334,
+    "ci95": [
+     -0.22463375000000008,
+     -0.21299958333333335
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.2666,
+     "delayed": -0.23105,
+     "development": -0.23175,
+     "drift": -0.2316,
+     "shift": -0.23195,
+     "sparse": -0.119
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": -198.88,
+    "ci95": [
+     -201.76100000000002,
+     -195.864875
+    ],
+    "scenario_deltas": {
+     "cold_start": -236.79,
+     "delayed": -191.1,
+     "development": -191.1,
+     "drift": -191.1,
+     "shift": -191.1,
+     "sparse": -192.09
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": -5.925,
+    "ci95": [
+     -6.286791666666667,
+     -5.555
+    ],
+    "scenario_deltas": {
+     "cold_start": -7.5,
+     "delayed": -6.55,
+     "development": -6.95,
+     "drift": -6.44,
+     "shift": -6.26,
+     "sparse": -1.85
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": -7.651666666666667,
+    "ci95": [
+     -8.096708333333334,
+     -7.189916666666667
+    ],
+    "scenario_deltas": {
+     "cold_start": -9.32,
+     "delayed": -8.72,
+     "development": -8.98,
+     "drift": -8.26,
+     "shift": -8.3,
+     "sparse": -2.33
+    }
+   }
+  },
+  "random": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": 0.0425,
+    "ci95": [
+     -0.017499999999999998,
+     0.10166666666666667
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.1,
+     "delayed": 0.115,
+     "development": 0.015,
+     "drift": 0.02,
+     "shift": 0.03,
+     "sparse": -0.025
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": -0.00015833333333333378,
+    "ci95": [
+     -0.001133333333333334,
+     0.0007749999999999989
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.001100000000000001,
+     "delayed": -5.000000000000171e-05,
+     "development": -0.0008500000000000007,
+     "drift": -0.0006000000000000005,
+     "shift": -0.00030000000000000024,
+     "sparse": -0.0002500000000000005
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": 0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "scenario_deltas": {
+     "cold_start": 0,
+     "delayed": 0,
+     "development": 0,
+     "drift": 0,
+     "shift": 0,
+     "sparse": 0
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": 0.29666666666666663,
+    "ci95": [
+     -0.095,
+     0.6933749999999999
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.05,
+     "delayed": 0.22,
+     "development": 0.38,
+     "drift": 0.47,
+     "shift": 0.58,
+     "sparse": 0.18
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": 0.28833333333333333,
+    "ci95": [
+     -0.15,
+     0.7268333333333324
+    ],
+    "scenario_deltas": {
+     "cold_start": -0.24,
+     "delayed": 0.2,
+     "development": 0.48,
+     "drift": 0.64,
+     "shift": 0.31,
+     "sparse": 0.34
+    }
+   }
+  },
+  "uncertainty_first": {
+   "msmi_per_100_arrived_members": {
+    "status": "complete",
+    "delta": -0.010833333333333334,
+    "ci95": [
+     -0.06583333333333333,
+     0.04083333333333333
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.0,
+     "delayed": 0.075,
+     "development": -0.04,
+     "drift": -0.045,
+     "shift": -0.025,
+     "sparse": -0.03
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "delta": 0.00011666666666666528,
+    "ci95": [
+     -0.0005833333333333354,
+     0.0008416666666666654
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.0002999999999999997,
+     "delayed": -5.000000000000282e-05,
+     "development": 4.9999999999998376e-05,
+     "drift": 0.00044999999999999874,
+     "shift": 0.00014999999999999847,
+     "sparse": -0.00020000000000000074
+    }
+   },
+   "ask_cost": {
+    "status": "complete",
+    "delta": 42.776666666666664,
+    "ci95": [
+     41.44133333333333,
+     43.988375
+    ],
+    "scenario_deltas": {
+     "cold_start": 43.11,
+     "delayed": 49.18,
+     "development": 50.79,
+     "drift": 51.47,
+     "shift": 50.77,
+     "sparse": 11.34
+    }
+   },
+   "dates": {
+    "status": "complete",
+    "delta": 0.39666666666666667,
+    "ci95": [
+     0.01829166666666667,
+     0.7834166666666662
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.3,
+     "delayed": 0.51,
+     "development": 0.43,
+     "drift": 0.51,
+     "shift": 0.46,
+     "sparse": 0.17
+    }
+   },
+   "mutual_acceptances": {
+    "status": "complete",
+    "delta": 0.49,
+    "ci95": [
+     0.09158333333333334,
+     0.9134166666666662
+    ],
+    "scenario_deltas": {
+     "cold_start": 0.59,
+     "delayed": 0.42,
+     "development": 0.56,
+     "drift": 0.76,
+     "shift": 0.34,
+     "sparse": 0.27
+    }
+   }
+  }
+ }
+}

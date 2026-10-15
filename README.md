@@ -23,7 +23,30 @@ Round 1 research note, unchanged since submission: [docs/GraphVOI_Round1_note.pd
 
 ## Results at a glance
 
-<!-- RESULTS -->
+Pre-registered study: 100 paired seeds x 6 scenario families x 7 methods = 4,200
+episodes, all valid. Mean per episode over 600 worlds:
+
+| Method | MSMI per 100 arrived | Completed dates | Mutual acceptances | Coverage |
+|---|---:|---:|---:|---:|
+| GraphVOI | 0.339 | 8.52 | 10.98 | 33.7% |
+| Degree-first | 0.380 | 8.62 | 11.11 | 33.8% |
+| Uncertainty-first | 0.331 | 8.47 | 10.85 | 33.8% |
+| GraphVOI without budget fill | 0.304 | 7.25 | 9.21 | 29.2% |
+| Official greedy | 0.350 | 8.23 | 10.59 | 33.7% |
+| Official random | 0.384 | 8.37 | 10.65 | 33.8% |
+| Official no-asks | 0.077 | 2.15 | 2.71 | 11.9% |
+
+- **Main hypothesis not supported.** GraphVOI does not beat degree-first or
+  uncertainty-first asking on MSMI or completed dates (all paired intervals cover
+  zero). The simpler degree-first rule does as well. The report explains why:
+  the pair model has almost no signal here, so value comes from making pairs
+  feasible, which degree-first measures directly.
+- **What clearly helps:** spending the whole daily budget early on hard
+  constraints (+1.3 completed dates, +1.8 mutual acceptances, +4.5 coverage points
+  per episode), found by diagnosing our own pilot.
+- **Safe and reproducible:** 0 violations of stated preferences in 279,261
+  introductions; official container mode valid on ARM and x86 Linux with
+  identical decisions on both; slowest call 4.6 s of the 10 s limit.
 
 ## How one day works
 

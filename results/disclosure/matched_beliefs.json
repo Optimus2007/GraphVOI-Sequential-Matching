@@ -1,0 +1,166 @@
+{
+ "graphvoi|belief=refusal_minus_none|actual=refusal": {
+  "msmi_per_100_arrived_members": {
+   "status": "complete",
+   "delta": -0.016666666666666666,
+   "ci95": [
+    -0.125,
+    0.075
+   ],
+   "scenario_deltas": {
+    "cold_start": -0.05,
+    "delayed": -0.1,
+    "development": 0.05,
+    "drift": -0.05,
+    "shift": 0.05,
+    "sparse": 0.0
+   }
+  },
+  "coverage": {
+   "status": "complete",
+   "delta": -0.00016666666666667013,
+   "ci95": [
+    -0.008000000000000002,
+    0.007249999999999994
+   ],
+   "scenario_deltas": {
+    "cold_start": 0.022999999999999993,
+    "delayed": -0.006500000000000001,
+    "development": -0.007500000000000007,
+    "drift": -0.007000000000000006,
+    "shift": -0.006500000000000001,
+    "sparse": 0.0035000000000000005
+   }
+  },
+  "ask_cost": {
+   "status": "complete",
+   "delta": -2.6,
+   "ci95": [
+    -5.416666666666666,
+    0.25041666666666446
+   ],
+   "scenario_deltas": {
+    "cold_start": 2.4,
+    "delayed": -4.6,
+    "development": -3.9,
+    "drift": -3.4,
+    "shift": -4.4,
+    "sparse": -1.7
+   }
+  },
+  "dates": {
+   "status": "complete",
+   "delta": -0.6333333333333333,
+   "ci95": [
+    -1.3666666666666667,
+    0.049999999999999996
+   ],
+   "scenario_deltas": {
+    "cold_start": 0.1,
+    "delayed": -0.5,
+    "development": -0.6,
+    "drift": -0.9,
+    "shift": -1.6,
+    "sparse": -0.3
+   }
+  },
+  "mutual_acceptances": {
+   "status": "complete",
+   "delta": -0.85,
+   "ci95": [
+    -1.75,
+    -0.032916666666668905
+   ],
+   "scenario_deltas": {
+    "cold_start": 0.4,
+    "delayed": -0.4,
+    "development": -1,
+    "drift": -1.1,
+    "shift": -2.8,
+    "sparse": -0.2
+   }
+  }
+ },
+ "graphvoi|belief=temporal_drift_minus_none|actual=drift": {
+  "msmi_per_100_arrived_members": {
+   "status": "complete",
+   "delta": -0.15,
+   "ci95": [
+    -0.275,
+    -0.04166666666666667
+   ],
+   "scenario_deltas": {
+    "cold_start": -0.05,
+    "delayed": -0.2,
+    "development": -0.25,
+    "drift": -0.3,
+    "shift": -0.1,
+    "sparse": 0.0
+   }
+  },
+  "coverage": {
+   "status": "complete",
+   "delta": -0.001250000000000003,
+   "ci95": [
+    -0.007835416666666664,
+    0.0044999999999999875
+   ],
+   "scenario_deltas": {
+    "cold_start": -0.004499999999999995,
+    "delayed": -0.0020000000000000074,
+    "development": -0.000500000000000006,
+    "drift": -0.000500000000000006,
+    "shift": 0.0004999999999999949,
+    "sparse": -0.000499999999999999
+   }
+  },
+  "ask_cost": {
+   "status": "complete",
+   "delta": -3.8333333333333335,
+   "ci95": [
+    -4.933333333333334,
+    -2.6833333333333336
+   ],
+   "scenario_deltas": {
+    "cold_start": -4.4,
+    "delayed": -5.2,
+    "development": -3,
+    "drift": -3,
+    "shift": -6.1,
+    "sparse": -1.3
+   }
+  },
+  "dates": {
+   "status": "complete",
+   "delta": -1.1333333333333333,
+   "ci95": [
+    -2.283333333333333,
+    -0.032916666666668926
+   ],
+   "scenario_deltas": {
+    "cold_start": -0.7,
+    "delayed": -1.3,
+    "development": -1.4,
+    "drift": -1.7,
+    "shift": -1.8,
+    "sparse": 0.1
+   }
+  },
+  "mutual_acceptances": {
+   "status": "complete",
+   "delta": -1.15,
+   "ci95": [
+    -2.5170833333333333,
+    0.2504166666666644
+   ],
+   "scenario_deltas": {
+    "cold_start": -0.9,
+    "delayed": -1.1,
+    "development": -1.3,
+    "drift": -1.8,
+    "shift": -1.9,
+    "sparse": 0.1
+   }
+  }
+ }
+}

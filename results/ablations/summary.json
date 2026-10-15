@@ -1,0 +1,2019 @@
+{
+ "complete": true,
+ "expected_design": {
+  "methods": [
+   "learned_greedy",
+   "learned_maxweight",
+   "graphvoi_wait",
+   "graphvoi_no_pairs"
+  ],
+  "seeds": [
+   71001,
+   71002,
+   71003,
+   71004,
+   71005,
+   71006,
+   71007,
+   71008,
+   71009,
+   71010,
+   71011,
+   71012,
+   71013,
+   71014,
+   71015,
+   71016,
+   71017,
+   71018,
+   71019,
+   71020,
+   71021,
+   71022,
+   71023,
+   71024,
+   71025,
+   71026,
+   71027,
+   71028,
+   71029,
+   71030,
+   71031,
+   71032,
+   71033,
+   71034,
+   71035,
+   71036,
+   71037,
+   71038,
+   71039,
+   71040,
+   71041,
+   71042,
+   71043,
+   71044,
+   71045,
+   71046,
+   71047,
+   71048,
+   71049,
+   71050,
+   71051,
+   71052,
+   71053,
+   71054,
+   71055,
+   71056,
+   71057,
+   71058,
+   71059,
+   71060,
+   71061,
+   71062,
+   71063,
+   71064,
+   71065,
+   71066,
+   71067,
+   71068,
+   71069,
+   71070,
+   71071,
+   71072,
+   71073,
+   71074,
+   71075,
+   71076,
+   71077,
+   71078,
+   71079,
+   71080,
+   71081,
+   71082,
+   71083,
+   71084,
+   71085,
+   71086,
+   71087,
+   71088,
+   71089,
+   71090,
+   71091,
+   71092,
+   71093,
+   71094,
+   71095,
+   71096,
+   71097,
+   71098,
+   71099,
+   71100
+  ],
+  "variants": [
+   "development",
+   "sparse",
+   "cold_start",
+   "delayed",
+   "shift",
+   "drift"
+  ]
+ },
+ "purpose": "confirmatory",
+ "summaries": {
+  "learned_greedy": {
+   "eligible": true,
+   "primary_score": 0.3416666666666667,
+   "scenario_means": {
+    "cold_start": {
+     "msmi_per_100_arrived_members": 0.33,
+     "coverage": 0.3291,
+     "mutual_acceptances_per_100": 5.33,
+     "ask_cost": 236.79,
+     "inference_seconds": 7.615249395119781
+    },
+    "delayed": {
+     "msmi_per_100_arrived_members": 0.335,
+     "coverage": 0.38115,
+     "mutual_acceptances_per_100": 6.13,
+     "ask_cost": 191.1,
+     "inference_seconds": 6.757679541669856
+    },
+    "development": {
+     "msmi_per_100_arrived_members": 0.43,
+     "coverage": 0.38225,
+     "mutual_acceptances_per_100": 6.3,
+     "ask_cost": 191.1,
+     "inference_seconds": 6.991322050090113
+    },
+    "drift": {
+     "msmi_per_100_arrived_members": 0.41,
+     "coverage": 0.38215,
+     "mutual_acceptances_per_100": 5.885,
+     "ask_cost": 191.1,
+     "inference_seconds": 6.890725858539684
+    },
+    "shift": {
+     "msmi_per_100_arrived_members": 0.4,
+     "coverage": 0.3824,
+     "mutual_acceptances_per_100": 5.83,
+     "ask_cost": 191.1,
+     "inference_seconds": 6.978454922659804
+    },
+    "sparse": {
+     "msmi_per_100_arrived_members": 0.145,
+     "coverage": 0.1692,
+     "mutual_acceptances_per_100": 1.615,
+     "ask_cost": 192.09,
+     "inference_seconds": 8.314569255819315
+    }
+   },
+   "overall": {
+    "msmi_per_100_arrived_members": 0.3416666666666667,
+    "coverage": 0.33770833333333333,
+    "mutual_acceptances_per_100": 5.181666666666667,
+    "ask_cost": 198.88,
+    "inference_seconds": 7.258000170649758
+   },
+   "ranking_key_descending": [
+    0.3416666666666667,
+    0.33770833333333333,
+    5.181666666666667,
+    -198.88,
+    -7.258000170649758
+   ],
+   "invalid_count": 0,
+   "recorded_count": 600
+  },
+  "learned_maxweight": {
+   "eligible": true,
+   "primary_score": 0.3466666666666667,
+   "scenario_means": {
+    "cold_start": {
+     "msmi_per_100_arrived_members": 0.35,
+     "coverage": 0.3293,
+     "mutual_acceptances_per_100": 5.39,
+     "ask_cost": 236.79,
+     "inference_seconds": 7.628309387409791
+    },
+    "delayed": {
+     "msmi_per_100_arrived_members": 0.32,
+     "coverage": 0.38265,
+     "mutual_acceptances_per_100": 6.17,
+     "ask_cost": 191.1,
+     "inference_seconds": 7.096168002450075
+    },
+    "development": {
+     "msmi_per_100_arrived_members": 0.43,
+     "coverage": 0.3829,
+     "mutual_acceptances_per_100": 6.33,
+     "ask_cost": 191.1,
+     "inference_seconds": 7.057834087789911
+    },
+    "drift": {
+     "msmi_per_100_arrived_members": 0.43,
+     "coverage": 0.3829,
+     "mutual_acceptances_per_100": 5.935,
+     "ask_cost": 191.1,
+     "inference_seconds": 6.890078002969825
+    },
+    "shift": {
+     "msmi_per_100_arrived_members": 0.405,
+     "coverage": 0.38285,
+     "mutual_acceptances_per_100": 5.89,
+     "ask_cost": 191.1,
+     "inference_seconds": 6.894460255439673
+    },
+    "sparse": {
+     "msmi_per_100_arrived_members": 0.145,
+     "coverage": 0.1692,
+     "mutual_acceptances_per_100": 1.635,
+     "ask_cost": 192.09,
+     "inference_seconds": 8.104959972809954
+    }
+   },
+   "overall": {
+    "msmi_per_100_arrived_members": 0.3466666666666667,
+    "coverage": 0.3383,
+    "mutual_acceptances_per_100": 5.225,
+    "ask_cost": 198.88,
+    "inference_seconds": 7.278634951478205
+   },
+   "ranking_key_descending": [
+    0.3466666666666667,
+    0.3383,
+    5.225,
+    -198.88,
+    -7.278634951478205
+   ],
+   "invalid_count": 0,
+   "recorded_count": 600
+  },
+  "graphvoi_wait": {
+   "eligible": true,
+   "primary_score": 0.29083333333333333,
+   "scenario_means": {
+    "cold_start": {
+     "msmi_per_100_arrived_members": 0.265,
+     "coverage": 0.29465,
+     "mutual_acceptances_per_100": 4.075,
+     "ask_cost": 309.15,
+     "inference_seconds": 149.37002265731016
+    },
+    "delayed": {
+     "msmi_per_100_arrived_members": 0.335,
+     "coverage": 0.34135,
+     "mutual_acceptances_per_100": 4.985,
+     "ask_cost": 265.9,
+     "inference_seconds": 158.08569891683038
+    },
+    "development": {
+     "msmi_per_100_arrived_members": 0.375,
+     "coverage": 0.3467,
+     "mutual_acceptances_per_100": 5.095,
+     "ask_cost": 268.27,
+     "inference_seconds": 162.07808441896015
+    },
+    "drift": {
+     "msmi_per_100_arrived_members": 0.33,
+     "coverage": 0.34745,
+     "mutual_acceptances_per_100": 3.97,
+     "ask_cost": 268.72,
+     "inference_seconds": 160.09449389651016
+    },
+    "shift": {
+     "msmi_per_100_arrived_members": 0.33,
+     "coverage": 0.34775,
+     "mutual_acceptances_per_100": 4.455,
+     "ask_cost": 268.59,
+     "inference_seconds": 157.69087558065962
+    },
+    "sparse": {
+     "msmi_per_100_arrived_members": 0.11,
+     "coverage": 0.1575,
+     "mutual_acceptances_per_100": 1.445,
+     "ask_cost": 241.72,
+     "inference_seconds": 88.41837657174966
+    }
+   },
+   "overall": {
+    "msmi_per_100_arrived_members": 0.29083333333333333,
+    "coverage": 0.3059,
+    "mutual_acceptances_per_100": 4.004166666666666,
+    "ask_cost": 270.39166666666665,
+    "inference_seconds": 145.95625867367002
+   },
+   "ranking_key_descending": [
+    0.29083333333333333,
+    0.3059,
+    4.004166666666666,
+    -270.39166666666665,
+    -145.95625867367002
+   ],
+   "invalid_count": 0,
+   "recorded_count": 600
+  },
+  "graphvoi_no_pairs": {
+   "eligible": true,
+   "primary_score": 0.3516666666666667,
+   "scenario_means": {
+    "cold_start": {
+     "msmi_per_100_arrived_members": 0.34,
+     "coverage": 0.33,
+     "mutual_acceptances_per_100": 5.55,
+     "ask_cost": 293.53,
+     "inference_seconds": 64.91466965546047
+    },
+    "delayed": {
+     "msmi_per_100_arrived_members": 0.475,
+     "coverage": 0.38065,
+     "mutual_acceptances_per_100": 6.305,
+     "ask_cost": 251.83,
+     "inference_seconds": 57.93968890615013
+    },
+    "development": {
+     "msmi_per_100_arrived_members": 0.405,
+     "coverage": 0.38225,
+     "mutual_acceptances_per_100": 6.555,
+     "ask_cost": 253.29,
+     "inference_seconds": 59.29279079774975
+    },
+    "drift": {
+     "msmi_per_100_arrived_members": 0.385,
+     "coverage": 0.38255,
+     "mutual_acceptances_per_100": 6.18,
+     "ask_cost": 253.68,
+     "inference_seconds": 57.66933033090012
+    },
+    "shift": {
+     "msmi_per_100_arrived_members": 0.415,
+     "coverage": 0.38265,
+     "mutual_acceptances_per_100": 6.095,
+     "ask_cost": 251.92,
+     "inference_seconds": 58.98139372524965
+    },
+    "sparse": {
+     "msmi_per_100_arrived_members": 0.09,
+     "coverage": 0.1689,
+     "mutual_acceptances_per_100": 1.685,
+     "ask_cost": 208.94,
+     "inference_seconds": 51.49962112596961
+    }
+   },
+   "overall": {
+    "msmi_per_100_arrived_members": 0.3516666666666667,
+    "coverage": 0.3378333333333333,
+    "mutual_acceptances_per_100": 5.395,
+    "ask_cost": 252.19833333333332,
+    "inference_seconds": 58.38291575691329
+   },
+   "ranking_key_descending": [
+    0.3516666666666667,
+    0.3378333333333333,
+    5.395,
+    -252.19833333333332,
+    -58.38291575691329
+   ],
+   "invalid_count": 0,
+   "recorded_count": 600
+  }
+ },
+ "secondary": {
+  "learned_greedy": {
+   "mean_mutual_acceptances": 10.363333333333333,
+   "mean_completed_dates": 8.075,
+   "mean_unserved": 132.45833333333334,
+   "served_wait_median": 4.0,
+   "served_wait_p90": 17.0,
+   "max_ask_seconds": 0.07010255600016535,
+   "max_match_seconds": 0.29501965700001165,
+   "note": "Waiting quantiles condition on served members; unserved remain in scoring/coverage denominator."
+  },
+  "learned_maxweight": {
+   "mean_mutual_acceptances": 10.45,
+   "mean_completed_dates": 8.065,
+   "mean_unserved": 132.34,
+   "served_wait_median": 4.0,
+   "served_wait_p90": 17.0,
+   "max_ask_seconds": 0.09749968400001308,
+   "max_match_seconds": 0.2916365829998995,
+   "note": "Waiting quantiles condition on served members; unserved remain in scoring/coverage denominator."
+  },
+  "graphvoi_wait": {
+   "mean_mutual_acceptances": 8.008333333333333,
+   "mean_completed_dates": 6.238333333333333,
+   "mean_unserved": 138.82,
+   "served_wait_median": 33.0,
+   "served_wait_p90": 42.0,
+   "max_ask_seconds": 7.078510140999697,
+   "max_match_seconds": 0.30579200100009984,
+   "note": "Waiting quantiles condition on served members; unserved remain in scoring/coverage denominator."
+  },
+  "graphvoi_no_pairs": {
+   "mean_mutual_acceptances": 10.79,
+   "mean_completed_dates": 8.4,
+   "mean_unserved": 132.43333333333334,
+   "served_wait_median": 3.0,
+   "served_wait_p90": 16.0,
+   "max_ask_seconds": 3.2513474429997586,
+   "max_match_seconds": 0.27339969300010125,
+   "note": "Waiting quantiles condition on served members; unserved remain in scoring/coverage denominator."
+  }
+ },
+ "paired_intervals": {},
+ "code_sha256": {
+  "graphvoi/__init__.py": "ecf105855fd2829829f61700d9b11c30f0136f93013c11311b7ffd15dc823827",
+  "graphvoi/analysis.py": "08e016fa048a8d20f9238bee10222e6d969785baccfe1e90e29c0f3815333ac2",
+  "graphvoi/answers.py": "3308a751aa53f04caa25576f0f03437e27df595daabef4fcc740d86be95d51bd",
+  "graphvoi/clarification.py": "3fc7a731ae49b183ae13a20f219bc020c469a219f325d63603cf07cd86e8d981",
+  "graphvoi/core.py": "8eccb125c5e69a6f49ee0a6b6be50b539b3225cbf7220c12b349075c3d2e29e8",
+  "graphvoi/models.py": "274f39b84159e5f05855b9940edf0dc22169d176d6c1daeeb1a2a0b121d119d1",
+  "graphvoi/policy.py": "50b77220cedeed4d98aa827c7165d0b9fbafaad60515db9acfcbd41d70697d32",
+  "scripts/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scripts/compare_studies.py": "2408926466c2f9a3b52ff85396237c796a699085dba45a49db76a70a3be4804f",
+  "scripts/decision_sensitivity.py": "7ff47819ce13d506426655613989c951836829ab754005b1d62ecc03ae0b6571",
+  "scripts/evaluate_method.py": "69ac4b268f0d3bb0665024458780d209c377d03b3dd1353326edd6979d08fe02",
+  "scripts/export_results.py": "dc7b89126f854faf6222a9b81abe65b354a721e634e5618c3b19fc0a44f97eca",
+  "scripts/make_figures.py": "6a8daf4e300a21441b4695d13185b43fb7eee9b46aa39358a02f9554a8670364",
+  "scripts/profile_container.py": "473afb8fdde6662cf39029f57a583133a0c908cbbb71fd27d488240288e536f7",
+  "scripts/run_disclosure.py": "aff2d23facc277f591ddecbd9be98408a80a617b0020e9b7e9c8d2df523552b9",
+  "scripts/run_experiments.py": "56311dfd7b5f62b247cd0d702c95ec80269fd5226095359ad67a4cc78975b476",
+  "scripts/run_pilot.py": "b3633b7a67ed31d314ada1a87a9ab97127c8cf6767f0f5aed22627c076426368",
+  "scripts/run_study.py": "c9d1702b088f8500dcb2b49ea1b328013a215d039a2438a6c7d649787acdba9a",
+  "scripts/summarize_results.py": "1135d6700cd013e70539bfad2c01c2295ddb0dd8fa5318da1d0a3aa1a2f53179",
+  "scripts/summarize_study.py": "b83c64bc01848a90ddef481f45596dc22ffb631caa5df571f3cda4b19bd11177",
+  "scripts/train_models.py": "14604b6b61245ff2045313b0fc64486048e0d02c99a03827525eda4357209d8e"
+ },
+ "asset_sha256": {
+  "pair_model.json": "5a1db00312713ffd9447840b8a0473759f60e4ec6855fa6d364a202a29c0dca4",
+  "answer_model.json": "732cdcf12e07061bc88e868a0229e9eb2eefc656ac9c9d3bc44dd913a2568695"
+ },
+ "acquisition": {
+  "frontier": 16,
+  "paired_actions": 8,
+  "world_limit": 8,
+  "evaluation_limit": 256,
+  "lambda_cost": 0,
+  "shared_hard_budget_fill": true
+ },
+ "python_version": "3.12.7 (main, Oct 16 2024, 04:37:19) [Clang 18.1.8 ]",
+ "raw_sha256": "02d3f4a3119ece4ae7945824976f5bedd924efa7fd095dbc6bea05e984dfef5c",
+ "raw_file": "v3_ablations.json",
+ "calibration": {
+  "graphvoi_no_pairs": {
+   "a_accepts_b": {
+    "labels": 45871,
+    "brier": 0.22928835470430933,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 6,
+      "predicted": 0.29775438928502557,
+      "observed": 0.0
+     },
+     {
+      "bin": 3,
+      "count": 43768,
+      "predicted": 0.3561062325449573,
+      "observed": 0.35583074392250047
+     },
+     {
+      "bin": 4,
+      "count": 2097,
+      "predicted": 0.41206817664282624,
+      "observed": 0.4444444444444444
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   },
+   "b_accepts_a": {
+    "labels": 45871,
+    "brier": 0.22736184594011938,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 4,
+      "predicted": 0.29755283190035264,
+      "observed": 0.25
+     },
+     {
+      "bin": 3,
+      "count": 43843,
+      "predicted": 0.3559124422814448,
+      "observed": 0.34780922838309425
+     },
+     {
+      "bin": 4,
+      "count": 2024,
+      "predicted": 0.41286382355889467,
+      "observed": 0.4856719367588933
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   },
+   "both_directions": {
+    "labels": 91742,
+    "brier": 0.22832510032221426,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 10,
+      "predicted": 0.2976737663311564,
+      "observed": 0.1
+     },
+     {
+      "bin": 3,
+      "count": 87611,
+      "predicted": 0.35600925446545617,
+      "observed": 0.35181655271598317
+     },
+     {
+      "bin": 4,
+      "count": 4121,
+      "predicted": 0.41245895299762464,
+      "observed": 0.46469303567095366
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   }
+  },
+  "graphvoi_wait": {
+   "a_accepts_b": {
+    "labels": 34251,
+    "brier": 0.2259940507034962,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 25,
+      "predicted": 0.29829345813568225,
+      "observed": 0.4
+     },
+     {
+      "bin": 3,
+      "count": 32771,
+      "predicted": 0.35510533110762155,
+      "observed": 0.34472551951420466
+     },
+     {
+      "bin": 4,
+      "count": 1455,
+      "predicted": 0.41143456239077214,
+      "observed": 0.4639175257731959
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   },
+   "b_accepts_a": {
+    "labels": 34251,
+    "brier": 0.22604533163836363,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 15,
+      "predicted": 0.2985067552982525,
+      "observed": 0.5333333333333333
+     },
+     {
+      "bin": 3,
+      "count": 32702,
+      "predicted": 0.35476037746319045,
+      "observed": 0.3427924897559782
+     },
+     {
+      "bin": 4,
+      "count": 1534,
+      "predicted": 0.4116328792800706,
+      "observed": 0.47979139504563234
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   },
+   "both_directions": {
+    "labels": 68502,
+    "brier": 0.22601969117092957,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 40,
+      "predicted": 0.29837344457164605,
+      "observed": 0.45
+     },
+     {
+      "bin": 3,
+      "count": 65473,
+      "predicted": 0.3549330360534745,
+      "observed": 0.34376002321567667
+     },
+     {
+      "bin": 4,
+      "count": 2989,
+      "predicted": 0.41153634161733094,
+      "observed": 0.4720642355302777
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   }
+  },
+  "learned_greedy": {
+   "a_accepts_b": {
+    "labels": 45501,
+    "brier": 0.2271689004657565,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 43700,
+      "predicted": 0.35561024622738946,
+      "observed": 0.34766590389016017
+     },
+     {
+      "bin": 4,
+      "count": 1801,
+      "predicted": 0.4128539905685832,
+      "observed": 0.47418101054969464
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   },
+   "b_accepts_a": {
+    "labels": 45501,
+    "brier": 0.22791975047021348,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 43704,
+      "predicted": 0.3552569144519716,
+      "observed": 0.349670510708402
+     },
+     {
+      "bin": 4,
+      "count": 1797,
+      "predicted": 0.41342368639411736,
+      "observed": 0.4746800222593211
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   },
+   "both_directions": {
+    "labels": 91002,
+    "brier": 0.2275443254679849,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 87404,
+      "predicted": 0.35543357225465494,
+      "observed": 0.34866825316919137
+     },
+     {
+      "bin": 4,
+      "count": 3598,
+      "predicted": 0.4131385218077394,
+      "observed": 0.4744302390216787
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   }
+  },
+  "learned_maxweight": {
+   "a_accepts_b": {
+    "labels": 45644,
+    "brier": 0.2276571153452823,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 43820,
+      "predicted": 0.35561870227759734,
+      "observed": 0.34895025102692834
+     },
+     {
+      "bin": 4,
+      "count": 1824,
+      "predicted": 0.4127147478893249,
+      "observed": 0.48026315789473684
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   },
+   "b_accepts_a": {
+    "labels": 45644,
+    "brier": 0.2274951210313721,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 43853,
+      "predicted": 0.3552260570667547,
+      "observed": 0.34761589857022324
+     },
+     {
+      "bin": 4,
+      "count": 1791,
+      "predicted": 0.41334335053716165,
+      "observed": 0.4818537130094919
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   },
+   "both_directions": {
+    "labels": 91288,
+    "brier": 0.2275761181883273,
+    "reliability": [
+     {
+      "bin": 0,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 1,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 2,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 3,
+      "count": 87673,
+      "predicted": 0.35542230577660955,
+      "observed": 0.34828282367433533
+     },
+     {
+      "bin": 4,
+      "count": 3615,
+      "predicted": 0.41302618007252667,
+      "observed": 0.4810511756569848
+     },
+     {
+      "bin": 5,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 6,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 7,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 8,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     },
+     {
+      "bin": 9,
+      "count": 0,
+      "predicted": null,
+      "observed": null
+     }
+    ]
+   }
+  }
+ },
+ "opportunity": {
+  "learned_greedy": {
+   "all": {
+    "all": {
+     "members": 120000,
+     "served_share": 0.33770833333333333,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.2870583333333334,
+     "introductions_per_member": 0.75835,
+     "eligible_partners_per_member": 0.8674,
+     "ask_units_per_member": 0.9944,
+     "declined_hard_field_share": 0.344475,
+     "servable_members": 78663,
+     "servable_served_share": 0.515172317353775,
+     "servable_km_median_wait_days": 28,
+     "servable_km_served_within_14_days": 0.4379060040934112
+    }
+   },
+   "gender": {
+    "woman": {
+     "members": 55979,
+     "served_share": 0.34421836760213653,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.2920202218689153,
+     "introductions_per_member": 0.7651440718840994,
+     "eligible_partners_per_member": 0.8737205023312313,
+     "ask_units_per_member": 0.993747655370764,
+     "declined_hard_field_share": 0.342217617320781,
+     "servable_members": 36822,
+     "servable_served_share": 0.5233012872739123,
+     "servable_km_median_wait_days": 24,
+     "servable_km_served_within_14_days": 0.44394655369072866
+    },
+    "man": {
+     "members": 54352,
+     "served_share": 0.32953709155136884,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.2780394465705035,
+     "introductions_per_member": 0.742309390638799,
+     "eligible_partners_per_member": 0.8538048277892258,
+     "ask_units_per_member": 0.981325434206653,
+     "declined_hard_field_share": 0.3478804827789226,
+     "servable_members": 35444,
+     "servable_served_share": 0.5053323552646428,
+     "servable_km_median_wait_days": 40,
+     "servable_km_served_within_14_days": 0.4263627130120754
+    },
+    "non_binary": {
+     "members": 9669,
+     "served_share": 0.34595097735029473,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.3090288551039404,
+     "introductions_per_member": 0.8091839900713621,
+     "eligible_partners_per_member": 0.9072292894818492,
+     "ask_units_per_member": 1.0716723549488054,
+     "declined_hard_field_share": 0.3384010756024408,
+     "servable_members": 6397,
+     "servable_served_share": 0.5229013600125059,
+     "servable_km_median_wait_days": 20,
+     "servable_km_served_within_14_days": 0.46709395028919787
+    }
+   },
+   "age_band": {
+    "21-29": {
+     "members": 41367,
+     "served_share": 0.3284018662218677,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.2777092851790074,
+     "introductions_per_member": 0.7300505233640341,
+     "eligible_partners_per_member": 0.838736190683395,
+     "ask_units_per_member": 0.9989121763724708,
+     "declined_hard_field_share": 0.3445983513428578,
+     "servable_members": 27112,
+     "servable_served_share": 0.50106963706108,
+     "servable_km_median_wait_days": 51,
+     "servable_km_served_within_14_days": 0.4237238123340219
+    },
+    "30-39": {
+     "members": 46021,
+     "served_share": 0.354012298733187,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.30438278177353817,
+     "introductions_per_member": 0.8340105603963408,
+     "eligible_partners_per_member": 0.9666239325525303,
+     "ask_units_per_member": 1.004541405010756,
+     "declined_hard_field_share": 0.34056191738554137,
+     "servable_members": 30348,
+     "servable_served_share": 0.5368393304336365,
+     "servable_km_median_wait_days": 20,
+     "servable_km_served_within_14_days": 0.46157901673915913
+    },
+    "40+": {
+     "members": 32612,
+     "served_share": 0.32650558076781555,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.27446952042193073,
+     "introductions_per_member": 0.6874770023304305,
+     "eligible_partners_per_member": 0.7637372746228382,
+     "ask_units_per_member": 0.9743652643198822,
+     "declined_hard_field_share": 0.3498405494909849,
+     "servable_members": 21203,
+     "servable_served_share": 0.502193085884073,
+     "servable_km_median_wait_days": 48,
+     "servable_km_served_within_14_days": 0.42215724189973114
+    }
+   }
+  },
+  "learned_maxweight": {
+   "all": {
+    "all": {
+     "members": 120000,
+     "served_share": 0.3383,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.2894916666666667,
+     "introductions_per_member": 0.7607333333333334,
+     "eligible_partners_per_member": 0.8656666666666667,
+     "ask_units_per_member": 0.9944,
+     "declined_hard_field_share": 0.344475,
+     "servable_members": 78663,
+     "servable_served_share": 0.5160749017962701,
+     "servable_km_median_wait_days": 27,
+     "servable_km_served_within_14_days": 0.4416180415188845
+    }
+   },
+   "gender": {
+    "woman": {
+     "members": 55979,
+     "served_share": 0.3447721466978688,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.29473552582218343,
+     "introductions_per_member": 0.7687347040854606,
+     "eligible_partners_per_member": 0.8739705961164008,
+     "ask_units_per_member": 0.993747655370764,
+     "declined_hard_field_share": 0.342217617320781,
+     "servable_members": 36822,
+     "servable_served_share": 0.5241431752756505,
+     "servable_km_median_wait_days": 23,
+     "servable_km_served_within_14_days": 0.4480745206669927
+    },
+    "man": {
+     "members": 54352,
+     "served_share": 0.3302178392699441,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.2804312628790109,
+     "introductions_per_member": 0.7446460111863409,
+     "eligible_partners_per_member": 0.8509530468060053,
+     "ask_units_per_member": 0.981325434206653,
+     "declined_hard_field_share": 0.3478804827789226,
+     "servable_members": 35444,
+     "servable_served_share": 0.5063762555016363,
+     "servable_km_median_wait_days": 38,
+     "servable_km_served_within_14_days": 0.43003047060151234
+    },
+    "non_binary": {
+     "members": 9669,
+     "served_share": 0.3462612472851381,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.3100630882200851,
+     "introductions_per_member": 0.8048402109835557,
+     "eligible_partners_per_member": 0.9002999276036818,
+     "ask_units_per_member": 1.0716723549488054,
+     "declined_hard_field_share": 0.3384010756024408,
+     "servable_members": 6397,
+     "servable_served_share": 0.5233703298421135,
+     "servable_km_median_wait_days": 19,
+     "servable_km_served_within_14_days": 0.46865718305455684
+    }
+   },
+   "age_band": {
+    "21-29": {
+     "members": 41367,
+     "served_share": 0.32886116953126887,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.27993328015084473,
+     "introductions_per_member": 0.7341117315734764,
+     "eligible_partners_per_member": 0.8363429787028308,
+     "ask_units_per_member": 0.9989121763724708,
+     "declined_hard_field_share": 0.3445983513428578,
+     "servable_members": 27112,
+     "servable_served_share": 0.5017704337562703,
+     "servable_km_median_wait_days": 48,
+     "servable_km_served_within_14_days": 0.4271171437002068
+    },
+    "30-39": {
+     "members": 46021,
+     "served_share": 0.35481627952456485,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.30692509941113855,
+     "introductions_per_member": 0.8365094196127855,
+     "eligible_partners_per_member": 0.9647986788639968,
+     "ask_units_per_member": 1.004541405010756,
+     "declined_hard_field_share": 0.34056191738554137,
+     "servable_members": 30348,
+     "servable_served_share": 0.5380585211546066,
+     "servable_km_median_wait_days": 19,
+     "servable_km_served_within_14_days": 0.46543429550547
+    },
+    "40+": {
+     "members": 32612,
+     "served_share": 0.3269655341592052,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.2770145958542869,
+     "introductions_per_member": 0.6875689930087084,
+     "eligible_partners_per_member": 0.7629706856371887,
+     "ask_units_per_member": 0.9743652643198822,
+     "declined_hard_field_share": 0.3498405494909849,
+     "servable_members": 21203,
+     "servable_served_share": 0.5029005329434514,
+     "servable_km_median_wait_days": 44,
+     "servable_km_served_within_14_days": 0.42607178229495857
+    }
+   }
+  },
+  "graphvoi_wait": {
+   "all": {
+    "all": {
+     "members": 120000,
+     "served_share": 0.3059,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.01481666666666659,
+     "introductions_per_member": 0.57085,
+     "eligible_partners_per_member": 0.9442333333333334,
+     "ask_units_per_member": 1.3519583333333334,
+     "declined_hard_field_share": 0.344475,
+     "servable_members": 78663,
+     "servable_served_share": 0.4666488692269555,
+     "servable_km_median_wait_days": null,
+     "servable_km_served_within_14_days": 0.022602748433189546
+    }
+   },
+   "gender": {
+    "woman": {
+     "members": 55979,
+     "served_share": 0.31063434502224047,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.015041354793762118,
+     "introductions_per_member": 0.5711963414851998,
+     "eligible_partners_per_member": 0.9538576966362385,
+     "ask_units_per_member": 1.3502920738133943,
+     "declined_hard_field_share": 0.342217617320781,
+     "servable_members": 36822,
+     "servable_served_share": 0.4722448536201184,
+     "servable_km_median_wait_days": null,
+     "servable_km_served_within_14_days": 0.022866764434305575
+    },
+    "man": {
+     "members": 54352,
+     "served_share": 0.29846187812775976,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.0146636738298499,
+     "introductions_per_member": 0.5609729172799529,
+     "eligible_partners_per_member": 0.9299749779216956,
+     "ask_units_per_member": 1.3299970562260819,
+     "declined_hard_field_share": 0.3478804827789226,
+     "servable_members": 35444,
+     "servable_served_share": 0.4576797201218824,
+     "servable_km_median_wait_days": null,
+     "servable_km_served_within_14_days": 0.02248617537523967
+    },
+    "non_binary": {
+     "members": 9669,
+     "served_share": 0.32030199606991416,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.014375840314407085,
+     "introductions_per_member": 0.6243665322163615,
+     "eligible_partners_per_member": 0.9686627365808254,
+     "ask_units_per_member": 1.4850553314717136,
+     "declined_hard_field_share": 0.3384010756024408,
+     "servable_members": 6397,
+     "servable_served_share": 0.48413318743160855,
+     "servable_km_median_wait_days": null,
+     "servable_km_served_within_14_days": 0.02172893543848675
+    }
+   },
+   "age_band": {
+    "21-29": {
+     "members": 41367,
+     "served_share": 0.29303551139797424,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.008436676577948776,
+     "introductions_per_member": 0.5295525418812097,
+     "eligible_partners_per_member": 0.914013585708415,
+     "ask_units_per_member": 1.3515604225590447,
+     "declined_hard_field_share": 0.3445983513428578,
+     "servable_members": 27112,
+     "servable_served_share": 0.4471082915314252,
+     "servable_km_median_wait_days": null,
+     "servable_km_served_within_14_days": 0.012872528769548475
+    },
+    "30-39": {
+     "members": 46021,
+     "served_share": 0.3222224636578953,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.014145716086134352,
+     "introductions_per_member": 0.6208904630494774,
+     "eligible_partners_per_member": 1.0608852480389388,
+     "ask_units_per_member": 1.3957541122531019,
+     "declined_hard_field_share": 0.34056191738554137,
+     "servable_members": 30348,
+     "servable_served_share": 0.4886318703044682,
+     "servable_km_median_wait_days": null,
+     "servable_km_served_within_14_days": 0.02145116646896017
+    },
+    "40+": {
+     "members": 32612,
+     "served_share": 0.29918434931926896,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.02385624923341101,
+     "introductions_per_member": 0.5526186679749785,
+     "eligible_partners_per_member": 0.8179504476879677,
+     "ask_units_per_member": 1.290659879798847,
+     "declined_hard_field_share": 0.3498405494909849,
+     "servable_members": 21203,
+     "servable_served_share": 0.46017073055699664,
+     "servable_km_median_wait_days": null,
+     "servable_km_served_within_14_days": 0.0366929208130925
+    }
+   }
+  },
+  "graphvoi_no_pairs": {
+   "all": {
+    "all": {
+     "members": 120000,
+     "served_share": 0.3378333333333333,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.29314166666666674,
+     "introductions_per_member": 0.7645166666666666,
+     "eligible_partners_per_member": 0.8722166666666666,
+     "ask_units_per_member": 1.2609916666666667,
+     "declined_hard_field_share": 0.344475,
+     "servable_members": 78663,
+     "servable_served_share": 0.5153630042078232,
+     "servable_km_median_wait_days": 26,
+     "servable_km_served_within_14_days": 0.4471860976570943
+    }
+   },
+   "gender": {
+    "woman": {
+     "members": 55979,
+     "served_share": 0.3439146822915736,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.29802247271298155,
+     "introductions_per_member": 0.768216652673324,
+     "eligible_partners_per_member": 0.8801336215366476,
+     "ask_units_per_member": 1.2538094642633846,
+     "declined_hard_field_share": 0.342217617320781,
+     "servable_members": 36822,
+     "servable_served_share": 0.5228396067568302,
+     "servable_km_median_wait_days": 23,
+     "servable_km_served_within_14_days": 0.4530715333224703
+    },
+    "man": {
+     "members": 54352,
+     "served_share": 0.3302730350309096,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.28458934353841625,
+     "introductions_per_member": 0.7520790403297026,
+     "eligible_partners_per_member": 0.8595451869296438,
+     "ask_units_per_member": 1.2514902855460701,
+     "declined_hard_field_share": 0.3478804827789226,
+     "servable_members": 35444,
+     "servable_served_share": 0.5064608960613927,
+     "servable_km_median_wait_days": 37,
+     "servable_km_served_within_14_days": 0.43640672610314835
+    },
+    "non_binary": {
+     "members": 9669,
+     "served_share": 0.34512359085737926,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.31295894094528887,
+     "introductions_per_member": 0.8130106526010963,
+     "eligible_partners_per_member": 0.8976109215017065,
+     "ask_units_per_member": 1.3559830385768952,
+     "declined_hard_field_share": 0.3384010756024408,
+     "servable_members": 6397,
+     "servable_served_share": 0.5216507738002188,
+     "servable_km_median_wait_days": 19,
+     "servable_km_served_within_14_days": 0.47303423479756135
+    }
+   },
+   "age_band": {
+    "21-29": {
+     "members": 41367,
+     "served_share": 0.3283535185050886,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.28119032078710093,
+     "introductions_per_member": 0.7371092900137791,
+     "eligible_partners_per_member": 0.8415403582565814,
+     "ask_units_per_member": 1.2522542122948244,
+     "declined_hard_field_share": 0.3445983513428578,
+     "servable_members": 27112,
+     "servable_served_share": 0.500995868987902,
+     "servable_km_median_wait_days": 53,
+     "servable_km_served_within_14_days": 0.42903511360283264
+    },
+    "30-39": {
+     "members": 46021,
+     "served_share": 0.3541861324178093,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.3098585428391387,
+     "introductions_per_member": 0.8397688011994524,
+     "eligible_partners_per_member": 0.974250885465331,
+     "ask_units_per_member": 1.3050346580908716,
+     "declined_hard_field_share": 0.34056191738554137,
+     "servable_members": 30348,
+     "servable_served_share": 0.5371029392381705,
+     "servable_km_median_wait_days": 19,
+     "servable_km_served_within_14_days": 0.46988269408198247
+    },
+    "40+": {
+     "members": 32612,
+     "served_share": 0.3267815528026493,
+     "km_median_wait_days": null,
+     "km_served_within_14_days": 0.28471114927020735,
+     "introductions_per_member": 0.6930884337053845,
+     "eligible_partners_per_member": 0.7671409297191218,
+     "ask_units_per_member": 1.2099227278302465,
+     "declined_hard_field_share": 0.3498405494909849,
+     "servable_members": 21203,
+     "servable_served_share": 0.5026175541197,
+     "servable_km_median_wait_days": 42,
+     "servable_km_served_within_14_days": 0.43790972975522335
+    }
+   }
+  }
+ },
+ "daily_ask_units": {
+  "learned_greedy": [
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   11.935,
+   11.705,
+   11.23,
+   10.595,
+   9.275,
+   8.01,
+   6.435,
+   5.6,
+   4.72,
+   4.35,
+   3.63,
+   3.065,
+   0.245,
+   0.075,
+   0.01,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "learned_maxweight": [
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   12.0,
+   11.935,
+   11.705,
+   11.23,
+   10.595,
+   9.275,
+   8.01,
+   6.435,
+   5.6,
+   4.72,
+   4.35,
+   3.63,
+   3.065,
+   0.245,
+   0.075,
+   0.01,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "graphvoi_wait": [
+   11.933333333333334,
+   11.956666666666667,
+   11.9,
+   11.95,
+   11.85,
+   11.873333333333333,
+   11.756666666666666,
+   11.721666666666666,
+   11.723333333333333,
+   11.555,
+   11.441666666666666,
+   10.986666666666666,
+   10.63,
+   10.313333333333333,
+   9.65,
+   8.388333333333334,
+   7.743333333333333,
+   6.828333333333333,
+   6.253333333333333,
+   5.621666666666667,
+   5.046666666666667,
+   2.655,
+   2.3133333333333335,
+   2.115,
+   2.0083333333333333,
+   1.965,
+   1.9583333333333333,
+   1.9533333333333334,
+   1.9383333333333332,
+   1.945,
+   1.9483333333333333,
+   1.96,
+   1.9416666666666667,
+   1.9416666666666667,
+   1.925,
+   1.9066666666666667,
+   1.9233333333333333,
+   1.8883333333333334,
+   1.85,
+   1.795,
+   1.6783333333333332,
+   1.585,
+   1.475,
+   1.51,
+   1.3216666666666668,
+   1.225,
+   1.29,
+   1.18,
+   1.0583333333333333,
+   0.985,
+   0.9816666666666667,
+   0.9666666666666667,
+   0.925,
+   0.8533333333333334,
+   0.8316666666666667,
+   0.73,
+   0.79,
+   0.6433333333333333,
+   0.595,
+   0.7116666666666667
+  ],
+  "graphvoi_no_pairs": [
+   11.823333333333334,
+   11.865,
+   11.89,
+   11.841666666666667,
+   11.833333333333334,
+   11.8,
+   11.73,
+   11.648333333333333,
+   11.573333333333334,
+   11.561666666666667,
+   11.416666666666666,
+   11.275,
+   10.77,
+   10.281666666666666,
+   9.623333333333333,
+   8.438333333333333,
+   7.785,
+   6.925,
+   6.225,
+   5.611666666666666,
+   5.176666666666667,
+   2.598333333333333,
+   1.9516666666666667,
+   1.6666666666666667,
+   2.4466666666666668,
+   1.815,
+   1.7016666666666667,
+   1.695,
+   1.585,
+   1.265,
+   1.2416666666666667,
+   1.245,
+   2.075,
+   1.3083333333333333,
+   1.2233333333333334,
+   1.0533333333333332,
+   1.0733333333333333,
+   0.8866666666666667,
+   0.985,
+   0.8783333333333333,
+   1.5116666666666667,
+   0.895,
+   0.865,
+   0.8266666666666667,
+   0.6416666666666667,
+   0.5883333333333334,
+   0.6083333333333333,
+   0.6133333333333333,
+   1.0583333333333333,
+   0.5433333333333333,
+   0.65,
+   0.53,
+   0.48,
+   0.4116666666666667,
+   0.39666666666666667,
+   0.30666666666666664,
+   0.585,
+   0.27166666666666667,
+   0.32666666666666666,
+   0.29833333333333334
+  ]
+ },
+ "true_preference_audit": {
+  "learned_greedy": {
+   "introductions": 45501,
+   "violations": 0,
+   "declined_member_introduced": 0
+  },
+  "learned_maxweight": {
+   "introductions": 45644,
+   "violations": 0,
+   "declined_member_introduced": 0
+  },
+  "graphvoi_wait": {
+   "introductions": 34251,
+   "violations": 0,
+   "declined_member_introduced": 0
+  },
+  "graphvoi_no_pairs": {
+   "introductions": 45871,
+   "violations": 0,
+   "declined_member_introduced": 0
+  }
+ },
+ "calibration_by_gender": {
+  "graphvoi_no_pairs": {
+   "woman": {
+    "labels": 43004,
+    "brier": 0.22941356004786237
+   },
+   "man": {
+    "labels": 40877,
+    "brier": 0.22643673259424354
+   },
+   "non_binary": {
+    "labels": 7861,
+    "brier": 0.23219009021847334
+   }
+  },
+  "graphvoi_wait": {
+   "woman": {
+    "labels": 31975,
+    "brier": 0.2251112821267854
+   },
+   "man": {
+    "labels": 30490,
+    "brier": 0.22602516891849045
+   },
+   "non_binary": {
+    "labels": 6037,
+    "brier": 0.23080341862883755
+   }
+  },
+  "learned_greedy": {
+   "woman": {
+    "labels": 42832,
+    "brier": 0.2285624103544793
+   },
+   "man": {
+    "labels": 40346,
+    "brier": 0.2263836693601912
+   },
+   "non_binary": {
+    "labels": 7824,
+    "brier": 0.22795603552252494
+   }
+  },
+  "learned_maxweight": {
+   "woman": {
+    "labels": 43033,
+    "brier": 0.22869195036166418
+   },
+   "man": {
+    "labels": 40473,
+    "brier": 0.2261906091437932
+   },
+   "non_binary": {
+    "labels": 7782,
+    "brier": 0.2286115977108433
+   }
+  }
+ }
+}
