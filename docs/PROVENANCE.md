@@ -4,8 +4,11 @@
 
 Built on the official starter, RomeoJulietLove/The-Sequential-Matching-Problem,
 commit `a8e26b35118cfa8e886a02f93984923e43ab64f6`. The simulator (`kit.py`),
-evaluator (`evaluate.py`), data verifier, public data and the starter tests are
-unmodified; `git diff a8e26b3` shows every file we changed. `official_policy.py`
+evaluator (`evaluate.py`), data verifier and public data are byte-identical to that
+commit, and the starter's own tests run unchanged from `tests/test_starter_*.py`.
+Organiser-side tooling that a policy does not need (world generation scripts,
+issue templates, runbooks, example outputs) was removed to keep the repository
+focused; the problem statement, data contract and policy interface are in `docs/`. `official_policy.py`
 keeps the original baseline adapter so the greedy, no-clarification and random
 baselines run exactly as supplied. All data is the organisers' synthetic data;
 no private worlds, real records or external personal data were used.
@@ -36,8 +39,8 @@ Inference needs no installation and no network.
 
 ## Tools
 
-Coding, testing and documentation assistance: OpenAI Codex and Anthropic Claude
-Code. The design, hypotheses and the Round 1 research note are the team's own.
+AI coding assistants were used for code, testing and documentation. The design,
+hypotheses, experiments and the Round 1 research note are the team's own.
 Container runtime for local validation: Colima with the Docker CLI.
 
 ## Licence

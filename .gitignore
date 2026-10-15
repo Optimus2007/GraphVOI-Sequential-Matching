@@ -49,3 +49,6 @@ id_ed25519
 secrets/
 .secrets/
 credentials/
+
+# Created by the README quick start
+request.json
