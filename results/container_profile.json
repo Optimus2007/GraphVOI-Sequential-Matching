@@ -1,0 +1,973 @@
+{
+  "image": "graphvoi-orbit:round2",
+  "flags": [
+    "docker",
+    "run",
+    "--rm",
+    "-i",
+    "--name",
+    "sequential-02fc9c5535084271b39b8b34076aae7e",
+    "--network=none",
+    "--cpus=2",
+    "--memory=1g",
+    "--memory-swap=1g",
+    "--pids-limit=64",
+    "--read-only",
+    "--cap-drop=ALL",
+    "--security-opt=no-new-privileges",
+    "--user=65534:65534",
+    "--tmpfs=/tmp:rw,noexec,nosuid,size=64m"
+  ],
+  "rows": [
+    {
+      "seed": 101,
+      "variant": "development",
+      "day": 0,
+      "phase": "ask",
+      "request_bytes": 228864,
+      "seconds": [
+        2.225555832963437,
+        2.043419042020105,
+        2.2399245830019936
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "development",
+      "day": 0,
+      "phase": "match",
+      "request_bytes": 231867,
+      "seconds": [
+        0.7131523750140332,
+        0.6905797090148553,
+        0.6235420829616487
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "development",
+      "day": 3,
+      "phase": "ask",
+      "request_bytes": 253902,
+      "seconds": [
+        1.8509068749845028,
+        1.833948458021041,
+        1.8769238750101067
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "development",
+      "day": 3,
+      "phase": "match",
+      "request_bytes": 256452,
+      "seconds": [
+        0.7012461250415072,
+        0.6286406249855645,
+        0.6452663330128416
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "development",
+      "day": 8,
+      "phase": "ask",
+      "request_bytes": 310932,
+      "seconds": [
+        1.8885184589889832,
+        1.9802652500220574,
+        1.9624748750356957
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "development",
+      "day": 8,
+      "phase": "match",
+      "request_bytes": 314111,
+      "seconds": [
+        0.6580730419955216,
+        0.6234305829857476,
+        0.6221980419941247
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "development",
+      "day": 15,
+      "phase": "ask",
+      "request_bytes": 375632,
+      "seconds": [
+        0.9932725420221686,
+        1.0280990420142189,
+        0.939072709006723
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "development",
+      "day": 15,
+      "phase": "match",
+      "request_bytes": 378842,
+      "seconds": [
+        0.7087578329956159,
+        0.6487776669673622,
+        0.635850541992113
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "development",
+      "day": 30,
+      "phase": "ask",
+      "request_bytes": 452686,
+      "seconds": [
+        1.526636041002348,
+        1.4997850830550306,
+        1.5683426670148037
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "development",
+      "day": 30,
+      "phase": "match",
+      "request_bytes": 453045,
+      "seconds": [
+        0.6796356250415556,
+        0.6795803330023773,
+        0.7070208330405876
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "development",
+      "day": 59,
+      "phase": "ask",
+      "request_bytes": 487685,
+      "seconds": [
+        1.6027437089942396,
+        1.6327415829873644,
+        1.6011468339711428
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "development",
+      "day": 59,
+      "phase": "match",
+      "request_bytes": 488049,
+      "seconds": [
+        0.7248031250201166,
+        0.6438168339664117,
+        0.6873310829978436
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "development",
+      "day": 0,
+      "phase": "ask",
+      "request_bytes": 235462,
+      "seconds": [
+        2.104910290974658,
+        2.2917165830149315,
+        2.1713677079533227
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "development",
+      "day": 0,
+      "phase": "match",
+      "request_bytes": 238686,
+      "seconds": [
+        0.6913294579717331,
+        0.6097382089938037,
+        0.7172373339999467
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "development",
+      "day": 3,
+      "phase": "ask",
+      "request_bytes": 266152,
+      "seconds": [
+        1.813697624951601,
+        1.846663875039667,
+        1.968932291958481
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "development",
+      "day": 3,
+      "phase": "match",
+      "request_bytes": 268732,
+      "seconds": [
+        0.6429739159648307,
+        0.7359268330037594,
+        0.6880155829712749
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "development",
+      "day": 8,
+      "phase": "ask",
+      "request_bytes": 311564,
+      "seconds": [
+        2.088240584009327,
+        2.0465477079851553,
+        2.1432371250120923
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "development",
+      "day": 8,
+      "phase": "match",
+      "request_bytes": 314659,
+      "seconds": [
+        0.6608969999942929,
+        0.6885730000212789,
+        0.6255222920444794
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "development",
+      "day": 15,
+      "phase": "ask",
+      "request_bytes": 378770,
+      "seconds": [
+        1.476772457943298,
+        1.5894755420158617,
+        1.5604484169743955
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "development",
+      "day": 15,
+      "phase": "match",
+      "request_bytes": 381447,
+      "seconds": [
+        0.6036887910449877,
+        0.64301300002262,
+        0.726883709023241
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "development",
+      "day": 30,
+      "phase": "ask",
+      "request_bytes": 445742,
+      "seconds": [
+        0.9890512499841861,
+        0.880228583002463,
+        0.9439764169510454
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "development",
+      "day": 30,
+      "phase": "match",
+      "request_bytes": 445744,
+      "seconds": [
+        0.7165269999532029,
+        0.7365433750092052,
+        0.7307559170294553
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "development",
+      "day": 59,
+      "phase": "ask",
+      "request_bytes": 474892,
+      "seconds": [
+        0.99777933297446,
+        1.0126077080494724,
+        0.9927731659845449
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "development",
+      "day": 59,
+      "phase": "match",
+      "request_bytes": 474894,
+      "seconds": [
+        0.7647943749907427,
+        0.7055896249949001,
+        0.6686949169961736
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "cold_start",
+      "day": 0,
+      "phase": "ask",
+      "request_bytes": 250463,
+      "seconds": [
+        2.375186000019312,
+        2.5211130839888938,
+        2.235789083002601
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "cold_start",
+      "day": 0,
+      "phase": "match",
+      "request_bytes": 253549,
+      "seconds": [
+        0.654613166989293,
+        0.6644503750139847,
+        0.6024359590373933
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "cold_start",
+      "day": 3,
+      "phase": "ask",
+      "request_bytes": 277607,
+      "seconds": [
+        1.944493582996074,
+        2.07799066696316,
+        1.8982630420359783
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "cold_start",
+      "day": 3,
+      "phase": "match",
+      "request_bytes": 280669,
+      "seconds": [
+        0.6422274580108933,
+        0.6841803330462426,
+        0.7394289160147309
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "cold_start",
+      "day": 8,
+      "phase": "ask",
+      "request_bytes": 326955,
+      "seconds": [
+        2.1703191669657826,
+        2.253987333038822,
+        2.5470513330074027
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "cold_start",
+      "day": 8,
+      "phase": "match",
+      "request_bytes": 330142,
+      "seconds": [
+        0.7747617909917608,
+        0.6992582090315409,
+        0.703583125025034
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "cold_start",
+      "day": 15,
+      "phase": "ask",
+      "request_bytes": 388376,
+      "seconds": [
+        1.9408989580115303,
+        1.9094610000029206,
+        1.8954906659782864
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "cold_start",
+      "day": 15,
+      "phase": "match",
+      "request_bytes": 391437,
+      "seconds": [
+        0.7144469159538858,
+        0.6592148329946212,
+        0.6524311249959283
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "cold_start",
+      "day": 30,
+      "phase": "ask",
+      "request_bytes": 454751,
+      "seconds": [
+        1.58330370800104,
+        1.6010137079865672,
+        1.5835154579835944
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "cold_start",
+      "day": 30,
+      "phase": "match",
+      "request_bytes": 455166,
+      "seconds": [
+        0.7713480410166085,
+        0.6302850829670206,
+        0.7061787080019712
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "cold_start",
+      "day": 59,
+      "phase": "ask",
+      "request_bytes": 482336,
+      "seconds": [
+        0.9710113750188611,
+        0.9931917500216514,
+        1.060755832993891
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "cold_start",
+      "day": 59,
+      "phase": "match",
+      "request_bytes": 482338,
+      "seconds": [
+        0.6565594589919783,
+        0.6276482919929549,
+        0.6985078330035321
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "cold_start",
+      "day": 0,
+      "phase": "ask",
+      "request_bytes": 222966,
+      "seconds": [
+        2.0112107089953497,
+        1.9757930419873446,
+        1.8124340000213124
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "cold_start",
+      "day": 0,
+      "phase": "match",
+      "request_bytes": 225939,
+      "seconds": [
+        0.6774555830052122,
+        0.6606042089988478,
+        0.6440407499903813
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "cold_start",
+      "day": 3,
+      "phase": "ask",
+      "request_bytes": 253774,
+      "seconds": [
+        1.906544791010674,
+        1.946278249961324,
+        1.9096134580322541
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "cold_start",
+      "day": 3,
+      "phase": "match",
+      "request_bytes": 256818,
+      "seconds": [
+        0.6246858749655075,
+        0.7321660830057226,
+        0.681452166987583
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "cold_start",
+      "day": 8,
+      "phase": "ask",
+      "request_bytes": 300805,
+      "seconds": [
+        1.796223709010519,
+        1.7720654999720864,
+        1.860607374983374
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "cold_start",
+      "day": 8,
+      "phase": "match",
+      "request_bytes": 303800,
+      "seconds": [
+        0.650303750007879,
+        0.6565978330327198,
+        0.6914216660079546
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "cold_start",
+      "day": 15,
+      "phase": "ask",
+      "request_bytes": 371123,
+      "seconds": [
+        1.910489542002324,
+        1.9650377089856192,
+        2.0042343749664724
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "cold_start",
+      "day": 15,
+      "phase": "match",
+      "request_bytes": 373757,
+      "seconds": [
+        0.6253101250040345,
+        0.6601694580167532,
+        0.6377252920065075
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "cold_start",
+      "day": 30,
+      "phase": "ask",
+      "request_bytes": 435813,
+      "seconds": [
+        0.9097252920037135,
+        0.9260941250249743,
+        0.9111085410113446
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "cold_start",
+      "day": 30,
+      "phase": "match",
+      "request_bytes": 435815,
+      "seconds": [
+        0.7402184589882381,
+        0.7224559579626657,
+        0.6972587920026854
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "cold_start",
+      "day": 59,
+      "phase": "ask",
+      "request_bytes": 451061,
+      "seconds": [
+        1.0437714160070755,
+        0.9604824170237407,
+        0.9089302499778569
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "cold_start",
+      "day": 59,
+      "phase": "match",
+      "request_bytes": 451063,
+      "seconds": [
+        0.6463378329644911,
+        0.7188227080041543,
+        0.7047839579754509
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "sparse",
+      "day": 0,
+      "phase": "ask",
+      "request_bytes": 230423,
+      "seconds": [
+        1.720922167005483,
+        1.7725724159972742,
+        1.8788509159930982
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "sparse",
+      "day": 0,
+      "phase": "match",
+      "request_bytes": 233586,
+      "seconds": [
+        0.6833088750136085,
+        0.7619621669873595,
+        0.6802182079991326
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "sparse",
+      "day": 3,
+      "phase": "ask",
+      "request_bytes": 251244,
+      "seconds": [
+        1.6698601249954663,
+        1.7355252500274219,
+        1.5489007500000298
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "sparse",
+      "day": 3,
+      "phase": "match",
+      "request_bytes": 254311,
+      "seconds": [
+        0.6631539580412209,
+        0.6578000000445172,
+        0.6134368749917485
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "sparse",
+      "day": 8,
+      "phase": "ask",
+      "request_bytes": 308280,
+      "seconds": [
+        1.7529993340140209,
+        1.7456686670193449,
+        1.791774416982662
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "sparse",
+      "day": 8,
+      "phase": "match",
+      "request_bytes": 311320,
+      "seconds": [
+        0.6380352090345696,
+        0.5948165829759091,
+        0.6754746250226162
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "sparse",
+      "day": 15,
+      "phase": "ask",
+      "request_bytes": 371217,
+      "seconds": [
+        1.6439535000245087,
+        1.6450297499541193,
+        1.710966875019949
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "sparse",
+      "day": 15,
+      "phase": "match",
+      "request_bytes": 372961,
+      "seconds": [
+        0.6488215840072371,
+        0.699121416953858,
+        0.6666588339721784
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "sparse",
+      "day": 30,
+      "phase": "ask",
+      "request_bytes": 404392,
+      "seconds": [
+        0.9937062499811873,
+        1.041533250012435,
+        0.9838194170151837
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "sparse",
+      "day": 30,
+      "phase": "match",
+      "request_bytes": 404394,
+      "seconds": [
+        0.6565456670359708,
+        0.7064174999832176,
+        0.7000367500004359
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "sparse",
+      "day": 59,
+      "phase": "ask",
+      "request_bytes": 406198,
+      "seconds": [
+        0.9441027080174536,
+        0.9523729999782518,
+        0.9878856670111418
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 101,
+      "variant": "sparse",
+      "day": 59,
+      "phase": "match",
+      "request_bytes": 406200,
+      "seconds": [
+        0.7048506659921259,
+        0.7486480419756845,
+        0.6984542499994859
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "sparse",
+      "day": 0,
+      "phase": "ask",
+      "request_bytes": 247236,
+      "seconds": [
+        2.046707040979527,
+        1.9279663750203326,
+        2.0433062500087544
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "sparse",
+      "day": 0,
+      "phase": "match",
+      "request_bytes": 249762,
+      "seconds": [
+        0.6585724579636008,
+        0.740988124976866,
+        0.6076984159881249
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "sparse",
+      "day": 3,
+      "phase": "ask",
+      "request_bytes": 271181,
+      "seconds": [
+        1.9390602500061505,
+        1.8948006670107134,
+        1.8278835419914685
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "sparse",
+      "day": 3,
+      "phase": "match",
+      "request_bytes": 274181,
+      "seconds": [
+        0.7145154169993475,
+        0.6618455830030143,
+        0.6909614999894984
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "sparse",
+      "day": 8,
+      "phase": "ask",
+      "request_bytes": 315724,
+      "seconds": [
+        1.7741104160086252,
+        1.8561279579880647,
+        1.8334532080334611
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "sparse",
+      "day": 8,
+      "phase": "match",
+      "request_bytes": 318771,
+      "seconds": [
+        0.6922134580090642,
+        0.6665581249981187,
+        0.6898314999998547
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "sparse",
+      "day": 15,
+      "phase": "ask",
+      "request_bytes": 371910,
+      "seconds": [
+        1.7625516249681823,
+        1.63470995798707,
+        1.6205039999913424
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "sparse",
+      "day": 15,
+      "phase": "match",
+      "request_bytes": 374252,
+      "seconds": [
+        0.738915125024505,
+        0.750321209023241,
+        0.6850089579820633
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "sparse",
+      "day": 30,
+      "phase": "ask",
+      "request_bytes": 401719,
+      "seconds": [
+        1.045889165950939,
+        1.0522338339942507,
+        1.112833499966655
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "sparse",
+      "day": 30,
+      "phase": "match",
+      "request_bytes": 401721,
+      "seconds": [
+        0.7884936250047758,
+        0.715207334025763,
+        0.6340030840365216
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "sparse",
+      "day": 59,
+      "phase": "ask",
+      "request_bytes": 402957,
+      "seconds": [
+        0.9950130420038477,
+        0.9448552090325393,
+        1.0487240829970688
+      ],
+      "deterministic": true
+    },
+    {
+      "seed": 102,
+      "variant": "sparse",
+      "day": 59,
+      "phase": "match",
+      "request_bytes": 402959,
+      "seconds": [
+        0.7167247500037774,
+        0.7958866670378484,
+        0.7175748330191709
+      ],
+      "deterministic": true
+    }
+  ],
+  "summary": {
+    "ask": {
+      "calls": 108,
+      "max_seconds": 2.5470513330074027,
+      "median_seconds": 1.7673085624701343
+    },
+    "match": {
+      "calls": 108,
+      "max_seconds": 0.7958866670378484,
+      "median_seconds": 0.6837446040299255
+    },
+    "all_deterministic": true
+  },
+  "note": "Wall time per docker run including container and Python startup, host-specific."
+}

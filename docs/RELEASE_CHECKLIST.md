@@ -120,3 +120,31 @@ source version. Keep every unresolved critical item visible until it passes.
 | Pilot intervals establish definitive superiority | UNVERIFIED |Limited10-cluster sample, rare outcomes; no superiority claim. |
 | Safe to begin frozen local prespecified100-seed study | PASS |Correctness tests, official validity and balanced pilot clear; study not launched. |
 | Submission-ready | FAIL |Docker/resource/image validation and accessible immutable pinned release remain unresolved; additional methodological/packaging findings documented. |
+
+
+## v3 release gates (second review, 15 October 2026)
+
+Earlier tables are kept as historical record. Where a row below covers the same
+item, this table is current.
+
+| Item | Status | Evidence / remaining action |
+|---|---|---|
+| Unit/integration suite | PASS | 93 tests (85 earlier + 8 in `tests/test_budget_fill.py`) |
+| Official data checksums | PASS | 71 files, `verify_data.py` |
+| Model assets reproducible | PASS | `train_models.py` rerun: all three asset SHA-256 identical |
+| Budget under-spend (V1) | PASS | Shared `fill_hard_budget`; dev check coverage 28.2% → 32.7% (greedy 32.8%) |
+| Disqualifying-timeout guard (V2) | PASS | 6 s ask deadline; tests; `deadline_count` recorded per episode |
+| Docker build and entrypoint | PASS | `graphvoi-orbit:round2`, Python 3.12.7, 227 MB, bytecode precompiled |
+| Offline isolated official Docker episodes | PASS | `evaluate.py --image`, six families, seed 101, all valid, eligible |
+| Per-call container runtime | PASS | 216 calls on heavy real states: ask max 2.55 s, match max 0.80 s incl. startup; deterministic |
+| 2 CPU / 1 GiB / 64 pids / read-only / no network | PASS | Official `docker_command` flags enforced by Docker in every container call |
+| Image size below 2 GiB | PASS | 227 MB |
+| Docker bytecode/cache exclusions (M5) | PASS | `.dockerignore` excludes `**/__pycache__`, `**/*.pyc` |
+| Official subprocess path, v3 | PASS | `results/v3_official_subprocess.json`, six families, seed 65001, all valid |
+| Git repository on official upstream | PASS | Based on `a8e26b3`; kit/evaluator/data unchanged |
+| Branch pushed | PASS | `orbit-graphvoi-round2` on private origin |
+| Repository public, accessible without credentials | FAIL | Owner must switch visibility before submission |
+| Final 40-character SHA pinned in Final submission issue | FAIL | Owner action after the final commit |
+| Team contribution licence (M6) | FAIL | Owner must choose; starter LICENSE covers only the kit |
+| Confirmatory 100-seed study | UNVERIFIED | Running: `results/v3_confirmatory.json`, 4,200 expected episodes |
+| GraphVOI superiority | UNVERIFIED | Decided only by the prespecified Bonferroni rule after the study |

@@ -74,3 +74,22 @@ The v2 pilot's 10-cluster 95% half-widths were about 0.10–0.13 MSMI/100. With
 100 clusters, half-widths of about 0.03–0.04 are expected. Differences between
 the three selectors smaller than that are not expected to be resolvable, because
 MSMI events are rare (under one per episode).
+
+## Secondary robustness study (declared before running, 15 October 2026)
+
+Answers the organisers' question on answer-model errors and disclosure changes.
+Seeds 71001–71010, six families. The unperturbed reference rows are the
+confirmatory rows for the same seeds, from the same commit.
+
+- Belief misspecification (policy's answer model is wrong; environment
+  unchanged): GraphVOI with `biased`, `overconfident`, `underconfident`,
+  `refusal` beliefs. 240 episodes. Reported: paired change versus unperturbed
+  GraphVOI in MSMI/100, mutual acceptances, coverage and ask cost.
+- Actual disclosure shift (environment changes; beliefs unchanged): the
+  research-only `DisclosureSimulator` makes asked bundles refused with
+  probability 0.35 (`refusal`) or rising to 0.35 by day 35 (`drift`). GraphVOI,
+  degree-first and official greedy, 360 episodes. Reported: within-condition
+  paired differences between methods, and each method's degradation versus its
+  own unshifted confirmatory rows.
+- Ten seed clusters only: descriptive, 95% paired seed-cluster intervals, no
+  superiority claims. No parameter is changed in response.

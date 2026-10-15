@@ -114,3 +114,17 @@ No Git checkout, commit or push exists in this workspace.
 - Frozen pilot completed:360 valid episodes,60/method,10 paired seeds ×6 families, zero invalids; 58.0min host wall time.43,200 action records and all metric/trace/source/paired-CI checks passed. Report includes measured tables and limited-support CIs. Full100-seed study still unrun; submission remains blocked by Docker/immutable publication.
 
 Completion recorded11 October2026. Corrected pilot and verification artifact hashes: f3e6bc045cbf3610625532aa4d6c0e68d365524d94f61a26cf0f5cc0f54d1c13 (pilot), 3026aa02251a3e13a78e7c6c371871c882a0e87b88dbb3a5b31255eacd3251c4 (verification).
+
+## Second review and v3 (15 October 2026)
+
+- Independently re-verified 85 tests, 71 checksums, v2 source hashes and pilot
+  tables. Found V1 budget under-spend, V2 missing timeout guard, V3 near-zero
+  pair-model signal (see audit section 15).
+- v3: shared hard-budget fill, priority-ordered work cap, 6 s deadline guard,
+  `graphvoi_nofill` ablation; 93 tests pass.
+- Development check (64001–64010, 300 episodes, 0 invalid): coverage recovered
+  to greedy's level; MSMI intervals all include zero.
+- Docker via Colima: image built; official container run valid in all six
+  families; per-call max 2.55 s ask / 0.80 s match including startup.
+- Git: commit `335b0af` on upstream `a8e26b3`, pushed to private origin.
+- Confirmatory 4,200-episode study launched on commit `335b0af`.

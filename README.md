@@ -90,67 +90,53 @@ The [starter-code permission](LICENSE) and [synthetic-data permission](DATA_LICE
 
 ## Team Orbit: GraphVOI Round 2
 
-Project: **GraphVOI**. Team: **Orbit**. Competition: **The Sequential Matching
-Problem**. Purpose: Round 2 implementation of allocation-aware clarification for
-sequential reciprocal matching.
+Project **GraphVOI** by Team **Orbit**: allocation-aware clarification for
+sequential reciprocal matching. Technical report: [docs/REPORT.md](docs/REPORT.md).
 
-The default container policy ranks legal clarifications by expected improvement
-in the exact maximum-weight matching, using a bounded empirical answer model.
-It also evaluates complementary two-member constraint asks. Unknown and declined
-hard preferences block introductions. The official simulator and evaluator remain
-unchanged; `official_policy.py` preserves the original baseline adapter.
+Each day the policy (1) ranks legal clarifications by the expected increase in
+the exact maximum-weight general-graph matching of the current pool under a
+bounded empirical answer model, including complementary two-member asks, with
+conditional re-evaluation after each pick; (2) spends any remaining units on
+legal hard-constraint bundles (shared with the degree-first and
+uncertainty-first comparators); (3) introduces the maximum-weight matching over
+reciprocally feasible pairs. Unknown or declined hard preferences always block
+an introduction. The official simulator, evaluator, data and baselines are
+byte-identical to upstream `a8e26b3`; `official_policy.py` keeps the baseline adapter.
 
-Orbit requires Python 3.11 or later. Python 3.12.7 is pinned in Docker; local
-checks use Python 3.13.7. The unchanged official kit alone still supports 3.10.
-NetworkX 3.5
-is pinned and vendored with its BSD licence, so inference runs offline without a
-package installation. The shipped JSON assets are required. Training uses only
-public simulator observations, seeds 31001..31008 across the six scenario families.
-Inference is deterministic and uses no random seed or online model updates.
+Environment: Python 3.12.7 in Docker (local checks used 3.13.7; Orbit needs 3.11+).
+NetworkX 3.5 is vendored with its BSD licence, so inference is offline with no
+installation. Training uses public simulator rollouts only, seeds 31001..31008 in
+all six families. Inference is deterministic: no random seed, no online updates.
 
 ```bash
-python3 -m unittest -v
-python3 verify_data.py
-# Rebuild shipped models from declared public rollouts, CPU only:
+python3 -m unittest -v                       # 93 tests
+python3 verify_data.py                       # 71 checksums
+docker build -t graphvoi-orbit:round2 .
+python3 evaluate.py --image graphvoi-orbit:round2 --seeds 101 --variants all \
+    --output results/container_validation.json
+python3 scripts/profile_container.py --image graphvoi-orbit:round2 --output results/container_profile.json
+# GraphVOI through the official subprocess path:
+python3 scripts/evaluate_method.py --method graphvoi --seeds 65001 --variants all \
+    --output results/v3_official_subprocess.json
+# Confirmatory paired study (docs/CONFIRMATORY_PROTOCOL.md), 4,200 episodes:
+python3 scripts/run_study.py --purpose confirmatory --seeds 71001-71100 \
+    --methods graphvoi,degree_first,uncertainty_first,graphvoi_nofill,greedy,no_asks,random \
+    --workers 6 --output results/v3_confirmatory.json
+python3 scripts/summarize_study.py results/v3_confirmatory.json
+# Rebuild the shipped model assets (CPU only, byte-identical):
 python3 scripts/train_models.py
-# Controlled comparisons, including all three official baselines:
-python3 scripts/run_experiments.py --seeds 41001 --output results/paired_smoke.json
-# Exact official subprocess checks for Orbit's entrypoint:
-python3 scripts/evaluate_method.py --method graphvoi --seeds 9103 --variants all --output results/graphvoi_protocol_all.json
-# Belief misspecification and independently changed disclosure:
-python3 scripts/run_robustness.py --seed 41002 --output results/robustness_smoke.json
-python3 scripts/summarize_results.py --input results/paired_smoke.json
-docker build -t orbit-graphvoi:submission .
-python3 evaluate.py --image orbit-graphvoi:submission --seeds 41003 --variants all --output results/container_check.json
 ```
 
-`evaluate.py --baseline greedy`, `no_asks` and `random` still select the exact
-official policies. To run GraphVOI locally use `scripts/evaluate_method.py`;
-the official evaluator's default local command explicitly selects its baseline.
-Docker invokes GraphVOI by default. Optional methods are `learned_greedy`,
-`learned_maxweight`, `uncertainty_first`, `degree_first`, `graphvoi_no_pairs`
-and `graphvoi_wait`.
+`evaluate.py`'s local mode always runs an official baseline (`--baseline`);
+Docker runs GraphVOI by default. Other selectable methods: `degree_first`,
+`uncertainty_first`, `graphvoi_nofill` (ablation), `graphvoi_no_pairs`,
+`graphvoi_wait`, `learned_greedy`, `learned_maxweight`, `safe_core`.
 
-The research runner serializes only public requests, validates every action and
-runs complete 60+40-day episodes. Its runtime excludes process startup and is
-not a replacement for official subprocess/Docker verification. Results include
-full action traces, pre-action predictions, observed feedback, censor-aware labels,
-and per-member opportunity/wait records. Static answer supports and greedy batch
-packing approximate the information-acquisition problem; each evaluated action
-uses a genuine counterfactual matching optimum. No claim of improvement follows
-from a one-seed smoke comparison.
-
-See [implementation plan](docs/IMPLEMENTATION_PLAN.md),
-[evaluation protocol](docs/EVALUATION_PROTOCOL.md), [progress](docs/PROGRESS.md),
-[decisions](docs/DECISIONS.md), and [provenance](docs/PROVENANCE.md).
-The proposed 100 paired episodes per scenario use seeds 51001..51100:
-
-```bash
-ORBIT_EVAL_SEEDS=$(python3 -c 'print(",".join(str(i) for i in range(51001,51101)))')
-python3 scripts/run_experiments.py --seeds "$ORBIT_EVAL_SEEDS" --output results/final_paired.json
-```
-
-That large experiment is a separate run; do not report it as completed unless
-its output contains every requested valid episode. `results/` remains ignored
-by the starter; explicitly include reviewed final JSON, traces and report when
-committing the submission. Research-context files and credentials stay local.
+The research runner (`scripts/run_study.py`) passes only serialized public JSON
+to the policy, validates every action, retains every failure, and refuses to
+score incomplete or invalid matrices. Per-episode traces are archived separately
+(`results/*_traces/` is not committed). See the
+[confirmatory protocol](docs/CONFIRMATORY_PROTOCOL.md),
+[audit](docs/INDEPENDENT_AUDIT.md), [release checklist](docs/RELEASE_CHECKLIST.md),
+[decisions](docs/DECISIONS.md), [progress](docs/PROGRESS.md) and
+[provenance](docs/PROVENANCE.md).

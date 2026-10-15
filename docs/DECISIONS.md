@@ -104,3 +104,25 @@ invalid-episode inference gating and batch redundancy. No new architectures adde
 30. Completed360-episode pilot preserved separately from historical smoke/intermediate builds. Independent check recomputed every primary metric, trace digest, coverage/wait count and paired MSMI interval; no failure deletion or parameter retuning. Ten seed clusters remain insufficient for final superiority/disclosure/subgroup claims. Proceeding with local prespecified100-seed comparison is correctness-safe, but do not treat that as submission certification.
 
 Completion recorded11 October2026. Corrected pilot and verification artifact hashes: f3e6bc045cbf3610625532aa4d6c0e68d365524d94f61a26cf0f5cc0f54d1c13 (pilot), 3026aa02251a3e13a78e7c6c371871c882a0e87b88dbb3a5b31255eacd3251c4 (verification).
+
+## Second-review decisions (15 October 2026)
+
+31. Treat the Codex pilot summary as a claim, not evidence; re-run tests,
+    checksums, hashes and recompute pilot tables before building on them.
+32. Fix the measured budget under-spend with one shared hard-bundle fill rather
+    than raising the work cap: the fill is legal, cheap and identical for all
+    selectors, so the comparison still isolates the ranking criterion. A larger
+    cap costs runtime margin that eligibility needs.
+33. Enumerate work-capped candidates in frontier-priority order. ID order made
+    truncation arbitrary.
+34. Add a 6 s ask deadline. One timed-out private episode disqualifies the
+    entry; an eligibility guard that never triggers in normal runs is worth a
+    theoretical loss of determinism in pathological ones.
+35. Do not change model assets. Held-out refits, history features and
+    soft-asking training rollouts gave no material log-loss gain; changing
+    models now would add risk without evidence of benefit.
+36. Development check on unused seeds 64001–64010 only confirms validity,
+    runtime and coverage recovery; no variant selection. Confirmatory seeds
+    71001–71100, protocol and Bonferroni decision rule declared before launch.
+37. Precompile bytecode in the image; base the git history on the official
+    upstream commit so the diff shows exactly what Team Orbit changed.

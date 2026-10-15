@@ -509,3 +509,71 @@ All360 metric rows and43,200 phase actions were checked against trace digests, p
 H4 improves from one to10 paired clusters in main comparisons, but remains FAIL for final research conclusions and multi-seed disclosure/subgroup evidence. H5 remains UNVERIFIED. H1/H2/H3 fixes remain PASS within stated exact-reference/bounded-production scope. Two critical release blockers persist. The frozen implementation is safe to begin the prespecified trusted local100-seed paired study; no such study was launched here. Container validation and immutable publication remain mandatory before submission.
 
 Completion recorded11 October2026. Corrected pilot and verification artifact hashes: f3e6bc045cbf3610625532aa4d6c0e68d365524d94f61a26cf0f5cc0f54d1c13 (pilot), 3026aa02251a3e13a78e7c6c371871c882a0e87b88dbb3a5b31255eacd3251c4 (verification).
+
+## 15. Second independent review and v3 follow-up (15 October 2026)
+
+Reviewer: Claude Code session, independent of the Codex agent that wrote
+sections 1–14. Earlier findings and text are preserved unchanged above.
+
+### Re-verification of the Codex correctness claims
+
+| Claim | Independent check | Result |
+|---|---|---|
+| 85 tests pass | `python3 -m unittest discover` on the unmodified v2 tree | PASS, 85/85 |
+| 71 data checksums | `python3 verify_data.py` | PASS, 71 files |
+| H1 cache key complete | Read `AnswerModel.outcomes`/`outcomes_uncached`; every input of the uncached path (day, field, age, gender, zone, fields, statuses, samples, perturbation, immutable asset) is in the key; cache cleared per invocation | Correct as implemented |
+| H2 conditional batch VOI | Read `select_asks`; residual asks deduplicated, costs charged once, gains recomputed on joint worlds | Correct; quadrature bias above 8 worlds remains (documented counterexample) |
+| H3 failure-aware statistics | Read `comparison_design`/`paired_intervals`; invalid, missing, duplicate block inference; seed-cluster bootstrap | Correct. Clustering by seed is right because one seed generates the same population in most families |
+| Pilot table | Recomputed from `results/corrected_pilot.json` | Matches |
+| v2 source equals pilot hashes | SHA-256 of `graphvoi/*.py` | Matches `code_sha256`; archived in `audit_history/v2_frozen_pilot_source/` |
+
+### New finding V1 (high): GraphVOI under-spent the ask budget
+
+The Codex report presented the pilot MSMI ties but omitted its secondary
+intervals. Versus official greedy, v2 GraphVOI had significantly fewer mutual
+acceptances (−2.33/episode, 95% CI [−3.22, −1.48]), dates (−1.32 [−2.43, −0.23])
+and coverage (−5.0 points [−5.7, −4.3]).
+
+Root cause, from traces: GraphVOI spent 53/51/32 units in days 0–9/10–19/20–29
+versus greedy's 120/78/3; median ~5 of 12 units per early day. On a real
+development state, `evaluation_limit=256` spent 9 units, 1024 spent 12. Later
+acquisition rounds exhausted the cap while enumerating candidates in member-ID
+order, so truncation removed an arbitrary subset. Myopic one-day VOI also gives
+zero value to durable hard answers whose payoff comes on later days.
+
+Fix (v3): `fill_hard_budget` spends unused units on legal hard bundles ordered
+by the shared frontier potential, applied identically to all three selectors;
+candidate evaluation follows frontier priority. `graphvoi_nofill` keeps the
+unfilled behaviour as an ablation. Tests: `tests/test_budget_fill.py` (8).
+
+### New finding V2 (high): no runtime guard against a disqualifying timeout
+
+One invalid assessed episode makes an entry ineligible. v3 adds a 6-second
+ask-phase deadline from `decide()` entry: past it, no further candidates are
+evaluated and the legal fill still runs. It never triggers in normal operation
+(maximum measured ask 2.9 s under 7 parallel workers), so behaviour stays
+deterministic there. Hits are counted in memory and in experiment rows
+(`deadline_count`).
+
+### New finding V3 (medium, negative result): pair-model signal near zero
+
+Held-out refit (train seeds 31001–31006, test 31007–31008): directional
+acceptance log loss 0.6501 versus 0.6496 intercept-only; mutual 0.4186 versus
+0.4182. Less regularisation, member-history features (past yes/no/no-response
+from public feedback) and soft-field-asking training rollouts did not help
+materially (best 0.6487/0.6502). Assets unchanged. Consequence: allocation value
+in this environment comes from feasibility and volume, not pair quality, which
+bounds soft-field VOI and explains why the selectors are close.
+
+### Packaging findings closed
+
+- M5: `.dockerignore` now excludes `**/__pycache__` and `**/*.pyc` after the allow
+  rules. The image compiles bytecode at build time (`compileall`); measured cold
+  NetworkX import 0.50 s without bytecode versus 0.12 s with it.
+- C1 Docker: image `graphvoi-orbit:round2` (227 MB, Python 3.12.7) built via
+  Colima (2 CPU, 2 GiB VM). The official `evaluate.py --image` run over all six
+  families at seed 101 is valid and eligible: `results/container_validation.json`.
+- C2 Git: repository initialised on official upstream `a8e26b3`. `kit.py`,
+  `evaluate.py` and data are byte-identical to upstream. Branch
+  `orbit-graphvoi-round2` was pushed to the private origin. The public visibility
+  and final SHA pin remain owner actions.
