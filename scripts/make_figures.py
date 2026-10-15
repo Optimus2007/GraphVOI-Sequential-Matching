@@ -98,48 +98,6 @@ def forest(confirm):
     save(fig, 'paired_differences')
 
 
-def calibration(confirm):
-    if not confirm or not confirm.get('calibration'):
-        return
-    c = confirm['calibration'].get('graphvoi')
-    fig, ax = plt.subplots(figsize=(3.2, 3))
-    ax.plot([0, 1], [0, 1], color=MUTED, lw=.8, ls=':')
-    for key, label, color, marker in (('a_accepts_b', 'A accepts B', COLOR['graphvoi'], 'o'),
-                                      ('b_accepts_a', 'B accepts A', COLOR['degree_first'], 's')):
-        # Bins with fewer than 30 labels are too noisy to plot.
-        bins = [b for b in c[key]['reliability'] if b['count'] >= 30]
-        ax.plot([b['predicted'] for b in bins], [b['observed'] for b in bins], marker=marker, ms=6,
-                color=color, lw=2, mec='white', mew=1, label=f"{label} (Brier {c[key]['brier']:.3f})")
-    ax.set_xlim(.2, .6)
-    ax.set_ylim(.2, .6)
-    ax.set_xlabel('predicted probability')
-    ax.set_ylabel('observed recorded Yes rate')
-    ax.legend(fontsize=7, loc='upper left')
-    ax.set_title('Directional calibration, GraphVOI episodes', fontsize=9)
-    save(fig, 'calibration')
-
-
-def waiting(confirm):
-    if not confirm or not confirm.get('opportunity'):
-        return
-    methods = [m for m in ('greedy', 'graphvoi_nofill', 'degree_first', 'uncertainty_first', 'graphvoi')
-               if m in confirm['opportunity']]
-    groups = [('gender', g) for g in ('woman', 'man', 'non_binary')] + \
-             [('age_band', a) for a in ('21-29', '30-39', '40+')]
-    fig, ax = plt.subplots(figsize=(7, 2.2))
-    width = .8 / len(methods)
-    for j, m in enumerate(methods):
-        ys = [confirm['opportunity'][m][d][g]['servable_km_served_within_14_days'] for d, g in groups]
-        ax.bar([i + (j - (len(methods) - 1) / 2) * width for i in range(len(groups))], ys,
-               width=width - .02, color=COLOR[m], label=LABEL[m], edgecolor='white', linewidth=1)
-    ax.set_xticks(range(len(groups)), [g.replace('_', '-') for _, g in groups])
-    ax.set_ylabel('share served within 14 days')
-    ax.set_title('Servable members first introduced within 14 days of arrival (Kaplan-Meier)', fontsize=9)
-    ax.legend(fontsize=7, ncol=len(methods), loc='upper center', bbox_to_anchor=(.5, -.12))
-    ax.grid(axis='x', visible=False)
-    save(fig, 'waiting_by_group')
-
-
 def calibration_waiting(confirm):
     """Organisers' third question in one figure: calibration (left), waiting (right)."""
     if not confirm or not confirm.get('calibration') or not confirm.get('opportunity'):
@@ -182,8 +140,6 @@ def main():
     pilot, confirm = load('pilot_v2'), load('confirmatory')
     spend(pilot, confirm)
     forest(confirm)
-    calibration(confirm)
-    waiting(confirm)
     calibration_waiting(confirm)
 
 
