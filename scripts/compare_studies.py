@@ -84,12 +84,39 @@ def disclosure(confirm):
     print('wrote results/disclosure/paired.json')
 
 
+def matched(confirm):
+    """Belief that matches the changed environment versus the unaware ('none') belief."""
+    m_path, d_path = Path('results/v3_disclosure_matched.json'), Path('results/v3_disclosure.json')
+    if not (m_path.exists() and d_path.exists()):
+        return print('skip matched beliefs: missing input')
+    mat, dis = json.loads(m_path.read_text()), json.loads(d_path.read_text())
+    if not mat.get('complete'):
+        raise SystemExit('Matched-belief study incomplete')
+    same_code(confirm, mat)
+    lo, hi = mat['seeds']
+    expected = {(v, s) for v in VARIANTS for s in range(lo, hi + 1)}
+    out = {}
+    for _, belief, actual in mat['conditions']:
+        rows = [dict(r, method='matched') for r in mat['episodes']
+                if r.get('belief') == belief and r.get('actual_disclosure') == actual] + \
+               [dict(r, method='unaware') for r in dis['episodes'] if r['method'] == 'graphvoi'
+                and r.get('belief') == 'none' and r.get('actual_disclosure') == actual]
+        res = paired_intervals(rows, reference='unaware', expected_pairs=expected,
+                               expected_methods=['matched', 'unaware'])
+        out[f'graphvoi|belief={belief}_minus_none|actual={actual}'] = compact(res)['matched']
+    path = Path('results/disclosure/matched_beliefs.json')
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(out, indent=1) + '\n')
+    print('wrote', path)
+
+
 def main():
     confirm = json.loads(Path('results/v3_confirmatory.json').read_text())
     if not confirm.get('complete'):
         raise SystemExit('Confirmatory study incomplete')
     ablations(confirm)
     disclosure(confirm)
+    matched(confirm)
 
 
 if __name__ == '__main__':

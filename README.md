@@ -70,6 +70,9 @@ python3 scripts/run_study.py --purpose confirmatory --seeds 71001-71100 \
 python3 scripts/export_results.py results/v3_ablations.json --name ablations
 python3 scripts/run_disclosure.py --workers 2 --output results/v3_disclosure.json
 python3 scripts/export_results.py results/v3_disclosure.json --name disclosure
+python3 scripts/run_disclosure.py --matched --workers 2 --output results/v3_disclosure_matched.json
+python3 scripts/decision_sensitivity.py        # same states, every answer-model error
+python3 scripts/compare_studies.py             # pairs ablation/disclosure rows with confirmatory rows
 
 # 6. Tables and figures for the report
 python3 scripts/summarize_study.py results/v3_confirmatory.json

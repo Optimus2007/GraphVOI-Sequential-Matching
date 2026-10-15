@@ -15,6 +15,8 @@ from scripts.run_experiments import CODE_SHA256, research_episode
 
 CONDITIONS = ([('graphvoi', b, 'none') for b in ('biased', 'overconfident', 'underconfident', 'refusal')] +
               [(m, 'none', a) for a in ('refusal', 'drift') for m in ('graphvoi', 'degree_first', 'greedy')])
+# Beliefs that match the changed environment (paired with the 'none' belief rows above).
+MATCHED = [('graphvoi', 'refusal', 'refusal'), ('graphvoi', 'temporal_drift', 'drift')]
 
 
 def job(seed, variant, method, belief, actual):
@@ -30,13 +32,15 @@ def main():
     p.add_argument('--seeds', default='71001-71010')
     p.add_argument('--workers', type=int, default=2)
     p.add_argument('--output', required=True)
+    p.add_argument('--matched', action='store_true', help='run only the matched-belief cells')
     args = p.parse_args()
+    conditions = MATCHED if args.matched else CONDITIONS
     lo, hi = map(int, args.seeds.split('-'))
     output = Path(args.output)
     if output.exists():
         p.error('Output exists; preserve prior experiment instead of overwriting')
     rows, started = [], time.perf_counter()
-    expected = [(s, v, *c) for s in range(lo, hi + 1) for v in VARIANTS for c in CONDITIONS]
+    expected = [(s, v, *c) for s in range(lo, hi + 1) for v in VARIANTS for c in conditions]
     with ProcessPoolExecutor(max_workers=args.workers) as executor:
         futures = [executor.submit(job, *e) for e in expected]
         for n, future in enumerate(as_completed(futures), 1):
@@ -47,7 +51,7 @@ def main():
                                   actual=row.get('actual_disclosure'), valid=row['valid'])), flush=True)
             if n % 20 == 0 or n == len(futures):
                 output.write_text(json.dumps(dict(complete=n == len(futures), expected=len(expected),
-                    conditions=CONDITIONS, seeds=[lo, hi], code_sha256=CODE_SHA256, episodes=rows,
+                    conditions=conditions, seeds=[lo, hi], code_sha256=CODE_SHA256, episodes=rows,
                     elapsed_seconds=time.perf_counter() - started), indent=1, allow_nan=False) + '\n')
     return 0 if all(r['valid'] for r in rows) else 2
 

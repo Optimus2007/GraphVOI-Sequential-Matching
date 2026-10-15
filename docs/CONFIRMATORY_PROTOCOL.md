@@ -109,3 +109,20 @@ row is paired with the confirmatory rows:
 
 Reported with 95% paired seed-cluster intervals against `graphvoi` and
 `learned_maxweight`; descriptive, no superiority claim beyond the primary rule.
+
+## Decision sensitivity and matched beliefs (declared before running, 15 October 2026)
+
+The organisers asked how sensitive the *decisions* are to answer-model errors,
+especially when disclosure behaviour changes. Two additions, no policy change:
+
+- Decision sensitivity on identical states. GraphVOI is run on the official
+  simulator for seeds 71001 to 71010 in all six families; on days 0, 5, 10 and 20
+  the same public state is given to GraphVOI under every belief (`none`, `biased`,
+  `overconfident`, `underconfident`, `refusal`, `subgroup_refusal`,
+  `temporal_drift`). Reported: Jaccard overlap of chosen ask sets with the
+  unperturbed choice, share of states where the choice is identical, and how
+  often the first-ranked ask changes. 240 states, 1,680 policy calls.
+- Matched beliefs under changed disclosure. GraphVOI with `refusal` beliefs in the
+  `refusal` environment, and `temporal_drift` beliefs in the `drift` environment,
+  seeds 71001 to 71010. Compared with GraphVOI using correct-world (`none`)
+  beliefs in the same shifted environments. 120 episodes.
