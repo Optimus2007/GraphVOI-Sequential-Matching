@@ -154,7 +154,7 @@ their history to reveal it. We kept the shipped model.
 # 4 Experimental setup
 
 All studies were written into `docs/CONFIRMATORY_PROTOCOL.md` and committed
-before they ran (commit `db79b4a` and later).
+before they ran (commit `69a9b56` and later).
 
 - **Worlds.** Seeds 71001 to 71100, never used before, in all six official
   scenario families: 600 worlds of 200 members, 60 decision days and 40 follow-up
@@ -165,7 +165,7 @@ before they ran (commit `db79b4a` and later).
   fill, the three official baselines, and the remaining Round 1 rows: learned
   edge model with greedy allocation, learned model with max-weight allocation,
   GraphVOI with a waiting threshold, and GraphVOI without paired questions.
-- **Code.** Commit `335b0af` for every episode. Results store hashes of every
+- **Code.** Commit `3be3dc2` for every episode. Results store hashes of every
   policy and runner file and both model assets.
 - **Main outcome.** As the organisers asked, completed meetings (dates) and mutual
   second-meeting intention are reported side by side for every comparison.
