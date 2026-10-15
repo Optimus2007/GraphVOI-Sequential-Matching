@@ -60,6 +60,7 @@ assets, raw results and the protocol we wrote before each study are all public.
 | Supplied baselines, ablations, changing conditions | 5, 6, 7 |
 | Completed meetings and MSMI as the main outcome | 5 |
 | Stated preferences and hard eligibility preserved | 11 |
+| What we claim and do not claim | 13 |
 
 # 2 What we built
 
@@ -80,7 +81,15 @@ $$\mathrm{GraphVOI}(q) = \mathbb{E}_y\left[V(G_t \mid q = y)\right] - V(G_t) - \
 
 where $V(G)$ is the value of the best matching under the edge weights. We use
 $\lambda = 0$, because unused budget is lost at the end of the day and ask cost is
-only the third tie-breaker in the official ranking.
+only the third tie-breaker in the official ranking [1].
+
+As in Round 1, the pieces are not new on their own. Judging a query by what it does
+to the final matching comes from stochastic matching with costly queries [2, 3],
+and asking only what matters for the matching from preference elicitation for
+stable matching [4]. Uncertainty-first is close to choosing questions by expected
+information gain about a profile [5]. Outcomes that have not arrived yet are
+treated as censored, not as negatives [6]. What we test is the link between the
+clarification action and the pool-level matching objective in this simulator.
 
 **Answers.** For a constraints bundle, possible answers come from the four most
 similar fully disclosed members in the training pools (by age, gender and zone,
@@ -107,6 +116,19 @@ GraphVOI and its comparators it never fired in any run reported here.
 answers. Degree-first ranks them by how many feasible edges they are expected to
 add. Both use exactly the same pair model, answer model, frontier, budget, budget
 fill, matcher and seeds as GraphVOI. Only the ranking criterion differs.
+
+**What changed from the Round 1 plan.** We built what we proposed, with the
+differences below. In each case the evidence, from held-out tests or from our own
+ablations, talked us out of the extra machinery.
+
+| Round 1 plan | What we did, and why |
+|------------------------------|----------------------------------------------------------|
+| Edge model with pair history and market features (feasible degree, best alternative edge); update the first stage inside each episode | Observable soft fields, age, gender and waiting time, trained offline, no in-episode updates. Held-out tests (Section 3) showed member history adds nothing measurable, and a member who is introduced at all gets about two introductions per episode, too few to learn from online. |
+| Carry per-episode statistics in the policy's memory field | Not needed once in-episode updating was dropped. The policy is stateless, which also makes every call reproducible on its own. |
+| Waiting threshold tuned on training and validation pools, plus a scarcity check; contextual bandit later | One fixed, untuned threshold tested as an ablation (Section 6). It clearly hurt, so we did not tune it, add the scarcity check or build a bandit. |
+| Hyperparameters chosen on training and validation pools | Nothing was tuned. The frontier sizes, world cap and work cap were fixed before the pilot, and model settings were fixed before any evaluation seed was run. |
+| A small future-value bonus if GraphVOI proved short-sighted | The pilot showed exactly this failure. We addressed it with the budget fill (Section 3), which is simpler than a learned bonus and is shared by all three selectors. |
+| Logistic regression or histogram gradient boosting for each stage | Regularized logistic regression only. With near-zero held-out signal, a more flexible model had nothing to find. |
 
 # 3 What the first build taught us
 
@@ -153,8 +175,18 @@ their history to reveal it. We kept the shipped model.
 
 # 4 Experimental setup
 
-All studies were written into `docs/CONFIRMATORY_PROTOCOL.md` and committed
-before they ran (commit `69a9b56` and later).
+We test the hypotheses exactly as Round 1 stated them:
+
+> **H1.** With equal ask budgets, GraphVOI clarification gives a higher
+> policy-level MSMI than uncertainty-first clarification.
+>
+> **H1b** (secondary, fixed in advance). The same comparison on mutual acceptances
+> per 100 arrived members.
+
+Round 1 also set the bar that GraphVOI must beat degree-first as well, because
+otherwise "the matching part of the idea is not what helps". All studies were
+written into `docs/CONFIRMATORY_PROTOCOL.md` and committed before they ran
+(commit `69a9b56` and later).
 
 - **Worlds.** Seeds 71001 to 71100, never used before, in all six official
   scenario families: 600 worlds of 200 members, 60 decision days and 40 follow-up
@@ -166,7 +198,8 @@ before they ran (commit `69a9b56` and later).
   edge model with greedy allocation, learned model with max-weight allocation,
   GraphVOI with a waiting threshold, and GraphVOI without paired questions.
 - **Code.** Commit `3be3dc2` for every episode. Results store hashes of every
-  policy and runner file and both model assets.
+  policy and runner file and both model assets. The submitted build differs only
+  in a tighter runtime guard that changes no decision (Section 11).
 - **Main outcome.** As the organisers asked, completed meetings (dates) and mutual
   second-meeting intention are reported side by side for every comparison.
 - **Primary analysis.** Official MSMI per 100 arrived members, averaged within
@@ -186,20 +219,32 @@ Differences smaller than that were not going to be resolvable.
 
 # 5 Main result
 
-All 4,200 confirmatory episodes were valid. Table 1 gives the main outcomes,
-averaged over 600 worlds per method.
+All 4,200 confirmatory episodes were valid. The two tables below give the full
+funnel Round 1 promised, averaged per episode over 600 worlds per method.
 
-| Method | MSMI per 100 | Completed dates per episode | Mutual acceptances per episode | Coverage | Ask units per episode |
+| Method | Introductions | Mutual acceptances | Completed dates | MSMI pairs | MSMI per 100 arrived |
 |------------------------------|------------:|------------:|------------:|------------:|------------:|
-| GraphVOI | 0.339 | 8.52 | 10.98 | 33.7% | 238.8 |
-| Degree-first | 0.380 | 8.62 | 11.11 | 33.8% | 198.9 |
-| Uncertainty-first | 0.331 | 8.47 | 10.85 | 33.8% | 241.7 |
-| GraphVOI, no budget fill | 0.304 | 7.25 | 9.21 | 29.2% | 138.6 |
-| Official greedy | 0.350 | 8.23 | 10.59 | 33.7% | 198.9 |
-| Official random | 0.384 | 8.37 | 10.65 | 33.8% | 198.9 |
-| Official no-asks | 0.077 | 2.15 | 2.71 | 11.9% | 0.0 |
+| GraphVOI | 76.1 | 10.98 | 8.52 | 0.68 | 0.339 |
+| Degree-first | 76.1 | 11.11 | 8.62 | 0.76 | 0.380 |
+| Uncertainty-first | 76.0 | 10.85 | 8.47 | 0.66 | 0.331 |
+| GraphVOI, no budget fill | 65.7 | 9.21 | 7.25 | 0.61 | 0.304 |
+| Official greedy | 75.4 | 10.59 | 8.23 | 0.70 | 0.350 |
+| Official random | 75.3 | 10.65 | 8.37 | 0.77 | 0.384 |
+| Official no-asks | 20.7 | 2.71 | 2.15 | 0.15 | 0.077 |
 
-Table: Confirmatory study, seeds 71001 to 71100, six scenario families.
+Table: Outcome funnel, confirmatory study (seeds 71001 to 71100, six scenario families).
+
+| Method | Coverage | Unserved | Wait (days) | Ask units | Missing | Invalid | Seconds |
+|------------------------------|--------:|--------:|--------:|--------:|--------:|--------:|--------:|
+| GraphVOI | 33.7% | 132.5 | 3 / 16 | 238.8 | 39.8 | 0 | 69.2 |
+| Degree-first | 33.8% | 132.4 | 3 / 16 | 198.9 | 39.2 | 0 | 60.2 |
+| Uncertainty-first | 33.8% | 132.4 | 3 / 16 | 241.7 | 39.8 | 0 | 47.1 |
+| GraphVOI, no budget fill | 29.2% | 141.5 | 5 / 27 | 138.6 | 34.7 | 0 | 88.8 |
+| Official greedy | 33.7% | 132.6 | 4 / 17 | 198.9 | 39.3 | 0 | 6.0 |
+| Official random | 33.8% | 132.5 | 5 / 17 | 198.9 | 39.8 | 0 | 5.7 |
+| Official no-asks | 11.9% | 176.2 | 0 / 16 | 0.0 | 10.8 | 0 | 7.7 |
+
+Table: Service and cost per episode. Unserved: arrived members never introduced. Wait: median / 90th percentile days from arrival to first introduction among members who were introduced (Section 8 gives the censor-aware version). Missing: responses that never arrived. Seconds: total inference time.
 
 ![Paired differences, GraphVOI minus each comparator, over 100 seed clusters.](figures/paired_differences.pdf){width=95%}
 
@@ -214,7 +259,8 @@ its unadjusted 95% interval (−0.079 to −0.002) only just excludes zero.
 outcomes with ten times more events, the three selectors are level: GraphVOI
 minus degree-first is −0.10 dates (95% −0.35 to +0.16) and −0.14 mutual
 acceptances (−0.42 to +0.15); against uncertainty-first it is +0.05 dates and
-+0.12 mutual acceptances, both intervals covering zero.
++0.12 mutual acceptances, both intervals covering zero. (We report per episode;
+with about 200 arrivals per episode, the per-100 figures in H1b are half these.)
 
 **What clearly matters is asking at all, and asking early.** Every asking policy
 beats no-asks by about 0.26 MSMI and 8 mutual acceptances per episode. The
@@ -334,8 +380,10 @@ These robustness runs use ten seeds per cell, so we treat them as descriptive.
 
 # 8 Calibration, waiting and who gets opportunities
 
-**Directional calibration.** The model predicts "A accepts B" and "B accepts A"
-separately, using the same weights with the roles swapped. Over 91,342 recorded
+**Directional calibration.** As Round 1 promised, "A accepts B" and "both accept"
+stay separate. The model predicts "A accepts B" and "B accepts A" with the same
+weights and the roles swapped, and learns "both accept" directly rather than
+multiplying the two directions, which would assume they are independent. Over 91,342 recorded
 responses in GraphVOI episodes, both directions are equally well calibrated
 (Brier 0.230 and 0.228) and calibrated on average: in the bin that holds 96% of
 labels, the model predicts 0.356 and 0.359 is observed. The problem is that it
@@ -416,17 +464,20 @@ delayed feedback and competition for the same candidate.
   introduced; we never fill those fields in and count them separately in the
   waiting analysis. When refusal rises further (Section 7), every method loses
   about 7 to 8 coverage points. GraphVOI's answer model cannot learn the new
-  refusal rate inside an episode, and believing in refusals that do not happen
-  costs outcomes, so tracking disclosure online is the obvious next step.
+  refusal rate inside an episode, but our matched-belief test suggests that would
+  not help anyway: expecting refusals made the policy ask less effectively. The
+  better response here is to keep asking the useful hard questions.
 - **Delayed feedback.** Our models are trained offline and not updated inside an
   episode, so the delayed-dates family does not hurt us more than others
   (GraphVOI 0.455 MSMI there, among its best families). The cost is the other
   way round: the model cannot learn from this episode's own outcomes either.
 - **Competition for the same candidate.** Maximum-weight matching resolves
   conflicts over a popular member globally rather than greedily, but with flat
-  weights it cannot tell which conflict is worth winning. The waiting analysis
-  shows the consequence that every policy shares: members aged 40 and over get
-  about 17% fewer introductions than those aged 30 to 39.
+  weights it cannot tell which conflict is worth winning, which is why it does no
+  better than greedy allocation (Section 6). Some members lose out under every
+  policy: those aged 40 and over get about 17% fewer introductions than those
+  aged 30 to 39, which we attribute to narrower mutual age windows rather than to
+  any question rule.
 - **Short-sighted value.** One-day VOI ignores the later value of a hard answer.
   This is the failure we found in the pilot; the fill is a simple patch, not a
   model of future value.
@@ -482,11 +533,30 @@ python3 scripts/run_study.py --purpose confirmatory --seeds 71001-71100 \
 ```
 
 The confirmatory study ran on two machines with identical code and model hashes:
-1,428 episodes on a Mac (Python 3.13.7, 6 workers) and 2,772 on a 80-vCPU x86
+1,428 episodes on a Mac (Python 3.13.7, 6 workers) and 2,772 on an 80-vCPU x86
 Linux machine (Python 3.12.7). `scripts/merge_studies.py` refuses to combine parts
 whose code or assets differ, requires the full design and checks that overlapping
 episodes have identical actions. The full study takes about 65 CPU-hours on Apple M-series cores. Inference
 uses no random seed; training seeds are 31001 to 31008.
+
+# 13 What we claim, stated narrowly
+
+**What we claim.** We implemented allocation-aware clarification as proposed:
+each costly question is scored by its counterfactual effect on the best feasible
+pool-level matching, with joint scoring of complementary questions and
+conditional re-scoring of overlapping ones. In 4,200 pre-registered paired
+episodes on the organisers' simulator it did not improve completed meetings or
+MSMI over uncertainty-first or degree-first asking. We traced why: the value of a
+question there comes from feasibility, because pair outcomes are barely
+predictable from public data. We also found that spending the whole daily budget
+on durable hard-constraint answers improves meetings, coverage and waiting by
+more than the choice between any of the three ranking rules.
+
+**What we do not claim.** That GraphVOI is better or worse than the simpler rules
+in general; our expectation that it should help when pair values are predictable
+is untested. That the synthetic simulator represents real members or real
+relationship outcomes. That our answer model's probabilities are accurate for
+real people or rare subgroups.
 
 # References
 
