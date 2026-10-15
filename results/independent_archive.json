@@ -1,0 +1,35 @@
+{
+  "archive": "output/GraphVOI_Orbit_Round2_candidate.tar.gz",
+  "sha256": "f91a2248751e4bd0f9860da949f21582d71edbdd4b22cfa2fbd356203e553710",
+  "files": 514,
+  "excluded_paths_absent": true,
+  "extracted_directory": "/var/folders/1l/tj9tbm892f71lz4s2ndthp9w0000gn/T/orbit-independent-archive-0ef10g0b/GraphVOI",
+  "checks": [
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-m",
+        "unittest",
+        "discover",
+        "-v"
+      ],
+      "returncode": 0,
+      "stdout_tail": "",
+      "stderr_tail": "Tests.test_inference_imports_only_allowed_kit_symbols) ... ok\ntest_real_process_matches_inprocess_action (tests.test_inference_boundary.BoundaryTests.test_real_process_matches_inprocess_action) ... ok\n\n----------------------------------------------------------------------\nRan 58 tests in 4.237s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "verify_data.py"
+      ],
+      "returncode": 0,
+      "stdout_tail": "{\n  \"verified\": true,\n  \"counts\": {\n    \"members\": 2000,\n    \"introductions\": 613,\n    \"feedback\": 1270,\n    \"conversations\": 1129\n  },\n  \"files\": 71\n}\n",
+      "stderr_tail": ""
+    }
+  ],
+  "empty_policy_output": {
+    "asks": [],
+    "memory": {}
+  },
+  "note": "Existing pre-audit archive tested unchanged; audit additions are not in this archive."
+}

@@ -1,0 +1,120 @@
+"""Empirical answer beliefs from disclosed training profiles, never hidden truth."""
+import copy
+import json
+import math
+from pathlib import Path
+
+from kit import HARD
+
+
+class AnswerModel:
+    def __init__(self, asset=None, samples=4, perturbation='none'):
+        path = Path(__file__).resolve().parents[1] / 'assets' / 'answer_model.json'
+        # Snapshot assets. Public asset access returns a copy, so beliefs cannot
+        # change underneath cached results.
+        self._asset = copy.deepcopy(asset) if asset is not None else json.loads(path.read_text())
+        self.samples = samples
+        self.perturbation = perturbation
+        self.cache = {}
+
+    @property
+    def asset(self):
+        return copy.deepcopy(self._asset)
+
+    def clear_cache(self):
+        self.cache.clear()
+
+    def outcomes(self, state, ask):
+        member = next(m for m in state['members'] if m['member_id'] == ask['member_id'])
+        # Complete calculation dependencies. IDs only select a record; history,
+        # policy memory, availability and scenario labels do not affect beliefs.
+        cache_key = (state['day'], ask['field'], member['age'], member['gender'],
+                     member['zone'], self.samples, self.perturbation,
+                     json.dumps(member['fields'], sort_keys=True),
+                     json.dumps(member['field_status'], sort_keys=True))
+        if cache_key in self.cache:
+            return copy.deepcopy(self.cache[cache_key])
+        result = self.outcomes_uncached(state, ask)
+        if len(self.cache) >= 256:
+            self.cache.clear()
+        self.cache[cache_key] = copy.deepcopy(result)
+        return copy.deepcopy(result)
+
+    def outcomes_uncached(self, state, ask):
+        """Reference calculation with no cache reads/writes; asset snapshot fixed."""
+        member = next(m for m in state['members'] if m['member_id'] == ask['member_id'])
+        keys = HARD if ask['field'] == 'constraints' else [ask['field']]
+        missing = [k for k in keys if member['fields'][k] is None
+                   and member['field_status'][k] == 'not_asked']
+        if not missing:
+            return [(1.0, {})]
+        if ask['field'] != 'constraints':
+            counts = self._asset['soft_counts'][ask['field']]
+            total = sum(counts.values())
+            values = [(n / total, {missing[0]: value}) for value, n in sorted(counts.items())]
+        else:
+            candidates = []
+            for index, donor in enumerate(self._asset['hard_donors']):
+                # Donor arrays are never mutated. Copy the mapping for the two
+                # age offsets; apply_answer owns any values that enter a world.
+                fields = dict(donor['fields'])
+                # Age-window offsets are learned from disclosed windows. Observed
+                # target limits and all other observations remain unchanged.
+                fields['age_min'] = max(18, min(65, member['age'] + fields['age_min'] - donor['age']))
+                fields['age_max'] = max(18, min(65, member['age'] + fields['age_max'] - donor['age']))
+                if any(member['fields'][k] is not None and member['fields'][k] != fields[k]
+                       for k in HARD if k not in ('age_min', 'age_max')):
+                    continue
+                answer = {k: fields[k] for k in missing}
+                merged = {**member['fields'], **answer}
+                if (merged['age_min'] is not None and merged['age_max'] is not None
+                        and merged['age_min'] > merged['age_max']):
+                    continue
+                similarity = (2 * (donor['gender'] == member['gender']) +
+                              2 * (donor['zone'] == member['zone']) -
+                              abs(donor['age'] - member['age']) / 13)
+                candidates.append((-similarity, index, answer))
+            # Insufficient compatible donors is an explicit unsupported belief;
+            # never fill from generator defaults or a refused value.
+            if not candidates:
+                return [(1.0, {})]
+            selected = sorted(candidates)[:self.samples]
+            weights = [math.exp(-distance) for distance, _, _ in selected]
+            values = [(w / sum(weights), answer) for w, (_, _, answer) in zip(weights, selected)]
+        temperature = {'overconfident': .5, 'underconfident': 2.0}.get(self.perturbation, 1.0)
+        weighted = []
+        for index, (p, answer) in enumerate(values):
+            weight = p ** (1 / temperature)
+            if self.perturbation == 'biased':
+                weight *= 3 if index == 0 else 1
+            weighted.append((weight, answer))
+        total = sum(p for p, _ in weighted)
+        values = [(p / total, a) for p, a in weighted]
+        refusal = 0.0
+        if self.perturbation == 'refusal':
+            refusal = .35
+        elif self.perturbation == 'subgroup_refusal' and member['gender'] == 'non_binary':
+            refusal = .6
+        elif self.perturbation == 'temporal_drift':
+            refusal = .5 * min(1, state['day'] / 59)
+        result = ([(p * (1 - refusal), a) for p, a in values] +
+                  ([(refusal, {})] if refusal else []))
+        return copy.deepcopy(result)
+
+
+def apply_answer(state, ask, answer):
+    # Only this member changes. The remaining public records are read-only;
+    # cloning cumulative feedback/ask history for every outcome is quadratic
+    # wasted work and can dominate later-day counterfactuals.
+    out = dict(state)
+    out['members'] = list(state['members'])
+    index = next(i for i, m in enumerate(out['members']) if m['member_id'] == ask['member_id'])
+    member = copy.deepcopy(out['members'][index])
+    out['members'][index] = member
+    allowed = HARD if ask['field'] == 'constraints' else [ask['field']]
+    for key, value in answer.items():
+        if key in allowed and member['fields'][key] is None and member['field_status'][key] == 'not_asked':
+            member['fields'][key] = copy.deepcopy(value)
+            member['field_status'][key] = 'observed'
+            member['field_observed_day'][key] = state['day']
+    return out

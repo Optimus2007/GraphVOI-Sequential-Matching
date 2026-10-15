@@ -1,0 +1,33 @@
+         573716 function calls (553584 primitive calls) in 0.130 seconds
+
+   Ordered by: cumulative time
+   List reduced from 95 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.130    0.130 /Users/adityakeshri/Documents/Romeo/graphvoi/policy.py:21(decide)
+        1    0.000    0.000    0.110    0.110 /Users/adityakeshri/Documents/Romeo/graphvoi/core.py:133(allocate)
+        1    0.000    0.000    0.108    0.108 /Users/adityakeshri/Documents/Romeo/graphvoi/core.py:81(weighted_edges)
+       20    0.004    0.000    0.106    0.005 /Users/adityakeshri/Documents/Romeo/graphvoi/core.py:44(public_pairs)
+    10163    0.067    0.000    0.102    0.000 /Users/adityakeshri/Documents/Romeo/kit.py:69(eligibility)
+   452598    0.036    0.000    0.036    0.000 {method 'get' of 'dict' objects}
+        1    0.001    0.001    0.020    0.020 /Users/adityakeshri/Documents/Romeo/graphvoi/core.py:10(normalize)
+  19339/1    0.010    0.000    0.019    0.019 /opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/copy.py:119(deepcopy)
+    573/1    0.003    0.000    0.019    0.019 /opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/copy.py:218(_deepcopy_dict)
+    204/4    0.000    0.000    0.019    0.005 /opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/copy.py:192(_deepcopy_list)
+        1    0.000    0.000    0.002    0.002 /Users/adityakeshri/Documents/Romeo/graphvoi/core.py:92(optimal_matching)
+       19    0.000    0.000    0.002    0.000 /Users/adityakeshri/Documents/Romeo/graphvoi/models.py:57(__call__)
+       19    0.000    0.000    0.002    0.000 /Users/adityakeshri/Documents/Romeo/graphvoi/models.py:48(stages)
+        1    0.000    0.000    0.002    0.002 <class 'networkx.utils.decorators.argmap'> compilation 6:1(argmap_max_weight_matching_1)
+10200/10190    0.002    0.000    0.002    0.000 {built-in method builtins.sorted}
+        1    0.000    0.000    0.002    0.002 /Users/adityakeshri/Documents/Romeo/vendor/networkx/utils/backends.py:525(_call_if_no_backends_installed)
+        1    0.001    0.001    0.002    0.002 /Users/adityakeshri/Documents/Romeo/vendor/networkx/algorithms/matching.py:321(max_weight_matching)
+    18444    0.002    0.000    0.002    0.000 {method 'append' of 'list' objects}
+    20894    0.001    0.000    0.001    0.000 {built-in method builtins.id}
+       76    0.001    0.000    0.001    0.000 /Users/adityakeshri/Documents/Romeo/graphvoi/core.py:55(pair_features)
+    18562    0.001    0.000    0.001    0.000 /opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/copy.py:173(_deepcopy_atomic)
+    10424    0.001    0.000    0.001    0.000 {built-in method builtins.min}
+       19    0.000    0.000    0.001    0.000 /Users/adityakeshri/Documents/Romeo/graphvoi/models.py:19(symmetric_features)
+       95    0.000    0.000    0.001    0.000 /Users/adityakeshri/Documents/Romeo/graphvoi/models.py:15(predict)
+       95    0.000    0.000    0.000    0.000 {built-in method builtins.sum}
+
+

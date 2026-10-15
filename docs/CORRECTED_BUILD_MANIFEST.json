@@ -1,0 +1,56 @@
+{
+  "code_sha256": {
+    "graphvoi/__init__.py": "ecf105855fd2829829f61700d9b11c30f0136f93013c11311b7ffd15dc823827",
+    "graphvoi/analysis.py": "42dcff1bebeb120279beca63caa1516dbf5834bd2004145de805eb932a795d48",
+    "graphvoi/answers.py": "3308a751aa53f04caa25576f0f03437e27df595daabef4fcc740d86be95d51bd",
+    "graphvoi/clarification.py": "68d2297f447daf17554270092e9ad3f9606cc4ffcf7e85eb8378b354fac2d56e",
+    "graphvoi/core.py": "8eccb125c5e69a6f49ee0a6b6be50b539b3225cbf7220c12b349075c3d2e29e8",
+    "graphvoi/models.py": "274f39b84159e5f05855b9940edf0dc22169d176d6c1daeeb1a2a0b121d119d1",
+    "graphvoi/policy.py": "4b399ee4f2f4d04d6f27157153beedb4a2dd0ce1e391b73a296c787f787559dc",
+    "scripts/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scripts/audit_runtime.py": "3f3ed6001de28ca8e876bb6f4efefea6c3bb2a3dd5da85b3814fd1773d144abc",
+    "scripts/evaluate_method.py": "69ac4b268f0d3bb0665024458780d209c377d03b3dd1353326edd6979d08fe02",
+    "scripts/independent_audit.py": "202eaf253a29ce6de68fecdc236dc0f5ef91ddbdb25ecbfca3c60232e0715406",
+    "scripts/package_source.py": "cb0469157dd1474f00b1b8c2018ab126e46c9e47effeb7ca85888ba1970abf43",
+    "scripts/plot_calibration.py": "b4f57bdc4b0b5e981755947f04d8b15ba3fe5e0d9482ef717d2398e9bcdc5516",
+    "scripts/profile_policy.py": "1b4383858ad027c2f0346b4da9204d1bebc080e6a44fcdb84aa68b4d03d13170",
+    "scripts/run_experiments.py": "a218c8a9d60f0b3b85612477c13b1b6a9b1ebb0b93c40423d782e58880b14d15",
+    "scripts/run_pilot.py": "b3633b7a67ed31d314ada1a87a9ab97127c8cf6767f0f5aed22627c076426368",
+    "scripts/run_robustness.py": "227d6f7b44206eee5a821c26d4fd1fbd5e47fba69fe6a0133adfc984b2f6524d",
+    "scripts/summarize_results.py": "1135d6700cd013e70539bfad2c01c2295ddb0dd8fa5318da1d0a3aa1a2f53179",
+    "scripts/train_models.py": "14604b6b61245ff2045313b0fc64486048e0d02c99a03827525eda4357209d8e",
+    "scripts/write_report.py": "af4d9845def4d3037670314008f3b2b2a9af21bb84090459ca82c08395b15fe6"
+  },
+  "asset_sha256": {
+    "assets/answer_model.json": "732cdcf12e07061bc88e868a0229e9eb2eefc656ac9c9d3bc44dd913a2568695",
+    "assets/pair_model.json": "5a1db00312713ffd9447840b8a0473759f60e4ec6855fa6d364a202a29c0dca4",
+    "assets/target_definitions.json": "4efb72a9998638566f2f007eee73a5ed17013831eadfe22bf19fc75ab0ad0116",
+    "assets/training_summary.json": "ee54dd28a2fbf6fd82c033af655fc6745df1d653b0541d346695b3b75c48f6a1"
+  },
+  "test_sha256": {
+    "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/test_analysis.py": "5d58e40856e9880b13a23dfb39fd3246dba426225f8535f522a35d5a85743f4b",
+    "tests/test_clarification.py": "cd85d2f31e47a5a9a8eb5bd12fd29df17134a69113410b0073b6204d403579a0",
+    "tests/test_core.py": "2419b58ea3a82a4186c91c2cb6f2fd50b97d9e0c803e282ba7295181f5d81f80",
+    "tests/test_correctness_fixes.py": "3f50c2cea8606b6e3f29d60b6b46be031b301715a0743365b5c95f58df3e4484",
+    "tests/test_independent_audit.py": "2f782bebcce671468fd5a3a2dd410da61fc14a1a7105dd55ef9e9cb1d8456c9e",
+    "tests/test_inference_boundary.py": "04823975ff360cd4d83a068539dfc690662dda63a092da2228b1e6c690cec502"
+  },
+  "pilot_seeds": [
+    62001,
+    62002,
+    62003,
+    62004,
+    62005,
+    62006,
+    62007,
+    62008,
+    62009,
+    62010
+  ],
+  "tests_passed": 85,
+  "profiling_result": "results/corrected_runtime_v2.json",
+  "official_verification": "results/corrected_verified_v2.json",
+  "note": "Freeze for conditional acquisition v2 pilot; official source and model weights unchanged.",
+  "verification_note": "Contrasting-donor and quantified quadrature tests added after pilot launch; inference/runner/asset hashes unchanged."
+}

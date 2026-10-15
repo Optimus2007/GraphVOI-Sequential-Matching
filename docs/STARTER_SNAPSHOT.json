@@ -1,0 +1,536 @@
+{
+  "repository": "RomeoJulietLove/The-Sequential-Matching-Problem",
+  "commit": "a8e26b35118cfa8e886a02f93984923e43ab64f6",
+  "files": [
+    {
+      "path": ".dockerignore",
+      "git_blob_sha1": "bd8b4b8bfcac0b3f0920687db2439273d3b53ad1",
+      "size": 33
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.yml",
+      "git_blob_sha1": "b851221b6735db93d69128fe1d927f489d84e695",
+      "size": 607
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "git_blob_sha1": "c72b97ce45a737226e2eae69507be3ca42c6a2e8",
+      "size": 365
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/final_submission.yml",
+      "git_blob_sha1": "9153667d1d4991f4112e196211d2e3fdebca68f3",
+      "size": 1671
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/question.yml",
+      "git_blob_sha1": "0b17d6b7f807f47282173150c0cda29c3b948d77",
+      "size": 602
+    },
+    {
+      "path": ".github/workflows/verify.yml",
+      "git_blob_sha1": "89e7de37a4c06066f1c9f400ceafd5420462f887",
+      "size": 634
+    },
+    {
+      "path": ".gitignore",
+      "git_blob_sha1": "c87b1eabdd279e5e2b53eb69deffbb38d762f7d1",
+      "size": 47
+    },
+    {
+      "path": "CHANGELOG.md",
+      "git_blob_sha1": "7f44da71abd6ee351c4e2152bd217baf376729e5",
+      "size": 2331
+    },
+    {
+      "path": "DATA_LICENSE.md",
+      "git_blob_sha1": "c018e9315f9ba56ae6f381c08abf4b6f4dc420dc",
+      "size": 628
+    },
+    {
+      "path": "Dockerfile",
+      "git_blob_sha1": "00d6f360dd3c16996fc2468bddb1ed6797aad130",
+      "size": 163
+    },
+    {
+      "path": "LICENSE",
+      "git_blob_sha1": "edab327524c5b551c7ca685a126b5c6270f2ccf4",
+      "size": 1232
+    },
+    {
+      "path": "PROBLEM_STATEMENT.md",
+      "git_blob_sha1": "bd60f4ccae4edb83b26567c9927b72be042ea97e",
+      "size": 27458
+    },
+    {
+      "path": "README.md",
+      "git_blob_sha1": "846989f60570bc787c54714d3dd7b2992db8acab",
+      "size": 6151
+    },
+    {
+      "path": "build_public_data.py",
+      "git_blob_sha1": "8fe1f10db1faa8d73d96f711e665b498b4f42f46",
+      "size": 5121
+    },
+    {
+      "path": "data/public_01/conversations.jsonl",
+      "git_blob_sha1": "5a70a1ac544533de8924b5ec05f0b9f034b6f058",
+      "size": 59940
+    },
+    {
+      "path": "data/public_01/feedback.jsonl",
+      "git_blob_sha1": "72a661cd4b17e3fb81365a935348198943bac99a",
+      "size": 27061
+    },
+    {
+      "path": "data/public_01/introductions.jsonl",
+      "git_blob_sha1": "517332cecd348ccfe9165f42e009d30d62878910",
+      "size": 15528
+    },
+    {
+      "path": "data/public_01/members.jsonl",
+      "git_blob_sha1": "b0201e126d4b3d530b9e78379e18695f7554ed69",
+      "size": 336798
+    },
+    {
+      "path": "data/public_01/members_flat.csv",
+      "git_blob_sha1": "a0058b882b4c699991da70acfcd13e818755c26b",
+      "size": 18466
+    },
+    {
+      "path": "data/public_01/questionnaires.jsonl",
+      "git_blob_sha1": "d1fa17badc0d461cc83a5a41dafabca155601b74",
+      "size": 90859
+    },
+    {
+      "path": "data/public_01/state.json",
+      "git_blob_sha1": "d0efbacab8b3421f997e2c5836d86165eb079c46",
+      "size": 565332
+    },
+    {
+      "path": "data/public_02/conversations.jsonl",
+      "git_blob_sha1": "105d51f9f16bb7bd262644756c2c6e354562d55e",
+      "size": 62928
+    },
+    {
+      "path": "data/public_02/feedback.jsonl",
+      "git_blob_sha1": "40b45fc5f301ce176f58858be10007069fc5999f",
+      "size": 26200
+    },
+    {
+      "path": "data/public_02/introductions.jsonl",
+      "git_blob_sha1": "96e93004faccde7515bfb5a51c43c95131eb922a",
+      "size": 15531
+    },
+    {
+      "path": "data/public_02/members.jsonl",
+      "git_blob_sha1": "43ab787bc609870f0305aa3dffa3c88b929a8208",
+      "size": 337162
+    },
+    {
+      "path": "data/public_02/members_flat.csv",
+      "git_blob_sha1": "3446bcb3a1b23fb41880ac6605307639ee2a94a5",
+      "size": 18791
+    },
+    {
+      "path": "data/public_02/questionnaires.jsonl",
+      "git_blob_sha1": "46f7cc2e598886aa71067533ae3b0522d07ffeb1",
+      "size": 96780
+    },
+    {
+      "path": "data/public_02/state.json",
+      "git_blob_sha1": "0a84c389852f7402e081af8a2b00d6f7455d6619",
+      "size": 576993
+    },
+    {
+      "path": "data/public_03/conversations.jsonl",
+      "git_blob_sha1": "042f7e7467df3040a64da7a22b05d6df8b910c4a",
+      "size": 69605
+    },
+    {
+      "path": "data/public_03/feedback.jsonl",
+      "git_blob_sha1": "bdd7319c8680bb670f775b07d56b11abb682acc7",
+      "size": 27234
+    },
+    {
+      "path": "data/public_03/introductions.jsonl",
+      "git_blob_sha1": "bd059d251c66b2941d99e6dd8e8b53b3e086ee0c",
+      "size": 15250
+    },
+    {
+      "path": "data/public_03/members.jsonl",
+      "git_blob_sha1": "6753fe7a34d7c7b9f138e7089a2c4656064b305e",
+      "size": 336947
+    },
+    {
+      "path": "data/public_03/members_flat.csv",
+      "git_blob_sha1": "7d46087a155ffb82ab0e5ef1befc85534c847221",
+      "size": 19141
+    },
+    {
+      "path": "data/public_03/questionnaires.jsonl",
+      "git_blob_sha1": "881babf2a3ba57653e4808c250f655e86fda7afe",
+      "size": 97621
+    },
+    {
+      "path": "data/public_03/state.json",
+      "git_blob_sha1": "fbcf6d229ced258ea41cdc2f290a55fa58a6f1c6",
+      "size": 568330
+    },
+    {
+      "path": "data/public_04/conversations.jsonl",
+      "git_blob_sha1": "2a686414816b79414d1f3145a6864eb66f88a3cd",
+      "size": 60528
+    },
+    {
+      "path": "data/public_04/feedback.jsonl",
+      "git_blob_sha1": "d102b8b77cbc84b27e48f8bae5cb0f33a41b4105",
+      "size": 26173
+    },
+    {
+      "path": "data/public_04/introductions.jsonl",
+      "git_blob_sha1": "8392ab51a7d81309a308cd4597a621fb87f74fab",
+      "size": 16899
+    },
+    {
+      "path": "data/public_04/members.jsonl",
+      "git_blob_sha1": "e48f74902c4e81db5b8162a0518c349ced1ca9e3",
+      "size": 338012
+    },
+    {
+      "path": "data/public_04/members_flat.csv",
+      "git_blob_sha1": "1895503aecc38d5dae286af4e5b89cf74263a1aa",
+      "size": 18443
+    },
+    {
+      "path": "data/public_04/questionnaires.jsonl",
+      "git_blob_sha1": "9f002fca09b8b3f9d95c9bc30854633f739ad7cb",
+      "size": 96326
+    },
+    {
+      "path": "data/public_04/state.json",
+      "git_blob_sha1": "0cd278dcb034de3e6205a747a8d4203beeedd995",
+      "size": 589292
+    },
+    {
+      "path": "data/public_05/conversations.jsonl",
+      "git_blob_sha1": "4f3e8c6f92ab056fae064fbe0201908322f99822",
+      "size": 63890
+    },
+    {
+      "path": "data/public_05/feedback.jsonl",
+      "git_blob_sha1": "d1c9c42eafd79998cbca35bfb10971e824fdd829",
+      "size": 38988
+    },
+    {
+      "path": "data/public_05/introductions.jsonl",
+      "git_blob_sha1": "f20162f4dc3476000e70d3c9e3402e248f27fdf2",
+      "size": 23164
+    },
+    {
+      "path": "data/public_05/members.jsonl",
+      "git_blob_sha1": "7242cdc67520d3ff0ef90a65ffaf2b84c2a1ae81",
+      "size": 337468
+    },
+    {
+      "path": "data/public_05/members_flat.csv",
+      "git_blob_sha1": "6aade291dfa6d5b1e8c6b2d8d8d54e50806683ae",
+      "size": 18726
+    },
+    {
+      "path": "data/public_05/questionnaires.jsonl",
+      "git_blob_sha1": "93695c97e69eb32074f46530b7ba7a6e95738f9d",
+      "size": 94388
+    },
+    {
+      "path": "data/public_05/state.json",
+      "git_blob_sha1": "6b8b86e97036fc9b5c755eba76039866d8bb50ee",
+      "size": 601621
+    },
+    {
+      "path": "data/public_06/conversations.jsonl",
+      "git_blob_sha1": "ef338a07c7bc336a54405af969a1451964ec671c",
+      "size": 60999
+    },
+    {
+      "path": "data/public_06/feedback.jsonl",
+      "git_blob_sha1": "4db9139d4b79b161bda2ac7aa6e97d71c3fab678",
+      "size": 27396
+    },
+    {
+      "path": "data/public_06/introductions.jsonl",
+      "git_blob_sha1": "fa342811fbc4efcf734d5dfb5e3b0ae9416a6868",
+      "size": 16072
+    },
+    {
+      "path": "data/public_06/members.jsonl",
+      "git_blob_sha1": "975f3187ebf1ee7cca000bd3266a24862015bbaa",
+      "size": 337199
+    },
+    {
+      "path": "data/public_06/members_flat.csv",
+      "git_blob_sha1": "a49eb0932fe9a7ab35b26af74b65eb048ad0325d",
+      "size": 18456
+    },
+    {
+      "path": "data/public_06/questionnaires.jsonl",
+      "git_blob_sha1": "c32d217c8a9d25587f4611d09ddebbbd16fdc997",
+      "size": 90998
+    },
+    {
+      "path": "data/public_06/state.json",
+      "git_blob_sha1": "fed54bd3ecc87786046381d6888a58e0509509d4",
+      "size": 572643
+    },
+    {
+      "path": "data/public_07/conversations.jsonl",
+      "git_blob_sha1": "ff6d6fb1dd271f29f065602fc067f4f13ac40ca0",
+      "size": 68034
+    },
+    {
+      "path": "data/public_07/feedback.jsonl",
+      "git_blob_sha1": "9e986e05470d561a3ab7762a7c668c49bd4fcf81",
+      "size": 30286
+    },
+    {
+      "path": "data/public_07/introductions.jsonl",
+      "git_blob_sha1": "418ffb9420fb07ac00a426cb9e668036755ae1bd",
+      "size": 17431
+    },
+    {
+      "path": "data/public_07/members.jsonl",
+      "git_blob_sha1": "bc850819fbb873e0892819b8201d2a59d33b18a0",
+      "size": 337404
+    },
+    {
+      "path": "data/public_07/members_flat.csv",
+      "git_blob_sha1": "1c89a472e534db23c98e806a62a6a02a6b9cbeac",
+      "size": 18925
+    },
+    {
+      "path": "data/public_07/questionnaires.jsonl",
+      "git_blob_sha1": "3126af65723b44847f968517125f27514c0b9a24",
+      "size": 96580
+    },
+    {
+      "path": "data/public_07/state.json",
+      "git_blob_sha1": "c3d7c9001344d146692fb1bc17010b94b53617f9",
+      "size": 580631
+    },
+    {
+      "path": "data/public_08/conversations.jsonl",
+      "git_blob_sha1": "13c9f9c85479a98c5462971e9969a1ff9b5c7cf7",
+      "size": 60683
+    },
+    {
+      "path": "data/public_08/feedback.jsonl",
+      "git_blob_sha1": "defa1b5a3532d87e49386249572b2d6a0a2e4387",
+      "size": 23250
+    },
+    {
+      "path": "data/public_08/introductions.jsonl",
+      "git_blob_sha1": "ae3134814fb3b875ee4d8a3844d2cea2a79291cd",
+      "size": 14445
+    },
+    {
+      "path": "data/public_08/members.jsonl",
+      "git_blob_sha1": "65f87a5e3a5dd8e7d07d34e870d90bf6b74df5a0",
+      "size": 337140
+    },
+    {
+      "path": "data/public_08/members_flat.csv",
+      "git_blob_sha1": "8da91f73fecdfcea1047105c49f7a89e34c51d6d",
+      "size": 18527
+    },
+    {
+      "path": "data/public_08/questionnaires.jsonl",
+      "git_blob_sha1": "4ad1e646abc3ad8fb1cffd01c09e472bff2238be",
+      "size": 93925
+    },
+    {
+      "path": "data/public_08/state.json",
+      "git_blob_sha1": "3745d5d9c8ebd7666f783076ed066de44c6c7daf",
+      "size": 572062
+    },
+    {
+      "path": "data/public_09/conversations.jsonl",
+      "git_blob_sha1": "3d1671644e9b149d42332b4c5aeac4839486c0cd",
+      "size": 57016
+    },
+    {
+      "path": "data/public_09/feedback.jsonl",
+      "git_blob_sha1": "20fc657cb9e45220ec9c5923beec0796448ce0b6",
+      "size": 24656
+    },
+    {
+      "path": "data/public_09/introductions.jsonl",
+      "git_blob_sha1": "3716bbfd389d2f23a43091254e79919c9ef13b03",
+      "size": 14978
+    },
+    {
+      "path": "data/public_09/members.jsonl",
+      "git_blob_sha1": "b450ddaa106ceeab70466ac7c42da90c2f9bf8b4",
+      "size": 336748
+    },
+    {
+      "path": "data/public_09/members_flat.csv",
+      "git_blob_sha1": "7f7df1d1bdfef847e49f392bcb2707069bebfb73",
+      "size": 18237
+    },
+    {
+      "path": "data/public_09/questionnaires.jsonl",
+      "git_blob_sha1": "a97253c9833caf34b3269d636417c54058e841e4",
+      "size": 88967
+    },
+    {
+      "path": "data/public_09/state.json",
+      "git_blob_sha1": "7584a82013f0051df4b4bef26d14f2c9d91a561a",
+      "size": 563915
+    },
+    {
+      "path": "data/public_10/conversations.jsonl",
+      "git_blob_sha1": "66f58ab3c2c1ccd1d0e86291d9b47f77f4dfab22",
+      "size": 68150
+    },
+    {
+      "path": "data/public_10/feedback.jsonl",
+      "git_blob_sha1": "e47d2e6ac76139b7d69646644de1f1c98b4d88c2",
+      "size": 27272
+    },
+    {
+      "path": "data/public_10/introductions.jsonl",
+      "git_blob_sha1": "1cf6753d9ff5d5aaab4601f246d6c7458a85e44d",
+      "size": 17710
+    },
+    {
+      "path": "data/public_10/members.jsonl",
+      "git_blob_sha1": "8e58892ca74702d4aeb69b946c60601c93a3f1dc",
+      "size": 337272
+    },
+    {
+      "path": "data/public_10/members_flat.csv",
+      "git_blob_sha1": "99447daa5d6d431f843c50a936ca0d534a3f747f",
+      "size": 18919
+    },
+    {
+      "path": "data/public_10/questionnaires.jsonl",
+      "git_blob_sha1": "268b63acbc2a0811297af5142258ce2407bb132b",
+      "size": 95500
+    },
+    {
+      "path": "data/public_10/state.json",
+      "git_blob_sha1": "ea20a996a3304fbe7bc7493e9a3204bf00a669a6",
+      "size": 572721
+    },
+    {
+      "path": "data_checksums.json",
+      "git_blob_sha1": "487b03ccaa0c1d905e71226c3d35c6e9a3061f49",
+      "size": 7435
+    },
+    {
+      "path": "data_manifest.json",
+      "git_blob_sha1": "53cce48411d6659e8546355215595a77b902a271",
+      "size": 2102
+    },
+    {
+      "path": "docs/DATA_CONTRACT.md",
+      "git_blob_sha1": "d0439d4ad9d25f5084ff6f1a185f42ebbe7a3d19",
+      "size": 6132
+    },
+    {
+      "path": "docs/FAQ.md",
+      "git_blob_sha1": "bd876c5ee140023308889b7630ed42733025042c",
+      "size": 4533
+    },
+    {
+      "path": "docs/INTEGRATION.md",
+      "git_blob_sha1": "621d6cf3f3c9505b8bef7a57ec189aa24c063ecb",
+      "size": 1537
+    },
+    {
+      "path": "docs/ORGANISER_RUNBOOK.md",
+      "git_blob_sha1": "af132f8c610555c7c3adb12d5ae02bd3627e31e9",
+      "size": 3764
+    },
+    {
+      "path": "docs/POLICY_INTERFACE.md",
+      "git_blob_sha1": "5ef46817a825af11eceecb57e6e8e8541cda2dd6",
+      "size": 3070
+    },
+    {
+      "path": "docs/PROBLEM_STATEMENT.pdf",
+      "git_blob_sha1": "f6184c371c99f57b1ac7620e4703badff438ecf6",
+      "size": 108829
+    },
+    {
+      "path": "docs/SUBMISSION.md",
+      "git_blob_sha1": "38fff3045c30571d839b7a86c31b944e0b46a1ab",
+      "size": 5399
+    },
+    {
+      "path": "evaluate.py",
+      "git_blob_sha1": "f9fa2617a3ef84da85502ec2bd730185d5049f65",
+      "size": 8353
+    },
+    {
+      "path": "examples/REPORT_GUIDE.md",
+      "git_blob_sha1": "88ae076ae031ba782eac6b00502f4df91902a7a2",
+      "size": 1610
+    },
+    {
+      "path": "examples/baseline_results/greedy.json",
+      "git_blob_sha1": "7bf82e0dc7e901815658a2bb99db03bc10264743",
+      "size": 11611
+    },
+    {
+      "path": "examples/baseline_results/no_asks.json",
+      "git_blob_sha1": "18a4eb28c901df325cb7f3b3e275784adbfa06ae",
+      "size": 8415
+    },
+    {
+      "path": "examples/baseline_results/random.json",
+      "git_blob_sha1": "09de99b95cae5f7d974013fe4ac968a969e52e67",
+      "size": 11669
+    },
+    {
+      "path": "kit.py",
+      "git_blob_sha1": "b0356b84211debdb8fc1c3ea81348a034dd2ddbd",
+      "size": 16218
+    },
+    {
+      "path": "organise.py",
+      "git_blob_sha1": "92a16fae4502338e0d441eef2e471894f92c0f58",
+      "size": 3939
+    },
+    {
+      "path": "policy.py",
+      "git_blob_sha1": "39766a8ea8c1d5090093e1a93c556f9d47ef8b29",
+      "size": 1540
+    },
+    {
+      "path": "requirements.txt",
+      "git_blob_sha1": "bad83898ab7f0ed260f479289635cc7adb5bc42e",
+      "size": 83
+    },
+    {
+      "path": "test_kit.py",
+      "git_blob_sha1": "ad495753b215203d568a5daaeaf973afc0c8d120",
+      "size": 3085
+    },
+    {
+      "path": "test_release.py",
+      "git_blob_sha1": "e51c1c43b910845020228345735ac3cea81cbb11",
+      "size": 3843
+    },
+    {
+      "path": "test_runner.py",
+      "git_blob_sha1": "899cbfe82e58f2202fd8e5f7d03730cc3b217828",
+      "size": 2664
+    },
+    {
+      "path": "verify_data.py",
+      "git_blob_sha1": "1592b6a7210e019e529b051ada7d223e2bb2785f",
+      "size": 1786
+    }
+  ]
+}

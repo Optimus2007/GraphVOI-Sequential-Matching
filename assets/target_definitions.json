@@ -1,0 +1,28 @@
+{
+  "directional_acceptance": {
+    "target": "Actor records Yes to the introduction by assigned_day + 7",
+    "conditioning": "A valid introduction was assigned",
+    "no_response": "Recorded event did not occur; not a preference rejection",
+    "censoring": "Exclude pairs without both observed response events"
+  },
+  "mutual_acceptance": {
+    "target": "Both directions record Yes by assigned_day + 7",
+    "conditioning": "A valid introduction was assigned",
+    "dependence": "Joint model fitted directly, not a product of directional predictions"
+  },
+  "date_given_mutual": {
+    "target": "A date happens no later than assigned_day + 30",
+    "conditioning": "Both recorded Yes to the introduction by deadline",
+    "censoring": "Exclude missing date events rather than fabricating an outcome"
+  },
+  "timely_seconds_given_date": {
+    "target": "Both members record second-meeting Yes within three days of the date",
+    "conditioning": "A completed date happened within thirty days of assignment",
+    "no_response": "Absence of a timely recorded Yes; not a dislike label",
+    "censoring": "Exclude pairs without both observed second-meeting events",
+    "undated_pairs": "No second-meeting label exists"
+  },
+  "training_observations": "Capture public directed and symmetric features before assigning each introduction",
+  "evaluation_follow_up": "40 days after a 60-day decision horizon",
+  "conditional_chain": "Mutual acceptance times timely date given mutual times timely mutual second intention given timely date"
+}

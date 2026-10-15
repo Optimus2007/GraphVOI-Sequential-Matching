@@ -1,0 +1,17 @@
+[
+  {
+    "phase": "ask",
+    "seconds_including_startup": 1.139672374993097,
+    "actions": 0,
+    "memory": {
+      "orbit_fallback_count": 1,
+      "orbit_last_fallback": "dense_feasible_graph_over_600_edges"
+    }
+  },
+  {
+    "phase": "match",
+    "seconds_including_startup": 3.0068072919966653,
+    "actions": 100,
+    "memory": {}
+  }
+]

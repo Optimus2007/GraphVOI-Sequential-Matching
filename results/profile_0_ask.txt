@@ -1,0 +1,33 @@
+         7101402 function calls (7047258 primitive calls) in 1.767 seconds
+
+   Ordered by: cumulative time
+   List reduced from 311 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    1.767    1.767 /Users/adityakeshri/Documents/Romeo/graphvoi/policy.py:21(decide)
+        1    0.000    0.000    1.732    1.732 /Users/adityakeshri/Documents/Romeo/graphvoi/clarification.py:114(select_asks)
+       24    0.000    0.000    1.324    0.055 /Users/adityakeshri/Documents/Romeo/graphvoi/clarification.py:95(question_score)
+       24    0.000    0.000    1.324    0.055 /Users/adityakeshri/Documents/Romeo/graphvoi/clarification.py:87(graphvoi_value)
+   206/25    0.000    0.000    0.878    0.035 {built-in method math.fsum}
+      205    0.001    0.000    0.878    0.004 /Users/adityakeshri/Documents/Romeo/graphvoi/clarification.py:90(<genexpr>)
+    74337    0.489    0.000    0.762    0.000 /Users/adityakeshri/Documents/Romeo/kit.py:69(eligibility)
+      181    0.054    0.000    0.547    0.003 /Users/adityakeshri/Documents/Romeo/graphvoi/clarification.py:20(updated)
+       24    0.010    0.000    0.446    0.019 /Users/adityakeshri/Documents/Romeo/graphvoi/clarification.py:75(counterfactuals)
+       56    0.177    0.003    0.403    0.007 /Users/adityakeshri/Documents/Romeo/graphvoi/answers.py:18(outcomes)
+      182    0.003    0.000    0.333    0.002 /Users/adityakeshri/Documents/Romeo/graphvoi/core.py:92(optimal_matching)
+      182    0.000    0.000    0.319    0.002 <class 'networkx.utils.decorators.argmap'> compilation 6:1(argmap_max_weight_matching_1)
+      182    0.000    0.000    0.319    0.002 /Users/adityakeshri/Documents/Romeo/vendor/networkx/utils/backends.py:525(_call_if_no_backends_installed)
+      182    0.118    0.001    0.318    0.002 /Users/adityakeshri/Documents/Romeo/vendor/networkx/algorithms/matching.py:321(max_weight_matching)
+     3060    0.011    0.000    0.314    0.000 /Users/adityakeshri/Documents/Romeo/graphvoi/core.py:44(public_pairs)
+  3794333    0.310    0.000    0.310    0.000 {method 'get' of 'dict' objects}
+        2    0.000    0.000    0.211    0.106 /Users/adityakeshri/Documents/Romeo/graphvoi/core.py:81(weighted_edges)
+        1    0.002    0.002    0.194    0.194 /Users/adityakeshri/Documents/Romeo/graphvoi/clarification.py:44(candidate_actions)
+    97581    0.088    0.000    0.182    0.000 {built-in method builtins.any}
+        1    0.000    0.000    0.108    0.108 /Users/adityakeshri/Documents/Romeo/graphvoi/clarification.py:13(__init__)
+     1031    0.000    0.000    0.093    0.000 /Users/adityakeshri/Documents/Romeo/graphvoi/models.py:57(__call__)
+     1031    0.002    0.000    0.092    0.000 /Users/adityakeshri/Documents/Romeo/graphvoi/models.py:48(stages)
+   822432    0.091    0.000    0.091    0.000 /Users/adityakeshri/Documents/Romeo/graphvoi/answers.py:43(<genexpr>)
+    86337    0.037    0.000    0.091    0.000 /Users/adityakeshri/Documents/Romeo/vendor/networkx/algorithms/matching.py:511(slack)
+     4124    0.027    0.000    0.055    0.000 /Users/adityakeshri/Documents/Romeo/graphvoi/core.py:55(pair_features)
+
+

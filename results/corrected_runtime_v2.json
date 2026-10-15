@@ -1,0 +1,189 @@
+{
+  "profiles": [
+    {
+      "case": "empty",
+      "phase": "ask",
+      "hashseed": 1,
+      "seconds": 0.11380741704488173,
+      "peak_rss_bytes": 36864000,
+      "response_bytes": 55,
+      "action_sha256": "ce0950fd6ea36b12efabf7507633dba7f8529e6c9d96681ceddc3e93195dc97a"
+    },
+    {
+      "case": "empty",
+      "phase": "ask",
+      "hashseed": 77,
+      "seconds": 0.11294175003422424,
+      "peak_rss_bytes": 36880384,
+      "response_bytes": 55,
+      "action_sha256": "ce0950fd6ea36b12efabf7507633dba7f8529e6c9d96681ceddc3e93195dc97a"
+    },
+    {
+      "case": "empty",
+      "phase": "match",
+      "hashseed": 1,
+      "seconds": 0.1126206669723615,
+      "peak_rss_bytes": 36864000,
+      "response_bytes": 56,
+      "action_sha256": "6a032ceb7e3fa2fc25aec7cc55ae020dd141aa8f1bdbea16ebcbc6aad0348bdb"
+    },
+    {
+      "case": "empty",
+      "phase": "match",
+      "hashseed": 77,
+      "seconds": 0.11916337499860674,
+      "peak_rss_bytes": 36716544,
+      "response_bytes": 56,
+      "action_sha256": "6a032ceb7e3fa2fc25aec7cc55ae020dd141aa8f1bdbea16ebcbc6aad0348bdb"
+    },
+    {
+      "case": "single",
+      "phase": "ask",
+      "hashseed": 1,
+      "seconds": 0.15034237498184666,
+      "peak_rss_bytes": 51560448,
+      "response_bytes": 55,
+      "action_sha256": "ce0950fd6ea36b12efabf7507633dba7f8529e6c9d96681ceddc3e93195dc97a"
+    },
+    {
+      "case": "single",
+      "phase": "ask",
+      "hashseed": 77,
+      "seconds": 0.16021933394949883,
+      "peak_rss_bytes": 51544064,
+      "response_bytes": 55,
+      "action_sha256": "ce0950fd6ea36b12efabf7507633dba7f8529e6c9d96681ceddc3e93195dc97a"
+    },
+    {
+      "case": "single",
+      "phase": "match",
+      "hashseed": 1,
+      "seconds": 0.11593249998986721,
+      "peak_rss_bytes": 36945920,
+      "response_bytes": 56,
+      "action_sha256": "6a032ceb7e3fa2fc25aec7cc55ae020dd141aa8f1bdbea16ebcbc6aad0348bdb"
+    },
+    {
+      "case": "single",
+      "phase": "match",
+      "hashseed": 77,
+      "seconds": 0.1135764159844257,
+      "peak_rss_bytes": 36896768,
+      "response_bytes": 56,
+      "action_sha256": "6a032ceb7e3fa2fc25aec7cc55ae020dd141aa8f1bdbea16ebcbc6aad0348bdb"
+    },
+    {
+      "case": "declined",
+      "phase": "ask",
+      "hashseed": 1,
+      "seconds": 0.14391987503040582,
+      "peak_rss_bytes": 51576832,
+      "response_bytes": 55,
+      "action_sha256": "ce0950fd6ea36b12efabf7507633dba7f8529e6c9d96681ceddc3e93195dc97a"
+    },
+    {
+      "case": "declined",
+      "phase": "ask",
+      "hashseed": 77,
+      "seconds": 0.14947879099054262,
+      "peak_rss_bytes": 51527680,
+      "response_bytes": 55,
+      "action_sha256": "ce0950fd6ea36b12efabf7507633dba7f8529e6c9d96681ceddc3e93195dc97a"
+    },
+    {
+      "case": "declined",
+      "phase": "match",
+      "hashseed": 1,
+      "seconds": 0.11760141601553187,
+      "peak_rss_bytes": 36880384,
+      "response_bytes": 56,
+      "action_sha256": "6a032ceb7e3fa2fc25aec7cc55ae020dd141aa8f1bdbea16ebcbc6aad0348bdb"
+    },
+    {
+      "case": "declined",
+      "phase": "match",
+      "hashseed": 77,
+      "seconds": 0.11548854102147743,
+      "peak_rss_bytes": 36798464,
+      "response_bytes": 56,
+      "action_sha256": "6a032ceb7e3fa2fc25aec7cc55ae020dd141aa8f1bdbea16ebcbc6aad0348bdb"
+    },
+    {
+      "case": "normal_day20",
+      "phase": "ask",
+      "hashseed": 1,
+      "seconds": 1.434377667028457,
+      "peak_rss_bytes": 64110592,
+      "response_bytes": 211,
+      "action_sha256": "ce4b701fa084c15b2943aa5508ad77785d3d7db86f17885d451ddafa233d7328"
+    },
+    {
+      "case": "normal_day20",
+      "phase": "ask",
+      "hashseed": 77,
+      "seconds": 1.406237167015206,
+      "peak_rss_bytes": 64094208,
+      "response_bytes": 211,
+      "action_sha256": "ce4b701fa084c15b2943aa5508ad77785d3d7db86f17885d451ddafa233d7328"
+    },
+    {
+      "case": "normal_day20",
+      "phase": "match",
+      "hashseed": 1,
+      "seconds": 0.20240595802897587,
+      "peak_rss_bytes": 38404096,
+      "response_bytes": 1038,
+      "action_sha256": "931991d11f4ba5245f92dc28b6bb68884aa5692e18191ef59f00cafdaeff3832"
+    },
+    {
+      "case": "normal_day20",
+      "phase": "match",
+      "hashseed": 77,
+      "seconds": 0.19872254197252914,
+      "peak_rss_bytes": 38518784,
+      "response_bytes": 1038,
+      "action_sha256": "931991d11f4ba5245f92dc28b6bb68884aa5692e18191ef59f00cafdaeff3832"
+    },
+    {
+      "case": "dense_200",
+      "phase": "ask",
+      "hashseed": 1,
+      "seconds": 0.7604244170361198,
+      "peak_rss_bytes": 56197120,
+      "response_bytes": 144,
+      "action_sha256": "11157c81cedc591c55b86b1b1166d9dac7f2d0c482ce95d2c5f7039a533697b8"
+    },
+    {
+      "case": "dense_200",
+      "phase": "ask",
+      "hashseed": 77,
+      "seconds": 0.7527884590090252,
+      "peak_rss_bytes": 56098816,
+      "response_bytes": 144,
+      "action_sha256": "11157c81cedc591c55b86b1b1166d9dac7f2d0c482ce95d2c5f7039a533697b8"
+    },
+    {
+      "case": "dense_200",
+      "phase": "match",
+      "hashseed": 1,
+      "seconds": 0.7502518750261515,
+      "peak_rss_bytes": 49463296,
+      "response_bytes": 1854,
+      "action_sha256": "878f9c50996a3ece319f1728446eda29b64c1e63c7305f14cd568e18a3ebbf98"
+    },
+    {
+      "case": "dense_200",
+      "phase": "match",
+      "hashseed": 77,
+      "seconds": 0.7579830000177026,
+      "peak_rss_bytes": 49332224,
+      "response_bytes": 1854,
+      "action_sha256": "878f9c50996a3ece319f1728446eda29b64c1e63c7305f14cd568e18a3ebbf98"
+    }
+  ],
+  "hashseed_repeatability": true,
+  "large_memory_roundtrip_bytes": 750000,
+  "unsupported_schema_rejected": true,
+  "container_resources_enforced": false,
+  "note": "macOS resource.getrusage peak RSS bytes in policy process; measured invocations only, not Docker certification. /usr/bin/time -l was blocked by sysctl restrictions."
+}

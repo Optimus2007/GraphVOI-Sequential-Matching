@@ -1,0 +1,68 @@
+import collections,hashlib,json,math,random,statistics
+from pathlib import Path
+
+path=Path('results/corrected_pilot.json');x=json.loads(path.read_text());rows=x['episodes']
+methods=('graphvoi','degree_first','uncertainty_first','greedy','no_asks','random')
+variants=('development','sparse','cold_start','delayed','shift','drift');seeds=tuple(range(62001,62011))
+expected={(m,v,s) for m in methods for v in variants for s in seeds}
+assert x['complete'] and len(rows)==360
+assert collections.Counter((r['method'],r['variant'],r['seed']) for r in rows)==collections.Counter({k:1 for k in expected})
+assert all(r['valid'] for r in rows), 'Invalid episodes: no inference permitted'
+assert x['expected_design']==dict(methods=list(methods),seeds=list(seeds),variants=list(variants))
+manifest=json.loads(Path('docs/CORRECTED_BUILD_MANIFEST.json').read_text())
+for p,h in manifest['code_sha256'].items():assert hashlib.sha256(Path(p).read_bytes()).hexdigest()==h,p
+for p,h in manifest['asset_sha256'].items():assert hashlib.sha256(Path(p).read_bytes()).hexdigest()==h,p
+assert x['code_sha256']==manifest['code_sha256']
+index={(r['method'],r['variant'],r['seed']):r for r in rows};classified={m:collections.Counter() for m in methods}
+peak=0
+for r in rows:
+ assert r['arrived_members']==200
+ assert r['msmi_per_100_arrived_members']==100*r['mutual_second_meeting_intention']/r['arrived_members']
+ assert r['mutual_acceptances_per_100']==100*r['mutual_acceptances']/r['arrived_members']
+ assert r['coverage']==r['served_members']/r['arrived_members']
+ assert r['served_members']+r['unserved_members']==200
+ t=json.loads((path.parent/(path.stem+'_traces')/f"{r['variant']}_{r['seed']}_{r['method']}.json").read_text())
+ assert len(t['actions'])==120 and len(t['opportunity']['members'])==200
+ assert [(a['day'],a['phase']) for a in t['actions']]==[(d,p) for d in range(60) for p in ('ask','match')]
+ digest=hashlib.sha256()
+ for a in t['actions']:digest.update(json.dumps([a['phase'],a['day'],a['action']],sort_keys=True).encode())
+ assert digest.hexdigest()==r['action_sha256']
+ for k,v in t['metrics'].items():assert r[k]==v,(r['method'],k)
+ assert r['unserved_members']==sum(m['wait_days'] is None for m in t['opportunity']['members'])
+ assert r['first_introduction_wait_days']==sorted(m['wait_days'] for m in t['opportunity']['members'] if m['wait_days'] is not None)
+ classified[r['method']].update(m['classification'] for m in t['opportunity']['members'])
+ peak=max(peak,r['worker_peak_rss_bytes'])
+ for phase in ('ask','match'):
+  times=[a['seconds'] for a in t['actions'] if a['phase']==phase]
+  assert math.isclose(sum(times),r['phase_runtime'][phase]['total'],rel_tol=1e-12)
+  assert max(times)==r['phase_runtime'][phase]['maximum']
+for m in methods:
+ for key in ('msmi_per_100_arrived_members','coverage','mutual_acceptances_per_100','ask_cost','inference_seconds'):
+  family={v:statistics.mean(index[m,v,s][key] for s in seeds) for v in variants}
+  assert math.isclose(statistics.mean(family.values()),x['summaries'][m]['overall'][key],abs_tol=1e-12)
+  for v in variants:assert family[v]==x['summaries'][m]['scenario_means'][v][key]
+
+def percentile(vals,p):
+ vals=sorted(vals);i=(len(vals)-1)*p;a=math.floor(i);b=math.ceil(i);return vals[a]+(vals[b]-vals[a])*(i-a)
+checks={}
+for ref in methods[1:]:
+ differences={(v,s):index['graphvoi',v,s]['msmi_per_100_arrived_members']-index[ref,v,s]['msmi_per_100_arrived_members'] for v in variants for s in seeds}
+ delta=statistics.mean(statistics.mean(differences[v,s] for s in seeds) for v in variants)
+ rng=random.Random(771);draws=[]
+ for _ in range(2000):
+  sample=rng.choices(seeds,k=len(seeds))
+  draws.append(statistics.mean(sum(differences[v,s] for s in sample)/len(sample) for v in sorted(variants)))
+ ci=[percentile(draws,.025),percentile(draws,.975)]
+ actual=x['paired_intervals'][ref]['graphvoi']['msmi_per_100_arrived_members']
+ assert math.isclose(delta,actual['delta'],abs_tol=1e-12)
+ assert all(math.isclose(a,b,abs_tol=1e-12) for a,b in zip(ci,actual['ci95']))
+ assert actual['paired_counts']=={v:10 for v in sorted(variants)}
+ assert actual['invalid_counts']=={'graphvoi':0,ref:0}
+ assert not actual['reliable_sample_size']
+ checks[ref]=dict(delta=delta,ci95=ci)
+out=dict(independent_verifier_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),status='PASS',episodes=360,per_method=60,paired_seed_clusters=10,invalid_episodes=0,action_records=43200,
+ metrics_trace_and_runtime_checks=True,frozen_source_assets_match=True,independent_msmi_cluster_bootstrap=checks,
+ classifications={m:dict(c) for m,c in classified.items()},peak_worker_rss_bytes=peak,
+ note='Balanced10-seed pilot; limited bootstrap support. Peak worker RSS includes trusted simulator/traces and cumulative process high-water mark; not isolated policy RSS.')
+Path('results/corrected_pilot_verification.json').write_text(json.dumps(out,indent=2)+'\n')
+print(json.dumps(out,indent=2))

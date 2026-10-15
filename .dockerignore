@@ -2,3 +2,15 @@
 !kit.py
 !policy.py
 !Dockerfile
+!graphvoi/
+!graphvoi/**
+!assets/
+!assets/**
+!vendor/
+!vendor/**
+!LICENSE
+!DATA_LICENSE.md
+
+# Never ship local bytecode caches (audit M5); exclusions after allow rules win.
+**/__pycache__
+**/*.pyc

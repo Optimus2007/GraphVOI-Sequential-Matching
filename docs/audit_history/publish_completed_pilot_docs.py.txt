@@ -1,0 +1,44 @@
+import json
+from pathlib import Path
+x=json.loads(Path('results/corrected_pilot.json').read_text());verify=json.loads(Path('results/corrected_pilot_verification.json').read_text())
+assert x['complete'] and verify['status']=='PASS'
+methods=x['expected_design']['methods'];variants=x['expected_design']['variants']
+lines=['## Completed corrected pilot results','',
+'`results/corrected_pilot.json`:360 completed valid episodes,60 per method,10 paired seeds per family. Invalid episodes:0. Independent aggregate/trace/bootstrap/source checks passed in `results/corrected_pilot_verification.json`. No full100-seed study was run.','',
+'Counts are recorded events across60 simulated episodes per method; families share seed populations. Cost and unserved are episode means. Waiting quantiles pool served members only.','',
+'| Method | MSMI/100 | Mutual accepts (total) | Dates (total) | Coverage | Cost/episode | Unserved/episode | Served median/p90 days | Invalid |',
+'|---|---:|---:|---:|---:|---:|---:|---:|---:|']
+for m in methods:
+ rs=[r for r in x['episodes'] if r['method']==m];s=x['summaries'][m]['overall'];d=x['secondary'][m]
+ lines.append(f"| {m} | {s['msmi_per_100_arrived_members']:.3f} | {sum(r['mutual_acceptances'] for r in rs)} | {sum(r['dates'] for r in rs)} | {100*s['coverage']:.1f}% | {s['ask_cost']:.1f} | {d['mean_unserved']:.1f} | {d['served_wait_median']:.1f}/{d['served_wait_p90']:.1f} | 0 |")
+lines+=['','Equal-family MSMI/100 means:','',
+'| Scenario | GraphVOI | Degree | Uncertainty | Greedy | No asks | Random |',
+'|---|---:|---:|---:|---:|---:|---:|']
+for v in variants:
+ lines.append('| '+v+' | '+' | '.join(f"{x['summaries'][m]['scenario_means'][v]['msmi_per_100_arrived_members']:.3f}" for m in methods)+' |')
+lines+=['','Paired differences are GraphVOI minus comparator, official MSMI/100. Bootstrap2,000 whole-seed draws; each draw retains all six scenarios with equal family weights. All comparisons have10 pairs/family and10 independent seed clusters; all intervals are flagged limited support.','',
+'| Comparator | Difference | Paired95% interval |',
+'|---|---:|---:|']
+for ref in methods[1:]:
+ s=x['paired_intervals'][ref]['graphvoi']['msmi_per_100_arrived_members'];lo,hi=s['ci95']
+ lines.append(f"| {ref} | {s['delta']:+.3f} | [{lo:+.3f}, {hi:+.3f}] |")
+lines+=['','These are pilot estimates, not proof of superiority. No parameters were tuned from this run. CIs for acceptance, dates, coverage, cost, unserved counts and inference time are also retained in the JSON. Waiting quantiles remain descriptive and conditional, not population censor-aware estimates.','',
+'Runtime under three parallel host workers (in-process; excludes startup):','',
+'| Method | Mean inference seconds/episode | Max ask seconds | Max match seconds |',
+'|---|---:|---:|---:|']
+for m in methods:
+ s=x['summaries'][m]['overall'];d=x['secondary'][m]
+ lines.append(f"| {m} | {s['inference_seconds']:.2f} | {d['max_ask_seconds']:.3f} | {d['max_match_seconds']:.3f} |")
+lines += ['',f"Pilot wall time: {x['elapsed_seconds']/60:.1f} minutes. Measured worker peakRSS: {verify['peak_worker_rss_bytes']/2**20:.1f}MiB (cumulative trusted-process high-water mark, including simulator/traces). Isolated policy fresh-process profile:61.14MiB; maxask1.4344s/maxmatch0.7580s. Neither measurement certifies Docker's enforced resources.",'',
+'All360 metric rows and43,200 phase actions were checked against trace digests, per-member waiting/coverage records, equal-family summaries, frozen source/assets and an independently recomputed paired MSMI bootstrap. Six fresh official subprocess families plus a complete repeated episode provide7 separate validity episodes; the balanced pilot count excludes those and intermediate repair-build runs.']
+section='\n'.join(lines)
+p=Path('docs/REPORT.md');s=p.read_text();a=s.index('<!-- CORRECTED_PILOT_RESULTS -->');b=s.index('<!-- END_CORRECTED_PILOT_RESULTS -->')+len('<!-- END_CORRECTED_PILOT_RESULTS -->');p.write_text(s[:a]+section+s[b:])
+p=Path('docs/INDEPENDENT_AUDIT.md');p.write_text(p.read_text()+'\n\n## 14. Completed pilot verification\n\n'+section+'\n\nH4 improves from one to10 paired clusters in main comparisons, but remains FAIL for final research conclusions and multi-seed disclosure/subgroup evidence. H5 remains UNVERIFIED. H1/H2/H3 fixes remain PASS within stated exact-reference/bounded-production scope. Two critical release blockers persist. The frozen implementation is safe to begin the prespecified trusted local100-seed paired study; no such study was launched here. Container validation and immutable publication remain mandatory before submission.\n')
+p=Path('docs/PROGRESS.md');p.write_text(p.read_text()+f"\n- Frozen pilot completed:360 valid episodes,60/method,10 paired seeds ×6 families, zero invalids; {x['elapsed_seconds']/60:.1f}min host wall time.43,200 action records and all metric/trace/source/paired-CI checks passed. Report includes measured tables and limited-support CIs. Full100-seed study still unrun; submission remains blocked by Docker/immutable publication.\n")
+p=Path('docs/DECISIONS.md');p.write_text(p.read_text()+'\n30. Completed360-episode pilot preserved separately from historical smoke/intermediate builds. Independent check recomputed every primary metric, trace digest, coverage/wait count and paired MSMI interval; no failure deletion or parameter retuning. Ten seed clusters remain insufficient for final superiority/disclosure/subgroup claims. Proceeding with local prespecified100-seed comparison is correctness-safe, but do not treat that as submission certification.\n')
+p=Path('docs/RELEASE_CHECKLIST.md');s=p.read_text().replace('| Frozen10-seed paired pilot complete | UNVERIFIED | Requires complete360-row matrix and verified summaries/CIs; completion appended below. |','| Frozen10-seed paired pilot complete | PASS |360 valid episodes,60/method, zero invalids; expected matrix/43,200 actions/metrics/source/paired bootstrap independently verified. |')
+s=s.replace('| Machine-readable completed results and traces | PASS | 60 main +10 disclosure episodes, complete flags, scenario summaries. |','| Machine-readable completed results and traces | PASS | Corrected360-episode pilot and43,200 action records; historical60 main +10 disclosure preserved as prior builds. |')
+s=s.replace('| Exact analysis/runner source provenance in every result | FAIL | M3: main hashes exclude experiment scripts; old analysis hash documented separately. |','| Full source/observation/archive provenance | FAIL | Corrected pilot hashes all inference/runner scripts and assets, declares matrix; M3 still requires full observation/archive hashes and resumability. |')
+s+='\n\n## Completed pilot verdict\n\n| Item | Status | Evidence / limitation |\n|---|---|---|\n| Balanced complete pilot and retained failures | PASS |360 expected/recorded,60/method,10 seed clusters, zero invalids. |\n| Independent aggregate/trace/MSMI-bootstrap verification | PASS |corrected_pilot_verification.json;43,200 phase actions, all denominators and frozen hashes checked. |\n| Pilot intervals establish definitive superiority | UNVERIFIED |Limited10-cluster sample, rare outcomes; no superiority claim. |\n| Safe to begin frozen local prespecified100-seed study | PASS |Correctness tests, official validity and balanced pilot clear; study not launched. |\n| Submission-ready | FAIL |Docker/resource/image validation and accessible immutable pinned release remain unresolved; additional methodological/packaging findings documented. |\n'
+p.write_text(s)
+print(section)

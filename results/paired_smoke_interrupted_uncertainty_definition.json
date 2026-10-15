@@ -1,0 +1,5914 @@
+{
+  "mode": "trusted_research_inprocess",
+  "startup_included": false,
+  "python_version": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.3.19.1)]",
+  "code_sha256": {
+    "graphvoi/__init__.py": "ecf105855fd2829829f61700d9b11c30f0136f93013c11311b7ffd15dc823827",
+    "graphvoi/analysis.py": "305d927c8c5c035c22d8d2c1ce9defd5e5dd5a127964dc0b81dbfa7ebbbf37e2",
+    "graphvoi/answers.py": "a30e46fc74ef7e3a32e7071d1d9c1fe3004c4a7f4aa64e3cff898b5125c3a9b0",
+    "graphvoi/clarification.py": "610930fb62c14d83c6c7d4b7268c280d7b6e95d44d653472af507ba29f981ead",
+    "graphvoi/core.py": "8eccb125c5e69a6f49ee0a6b6be50b539b3225cbf7220c12b349075c3d2e29e8",
+    "graphvoi/models.py": "274f39b84159e5f05855b9940edf0dc22169d176d6c1daeeb1a2a0b121d119d1",
+    "graphvoi/policy.py": "ce9e6acb6574d9772fdce018854d1e8d6615c4ce320da83b9d7e27ec553e7603"
+  },
+  "decision_days": 60,
+  "follow_up_days": 40,
+  "members_per_episode": 200,
+  "experimental_disclosure": false,
+  "episodes": [
+    {
+      "assignments": 117,
+      "mutual_acceptances": 15,
+      "dates": 14,
+      "mutual_second_meeting_intention": 1,
+      "missing_feedback": 74,
+      "ask_cost": 243,
+      "arrived_members": 200,
+      "msmi_per_100_arrived_members": 0.5,
+      "status": "simulated_not_observed_product_performance",
+      "valid": true,
+      "served_members": 86,
+      "unserved_members": 114,
+      "coverage": 0.43,
+      "mutual_acceptances_per_100": 7.5,
+      "first_introduction_wait_days": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        5,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        7,
+        7,
+        7,
+        7,
+        8,
+        8,
+        8,
+        8,
+        9,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        11,
+        11,
+        11,
+        11,
+        12,
+        12,
+        12,
+        13,
+        13,
+        13,
+        14,
+        15,
+        17,
+        17,
+        18,
+        18,
+        19,
+        19,
+        19,
+        20,
+        21,
+        24,
+        24,
+        27,
+        32,
+        34,
+        36
+      ],
+      "inference_seconds": 2.3546408772235736,
+      "phase_runtime": {
+        "ask": {
+          "total": 0.009028333355672657,
+          "maximum": 0.00020654103718698025,
+          "p90": 0.0001741250162012875
+        },
+        "match": {
+          "total": 2.345612543867901,
+          "maximum": 0.051374125003349036,
+          "p90": 0.04860579199157655
+        }
+      },
+      "action_sha256": "1587c685929f001c52a494cf8bf10a19298d8635df842359ca9bf0bc7a81490c",
+      "seed": 41001,
+      "variant": "development",
+      "method": "greedy",
+      "belief": "none",
+      "actual_disclosure": "none",
+      "fallback_count": 0,
+      "opportunity": {
+        "groups": {
+          "gender": {
+            "man": {
+              "count": 91,
+              "served": 35,
+              "unserved": 56,
+              "median_wait": 3.0,
+              "p90_wait": 15.400000000000006,
+              "mean_exposure": 1.043956043956044,
+              "mean_eligible_opportunities": 1.1758241758241759,
+              "clarification_cost": 90,
+              "classification_counts": {
+                "served": 35,
+                "blocked_by_declined_hard_field": 32,
+                "unresolved_observed_constraints": 16,
+                "no_observed_feasible_opportunity": 7,
+                "feasible_but_never_introduced": 1
+              }
+            },
+            "non_binary": {
+              "count": 9,
+              "served": 4,
+              "unserved": 5,
+              "median_wait": 1.0,
+              "p90_wait": 12.500000000000004,
+              "mean_exposure": 1.1111111111111112,
+              "mean_eligible_opportunities": 1.2222222222222223,
+              "clarification_cost": 15,
+              "classification_counts": {
+                "blocked_by_declined_hard_field": 2,
+                "no_observed_feasible_opportunity": 1,
+                "served": 4,
+                "unresolved_observed_constraints": 2
+              }
+            },
+            "woman": {
+              "count": 100,
+              "served": 47,
+              "unserved": 53,
+              "median_wait": 7.0,
+              "p90_wait": 20.4,
+              "mean_exposure": 1.29,
+              "mean_eligible_opportunities": 1.44,
+              "clarification_cost": 138,
+              "classification_counts": {
+                "unresolved_observed_constraints": 25,
+                "blocked_by_declined_hard_field": 22,
+                "no_observed_feasible_opportunity": 5,
+                "served": 47,
+                "feasible_but_never_introduced": 1
+              }
+            }
+          },
+          "age_band": {
+            "21-29": {
+              "count": 61,
+              "served": 31,
+              "unserved": 30,
+              "median_wait": 7.0,
+              "p90_wait": 24.0,
+              "mean_exposure": 1.3278688524590163,
+              "mean_eligible_opportunities": 1.360655737704918,
+              "clarification_cost": 72,
+              "classification_counts": {
+                "blocked_by_declined_hard_field": 17,
+                "served": 31,
+                "unresolved_observed_constraints": 8,
+                "no_observed_feasible_opportunity": 5
+              }
+            },
+            "30-39": {
+              "count": 87,
+              "served": 33,
+              "unserved": 54,
+              "median_wait": 3.0,
+              "p90_wait": 19.0,
+              "mean_exposure": 1.0459770114942528,
+              "mean_eligible_opportunities": 1.264367816091954,
+              "clarification_cost": 105,
+              "classification_counts": {
+                "unresolved_observed_constraints": 24,
+                "served": 33,
+                "blocked_by_declined_hard_field": 25,
+                "no_observed_feasible_opportunity": 3,
+                "feasible_but_never_introduced": 2
+              }
+            },
+            "40+": {
+              "count": 52,
+              "served": 22,
+              "unserved": 30,
+              "median_wait": 6.0,
+              "p90_wait": 17.900000000000002,
+              "mean_exposure": 1.1923076923076923,
+              "mean_eligible_opportunities": 1.3269230769230769,
+              "clarification_cost": 66,
+              "classification_counts": {
+                "no_observed_feasible_opportunity": 5,
+                "blocked_by_declined_hard_field": 14,
+                "served": 22,
+                "unresolved_observed_constraints": 11
+              }
+            }
+          },
+          "zone": {
+            "zone_a": {
+              "count": 125,
+              "served": 63,
+              "unserved": 62,
+              "median_wait": 6.0,
+              "p90_wait": 18.800000000000004,
+              "mean_exposure": 1.504,
+              "mean_eligible_opportunities": 1.728,
+              "clarification_cost": 138,
+              "classification_counts": {
+                "unresolved_observed_constraints": 19,
+                "blocked_by_declined_hard_field": 40,
+                "served": 63,
+                "feasible_but_never_introduced": 2,
+                "no_observed_feasible_opportunity": 1
+              }
+            },
+            "zone_b": {
+              "count": 43,
+              "served": 20,
+              "unserved": 23,
+              "median_wait": 10.0,
+              "p90_wait": 19.80000000000001,
+              "mean_exposure": 0.9302325581395349,
+              "mean_eligible_opportunities": 0.9302325581395349,
+              "clarification_cost": 75,
+              "classification_counts": {
+                "no_observed_feasible_opportunity": 7,
+                "served": 20,
+                "unresolved_observed_constraints": 9,
+                "blocked_by_declined_hard_field": 7
+              }
+            },
+            "zone_c": {
+              "count": 22,
+              "served": 3,
+              "unserved": 19,
+              "median_wait": 0.0,
+              "p90_wait": 1.6,
+              "mean_exposure": 0.2727272727272727,
+              "mean_eligible_opportunities": 0.2727272727272727,
+              "clarification_cost": 21,
+              "classification_counts": {
+                "blocked_by_declined_hard_field": 7,
+                "unresolved_observed_constraints": 10,
+                "served": 3,
+                "no_observed_feasible_opportunity": 2
+              }
+            },
+            "zone_d": {
+              "count": 10,
+              "served": 0,
+              "unserved": 10,
+              "median_wait": null,
+              "p90_wait": null,
+              "mean_exposure": 0,
+              "mean_eligible_opportunities": 0,
+              "clarification_cost": 9,
+              "classification_counts": {
+                "no_observed_feasible_opportunity": 3,
+                "unresolved_observed_constraints": 5,
+                "blocked_by_declined_hard_field": 2
+              }
+            }
+          }
+        },
+        "median_wait": 6.0,
+        "p90_wait": 19.0,
+        "unserved": 114,
+        "limitation": "Eligibility/opportunities are observable and time-varying, not hidden truth; wait summaries condition on served members."
+      },
+      "calibration": {
+        "recorded_yes": {
+          "count": 234,
+          "positives": 83,
+          "brier": 0.22642265441440734,
+          "log_loss": 0.6449547948546936,
+          "reliability": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "count": 226,
+              "predicted": 0.35509798819263017,
+              "observed": 0.35398230088495575
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "count": 8,
+              "predicted": 0.41394317128833247,
+              "observed": 0.375
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            }
+          ]
+        },
+        "by_direction": {
+          "a_accepts_b": {
+            "count": 117,
+            "positives": 42,
+            "brier": 0.22769269036549983,
+            "log_loss": 0.6475631486301399,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 114,
+                "predicted": 0.35435533618898984,
+                "observed": 0.35964912280701755
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 3,
+                "predicted": 0.41280860387768287,
+                "observed": 0.3333333333333333
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "b_accepts_a": {
+            "count": 117,
+            "positives": 41,
+            "brier": 0.22515261846331483,
+            "log_loss": 0.6423464410792474,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 112,
+                "predicted": 0.35585390183919263,
+                "observed": 0.3482142857142857
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 5,
+                "predicted": 0.4146239117347222,
+                "observed": 0.4
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ]
+          }
+        },
+        "by_gender": {
+          "woman": {
+            "count": 129,
+            "positives": 49,
+            "brier": 0.23564475932590992,
+            "log_loss": 0.664151791126711,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 122,
+                "predicted": 0.35953104224683574,
+                "observed": 0.38524590163934425
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 7,
+                "predicted": 0.41547444771635855,
+                "observed": 0.2857142857142857
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "sufficient_sample": true
+          },
+          "man": {
+            "count": 95,
+            "positives": 31,
+            "brier": 0.21598279058092593,
+            "log_loss": 0.6232656306714932,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 94,
+                "predicted": 0.3503497420416414,
+                "observed": 0.3191489361702128
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 1,
+                "predicted": 0.40322423629214954,
+                "observed": 1
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "sufficient_sample": true
+          },
+          "non_binary": {
+            "count": 10,
+            "positives": 3,
+            "brier": 0.2066362074740974,
+            "log_loss": 0.6033606026860756,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 10,
+                "predicted": 0.3456482425506167,
+                "observed": 0.3
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "sufficient_sample": false
+          }
+        },
+        "target": "Recorded Yes by seven-day deadline; no response is not dislike.",
+        "limitation": "No posthoc calibration fitted to these evaluation labels. Directions share parameters with swapped features."
+      }
+    },
+    {
+      "assignments": 18,
+      "mutual_acceptances": 5,
+      "dates": 3,
+      "mutual_second_meeting_intention": 1,
+      "missing_feedback": 11,
+      "ask_cost": 0,
+      "arrived_members": 200,
+      "msmi_per_100_arrived_members": 0.5,
+      "status": "simulated_not_observed_product_performance",
+      "valid": true,
+      "served_members": 20,
+      "unserved_members": 180,
+      "coverage": 0.1,
+      "mutual_acceptances_per_100": 2.5,
+      "first_introduction_wait_days": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        8,
+        11,
+        12,
+        14,
+        16,
+        22,
+        32
+      ],
+      "inference_seconds": 3.99613220669562,
+      "phase_runtime": {
+        "ask": {
+          "total": 0.0001453760196454823,
+          "maximum": 7.5830030255019665e-06,
+          "p90": 2.749962732195854e-06
+        },
+        "match": {
+          "total": 3.9959868306759745,
+          "maximum": 0.08041320799384266,
+          "p90": 0.07720374997006729
+        }
+      },
+      "action_sha256": "c97212b0dd3c3327a7fed36871cedb57d4f7d0334e29ec5bf1709a71043cf8ae",
+      "seed": 41001,
+      "variant": "development",
+      "method": "no_asks",
+      "belief": "none",
+      "actual_disclosure": "none",
+      "fallback_count": 0,
+      "opportunity": {
+        "groups": {
+          "gender": {
+            "man": {
+              "count": 91,
+              "served": 6,
+              "unserved": 85,
+              "median_wait": 0.0,
+              "p90_wait": 8.0,
+              "mean_exposure": 0.14285714285714285,
+              "mean_eligible_opportunities": 0.21978021978021978,
+              "clarification_cost": 0,
+              "classification_counts": {
+                "served": 6,
+                "unresolved_observed_constraints": 47,
+                "blocked_by_declined_hard_field": 32,
+                "feasible_but_never_introduced": 1,
+                "no_observed_feasible_opportunity": 5
+              }
+            },
+            "non_binary": {
+              "count": 9,
+              "served": 1,
+              "unserved": 8,
+              "median_wait": 0.0,
+              "p90_wait": 0.0,
+              "mean_exposure": 0.1111111111111111,
+              "mean_eligible_opportunities": 0.1111111111111111,
+              "clarification_cost": 0,
+              "classification_counts": {
+                "blocked_by_declined_hard_field": 2,
+                "no_observed_feasible_opportunity": 1,
+                "served": 1,
+                "unresolved_observed_constraints": 5
+              }
+            },
+            "woman": {
+              "count": 100,
+              "served": 13,
+              "unserved": 87,
+              "median_wait": 1.0,
+              "p90_wait": 20.400000000000006,
+              "mean_exposure": 0.22,
+              "mean_eligible_opportunities": 0.25,
+              "clarification_cost": 0,
+              "classification_counts": {
+                "unresolved_observed_constraints": 62,
+                "blocked_by_declined_hard_field": 22,
+                "no_observed_feasible_opportunity": 2,
+                "served": 13,
+                "feasible_but_never_introduced": 1
+              }
+            }
+          },
+          "age_band": {
+            "21-29": {
+              "count": 61,
+              "served": 7,
+              "unserved": 54,
+              "median_wait": 0.0,
+              "p90_wait": 13.400000000000011,
+              "mean_exposure": 0.22950819672131148,
+              "mean_eligible_opportunities": 0.22950819672131148,
+              "clarification_cost": 0,
+              "classification_counts": {
+                "blocked_by_declined_hard_field": 17,
+                "served": 7,
+                "unresolved_observed_constraints": 34,
+                "no_observed_feasible_opportunity": 3
+              }
+            },
+            "30-39": {
+              "count": 87,
+              "served": 7,
+              "unserved": 80,
+              "median_wait": 0.0,
+              "p90_wait": 11.200000000000003,
+              "mean_exposure": 0.12643678160919541,
+              "mean_eligible_opportunities": 0.22988505747126436,
+              "clarification_cost": 0,
+              "classification_counts": {
+                "unresolved_observed_constraints": 50,
+                "feasible_but_never_introduced": 2,
+                "blocked_by_declined_hard_field": 25,
+                "served": 7,
+                "no_observed_feasible_opportunity": 3
+              }
+            },
+            "40+": {
+              "count": 52,
+              "served": 6,
+              "unserved": 46,
+              "median_wait": 11.5,
+              "p90_wait": 18.0,
+              "mean_exposure": 0.21153846153846154,
+              "mean_eligible_opportunities": 0.23076923076923078,
+              "clarification_cost": 0,
+              "classification_counts": {
+                "no_observed_feasible_opportunity": 2,
+                "blocked_by_declined_hard_field": 14,
+                "unresolved_observed_constraints": 30,
+                "served": 6
+              }
+            }
+          },
+          "zone": {
+            "zone_a": {
+              "count": 125,
+              "served": 18,
+              "unserved": 107,
+              "median_wait": 0.0,
+              "p90_wait": 17.800000000000004,
+              "mean_exposure": 0.272,
+              "mean_eligible_opportunities": 0.352,
+              "clarification_cost": 0,
+              "classification_counts": {
+                "unresolved_observed_constraints": 65,
+                "blocked_by_declined_hard_field": 40,
+                "served": 18,
+                "feasible_but_never_introduced": 2
+              }
+            },
+            "zone_b": {
+              "count": 43,
+              "served": 2,
+              "unserved": 41,
+              "median_wait": 5.5,
+              "p90_wait": 9.9,
+              "mean_exposure": 0.046511627906976744,
+              "mean_eligible_opportunities": 0.046511627906976744,
+              "clarification_cost": 0,
+              "classification_counts": {
+                "unresolved_observed_constraints": 30,
+                "no_observed_feasible_opportunity": 4,
+                "blocked_by_declined_hard_field": 7,
+                "served": 2
+              }
+            },
+            "zone_c": {
+              "count": 22,
+              "served": 0,
+              "unserved": 22,
+              "median_wait": null,
+              "p90_wait": null,
+              "mean_exposure": 0,
+              "mean_eligible_opportunities": 0,
+              "clarification_cost": 0,
+              "classification_counts": {
+                "blocked_by_declined_hard_field": 7,
+                "unresolved_observed_constraints": 14,
+                "no_observed_feasible_opportunity": 1
+              }
+            },
+            "zone_d": {
+              "count": 10,
+              "served": 0,
+              "unserved": 10,
+              "median_wait": null,
+              "p90_wait": null,
+              "mean_exposure": 0,
+              "mean_eligible_opportunities": 0,
+              "clarification_cost": 0,
+              "classification_counts": {
+                "no_observed_feasible_opportunity": 3,
+                "unresolved_observed_constraints": 5,
+                "blocked_by_declined_hard_field": 2
+              }
+            }
+          }
+        },
+        "median_wait": 0.0,
+        "p90_wait": 16.60000000000001,
+        "unserved": 180,
+        "limitation": "Eligibility/opportunities are observable and time-varying, not hidden truth; wait summaries condition on served members."
+      },
+      "calibration": {
+        "recorded_yes": {
+          "count": 36,
+          "positives": 16,
+          "brier": 0.24126490381058066,
+          "log_loss": 0.6747438402710025,
+          "reliability": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "count": 26,
+              "predicted": 0.3664007122105469,
+              "observed": 0.4230769230769231
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "count": 10,
+              "predicted": 0.4134205322415737,
+              "observed": 0.5
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            }
+          ]
+        },
+        "by_direction": {
+          "a_accepts_b": {
+            "count": 18,
+            "positives": 9,
+            "brier": 0.25702476951709663,
+            "log_loss": 0.7072015596257778,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 14,
+                "predicted": 0.36680817944856875,
+                "observed": 0.5
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 4,
+                "predicted": 0.41225384121958675,
+                "observed": 0.5
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "b_accepts_a": {
+            "count": 18,
+            "positives": 7,
+            "brier": 0.2255050381040647,
+            "log_loss": 0.6422861209162273,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 12,
+                "predicted": 0.3659253337661881,
+                "observed": 0.3333333333333333
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 6,
+                "predicted": 0.41419832625623165,
+                "observed": 0.5
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ]
+          }
+        },
+        "by_gender": {
+          "woman": {
+            "count": 22,
+            "positives": 10,
+            "brier": 0.24926829851805585,
+            "log_loss": 0.6917535714417534,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 13,
+                "predicted": 0.3680935757826926,
+                "observed": 0.46153846153846156
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 9,
+                "predicted": 0.41455345401373195,
+                "observed": 0.4444444444444444
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "sufficient_sample": false
+          },
+          "man": {
+            "count": 13,
+            "positives": 5,
+            "brier": 0.21611773994332856,
+            "log_loss": 0.622170354967461,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 12,
+                "predicted": 0.3639486329868013,
+                "observed": 0.3333333333333333
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 1,
+                "predicted": 0.40322423629214954,
+                "observed": 1
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "sufficient_sample": false
+          },
+          "non_binary": {
+            "count": 1,
+            "positives": 1,
+            "brier": 0.3921033505204044,
+            "log_loss": 0.9839850634605237,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 1,
+                "predicted": 0.3738184364576003,
+                "observed": 1
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "sufficient_sample": false
+          }
+        },
+        "target": "Recorded Yes by seven-day deadline; no response is not dislike.",
+        "limitation": "No posthoc calibration fitted to these evaluation labels. Directions share parameters with swapped features."
+      }
+    },
+    {
+      "assignments": 114,
+      "mutual_acceptances": 18,
+      "dates": 15,
+      "mutual_second_meeting_intention": 2,
+      "missing_feedback": 68,
+      "ask_cost": 243,
+      "arrived_members": 200,
+      "msmi_per_100_arrived_members": 1.0,
+      "status": "simulated_not_observed_product_performance",
+      "valid": true,
+      "served_members": 87,
+      "unserved_members": 113,
+      "coverage": 0.435,
+      "mutual_acceptances_per_100": 9.0,
+      "first_introduction_wait_days": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        5,
+        6,
+        6,
+        6,
+        6,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        8,
+        9,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        11,
+        11,
+        11,
+        12,
+        12,
+        12,
+        13,
+        13,
+        15,
+        15,
+        16,
+        17,
+        17,
+        18,
+        19,
+        19,
+        19,
+        20,
+        20,
+        21,
+        22,
+        24,
+        24,
+        26,
+        27,
+        29,
+        30,
+        32
+      ],
+      "inference_seconds": 2.535768453089986,
+      "phase_runtime": {
+        "ask": {
+          "total": 0.010826830985024571,
+          "maximum": 0.0003955420106649399,
+          "p90": 0.00020891701569780707
+        },
+        "match": {
+          "total": 2.5249416221049614,
+          "maximum": 0.05633791600121185,
+          "p90": 0.04935349995503202
+        }
+      },
+      "action_sha256": "db19f61d4461f680490a68dcd5efa71042eb5357656d52a2e969c90285750bf2",
+      "seed": 41001,
+      "variant": "development",
+      "method": "random",
+      "belief": "none",
+      "actual_disclosure": "none",
+      "fallback_count": 0,
+      "opportunity": {
+        "groups": {
+          "gender": {
+            "man": {
+              "count": 91,
+              "served": 35,
+              "unserved": 56,
+              "median_wait": 2.0,
+              "p90_wait": 16.200000000000003,
+              "mean_exposure": 1.010989010989011,
+              "mean_eligible_opportunities": 1.1978021978021978,
+              "clarification_cost": 90,
+              "classification_counts": {
+                "served": 35,
+                "blocked_by_declined_hard_field": 32,
+                "unresolved_observed_constraints": 16,
+                "no_observed_feasible_opportunity": 7,
+                "feasible_but_never_introduced": 1
+              }
+            },
+            "non_binary": {
+              "count": 9,
+              "served": 4,
+              "unserved": 5,
+              "median_wait": 1.0,
+              "p90_wait": 12.500000000000004,
+              "mean_exposure": 1,
+              "mean_eligible_opportunities": 1.2222222222222223,
+              "clarification_cost": 15,
+              "classification_counts": {
+                "blocked_by_declined_hard_field": 2,
+                "no_observed_feasible_opportunity": 1,
+                "served": 4,
+                "unresolved_observed_constraints": 2
+              }
+            },
+            "woman": {
+              "count": 100,
+              "served": 48,
+              "unserved": 52,
+              "median_wait": 7.0,
+              "p90_wait": 21.300000000000004,
+              "mean_exposure": 1.27,
+              "mean_eligible_opportunities": 1.46,
+              "clarification_cost": 138,
+              "classification_counts": {
+                "unresolved_observed_constraints": 25,
+                "blocked_by_declined_hard_field": 22,
+                "no_observed_feasible_opportunity": 5,
+                "served": 48
+              }
+            }
+          },
+          "age_band": {
+            "21-29": {
+              "count": 61,
+              "served": 31,
+              "unserved": 30,
+              "median_wait": 7.0,
+              "p90_wait": 24.0,
+              "mean_exposure": 1.1967213114754098,
+              "mean_eligible_opportunities": 1.3278688524590163,
+              "clarification_cost": 72,
+              "classification_counts": {
+                "blocked_by_declined_hard_field": 17,
+                "served": 31,
+                "unresolved_observed_constraints": 8,
+                "no_observed_feasible_opportunity": 5
+              }
+            },
+            "30-39": {
+              "count": 87,
+              "served": 34,
+              "unserved": 53,
+              "median_wait": 2.0,
+              "p90_wait": 20.7,
+              "mean_exposure": 1.103448275862069,
+              "mean_eligible_opportunities": 1.3103448275862069,
+              "clarification_cost": 105,
+              "classification_counts": {
+                "unresolved_observed_constraints": 24,
+                "served": 34,
+                "blocked_by_declined_hard_field": 25,
+                "no_observed_feasible_opportunity": 3,
+                "feasible_but_never_introduced": 1
+              }
+            },
+            "40+": {
+              "count": 52,
+              "served": 22,
+              "unserved": 30,
+              "median_wait": 6.0,
+              "p90_wait": 18.800000000000004,
+              "mean_exposure": 1.1346153846153846,
+              "mean_eligible_opportunities": 1.3653846153846154,
+              "clarification_cost": 66,
+              "classification_counts": {
+                "no_observed_feasible_opportunity": 5,
+                "blocked_by_declined_hard_field": 14,
+                "served": 22,
+                "unresolved_observed_constraints": 11
+              }
+            }
+          },
+          "zone": {
+            "zone_a": {
+              "count": 125,
+              "served": 64,
+              "unserved": 61,
+              "median_wait": 4.0,
+              "p90_wait": 20.0,
+              "mean_exposure": 1.456,
+              "mean_eligible_opportunities": 1.76,
+              "clarification_cost": 138,
+              "classification_counts": {
+                "unresolved_observed_constraints": 19,
+                "blocked_by_declined_hard_field": 40,
+                "served": 64,
+                "feasible_but_never_introduced": 1,
+                "no_observed_feasible_opportunity": 1
+              }
+            },
+            "zone_b": {
+              "count": 43,
+              "served": 20,
+              "unserved": 23,
+              "median_wait": 10.5,
+              "p90_wait": 27.200000000000003,
+              "mean_exposure": 0.9302325581395349,
+              "mean_eligible_opportunities": 0.9302325581395349,
+              "clarification_cost": 75,
+              "classification_counts": {
+                "no_observed_feasible_opportunity": 7,
+                "served": 20,
+                "unresolved_observed_constraints": 9,
+                "blocked_by_declined_hard_field": 7
+              }
+            },
+            "zone_c": {
+              "count": 22,
+              "served": 3,
+              "unserved": 19,
+              "median_wait": 0.0,
+              "p90_wait": 1.6,
+              "mean_exposure": 0.2727272727272727,
+              "mean_eligible_opportunities": 0.2727272727272727,
+              "clarification_cost": 21,
+              "classification_counts": {
+                "blocked_by_declined_hard_field": 7,
+                "unresolved_observed_constraints": 10,
+                "served": 3,
+                "no_observed_feasible_opportunity": 2
+              }
+            },
+            "zone_d": {
+              "count": 10,
+              "served": 0,
+              "unserved": 10,
+              "median_wait": null,
+              "p90_wait": null,
+              "mean_exposure": 0,
+              "mean_eligible_opportunities": 0,
+              "clarification_cost": 9,
+              "classification_counts": {
+                "no_observed_feasible_opportunity": 3,
+                "unresolved_observed_constraints": 5,
+                "blocked_by_declined_hard_field": 2
+              }
+            }
+          }
+        },
+        "median_wait": 6.0,
+        "p90_wait": 20.400000000000006,
+        "unserved": 113,
+        "limitation": "Eligibility/opportunities are observable and time-varying, not hidden truth; wait summaries condition on served members."
+      },
+      "calibration": {
+        "recorded_yes": {
+          "count": 228,
+          "positives": 89,
+          "brier": 0.2374829327206293,
+          "log_loss": 0.6678508890507319,
+          "reliability": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "count": 220,
+              "predicted": 0.3551652624866802,
+              "observed": 0.39090909090909093
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "count": 8,
+              "predicted": 0.41318666674439963,
+              "observed": 0.375
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            }
+          ]
+        },
+        "by_direction": {
+          "a_accepts_b": {
+            "count": 114,
+            "positives": 46,
+            "brier": 0.24041886029592172,
+            "log_loss": 0.673820694217998,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 111,
+                "predicted": 0.3537416056952257,
+                "observed": 0.3963963963963964
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 3,
+                "predicted": 0.41217840876505146,
+                "observed": 0.6666666666666666
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "b_accepts_a": {
+            "count": 114,
+            "positives": 43,
+            "brier": 0.23454700514533686,
+            "log_loss": 0.6618810838834658,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 109,
+                "predicted": 0.3566150414210971,
+                "observed": 0.3853211009174312
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 5,
+                "predicted": 0.41379162153200855,
+                "observed": 0.2
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ]
+          }
+        },
+        "by_gender": {
+          "woman": {
+            "count": 127,
+            "positives": 47,
+            "brier": 0.23270616037415312,
+            "log_loss": 0.6581003254444767,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 120,
+                "predicted": 0.35958931432881835,
+                "observed": 0.375
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 7,
+                "predicted": 0.41474426654709057,
+                "observed": 0.2857142857142857
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "sufficient_sample": true
+          },
+          "man": {
+            "count": 92,
+            "positives": 38,
+            "brier": 0.2414691119363721,
+            "log_loss": 0.6757847800518345,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 91,
+                "predicted": 0.35055058080338825,
+                "observed": 0.4065934065934066
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 1,
+                "predicted": 0.40228346812556304,
+                "observed": 1
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "sufficient_sample": true
+          },
+          "non_binary": {
+            "count": 9,
+            "positives": 4,
+            "brier": 0.26414088829331095,
+            "log_loss": 0.7243401785943933,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 9,
+                "predicted": 0.34283746383367947,
+                "observed": 0.4444444444444444
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "sufficient_sample": false
+          }
+        },
+        "target": "Recorded Yes by seven-day deadline; no response is not dislike.",
+        "limitation": "No posthoc calibration fitted to these evaluation labels. Directions share parameters with swapped features."
+      }
+    },
+    {
+      "assignments": 118,
+      "mutual_acceptances": 18,
+      "dates": 15,
+      "mutual_second_meeting_intention": 0,
+      "missing_feedback": 76,
+      "ask_cost": 243,
+      "arrived_members": 200,
+      "msmi_per_100_arrived_members": 0.0,
+      "status": "simulated_not_observed_product_performance",
+      "valid": true,
+      "served_members": 87,
+      "unserved_members": 113,
+      "coverage": 0.435,
+      "mutual_acceptances_per_100": 9.0,
+      "first_introduction_wait_days": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        8,
+        8,
+        8,
+        8,
+        9,
+        9,
+        9,
+        10,
+        10,
+        10,
+        10,
+        10,
+        11,
+        12,
+        13,
+        13,
+        13,
+        13,
+        14,
+        14,
+        14,
+        14,
+        16,
+        17,
+        18,
+        18,
+        19,
+        20,
+        22,
+        23
+      ],
+      "inference_seconds": 3.6377130462788045,
+      "phase_runtime": {
+        "ask": {
+          "total": 0.561156549025327,
+          "maximum": 0.011345167004037648,
+          "p90": 0.010988958005327731
+        },
+        "match": {
+          "total": 3.0765564972534776,
+          "maximum": 0.08593579201260582,
+          "p90": 0.05990529200062156
+        }
+      },
+      "action_sha256": "0f411101c2fb906a7cc254af106e56397e4e04e36f3079067399f087731bbf27",
+      "seed": 41001,
+      "variant": "development",
+      "method": "learned_greedy",
+      "belief": "none",
+      "actual_disclosure": "none",
+      "fallback_count": 0,
+      "opportunity": {
+        "groups": {
+          "gender": {
+            "man": {
+              "count": 91,
+              "served": 35,
+              "unserved": 56,
+              "median_wait": 2.0,
+              "p90_wait": 9.600000000000001,
+              "mean_exposure": 1.1318681318681318,
+              "mean_eligible_opportunities": 1.2637362637362637,
+              "clarification_cost": 90,
+              "classification_counts": {
+                "served": 35,
+                "blocked_by_declined_hard_field": 32,
+                "unresolved_observed_constraints": 17,
+                "no_observed_feasible_opportunity": 6,
+                "feasible_but_never_introduced": 1
+              }
+            },
+            "non_binary": {
+              "count": 9,
+              "served": 4,
+              "unserved": 5,
+              "median_wait": 1.5,
+              "p90_wait": 12.500000000000004,
+              "mean_exposure": 0.8888888888888888,
+              "mean_eligible_opportunities": 1,
+              "clarification_cost": 15,
+              "classification_counts": {
+                "blocked_by_declined_hard_field": 2,
+                "no_observed_feasible_opportunity": 1,
+                "served": 4,
+                "unresolved_observed_constraints": 2
+              }
+            },
+            "woman": {
+              "count": 100,
+              "served": 48,
+              "unserved": 52,
+              "median_wait": 7.0,
+              "p90_wait": 14.600000000000009,
+              "mean_exposure": 1.25,
+              "mean_eligible_opportunities": 1.46,
+              "clarification_cost": 138,
+              "classification_counts": {
+                "unresolved_observed_constraints": 25,
+                "blocked_by_declined_hard_field": 22,
+                "no_observed_feasible_opportunity": 5,
+                "served": 48
+              }
+            }
+          },
+          "age_band": {
+            "21-29": {
+              "count": 61,
+              "served": 31,
+              "unserved": 30,
+              "median_wait": 5.0,
+              "p90_wait": 14.0,
+              "mean_exposure": 1.2622950819672132,
+              "mean_eligible_opportunities": 1.3278688524590163,
+              "clarification_cost": 72,
+              "classification_counts": {
+                "blocked_by_declined_hard_field": 17,
+                "served": 31,
+                "unresolved_observed_constraints": 9,
+                "no_observed_feasible_opportunity": 4
+              }
+            },
+            "30-39": {
+              "count": 87,
+              "served": 34,
+              "unserved": 53,
+              "median_wait": 3.0,
+              "p90_wait": 14.0,
+              "mean_exposure": 1.160919540229885,
+              "mean_eligible_opportunities": 1.3218390804597702,
+              "clarification_cost": 105,
+              "classification_counts": {
+                "unresolved_observed_constraints": 24,
+                "served": 34,
+                "blocked_by_declined_hard_field": 25,
+                "no_observed_feasible_opportunity": 3,
+                "feasible_but_never_introduced": 1
+              }
+            },
+            "40+": {
+              "count": 52,
+              "served": 22,
+              "unserved": 30,
+              "median_wait": 4.5,
+              "p90_wait": 15.700000000000006,
+              "mean_exposure": 1.1153846153846154,
+              "mean_eligible_opportunities": 1.4230769230769231,
+              "clarification_cost": 66,
+              "classification_counts": {
+                "no_observed_feasible_opportunity": 5,
+                "blocked_by_declined_hard_field": 14,
+                "served": 22,
+                "unresolved_observed_constraints": 11
+              }
+            }
+          },
+          "zone": {
+            "zone_a": {
+              "count": 125,
+              "served": 64,
+              "unserved": 61,
+              "median_wait": 2.0,
+              "p90_wait": 14.0,
+              "mean_exposure": 1.56,
+              "mean_eligible_opportunities": 1.816,
+              "clarification_cost": 138,
+              "classification_counts": {
+                "unresolved_observed_constraints": 20,
+                "blocked_by_declined_hard_field": 40,
+                "served": 64,
+                "feasible_but_never_introduced": 1
+              }
+            },
+            "zone_b": {
+              "count": 43,
+              "served": 20,
+              "unserved": 23,
+              "median_wait": 8.0,
+              "p90_wait": 14.500000000000007,
+              "mean_exposure": 0.813953488372093,
+              "mean_eligible_opportunities": 0.8604651162790697,
+              "clarification_cost": 75,
+              "classification_counts": {
+                "no_observed_feasible_opportunity": 7,
+                "served": 20,
+                "unresolved_observed_constraints": 9,
+                "blocked_by_declined_hard_field": 7
+              }
+            },
+            "zone_c": {
+              "count": 22,
+              "served": 3,
+              "unserved": 19,
+              "median_wait": 3.0,
+              "p90_wait": 4.6,
+              "mean_exposure": 0.2727272727272727,
+              "mean_eligible_opportunities": 0.2727272727272727,
+              "clarification_cost": 21,
+              "classification_counts": {
+                "blocked_by_declined_hard_field": 7,
+                "unresolved_observed_constraints": 10,
+                "served": 3,
+                "no_observed_feasible_opportunity": 2
+              }
+            },
+            "zone_d": {
+              "count": 10,
+              "served": 0,
+              "unserved": 10,
+              "median_wait": null,
+              "p90_wait": null,
+              "mean_exposure": 0,
+              "mean_eligible_opportunities": 0,
+              "clarification_cost": 9,
+              "classification_counts": {
+                "no_observed_feasible_opportunity": 3,
+                "unresolved_observed_constraints": 5,
+                "blocked_by_declined_hard_field": 2
+              }
+            }
+          }
+        },
+        "median_wait": 4.0,
+        "p90_wait": 14.0,
+        "unserved": 113,
+        "limitation": "Eligibility/opportunities are observable and time-varying, not hidden truth; wait summaries condition on served members."
+      },
+      "calibration": {
+        "recorded_yes": {
+          "count": 236,
+          "positives": 86,
+          "brier": 0.23212328764657408,
+          "log_loss": 0.6570127609052975,
+          "reliability": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "count": 231,
+              "predicted": 0.35567875053906645,
+              "observed": 0.36796536796536794
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "count": 5,
+              "predicted": 0.4066291546224017,
+              "observed": 0.2
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            }
+          ]
+        },
+        "by_direction": {
+          "a_accepts_b": {
+            "count": 118,
+            "positives": 41,
+            "brier": 0.22744322837077394,
+            "log_loss": 0.6474369904695693,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 117,
+                "predicted": 0.3546852372719525,
+                "observed": 0.3418803418803419
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 1,
+                "predicted": 0.40322423629214954,
+                "observed": 1
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "b_accepts_a": {
+            "count": 118,
+            "positives": 45,
+            "brier": 0.23680334692237423,
+            "log_loss": 0.6665885313410257,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 114,
+                "predicted": 0.3566984088921571,
+                "observed": 0.39473684210526316
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 4,
+                "predicted": 0.4074803842049647,
+                "observed": 0
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ]
+          }
+        },
+        "by_gender": {
+          "woman": {
+            "count": 125,
+            "positives": 44,
+            "brier": 0.2301316224126329,
+            "log_loss": 0.6530478528090876,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 121,
+                "predicted": 0.35980785692659817,
+                "observed": 0.36363636363636365
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 4,
+                "predicted": 0.4074803842049647,
+                "observed": 0
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "sufficient_sample": true
+          },
+          "man": {
+            "count": 103,
+            "positives": 39,
+            "brier": 0.23375893757804742,
+            "log_loss": 0.6601291079107383,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 102,
+                "predicted": 0.35149550179241323,
+                "observed": 0.37254901960784315
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 1,
+                "predicted": 0.40322423629214954,
+                "observed": 1
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "sufficient_sample": true
+          },
+          "non_binary": {
+            "count": 8,
+            "positives": 3,
+            "brier": 0.24218406405918574,
+            "log_loss": 0.678841482213526,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 8,
+                "predicted": 0.3465624379474778,
+                "observed": 0.375
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "sufficient_sample": false
+          }
+        },
+        "target": "Recorded Yes by seven-day deadline; no response is not dislike.",
+        "limitation": "No posthoc calibration fitted to these evaluation labels. Directions share parameters with swapped features."
+      }
+    },
+    {
+      "assignments": 118,
+      "mutual_acceptances": 16,
+      "dates": 13,
+      "mutual_second_meeting_intention": 1,
+      "missing_feedback": 65,
+      "ask_cost": 243,
+      "arrived_members": 200,
+      "msmi_per_100_arrived_members": 0.5,
+      "status": "simulated_not_observed_product_performance",
+      "valid": true,
+      "served_members": 86,
+      "unserved_members": 114,
+      "coverage": 0.43,
+      "mutual_acceptances_per_100": 8.0,
+      "first_introduction_wait_days": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        8,
+        8,
+        8,
+        9,
+        9,
+        9,
+        10,
+        10,
+        10,
+        10,
+        10,
+        12,
+        13,
+        13,
+        13,
+        13,
+        14,
+        14,
+        14,
+        16,
+        17,
+        18,
+        18,
+        19,
+        20,
+        22,
+        23
+      ],
+      "inference_seconds": 3.6761110438383184,
+      "phase_runtime": {
+        "ask": {
+          "total": 0.5825024600489996,
+          "maximum": 0.017153583001345396,
+          "p90": 0.011015249998308718
+        },
+        "match": {
+          "total": 3.093608583789319,
+          "maximum": 0.06373812502715737,
+          "p90": 0.06092337495647371
+        }
+      },
+      "action_sha256": "281ef971f7293f52e4201e37eb808eb38eebf58738882aaf55a7eab51e4c236c",
+      "seed": 41001,
+      "variant": "development",
+      "method": "learned_maxweight",
+      "belief": "none",
+      "actual_disclosure": "none",
+      "fallback_count": 0,
+      "opportunity": {
+        "groups": {
+          "gender": {
+            "man": {
+              "count": 91,
+              "served": 35,
+              "unserved": 56,
+              "median_wait": 1.0,
+              "p90_wait": 9.600000000000001,
+              "mean_exposure": 1.164835164835165,
+              "mean_eligible_opportunities": 1.2197802197802199,
+              "clarification_cost": 90,
+              "classification_counts": {
+                "served": 35,
+                "blocked_by_declined_hard_field": 32,
+                "unresolved_observed_constraints": 17,
+                "no_observed_feasible_opportunity": 6,
+                "feasible_but_never_introduced": 1
+              }
+            },
+            "non_binary": {
+              "count": 9,
+              "served": 4,
+              "unserved": 5,
+              "median_wait": 1.5,
+              "p90_wait": 12.500000000000004,
+              "mean_exposure": 0.7777777777777778,
+              "mean_eligible_opportunities": 0.8888888888888888,
+              "clarification_cost": 15,
+              "classification_counts": {
+                "blocked_by_declined_hard_field": 2,
+                "no_observed_feasible_opportunity": 1,
+                "served": 4,
+                "unresolved_observed_constraints": 2
+              }
+            },
+            "woman": {
+              "count": 100,
+              "served": 47,
+              "unserved": 53,
+              "median_wait": 7.0,
+              "p90_wait": 14.799999999999997,
+              "mean_exposure": 1.23,
+              "mean_eligible_opportunities": 1.41,
+              "clarification_cost": 138,
+              "classification_counts": {
+                "unresolved_observed_constraints": 25,
+                "blocked_by_declined_hard_field": 22,
+                "no_observed_feasible_opportunity": 5,
+                "served": 47,
+                "feasible_but_never_introduced": 1
+              }
+            }
+          },
+          "age_band": {
+            "21-29": {
+              "count": 61,
+              "served": 31,
+              "unserved": 30,
+              "median_wait": 5.0,
+              "p90_wait": 14.0,
+              "mean_exposure": 1.2950819672131149,
+              "mean_eligible_opportunities": 1.3278688524590163,
+              "clarification_cost": 72,
+              "classification_counts": {
+                "blocked_by_declined_hard_field": 17,
+                "served": 31,
+                "unresolved_observed_constraints": 9,
+                "no_observed_feasible_opportunity": 4
+              }
+            },
+            "30-39": {
+              "count": 87,
+              "served": 33,
+              "unserved": 54,
+              "median_wait": 1.0,
+              "p90_wait": 13.8,
+              "mean_exposure": 1.103448275862069,
+              "mean_eligible_opportunities": 1.2298850574712643,
+              "clarification_cost": 105,
+              "classification_counts": {
+                "unresolved_observed_constraints": 24,
+                "served": 33,
+                "blocked_by_declined_hard_field": 25,
+                "no_observed_feasible_opportunity": 3,
+                "feasible_but_never_introduced": 2
+              }
+            },
+            "40+": {
+              "count": 52,
+              "served": 22,
+              "unserved": 30,
+              "median_wait": 4.0,
+              "p90_wait": 15.700000000000006,
+              "mean_exposure": 1.1730769230769231,
+              "mean_eligible_opportunities": 1.3846153846153846,
+              "clarification_cost": 66,
+              "classification_counts": {
+                "no_observed_feasible_opportunity": 5,
+                "blocked_by_declined_hard_field": 14,
+                "served": 22,
+                "unresolved_observed_constraints": 11
+              }
+            }
+          },
+          "zone": {
+            "zone_a": {
+              "count": 125,
+              "served": 63,
+              "unserved": 62,
+              "median_wait": 0.0,
+              "p90_wait": 13.800000000000004,
+              "mean_exposure": 1.56,
+              "mean_eligible_opportunities": 1.736,
+              "clarification_cost": 138,
+              "classification_counts": {
+                "unresolved_observed_constraints": 20,
+                "blocked_by_declined_hard_field": 40,
+                "served": 63,
+                "feasible_but_never_introduced": 2
+              }
+            },
+            "zone_b": {
+              "count": 43,
+              "served": 20,
+              "unserved": 23,
+              "median_wait": 8.0,
+              "p90_wait": 14.500000000000007,
+              "mean_exposure": 0.813953488372093,
+              "mean_eligible_opportunities": 0.8604651162790697,
+              "clarification_cost": 75,
+              "classification_counts": {
+                "no_observed_feasible_opportunity": 7,
+                "served": 20,
+                "unresolved_observed_constraints": 9,
+                "blocked_by_declined_hard_field": 7
+              }
+            },
+            "zone_c": {
+              "count": 22,
+              "served": 3,
+              "unserved": 19,
+              "median_wait": 3.0,
+              "p90_wait": 4.6,
+              "mean_exposure": 0.2727272727272727,
+              "mean_eligible_opportunities": 0.2727272727272727,
+              "clarification_cost": 21,
+              "classification_counts": {
+                "blocked_by_declined_hard_field": 7,
+                "unresolved_observed_constraints": 10,
+                "served": 3,
+                "no_observed_feasible_opportunity": 2
+              }
+            },
+            "zone_d": {
+              "count": 10,
+              "served": 0,
+              "unserved": 10,
+              "median_wait": null,
+              "p90_wait": null,
+              "mean_exposure": 0,
+              "mean_eligible_opportunities": 0,
+              "clarification_cost": 9,
+              "classification_counts": {
+                "no_observed_feasible_opportunity": 3,
+                "unresolved_observed_constraints": 5,
+                "blocked_by_declined_hard_field": 2
+              }
+            }
+          }
+        },
+        "median_wait": 3.0,
+        "p90_wait": 14.0,
+        "unserved": 114,
+        "limitation": "Eligibility/opportunities are observable and time-varying, not hidden truth; wait summaries condition on served members."
+      },
+      "calibration": {
+        "recorded_yes": {
+          "count": 236,
+          "positives": 87,
+          "brier": 0.2318077442935258,
+          "log_loss": 0.6562639943601037,
+          "reliability": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "count": 230,
+              "predicted": 0.3556003265060521,
+              "observed": 0.36086956521739133
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "count": 6,
+              "predicted": 0.4113711985094708,
+              "observed": 0.6666666666666666
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            }
+          ]
+        },
+        "by_direction": {
+          "a_accepts_b": {
+            "count": 118,
+            "positives": 44,
+            "brier": 0.23375296276982133,
+            "log_loss": 0.6604039823156262,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 116,
+                "predicted": 0.354409234932426,
+                "observed": 0.3620689655172414
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 2,
+                "predicted": 0.4115910391860394,
+                "observed": 1
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "b_accepts_a": {
+            "count": 118,
+            "positives": 43,
+            "brier": 0.22986252581723027,
+            "log_loss": 0.6521240064045812,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 114,
+                "predicted": 0.35681231442307515,
+                "observed": 0.35964912280701755
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 4,
+                "predicted": 0.4112612781711865,
+                "observed": 0.5
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ]
+          }
+        },
+        "by_gender": {
+          "woman": {
+            "count": 123,
+            "positives": 42,
+            "brier": 0.22500129379871514,
+            "log_loss": 0.6423507137634444,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 118,
+                "predicted": 0.3599152515481814,
+                "observed": 0.3305084745762712
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 5,
+                "predicted": 0.41300059095293506,
+                "observed": 0.6
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "sufficient_sample": true
+          },
+          "man": {
+            "count": 106,
+            "positives": 42,
+            "brier": 0.23803940589849046,
+            "log_loss": 0.6688982418737275,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 105,
+                "predicted": 0.35159336180660644,
+                "observed": 0.3904761904761905
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 1,
+                "predicted": 0.40322423629214954,
+                "observed": 1
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "sufficient_sample": true
+          },
+          "non_binary": {
+            "count": 7,
+            "positives": 3,
+            "brier": 0.25704164154144793,
+            "log_loss": 0.7094216053522445,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 7,
+                "predicted": 0.34296748914470054,
+                "observed": 0.42857142857142855
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "sufficient_sample": false
+          }
+        },
+        "target": "Recorded Yes by seven-day deadline; no response is not dislike.",
+        "limitation": "No posthoc calibration fitted to these evaluation labels. Directions share parameters with swapped features."
+      }
+    },
+    {
+      "assignments": 121,
+      "mutual_acceptances": 16,
+      "dates": 11,
+      "mutual_second_meeting_intention": 0,
+      "missing_feedback": 59,
+      "ask_cost": 426,
+      "arrived_members": 200,
+      "msmi_per_100_arrived_members": 0.0,
+      "status": "simulated_not_observed_product_performance",
+      "valid": true,
+      "served_members": 86,
+      "unserved_members": 114,
+      "coverage": 0.43,
+      "mutual_acceptances_per_100": 8.0,
+      "first_introduction_wait_days": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        6,
+        6,
+        6,
+        7,
+        7,
+        7,
+        8,
+        8,
+        9,
+        10,
+        10,
+        10,
+        10,
+        11,
+        12,
+        12,
+        13,
+        14,
+        14,
+        15,
+        16,
+        17,
+        18,
+        18,
+        18,
+        18,
+        24
+      ],
+      "inference_seconds": 15.026293961156625,
+      "phase_runtime": {
+        "ask": {
+          "total": 11.897301333257928,
+          "maximum": 0.3997787080006674,
+          "p90": 0.3166184580186382
+        },
+        "match": {
+          "total": 3.128992627898697,
+          "maximum": 0.06579012499423698,
+          "p90": 0.062126208969857544
+        }
+      },
+      "action_sha256": "cbd723129ea331a674949a1dec95a05c22cf1924e286417d8903257ca42abe43",
+      "seed": 41001,
+      "variant": "development",
+      "method": "uncertainty_first",
+      "belief": "none",
+      "actual_disclosure": "none",
+      "fallback_count": 0,
+      "opportunity": {
+        "groups": {
+          "gender": {
+            "man": {
+              "count": 91,
+              "served": 36,
+              "unserved": 55,
+              "median_wait": 2.0,
+              "p90_wait": 14.0,
+              "mean_exposure": 1.164835164835165,
+              "mean_eligible_opportunities": 1.2527472527472527,
+              "clarification_cost": 181,
+              "classification_counts": {
+                "served": 36,
+                "blocked_by_declined_hard_field": 32,
+                "unresolved_observed_constraints": 15,
+                "no_observed_feasible_opportunity": 8
+              }
+            },
+            "non_binary": {
+              "count": 9,
+              "served": 4,
+              "unserved": 5,
+              "median_wait": 2.5,
+              "p90_wait": 5.7,
+              "mean_exposure": 1.1111111111111112,
+              "mean_eligible_opportunities": 1.2222222222222223,
+              "clarification_cost": 18,
+              "classification_counts": {
+                "blocked_by_declined_hard_field": 2,
+                "no_observed_feasible_opportunity": 1,
+                "served": 4,
+                "unresolved_observed_constraints": 2
+              }
+            },
+            "woman": {
+              "count": 100,
+              "served": 46,
+              "unserved": 54,
+              "median_wait": 3.0,
+              "p90_wait": 14.0,
+              "mean_exposure": 1.26,
+              "mean_eligible_opportunities": 1.45,
+              "clarification_cost": 227,
+              "classification_counts": {
+                "unresolved_observed_constraints": 27,
+                "blocked_by_declined_hard_field": 22,
+                "no_observed_feasible_opportunity": 4,
+                "served": 46,
+                "feasible_but_never_introduced": 1
+              }
+            }
+          },
+          "age_band": {
+            "21-29": {
+              "count": 61,
+              "served": 30,
+              "unserved": 31,
+              "median_wait": 3.5,
+              "p90_wait": 18.0,
+              "mean_exposure": 1.2131147540983607,
+              "mean_eligible_opportunities": 1.3278688524590163,
+              "clarification_cost": 131,
+              "classification_counts": {
+                "blocked_by_declined_hard_field": 17,
+                "served": 30,
+                "unresolved_observed_constraints": 10,
+                "no_observed_feasible_opportunity": 4
+              }
+            },
+            "30-39": {
+              "count": 87,
+              "served": 34,
+              "unserved": 53,
+              "median_wait": 2.0,
+              "p90_wait": 10.7,
+              "mean_exposure": 1.1839080459770115,
+              "mean_eligible_opportunities": 1.3333333333333333,
+              "clarification_cost": 168,
+              "classification_counts": {
+                "unresolved_observed_constraints": 24,
+                "served": 34,
+                "blocked_by_declined_hard_field": 25,
+                "no_observed_feasible_opportunity": 3,
+                "feasible_but_never_introduced": 1
+              }
+            },
+            "40+": {
+              "count": 52,
+              "served": 22,
+              "unserved": 30,
+              "median_wait": 2.0,
+              "p90_wait": 7.0,
+              "mean_exposure": 1.25,
+              "mean_eligible_opportunities": 1.4038461538461537,
+              "clarification_cost": 127,
+              "classification_counts": {
+                "no_observed_feasible_opportunity": 6,
+                "blocked_by_declined_hard_field": 14,
+                "served": 22,
+                "unresolved_observed_constraints": 10
+              }
+            }
+          },
+          "zone": {
+            "zone_a": {
+              "count": 125,
+              "served": 63,
+              "unserved": 62,
+              "median_wait": 2.0,
+              "p90_wait": 14.800000000000004,
+              "mean_exposure": 1.56,
+              "mean_eligible_opportunities": 1.784,
+              "clarification_cost": 279,
+              "classification_counts": {
+                "unresolved_observed_constraints": 19,
+                "blocked_by_declined_hard_field": 40,
+                "served": 63,
+                "no_observed_feasible_opportunity": 2,
+                "feasible_but_never_introduced": 1
+              }
+            },
+            "zone_b": {
+              "count": 43,
+              "served": 20,
+              "unserved": 23,
+              "median_wait": 2.0,
+              "p90_wait": 11.100000000000001,
+              "mean_exposure": 0.9534883720930233,
+              "mean_eligible_opportunities": 0.9534883720930233,
+              "clarification_cost": 117,
+              "classification_counts": {
+                "no_observed_feasible_opportunity": 7,
+                "unresolved_observed_constraints": 9,
+                "served": 20,
+                "blocked_by_declined_hard_field": 7
+              }
+            },
+            "zone_c": {
+              "count": 22,
+              "served": 3,
+              "unserved": 19,
+              "median_wait": 4.0,
+              "p90_wait": 5.6,
+              "mean_exposure": 0.2727272727272727,
+              "mean_eligible_opportunities": 0.2727272727272727,
+              "clarification_cost": 21,
+              "classification_counts": {
+                "blocked_by_declined_hard_field": 7,
+                "unresolved_observed_constraints": 11,
+                "served": 3,
+                "no_observed_feasible_opportunity": 1
+              }
+            },
+            "zone_d": {
+              "count": 10,
+              "served": 0,
+              "unserved": 10,
+              "median_wait": null,
+              "p90_wait": null,
+              "mean_exposure": 0,
+              "mean_eligible_opportunities": 0,
+              "clarification_cost": 9,
+              "classification_counts": {
+                "no_observed_feasible_opportunity": 3,
+                "unresolved_observed_constraints": 5,
+                "blocked_by_declined_hard_field": 2
+              }
+            }
+          }
+        },
+        "median_wait": 2.0,
+        "p90_wait": 14.0,
+        "unserved": 114,
+        "limitation": "Eligibility/opportunities are observable and time-varying, not hidden truth; wait summaries condition on served members."
+      },
+      "calibration": {
+        "recorded_yes": {
+          "count": 242,
+          "positives": 82,
+          "brier": 0.2243284965703447,
+          "log_loss": 0.6408425019709225,
+          "reliability": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "count": 232,
+              "predicted": 0.3576081487677478,
+              "observed": 0.34913793103448276
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "count": 10,
+              "predicted": 0.40942071457488327,
+              "observed": 0.1
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            }
+          ]
+        },
+        "by_direction": {
+          "a_accepts_b": {
+            "count": 121,
+            "positives": 43,
+            "brier": 0.2280865733897947,
+            "log_loss": 0.6485046358415368,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 119,
+                "predicted": 0.35727603389024826,
+                "observed": 0.36134453781512604
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 2,
+                "predicted": 0.410234132828555,
+                "observed": 0
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "b_accepts_a": {
+            "count": 121,
+            "positives": 39,
+            "brier": 0.22057041975089467,
+            "log_loss": 0.6331803681003082,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 113,
+                "predicted": 0.35795789806352174,
+                "observed": 0.336283185840708
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 8,
+                "predicted": 0.40921736001146536,
+                "observed": 0.125
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ]
+          }
+        },
+        "by_gender": {
+          "woman": {
+            "count": 126,
+            "positives": 39,
+            "brier": 0.21728586645978223,
+            "log_loss": 0.6264416493146718,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 118,
+                "predicted": 0.36163068710714197,
+                "observed": 0.3220338983050847
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 8,
+                "predicted": 0.40990924197985557,
+                "observed": 0.125
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "sufficient_sample": true
+          },
+          "man": {
+            "count": 106,
+            "positives": 37,
+            "brier": 0.22505251714632543,
+            "log_loss": 0.6421125961075894,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 104,
+                "predicted": 0.35383606225881464,
+                "observed": 0.3557692307692308
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 2,
+                "predicted": 0.4074666049549942,
+                "observed": 0
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "sufficient_sample": true
+          },
+          "non_binary": {
+            "count": 10,
+            "positives": 6,
+            "brier": 0.3053910178580361,
+            "log_loss": 0.8088302475910114,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 10,
+                "predicted": 0.3493718960558026,
+                "observed": 0.6
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "sufficient_sample": false
+          }
+        },
+        "target": "Recorded Yes by seven-day deadline; no response is not dislike.",
+        "limitation": "No posthoc calibration fitted to these evaluation labels. Directions share parameters with swapped features."
+      }
+    },
+    {
+      "assignments": 106,
+      "mutual_acceptances": 14,
+      "dates": 10,
+      "mutual_second_meeting_intention": 0,
+      "missing_feedback": 52,
+      "ask_cost": 213,
+      "arrived_members": 200,
+      "msmi_per_100_arrived_members": 0.0,
+      "status": "simulated_not_observed_product_performance",
+      "valid": true,
+      "served_members": 79,
+      "unserved_members": 121,
+      "coverage": 0.395,
+      "mutual_acceptances_per_100": 7.0,
+      "first_introduction_wait_days": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        5,
+        6,
+        8,
+        8,
+        8,
+        9,
+        9,
+        10,
+        10,
+        11,
+        11,
+        11,
+        11,
+        12,
+        12,
+        12,
+        12,
+        12,
+        13,
+        13,
+        14,
+        14,
+        14,
+        14,
+        16,
+        16,
+        21,
+        23,
+        23,
+        24,
+        24,
+        25,
+        34
+      ],
+      "inference_seconds": 35.42639270215295,
+      "phase_runtime": {
+        "ask": {
+          "total": 32.17398303601658,
+          "maximum": 0.655315582989715,
+          "p90": 0.6056846250430681
+        },
+        "match": {
+          "total": 3.252409666136373,
+          "maximum": 0.06667837500572205,
+          "p90": 0.06337795895524323
+        }
+      },
+      "action_sha256": "2d3ddc6d7ec47dc33179d5d4da5bbaf6e8722910cc6cf4fe84f7d6643bce5d88",
+      "seed": 41001,
+      "variant": "development",
+      "method": "degree_first",
+      "belief": "none",
+      "actual_disclosure": "none",
+      "fallback_count": 0,
+      "opportunity": {
+        "groups": {
+          "gender": {
+            "man": {
+              "count": 91,
+              "served": 32,
+              "unserved": 59,
+              "median_wait": 3.0,
+              "p90_wait": 13.800000000000004,
+              "mean_exposure": 0.967032967032967,
+              "mean_eligible_opportunities": 1.032967032967033,
+              "clarification_cost": 81,
+              "classification_counts": {
+                "served": 32,
+                "blocked_by_declined_hard_field": 32,
+                "unresolved_observed_constraints": 20,
+                "no_observed_feasible_opportunity": 7
+              }
+            },
+            "non_binary": {
+              "count": 9,
+              "served": 4,
+              "unserved": 5,
+              "median_wait": 6.5,
+              "p90_wait": 15.100000000000001,
+              "mean_exposure": 1.1111111111111112,
+              "mean_eligible_opportunities": 1.1111111111111112,
+              "clarification_cost": 12,
+              "classification_counts": {
+                "blocked_by_declined_hard_field": 2,
+                "no_observed_feasible_opportunity": 1,
+                "served": 4,
+                "unresolved_observed_constraints": 2
+              }
+            },
+            "woman": {
+              "count": 100,
+              "served": 43,
+              "unserved": 57,
+              "median_wait": 3.0,
+              "p90_wait": 15.600000000000009,
+              "mean_exposure": 1.14,
+              "mean_eligible_opportunities": 1.34,
+              "clarification_cost": 120,
+              "classification_counts": {
+                "unresolved_observed_constraints": 31,
+                "blocked_by_declined_hard_field": 22,
+                "no_observed_feasible_opportunity": 3,
+                "served": 43,
+                "feasible_but_never_introduced": 1
+              }
+            }
+          },
+          "age_band": {
+            "21-29": {
+              "count": 61,
+              "served": 25,
+              "unserved": 36,
+              "median_wait": 4.0,
+              "p90_wait": 23.6,
+              "mean_exposure": 0.9836065573770492,
+              "mean_eligible_opportunities": 1.0163934426229508,
+              "clarification_cost": 57,
+              "classification_counts": {
+                "blocked_by_declined_hard_field": 17,
+                "served": 25,
+                "unresolved_observed_constraints": 15,
+                "no_observed_feasible_opportunity": 4
+              }
+            },
+            "30-39": {
+              "count": 87,
+              "served": 33,
+              "unserved": 54,
+              "median_wait": 3.0,
+              "p90_wait": 15.600000000000001,
+              "mean_exposure": 1.0229885057471264,
+              "mean_eligible_opportunities": 1.2183908045977012,
+              "clarification_cost": 93,
+              "classification_counts": {
+                "unresolved_observed_constraints": 25,
+                "served": 33,
+                "blocked_by_declined_hard_field": 25,
+                "no_observed_feasible_opportunity": 3,
+                "feasible_but_never_introduced": 1
+              }
+            },
+            "40+": {
+              "count": 52,
+              "served": 21,
+              "unserved": 31,
+              "median_wait": 1.0,
+              "p90_wait": 12.0,
+              "mean_exposure": 1.2115384615384615,
+              "mean_eligible_opportunities": 1.3461538461538463,
+              "clarification_cost": 63,
+              "classification_counts": {
+                "no_observed_feasible_opportunity": 4,
+                "blocked_by_declined_hard_field": 14,
+                "served": 21,
+                "unresolved_observed_constraints": 13
+              }
+            }
+          },
+          "zone": {
+            "zone_a": {
+              "count": 125,
+              "served": 61,
+              "unserved": 64,
+              "median_wait": 3.0,
+              "p90_wait": 16.0,
+              "mean_exposure": 1.456,
+              "mean_eligible_opportunities": 1.64,
+              "clarification_cost": 126,
+              "classification_counts": {
+                "unresolved_observed_constraints": 22,
+                "blocked_by_declined_hard_field": 40,
+                "served": 61,
+                "feasible_but_never_introduced": 1,
+                "no_observed_feasible_opportunity": 1
+              }
+            },
+            "zone_b": {
+              "count": 43,
+              "served": 16,
+              "unserved": 27,
+              "median_wait": 2.0,
+              "p90_wait": 18.5,
+              "mean_exposure": 0.6511627906976745,
+              "mean_eligible_opportunities": 0.7209302325581395,
+              "clarification_cost": 66,
+              "classification_counts": {
+                "unresolved_observed_constraints": 15,
+                "no_observed_feasible_opportunity": 5,
+                "served": 16,
+                "blocked_by_declined_hard_field": 7
+              }
+            },
+            "zone_c": {
+              "count": 22,
+              "served": 2,
+              "unserved": 20,
+              "median_wait": 3.0,
+              "p90_wait": 3.0,
+              "mean_exposure": 0.09090909090909091,
+              "mean_eligible_opportunities": 0.09090909090909091,
+              "clarification_cost": 18,
+              "classification_counts": {
+                "blocked_by_declined_hard_field": 7,
+                "unresolved_observed_constraints": 11,
+                "served": 2,
+                "no_observed_feasible_opportunity": 2
+              }
+            },
+            "zone_d": {
+              "count": 10,
+              "served": 0,
+              "unserved": 10,
+              "median_wait": null,
+              "p90_wait": null,
+              "mean_exposure": 0,
+              "mean_eligible_opportunities": 0,
+              "clarification_cost": 3,
+              "classification_counts": {
+                "no_observed_feasible_opportunity": 3,
+                "unresolved_observed_constraints": 5,
+                "blocked_by_declined_hard_field": 2
+              }
+            }
+          }
+        },
+        "median_wait": 3.0,
+        "p90_wait": 16.0,
+        "unserved": 121,
+        "limitation": "Eligibility/opportunities are observable and time-varying, not hidden truth; wait summaries condition on served members."
+      },
+      "calibration": {
+        "recorded_yes": {
+          "count": 212,
+          "positives": 80,
+          "brier": 0.2342893256778596,
+          "log_loss": 0.6613524466980353,
+          "reliability": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "count": 205,
+              "predicted": 0.35643758915650964,
+              "observed": 0.375609756097561
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "count": 7,
+              "predicted": 0.4100259742107784,
+              "observed": 0.42857142857142855
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "count": 0,
+              "predicted": null,
+              "observed": null
+            }
+          ]
+        },
+        "by_direction": {
+          "a_accepts_b": {
+            "count": 106,
+            "positives": 44,
+            "brier": 0.2445169566283147,
+            "log_loss": 0.6823205991885812,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 104,
+                "predicted": 0.3556286787896121,
+                "observed": 0.41346153846153844
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 2,
+                "predicted": 0.40916564494213115,
+                "observed": 0.5
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "b_accepts_a": {
+            "count": 106,
+            "positives": 36,
+            "brier": 0.22406169472740448,
+            "log_loss": 0.6403842942074894,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 101,
+                "predicted": 0.35727052656400815,
+                "observed": 0.33663366336633666
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 5,
+                "predicted": 0.4103701059182373,
+                "observed": 0.4
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ]
+          }
+        },
+        "by_gender": {
+          "woman": {
+            "count": 114,
+            "positives": 40,
+            "brier": 0.2278825013046316,
+            "log_loss": 0.6482164242799582,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 108,
+                "predicted": 0.361419435917505,
+                "observed": 0.35185185185185186
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 6,
+                "predicted": 0.4115317887710638,
+                "observed": 0.3333333333333333
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "sufficient_sample": true
+          },
+          "man": {
+            "count": 88,
+            "positives": 35,
+            "brier": 0.23663753758573455,
+            "log_loss": 0.6657946284787121,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 87,
+                "predicted": 0.35128823181312785,
+                "observed": 0.39080459770114945
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 1,
+                "predicted": 0.4009910868490663,
+                "observed": 1
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "sufficient_sample": true
+          },
+          "non_binary": {
+            "count": 10,
+            "positives": 5,
+            "brier": 0.28666285874335884,
+            "log_loss": 0.7720119025941593,
+            "reliability": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "count": 10,
+                "predicted": 0.34743305302518135,
+                "observed": 0.5
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "count": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "sufficient_sample": false
+          }
+        },
+        "target": "Recorded Yes by seven-day deadline; no response is not dislike.",
+        "limitation": "No posthoc calibration fitted to these evaluation labels. Directions share parameters with swapped features."
+      }
+    }
+  ],
+  "complete": false,
+  "summaries": {
+    "greedy": {
+      "eligible": true,
+      "primary_score": 0.5,
+      "scenario_means": {
+        "development": {
+          "msmi_per_100_arrived_members": 0.5,
+          "coverage": 0.43,
+          "mutual_acceptances_per_100": 7.5,
+          "ask_cost": 243,
+          "inference_seconds": 2.3546408772235736
+        }
+      },
+      "overall": {
+        "msmi_per_100_arrived_members": 0.5,
+        "coverage": 0.43,
+        "mutual_acceptances_per_100": 7.5,
+        "ask_cost": 243,
+        "inference_seconds": 2.3546408772235736
+      },
+      "ranking_key_descending": [
+        0.5,
+        0.43,
+        7.5,
+        -243,
+        -2.3546408772235736
+      ]
+    },
+    "no_asks": {
+      "eligible": true,
+      "primary_score": 0.5,
+      "scenario_means": {
+        "development": {
+          "msmi_per_100_arrived_members": 0.5,
+          "coverage": 0.1,
+          "mutual_acceptances_per_100": 2.5,
+          "ask_cost": 0,
+          "inference_seconds": 3.99613220669562
+        }
+      },
+      "overall": {
+        "msmi_per_100_arrived_members": 0.5,
+        "coverage": 0.1,
+        "mutual_acceptances_per_100": 2.5,
+        "ask_cost": 0,
+        "inference_seconds": 3.99613220669562
+      },
+      "ranking_key_descending": [
+        0.5,
+        0.1,
+        2.5,
+        0,
+        -3.99613220669562
+      ]
+    },
+    "random": {
+      "eligible": true,
+      "primary_score": 1.0,
+      "scenario_means": {
+        "development": {
+          "msmi_per_100_arrived_members": 1.0,
+          "coverage": 0.435,
+          "mutual_acceptances_per_100": 9.0,
+          "ask_cost": 243,
+          "inference_seconds": 2.535768453089986
+        }
+      },
+      "overall": {
+        "msmi_per_100_arrived_members": 1.0,
+        "coverage": 0.435,
+        "mutual_acceptances_per_100": 9.0,
+        "ask_cost": 243,
+        "inference_seconds": 2.535768453089986
+      },
+      "ranking_key_descending": [
+        1.0,
+        0.435,
+        9.0,
+        -243,
+        -2.535768453089986
+      ]
+    },
+    "learned_greedy": {
+      "eligible": true,
+      "primary_score": 0.0,
+      "scenario_means": {
+        "development": {
+          "msmi_per_100_arrived_members": 0.0,
+          "coverage": 0.435,
+          "mutual_acceptances_per_100": 9.0,
+          "ask_cost": 243,
+          "inference_seconds": 3.6377130462788045
+        }
+      },
+      "overall": {
+        "msmi_per_100_arrived_members": 0.0,
+        "coverage": 0.435,
+        "mutual_acceptances_per_100": 9.0,
+        "ask_cost": 243,
+        "inference_seconds": 3.6377130462788045
+      },
+      "ranking_key_descending": [
+        0.0,
+        0.435,
+        9.0,
+        -243,
+        -3.6377130462788045
+      ]
+    },
+    "learned_maxweight": {
+      "eligible": true,
+      "primary_score": 0.5,
+      "scenario_means": {
+        "development": {
+          "msmi_per_100_arrived_members": 0.5,
+          "coverage": 0.43,
+          "mutual_acceptances_per_100": 8.0,
+          "ask_cost": 243,
+          "inference_seconds": 3.6761110438383184
+        }
+      },
+      "overall": {
+        "msmi_per_100_arrived_members": 0.5,
+        "coverage": 0.43,
+        "mutual_acceptances_per_100": 8.0,
+        "ask_cost": 243,
+        "inference_seconds": 3.6761110438383184
+      },
+      "ranking_key_descending": [
+        0.5,
+        0.43,
+        8.0,
+        -243,
+        -3.6761110438383184
+      ]
+    },
+    "uncertainty_first": {
+      "eligible": true,
+      "primary_score": 0.0,
+      "scenario_means": {
+        "development": {
+          "msmi_per_100_arrived_members": 0.0,
+          "coverage": 0.43,
+          "mutual_acceptances_per_100": 8.0,
+          "ask_cost": 426,
+          "inference_seconds": 15.026293961156625
+        }
+      },
+      "overall": {
+        "msmi_per_100_arrived_members": 0.0,
+        "coverage": 0.43,
+        "mutual_acceptances_per_100": 8.0,
+        "ask_cost": 426,
+        "inference_seconds": 15.026293961156625
+      },
+      "ranking_key_descending": [
+        0.0,
+        0.43,
+        8.0,
+        -426,
+        -15.026293961156625
+      ]
+    },
+    "degree_first": {
+      "eligible": true,
+      "primary_score": 0.0,
+      "scenario_means": {
+        "development": {
+          "msmi_per_100_arrived_members": 0.0,
+          "coverage": 0.395,
+          "mutual_acceptances_per_100": 7.0,
+          "ask_cost": 213,
+          "inference_seconds": 35.42639270215295
+        }
+      },
+      "overall": {
+        "msmi_per_100_arrived_members": 0.0,
+        "coverage": 0.395,
+        "mutual_acceptances_per_100": 7.0,
+        "ask_cost": 213,
+        "inference_seconds": 35.42639270215295
+      },
+      "ranking_key_descending": [
+        0.0,
+        0.395,
+        7.0,
+        -213,
+        -35.42639270215295
+      ]
+    },
+    "graphvoi": {
+      "eligible": false,
+      "primary_score": null,
+      "reason": "At least one episode is invalid"
+    },
+    "graphvoi_no_pairs": {
+      "eligible": false,
+      "primary_score": null,
+      "reason": "At least one episode is invalid"
+    },
+    "graphvoi_wait": {
+      "eligible": false,
+      "primary_score": null,
+      "reason": "At least one episode is invalid"
+    }
+  },
+  "paired_intervals": {
+    "degree_first": {
+      "msmi_per_100_arrived_members": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "paired_counts": {
+          "development": 1
+        },
+        "reliable_sample_size": false,
+        "note": "Paired seed bootstrap within scenario; equal scenario weighting. Small smoke CIs are not reliable."
+      },
+      "mutual_acceptances_per_100": {
+        "delta": -1.0,
+        "ci95": [
+          -1.0,
+          -1.0
+        ],
+        "paired_counts": {
+          "development": 1
+        },
+        "reliable_sample_size": false,
+        "note": "Paired seed bootstrap within scenario; equal scenario weighting. Small smoke CIs are not reliable."
+      },
+      "coverage": {
+        "delta": -0.034999999999999976,
+        "ci95": [
+          -0.034999999999999976,
+          -0.034999999999999976
+        ],
+        "paired_counts": {
+          "development": 1
+        },
+        "reliable_sample_size": false,
+        "note": "Paired seed bootstrap within scenario; equal scenario weighting. Small smoke CIs are not reliable."
+      },
+      "ask_cost": {
+        "delta": -213,
+        "ci95": [
+          -213.0,
+          -213.0
+        ],
+        "paired_counts": {
+          "development": 1
+        },
+        "reliable_sample_size": false,
+        "note": "Paired seed bootstrap within scenario; equal scenario weighting. Small smoke CIs are not reliable."
+      }
+    },
+    "greedy": {
+      "msmi_per_100_arrived_members": {
+        "delta": 0.5,
+        "ci95": [
+          0.5,
+          0.5
+        ],
+        "paired_counts": {
+          "development": 1
+        },
+        "reliable_sample_size": false,
+        "note": "Paired seed bootstrap within scenario; equal scenario weighting. Small smoke CIs are not reliable."
+      },
+      "mutual_acceptances_per_100": {
+        "delta": -0.5,
+        "ci95": [
+          -0.5,
+          -0.5
+        ],
+        "paired_counts": {
+          "development": 1
+        },
+        "reliable_sample_size": false,
+        "note": "Paired seed bootstrap within scenario; equal scenario weighting. Small smoke CIs are not reliable."
+      },
+      "coverage": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "paired_counts": {
+          "development": 1
+        },
+        "reliable_sample_size": false,
+        "note": "Paired seed bootstrap within scenario; equal scenario weighting. Small smoke CIs are not reliable."
+      },
+      "ask_cost": {
+        "delta": -183,
+        "ci95": [
+          -183.0,
+          -183.0
+        ],
+        "paired_counts": {
+          "development": 1
+        },
+        "reliable_sample_size": false,
+        "note": "Paired seed bootstrap within scenario; equal scenario weighting. Small smoke CIs are not reliable."
+      }
+    },
+    "learned_greedy": {
+      "msmi_per_100_arrived_members": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "paired_counts": {
+          "development": 1
+        },
+        "reliable_sample_size": false,
+        "note": "Paired seed bootstrap within scenario; equal scenario weighting. Small smoke CIs are not reliable."
+      },
+      "mutual_acceptances_per_100": {
+        "delta": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "paired_counts": {
+          "development": 1
+        },
+        "reliable_sample_size": false,
+        "note": "Paired seed bootstrap within scenario; equal scenario weighting. Small smoke CIs are not reliable."
+      },
+      "coverage": {
+        "delta": 0.0050000000000000044,
+        "ci95": [
+          0.0050000000000000044,
+          0.0050000000000000044
+        ],
+        "paired_counts": {
+          "development": 1
+        },
+        "reliable_sample_size": false,
+        "note": "Paired seed bootstrap within scenario; equal scenario weighting. Small smoke CIs are not reliable."
+      },
+      "ask_cost": {
+        "delta": -183,
+        "ci95": [
+          -183.0,
+          -183.0
+        ],
+        "paired_counts": {
+          "development": 1
+        },
+        "reliable_sample_size": false,
+        "note": "Paired seed bootstrap within scenario; equal scenario weighting. Small smoke CIs are not reliable."
+      }
+    },
+    "learned_maxweight": {
+      "msmi_per_100_arrived_members": {
+        "delta": 0.5,
+        "ci95": [
+          0.5,
+          0.5
+        ],
+        "paired_counts": {
+          "development": 1
+        },
+        "reliable_sample_size": false,
+        "note": "Paired seed bootstrap within scenario; equal scenario weighting. Small smoke CIs are not reliable."
+      },
+      "mutual_acceptances_per_100": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "paired_counts": {
+          "development": 1
+        },
+        "reliable_sample_size": false,
+        "note": "Paired seed bootstrap within scenario; equal scenario weighting. Small smoke CIs are not reliable."
+      },
+      "coverage": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "paired_counts": {
+          "development": 1
+        },
+        "reliable_sample_size": false,
+        "note": "Paired seed bootstrap within scenario; equal scenario weighting. Small smoke CIs are not reliable."
+      },
+      "ask_cost": {
+        "delta": -183,
+        "ci95": [
+          -183.0,
+          -183.0
+        ],
+        "paired_counts": {
+          "development": 1
+        },
+        "reliable_sample_size": false,
+        "note": "Paired seed bootstrap within scenario; equal scenario weighting. Small smoke CIs are not reliable."
+      }
+    },
+    "no_asks": {
+      "msmi_per_100_arrived_members": {
+        "delta": 0.5,
+        "ci95": [
+          0.5,
+          0.5
+        ],
+        "paired_counts": {
+          "development": 1
+        },
+        "reliable_sample_size": false,
+        "note": "Paired seed bootstrap within scenario; equal scenario weighting. Small smoke CIs are not reliable."
+      },
+      "mutual_acceptances_per_100": {
+        "delta": -5.5,
+        "ci95": [
+          -5.5,
+          -5.5
+        ],
+        "paired_counts": {
+          "development": 1
+        },
+        "reliable_sample_size": false,
+        "note": "Paired seed bootstrap within scenario; equal scenario weighting. Small smoke CIs are not reliable."
+      },
+      "coverage": {
+        "delta": -0.32999999999999996,
+        "ci95": [
+          -0.32999999999999996,
+          -0.32999999999999996
+        ],
+        "paired_counts": {
+          "development": 1
+        },
+        "reliable_sample_size": false,
+        "note": "Paired seed bootstrap within scenario; equal scenario weighting. Small smoke CIs are not reliable."
+      },
+      "ask_cost": {
+        "delta": -426,
+        "ci95": [
+          -426.0,
+          -426.0
+        ],
+        "paired_counts": {
+          "development": 1
+        },
+        "reliable_sample_size": false,
+        "note": "Paired seed bootstrap within scenario; equal scenario weighting. Small smoke CIs are not reliable."
+      }
+    },
+    "random": {
+      "msmi_per_100_arrived_members": {
+        "delta": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "paired_counts": {
+          "development": 1
+        },
+        "reliable_sample_size": false,
+        "note": "Paired seed bootstrap within scenario; equal scenario weighting. Small smoke CIs are not reliable."
+      },
+      "mutual_acceptances_per_100": {
+        "delta": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "paired_counts": {
+          "development": 1
+        },
+        "reliable_sample_size": false,
+        "note": "Paired seed bootstrap within scenario; equal scenario weighting. Small smoke CIs are not reliable."
+      },
+      "coverage": {
+        "delta": 0.0050000000000000044,
+        "ci95": [
+          0.0050000000000000044,
+          0.0050000000000000044
+        ],
+        "paired_counts": {
+          "development": 1
+        },
+        "reliable_sample_size": false,
+        "note": "Paired seed bootstrap within scenario; equal scenario weighting. Small smoke CIs are not reliable."
+      },
+      "ask_cost": {
+        "delta": -183,
+        "ci95": [
+          -183.0,
+          -183.0
+        ],
+        "paired_counts": {
+          "development": 1
+        },
+        "reliable_sample_size": false,
+        "note": "Paired seed bootstrap within scenario; equal scenario weighting. Small smoke CIs are not reliable."
+      }
+    }
+  },
+  "asset_sha256": {
+    "pair_model.json": "5a1db00312713ffd9447840b8a0473759f60e4ec6855fa6d364a202a29c0dca4",
+    "answer_model.json": "732cdcf12e07061bc88e868a0229e9eb2eefc656ac9c9d3bc44dd913a2568695"
+  }
+}

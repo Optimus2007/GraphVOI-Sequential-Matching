@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "source": "public simulator observed rollouts",
+  "training_seeds": [
+    31001,
+    31002,
+    31003,
+    31004,
+    31005,
+    31006,
+    31007,
+    31008
+  ],
+  "variants": [
+    "development",
+    "sparse",
+    "cold_start",
+    "delayed",
+    "shift",
+    "drift"
+  ],
+  "censor_count": 0,
+  "feature_version": 1,
+  "iterations": 100,
+  "l2_penalty": 0.05,
+  "logging_policy": "official greedy",
+  "inference_random_seed": "none; deterministic",
+  "limitations": [
+    "selective labels",
+    "baseline-conditional training distribution",
+    "joint-stage model has limited rare-outcome support",
+    "conditional donor selection and bounded support approximation"
+  ],
+  "stages": {
+    "directional_acceptance": {
+      "count": 7392,
+      "positives": 2635,
+      "fitted_features": true
+    },
+    "mutual_acceptance": {
+      "count": 3696,
+      "positives": 510,
+      "fitted_features": true
+    },
+    "date_given_mutual": {
+      "count": 510,
+      "positives": 382,
+      "fitted_features": true
+    },
+    "timely_seconds_given_date": {
+      "count": 382,
+      "positives": 33,
+      "fitted_features": true
+    }
+  },
+  "donor_count": 6285,
+  "asset_sha256": {
+    "pair_model.json": "5a1db00312713ffd9447840b8a0473759f60e4ec6855fa6d364a202a29c0dca4",
+    "answer_model.json": "732cdcf12e07061bc88e868a0229e9eb2eefc656ac9c9d3bc44dd913a2568695"
+  }
+}

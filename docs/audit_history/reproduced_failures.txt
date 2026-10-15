@@ -1,0 +1,58 @@
+test_cache_changes_age_dependency (tests.test_correctness_fixes.CorrectnessFixTests.test_cache_changes_age_dependency) ... FAIL
+test_invalid_episode_blocks_comparison (tests.test_correctness_fixes.CorrectnessFixTests.test_invalid_episode_blocks_comparison) ... FAIL
+test_redundant_batch_does_not_spend_again (tests.test_correctness_fixes.CorrectnessFixTests.test_redundant_batch_does_not_spend_again) ... FAIL
+
+======================================================================
+FAIL: test_cache_changes_age_dependency (tests.test_correctness_fixes.CorrectnessFixTests.test_cache_changes_age_dependency)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/adityakeshri/Documents/Romeo/tests/test_correctness_fixes.py", line 17, in test_cache_changes_age_dependency
+    self.assertEqual(model.outcomes(s,ask('a')[0]),AnswerModel(asset=asset).outcomes(s,ask('a')[0]))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [(1.0, {'age_min': 25})] != [(1.0, {'age_min': 45})]
+
+First differing element 0:
+(1.0, {'age_min': 25})
+(1.0, {'age_min': 45})
+
+- [(1.0, {'age_min': 25})]
+?                    ^
+
++ [(1.0, {'age_min': 45})]
+?                    ^
+
+
+======================================================================
+FAIL: test_invalid_episode_blocks_comparison (tests.test_correctness_fixes.CorrectnessFixTests.test_invalid_episode_blocks_comparison)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/adityakeshri/Documents/Romeo/tests/test_correctness_fixes.py", line 29, in test_invalid_episode_blocks_comparison
+    self.assertIsNone(paired_intervals(rows,replicates=10)['graphvoi']['msmi_per_100_arrived_members']['delta'])
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 is not None
+
+======================================================================
+FAIL: test_redundant_batch_does_not_spend_again (tests.test_correctness_fixes.CorrectnessFixTests.test_redundant_batch_does_not_spend_again)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/adityakeshri/Documents/Romeo/tests/test_correctness_fixes.py", line 22, in test_redundant_batch_does_not_spend_again
+    self.assertEqual(select_asks(s,scorer({('a','b'):10,('a','d'):9}),model),ask('b'))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [{'me[20 chars]d': 'constraints'}, {'member_id': 'd', 'field': 'constraints'}] != [{'me[20 chars]d': 'constraints'}]
+
+First list contains 1 additional elements.
+First extra element 1:
+{'member_id': 'd', 'field': 'constraints'}
+
+- [{'field': 'constraints', 'member_id': 'b'},
+?                                            ^
+
++ [{'field': 'constraints', 'member_id': 'b'}]
+?                                            ^
+
+-  {'field': 'constraints', 'member_id': 'd'}]
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+FAILED (failures=3)

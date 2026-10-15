@@ -1,4 +1,4 @@
-"""Reference policy: executable JSON adapter, never reads simulator hidden state."""
+"""Team Orbit JSON adapter. Official baselines remain explicitly selectable."""
 import argparse
 import itertools
 import json
@@ -32,7 +32,17 @@ def decide(request, mode='greedy'):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--baseline', choices=['greedy', 'no_asks', 'random'], default='greedy')
+    parser.add_argument('--baseline', choices=['greedy', 'no_asks', 'random'], default=None)
+    parser.add_argument('--method', choices=['safe_core', 'learned_greedy', 'learned_maxweight',
+                                            'uncertainty_first', 'degree_first', 'graphvoi',
+                                            'graphvoi_no_pairs', 'graphvoi_wait', 'graphvoi_nofill'], default='graphvoi')
+    parser.add_argument('--answer-perturbation', choices=['none', 'biased', 'overconfident',
+                        'underconfident', 'refusal', 'subgroup_refusal', 'temporal_drift'], default='none')
     args = parser.parse_args()
     request = json.load(sys.stdin)
-    print(json.dumps(decide(request, args.baseline), allow_nan=False))
+    if args.baseline is not None:
+        response = decide(request, args.baseline)
+    else:
+        from graphvoi.policy import decide as orbit_decide
+        response = orbit_decide(request, method=args.method, perturbation=args.answer_perturbation)
+    print(json.dumps(response, allow_nan=False))

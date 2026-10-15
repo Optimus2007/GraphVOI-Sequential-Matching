@@ -1,1 +1,4 @@
 # The reference kit uses only the Python standard library. No packages to install.
+# Orbit inference uses the vendored, unmodified NetworkX 3.5 source (BSD-3-Clause).
+# This pin documents the dependency. The Dockerfile uses the vendor copy offline.
+networkx==3.5

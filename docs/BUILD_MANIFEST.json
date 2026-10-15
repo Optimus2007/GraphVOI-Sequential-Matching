@@ -1,0 +1,20 @@
+{
+  "source_snapshot": "a8e26b35118cfa8e886a02f93984923e43ab64f6",
+  "inference": {
+    "policy.py": "91688745cefccb3b43fb578028a5a601060c46fdf7d56bd518a4b21e7f89f2e0",
+    "kit.py": "0d2cb3d3b46ca2a6ee7c8b74b78c55642ef98686e59a890ec18f66f2cabc1f3e",
+    "graphvoi/__init__.py": "ecf105855fd2829829f61700d9b11c30f0136f93013c11311b7ffd15dc823827",
+    "graphvoi/analysis.py": "276241197a62e1b4654c2d6de1b4b198052b5742c11b3b5d764492b0e738c2ca",
+    "graphvoi/answers.py": "a30e46fc74ef7e3a32e7071d1d9c1fe3004c4a7f4aa64e3cff898b5125c3a9b0",
+    "graphvoi/clarification.py": "c88cdeeb405422b8fabf104804ab229b103abe5940c85ff0d953ce9d5917d157",
+    "graphvoi/core.py": "8eccb125c5e69a6f49ee0a6b6be50b539b3225cbf7220c12b349075c3d2e29e8",
+    "graphvoi/models.py": "274f39b84159e5f05855b9940edf0dc22169d176d6c1daeeb1a2a0b121d119d1",
+    "graphvoi/policy.py": "ce9e6acb6574d9772fdce018854d1e8d6615c4ce320da83b9d7e27ec553e7603",
+    "assets/answer_model.json": "732cdcf12e07061bc88e868a0229e9eb2eefc656ac9c9d3bc44dd913a2568695",
+    "assets/pair_model.json": "5a1db00312713ffd9447840b8a0473759f60e4ec6855fa6d364a202a29c0dca4",
+    "assets/target_definitions.json": "4efb72a9998638566f2f007eee73a5ed17013831eadfe22bf19fc75ab0ad0116",
+    "assets/training_summary.json": "ee54dd28a2fbf6fd82c033af655fc6745df1d653b0541d346695b3b75c48f6a1",
+    "Dockerfile": "a5a4616bfcc87add04ad6bfdef14a62bcf6acbd0e9fa261655012e55f0a98bfd"
+  },
+  "analysis_note": "Seed-cluster bootstrap correction affects analysis only; initial source is preserved in docs/analysis_before_seed_cluster.py.txt."
+}

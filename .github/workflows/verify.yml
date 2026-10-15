@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python: ['3.10', '3.12']
+        python: ['3.11', '3.12']
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -16,5 +16,6 @@ jobs:
       - run: python -m unittest -v
       - run: python verify_data.py
       - run: python evaluate.py --seeds 101 --output results/smoke.json
+      - run: python scripts/evaluate_method.py --method graphvoi --seeds 9103 --output results/graphvoi_ci.json
       - run: docker build -t sequential-policy:ci .
       - run: python evaluate.py --image sequential-policy:ci --seeds 101 --output results/container.json
